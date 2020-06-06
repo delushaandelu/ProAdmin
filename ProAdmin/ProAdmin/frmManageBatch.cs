@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ProAdmin
 {
-    public partial class Form1 : Form
+    public partial class frmManageBatch : Form
     {
-        public Form1()
+        public frmManageBatch()
         {
             InitializeComponent();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
