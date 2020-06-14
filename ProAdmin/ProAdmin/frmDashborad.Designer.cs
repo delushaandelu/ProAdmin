@@ -77,7 +77,7 @@
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons)});
             this.accordionControlElement1.Name = "accordionControlElement1";
-            this.accordionControlElement1.Text = "Basic Data Control";
+            this.accordionControlElement1.Text = "Primary Data Setting";
             // 
             // accBasicData
             // 
@@ -88,7 +88,7 @@
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons)});
             this.accBasicData.Name = "accBasicData";
             this.accBasicData.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accBasicData.Text = "Manage Subjects";
+            this.accBasicData.Text = "Basic Data Setting";
             this.accBasicData.Click += new System.EventHandler(this.accBasicData_Click);
             // 
             // accManageStudent
@@ -148,6 +148,7 @@
             this.Name = "frmDashborad";
             this.NavigationControl = this.accordionControl1;
             this.Text = "frmDashborad";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             this.ResumeLayout(false);
