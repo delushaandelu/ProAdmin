@@ -34,11 +34,11 @@
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accBasicData = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accManageStudent = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accManageTutionFee = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.SuspendLayout();
@@ -67,9 +67,8 @@
             // accordionControlElement1
             // 
             this.accordionControlElement1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accBasicData,
             this.accManageStudent,
-            this.accManageTutionFee});
+            this.accBasicData});
             this.accordionControlElement1.Expanded = true;
             this.accordionControlElement1.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
@@ -95,14 +94,8 @@
             // 
             this.accManageStudent.Name = "accManageStudent";
             this.accManageStudent.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accManageStudent.Text = "Manage Schools";
+            this.accManageStudent.Text = "User Settings";
             this.accManageStudent.Click += new System.EventHandler(this.accManageStudent_Click);
-            // 
-            // accManageTutionFee
-            // 
-            this.accManageTutionFee.Name = "accManageTutionFee";
-            this.accManageTutionFee.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accManageTutionFee.Text = "Manage Universitites";
             // 
             // accordionControlElement2
             // 
@@ -129,11 +122,21 @@
             // fluentDesignFormControl1
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
+            this.fluentDesignFormControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.barButtonItem1});
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
             this.fluentDesignFormControl1.Size = new System.Drawing.Size(848, 31);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
+            this.fluentDesignFormControl1.TitleItemLinks.Add(this.barButtonItem1);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barButtonItem1.Caption = "Logout";
+            this.barButtonItem1.Id = 0;
+            this.barButtonItem1.Name = "barButtonItem1";
             // 
             // frmDashborad
             // 
@@ -147,7 +150,7 @@
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
             this.Name = "frmDashborad";
             this.NavigationControl = this.accordionControl1;
-            this.Text = "frmDashborad";
+            this.Text = "ProAdmin v0.1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
@@ -163,9 +166,9 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accBasicData;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accManageStudent;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accManageTutionFee;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement3;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement4;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
     }
 }
