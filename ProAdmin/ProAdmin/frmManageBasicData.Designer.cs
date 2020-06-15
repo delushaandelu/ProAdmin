@@ -1,6 +1,6 @@
 ﻿namespace ProAdmin
 {
-    partial class frmManageSubjects
+    partial class frmManageBasicData
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.tabPane1 = new DevExpress.XtraBars.Navigation.TabPane();
             this.tabNavigationPage1 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvBatch = new DevExpress.XtraGrid.GridControl();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,19 +40,16 @@
             this.tabNavigationPage2 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.tabNavigationPage3 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.tabNavigationPage4 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
-            this.tileView1 = new DevExpress.XtraGrid.Views.Tile.TileView();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.BatchId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Batch = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.LastModified = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.dgvBatchView = new System.Windows.Forms.DataGridView();
+            this.batchid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.batch = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Log = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
             this.tabPane1.SuspendLayout();
             this.tabNavigationPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBatch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBatch.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tileView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBatchView)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonPageGroup4
@@ -90,7 +85,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dgvBatch);
+            this.groupBox1.Controls.Add(this.dgvBatchView);
             this.groupBox1.Controls.Add(this.btnDelete);
             this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.label1);
@@ -103,29 +98,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Settings";
             // 
-            // dgvBatch
-            // 
-            gridLevelNode1.RelationName = "Level1";
-            this.dgvBatch.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
-            this.dgvBatch.Location = new System.Drawing.Point(304, 19);
-            this.dgvBatch.MainView = this.gridView1;
-            this.dgvBatch.Name = "dgvBatch";
-            this.dgvBatch.Size = new System.Drawing.Size(523, 207);
-            this.dgvBatch.TabIndex = 6;
-            this.dgvBatch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.tileView1,
-            this.gridView1});
-            this.dgvBatch.DoubleClick += new System.EventHandler(this.dgvBatch_DoubleClick);
-            // 
             // btnDelete
             // 
+            this.btnDelete.Enabled = false;
             this.btnDelete.Location = new System.Drawing.Point(112, 84);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClear
             // 
@@ -181,58 +163,60 @@
             this.tabNavigationPage4.Name = "tabNavigationPage4";
             this.tabNavigationPage4.Size = new System.Drawing.Size(1118, 624);
             // 
-            // tileView1
+            // dgvBatchView
             // 
-            this.tileView1.GridControl = this.dgvBatch;
-            this.tileView1.Name = "tileView1";
+            this.dgvBatchView.AllowUserToAddRows = false;
+            this.dgvBatchView.AllowUserToDeleteRows = false;
+            this.dgvBatchView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvBatchView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBatchView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.batchid,
+            this.batch,
+            this.Log});
+            this.dgvBatchView.Location = new System.Drawing.Point(338, 19);
+            this.dgvBatchView.Name = "dgvBatchView";
+            this.dgvBatchView.ReadOnly = true;
+            this.dgvBatchView.Size = new System.Drawing.Size(493, 204);
+            this.dgvBatchView.TabIndex = 6;
+            this.dgvBatchView.DoubleClick += new System.EventHandler(this.dgvBatchView_DoubleClick);
             // 
-            // gridView1
+            // batchid
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.BatchId,
-            this.Batch,
-            this.LastModified});
-            this.gridView1.GridControl = this.dgvBatch;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.Editable = false;
+            this.batchid.DataPropertyName = "batchid";
+            this.batchid.HeaderText = "Batch Id";
+            this.batchid.Name = "batchid";
+            this.batchid.ReadOnly = true;
+            this.batchid.Visible = false;
             // 
-            // BatchId
+            // batch
             // 
-            this.BatchId.FieldName = "batchid";
-            this.BatchId.Name = "BatchId";
-            this.BatchId.Visible = true;
-            this.BatchId.VisibleIndex = 0;
+            this.batch.DataPropertyName = "batch";
+            this.batch.HeaderText = "Batch";
+            this.batch.Name = "batch";
+            this.batch.ReadOnly = true;
             // 
-            // Batch
+            // Log
             // 
-            this.Batch.FieldName = "batch";
-            this.Batch.Name = "Batch";
-            this.Batch.Visible = true;
-            this.Batch.VisibleIndex = 1;
+            this.Log.DataPropertyName = "log";
+            this.Log.HeaderText = "Log";
+            this.Log.Name = "Log";
+            this.Log.ReadOnly = true;
+            this.Log.Width = 200;
             // 
-            // LastModified
-            // 
-            this.LastModified.FieldName = "log";
-            this.LastModified.Name = "LastModified";
-            this.LastModified.Visible = true;
-            this.LastModified.VisibleIndex = 2;
-            // 
-            // frmManageSubjects
+            // frmManageBasicData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tabPane1);
-            this.Name = "frmManageSubjects";
+            this.Name = "frmManageBasicData";
             this.Size = new System.Drawing.Size(1118, 661);
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).EndInit();
             this.tabPane1.ResumeLayout(false);
             this.tabNavigationPage1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBatch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBatch.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tileView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBatchView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -250,11 +234,9 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnClear;
-        private DevExpress.XtraGrid.GridControl dgvBatch;
-        private DevExpress.XtraGrid.Views.Tile.TileView tileView1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn BatchId;
-        private DevExpress.XtraGrid.Columns.GridColumn Batch;
-        private DevExpress.XtraGrid.Columns.GridColumn LastModified;
+        private System.Windows.Forms.DataGridView dgvBatchView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn batchid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn batch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Log;
     }
 }

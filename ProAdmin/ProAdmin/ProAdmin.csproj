@@ -77,11 +77,11 @@
     <Compile Include="frmDashborad.Designer.cs">
       <DependentUpon>frmDashborad.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManageSubjects.cs">
+    <Compile Include="frmManageBasicData.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="frmManageSubjects.Designer.cs">
-      <DependentUpon>frmManageSubjects.cs</DependentUpon>
+    <Compile Include="frmManageBasicData.Designer.cs">
+      <DependentUpon>frmManageBasicData.cs</DependentUpon>
     </Compile>
     <Compile Include="ProAdmin_Entity_v1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -103,8 +103,8 @@
     <EmbeddedResource Include="frmDashborad.resx">
       <DependentUpon>frmDashborad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManageSubjects.resx">
-      <DependentUpon>frmManageSubjects.cs</DependentUpon>
+    <EmbeddedResource Include="frmManageBasicData.resx">
+      <DependentUpon>frmManageBasicData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -20,13 +20,13 @@ namespace ProAdmin
 
         private void accBasicData_Click(object sender, EventArgs e)
         {
-            if(!panelContainer.Controls.Contains(frmManageSubjects.Instance))
+            if(!panelContainer.Controls.Contains(frmManageBasicData.Instance))
             {
-                panelContainer.Controls.Add(frmManageSubjects.Instance);
-                frmManageSubjects.Instance.Dock = DockStyle.Fill;
-                frmManageSubjects.Instance.BringToFront();
+                panelContainer.Controls.Add(frmManageBasicData.Instance);
+                frmManageBasicData.Instance.Dock = DockStyle.Fill;
+                frmManageBasicData.Instance.BringToFront();
             }
-            frmManageSubjects.Instance.BringToFront();
+            frmManageBasicData.Instance.BringToFront();
         }
 
         private void accManageStudent_Click(object sender, EventArgs e)
