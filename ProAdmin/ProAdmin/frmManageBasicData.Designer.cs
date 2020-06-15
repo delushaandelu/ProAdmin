@@ -54,6 +54,16 @@
             this.uniid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uniname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dgvSchoolView = new System.Windows.Forms.DataGridView();
+            this.btnSchoolDelete = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnSchoolSave = new System.Windows.Forms.Button();
+            this.txtschool = new DevExpress.XtraEditors.TextEdit();
+            this.schid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.schoolname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
             this.tabPane1.SuspendLayout();
             this.tabNavigationPage1.SuspendLayout();
@@ -64,6 +74,10 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUniversityView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUniversity.Properties)).BeginInit();
+            this.tabNavigationPage3.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSchoolView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtschool.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonPageGroup4
@@ -105,7 +119,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.txtBatch);
-            this.groupBox1.Location = new System.Drawing.Point(29, 22);
+            this.groupBox1.Location = new System.Drawing.Point(29, 24);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(848, 242);
             this.groupBox1.TabIndex = 4;
@@ -265,6 +279,7 @@
             // tabNavigationPage3
             // 
             this.tabNavigationPage3.Caption = "Manage School";
+            this.tabNavigationPage3.Controls.Add(this.groupBox3);
             this.tabNavigationPage3.Name = "tabNavigationPage3";
             this.tabNavigationPage3.Size = new System.Drawing.Size(1118, 624);
             // 
@@ -320,6 +335,108 @@
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.Width = 200;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.dgvSchoolView);
+            this.groupBox3.Controls.Add(this.btnSchoolDelete);
+            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.btnSchoolSave);
+            this.groupBox3.Controls.Add(this.txtschool);
+            this.groupBox3.Location = new System.Drawing.Point(29, 24);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(848, 242);
+            this.groupBox3.TabIndex = 5;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Batch Settings";
+            // 
+            // dgvSchoolView
+            // 
+            this.dgvSchoolView.AllowUserToAddRows = false;
+            this.dgvSchoolView.AllowUserToDeleteRows = false;
+            this.dgvSchoolView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvSchoolView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSchoolView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.schid,
+            this.schoolname,
+            this.dataGridViewTextBoxColumn4});
+            this.dgvSchoolView.Location = new System.Drawing.Point(338, 19);
+            this.dgvSchoolView.Name = "dgvSchoolView";
+            this.dgvSchoolView.ReadOnly = true;
+            this.dgvSchoolView.Size = new System.Drawing.Size(493, 204);
+            this.dgvSchoolView.TabIndex = 6;
+            this.dgvSchoolView.DoubleClick += new System.EventHandler(this.dgvSchoolView_DoubleClick);
+            // 
+            // btnSchoolDelete
+            // 
+            this.btnSchoolDelete.Enabled = false;
+            this.btnSchoolDelete.Location = new System.Drawing.Point(112, 84);
+            this.btnSchoolDelete.Name = "btnSchoolDelete";
+            this.btnSchoolDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnSchoolDelete.TabIndex = 5;
+            this.btnSchoolDelete.Text = "Delete";
+            this.btnSchoolDelete.UseVisualStyleBackColor = true;
+            this.btnSchoolDelete.Click += new System.EventHandler(this.btnSchoolDelete_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(206, 84);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Clear";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(15, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Batch : ";
+            // 
+            // btnSchoolSave
+            // 
+            this.btnSchoolSave.Location = new System.Drawing.Point(18, 84);
+            this.btnSchoolSave.Name = "btnSchoolSave";
+            this.btnSchoolSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSchoolSave.TabIndex = 3;
+            this.btnSchoolSave.Text = "Save";
+            this.btnSchoolSave.UseVisualStyleBackColor = true;
+            this.btnSchoolSave.Click += new System.EventHandler(this.btnSchoolSave_Click);
+            // 
+            // txtschool
+            // 
+            this.txtschool.Location = new System.Drawing.Point(73, 39);
+            this.txtschool.Name = "txtschool";
+            this.txtschool.Size = new System.Drawing.Size(208, 20);
+            this.txtschool.TabIndex = 0;
+            // 
+            // schid
+            // 
+            this.schid.DataPropertyName = "schid";
+            this.schid.HeaderText = "School ID";
+            this.schid.Name = "schid";
+            this.schid.ReadOnly = true;
+            this.schid.Visible = false;
+            // 
+            // schoolname
+            // 
+            this.schoolname.DataPropertyName = "schoolname";
+            this.schoolname.HeaderText = "School Name";
+            this.schoolname.Name = "schoolname";
+            this.schoolname.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "log";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Log";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 200;
+            // 
             // frmManageBasicData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,6 +456,11 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUniversityView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUniversity.Properties)).EndInit();
+            this.tabNavigationPage3.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSchoolView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtschool.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -370,5 +492,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn uniid;
         private System.Windows.Forms.DataGridViewTextBoxColumn uniname;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.DataGridView dgvSchoolView;
+        private System.Windows.Forms.Button btnSchoolDelete;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnSchoolSave;
+        private DevExpress.XtraEditors.TextEdit txtschool;
+        private System.Windows.Forms.DataGridViewTextBoxColumn schid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn schoolname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }

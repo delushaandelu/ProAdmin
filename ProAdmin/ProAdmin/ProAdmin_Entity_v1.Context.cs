@@ -27,5 +27,6 @@ namespace ProAdmin
     
         public virtual DbSet<basicdata_batch> basicdata_batch { get; set; }
         public virtual DbSet<basicdata_university> basicdata_university { get; set; }
+        public virtual DbSet<basicdata_school> basicdata_school { get; set; }
     }
 }
