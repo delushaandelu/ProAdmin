@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="proadmin_v1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="proadmin_v1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="basicdata_batch">
           <Key>
             <PropertyRef Name="batchid" />
@@ -13,11 +13,19 @@
           <Property Name="batch" Type="varchar" MaxLength="50" />
           <Property Name="log" Type="varchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="basicdata_university">
+          <Key>
+            <PropertyRef Name="uniid" />
+          </Key>
+          <Property Name="uniid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="uniname" Type="varchar" MaxLength="200" />
+          <Property Name="log" Type="varchar" MaxLength="100" />
+        </EntityType>
         <EntityContainer Name="proadmin_v1ModelStoreContainer">
           <EntitySet Name="basicdata_batch" EntityType="Self.basicdata_batch" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="basicdata_university" EntityType="Self.basicdata_university" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="proadmin_v1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -31,7 +39,16 @@
         </EntityType>
         <EntityContainer Name="DBEntity" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="basicdata_batch" EntityType="Self.basicdata_batch" />
+          <EntitySet Name="basicdata_university" EntityType="proadmin_v1Model.basicdata_university" />
         </EntityContainer>
+        <EntityType Name="basicdata_university">
+          <Key>
+            <PropertyRef Name="uniid" />
+          </Key>
+          <Property Name="uniid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="uniname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="log" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -44,6 +61,15 @@
                 <ScalarProperty Name="batchid" ColumnName="batchid" />
                 <ScalarProperty Name="batch" ColumnName="batch" />
                 <ScalarProperty Name="log" ColumnName="log" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="basicdata_university">
+            <EntityTypeMapping TypeName="proadmin_v1Model.basicdata_university">
+              <MappingFragment StoreEntitySet="basicdata_university">
+                <ScalarProperty Name="log" ColumnName="log" />
+                <ScalarProperty Name="uniname" ColumnName="uniname" />
+                <ScalarProperty Name="uniid" ColumnName="uniid" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

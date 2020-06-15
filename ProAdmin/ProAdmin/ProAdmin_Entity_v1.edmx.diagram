@@ -6,6 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="442fc138a1ed42038e0a02fd0558eb9b" Name="Diagram1">
         <EntityTypeShape EntityType="proadmin_v1Model.basicdata_batch" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="proadmin_v1Model.basicdata_university" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

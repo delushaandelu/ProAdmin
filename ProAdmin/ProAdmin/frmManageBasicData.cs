@@ -16,6 +16,7 @@ namespace ProAdmin
     {
         //Declare Object of the Models
         basicdata_batch model_batch = new basicdata_batch();
+        basicdata_university model_university = new basicdata_university();
 
         private static frmManageBasicData _instance;
 
@@ -33,6 +34,7 @@ namespace ProAdmin
         {
             InitializeComponent();
             populate_batch_data_grid_view();
+            populate_university_data_grid_view();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -43,6 +45,7 @@ namespace ProAdmin
         private void clear_fields()
         {
             txtBatch.Text = null;
+            txtUniversity.Text = null;
         }
 
         private void message_popup_ok(string messsage)
@@ -96,6 +99,15 @@ namespace ProAdmin
             }
         }
 
+        private void populate_university_data_grid_view()
+        {
+            dgvUniversityView.AutoGenerateColumns = false;
+
+            using (DBEntity db = new DBEntity())
+            {
+                dgvUniversityView.DataSource = db.basicdata_university.ToList<basicdata_university>();
+            }
+        }
 
         private void dgvBatchView_DoubleClick(object sender, EventArgs e)
         {
@@ -129,6 +141,77 @@ namespace ProAdmin
                     db.SaveChangesAsync();
 
                     populate_batch_data_grid_view();
+                    clear_fields();
+                    btnSave.Text = "Save";
+
+                    message_popup_ok("Data Deleted!");
+                }
+            }
+        }
+
+        private void btnUniSave_Click(object sender, EventArgs e)
+        {
+            if (txtUniversity.Text != "")
+            {
+                model_university.uniname = txtUniversity.Text.Trim();
+                model_university.log = DateTime.Now.ToString();
+
+                using (DBEntity db = new DBEntity())
+                {
+
+                    if (model_university.uniid == 0)//Insert
+                        db.basicdata_university.Add(model_university);
+                    else //Update
+                        db.Entry(model_university).State = EntityState.Modified;
+
+                    db.SaveChangesAsync();
+                    clear_fields();
+                    message_popup_ok("Data Record Saved!");
+                    populate_university_data_grid_view();
+
+                    //Reset normal after changes done
+                    model_university.uniid = 0;
+                    btnUniSave.Text = "Save";
+                }
+            }
+            else
+            {
+                message_popup_ok("Empty fields found.");
+            }
+        }
+
+        private void dgvUniversityView_DoubleClick(object sender, EventArgs e)
+        {
+            if (dgvUniversityView.CurrentRow.Index != -1)
+            {
+                model_university.uniid = Convert.ToInt32(dgvUniversityView.CurrentRow.Cells["uniid"].Value);
+
+                using (DBEntity db = new DBEntity())
+                {
+                    model_university = db.basicdata_university.Where(x => x.uniid == model_university.uniid).FirstOrDefault();
+                    txtUniversity.Text = model_university.uniname;
+                    string now = DateTime.Now.ToString();
+                    now = model_university.log;
+                }
+
+                btnUniSave.Text = "Update";
+                btnUniDelete.Enabled = true;
+            }
+        }
+
+        private void btnUniDelete_Click(object sender, EventArgs e)
+        {
+            if (XtraMessageBox.Show("Are you sure to delete the record?", "Delete Record", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                using (DBEntity db = new DBEntity())
+                {
+                    var entity = db.Entry(model_university);
+                    if (entity.State == EntityState.Detached)
+                        db.basicdata_university.Attach(model_university);
+                    db.basicdata_university.Remove(model_university);
+                    db.SaveChangesAsync();
+
+                    populate_university_data_grid_view();
                     clear_fields();
                     btnSave.Text = "Save";
 

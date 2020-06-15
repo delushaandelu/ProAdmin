@@ -32,24 +32,38 @@
             this.tabPane1 = new DevExpress.XtraBars.Navigation.TabPane();
             this.tabNavigationPage1 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvBatchView = new System.Windows.Forms.DataGridView();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtBatch = new DevExpress.XtraEditors.TextEdit();
             this.tabNavigationPage2 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgvUniversityView = new System.Windows.Forms.DataGridView();
+            this.btnUniDelete = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnUniSave = new System.Windows.Forms.Button();
+            this.txtUniversity = new DevExpress.XtraEditors.TextEdit();
             this.tabNavigationPage3 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.tabNavigationPage4 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
-            this.dgvBatchView = new System.Windows.Forms.DataGridView();
-            this.batchid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.batch = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Log = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.batch = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.batchid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uniid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uniname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
             this.tabPane1.SuspendLayout();
             this.tabNavigationPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBatch.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBatchView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBatch.Properties)).BeginInit();
+            this.tabNavigationPage2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUniversityView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUniversity.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonPageGroup4
@@ -91,12 +105,29 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.txtBatch);
-            this.groupBox1.Location = new System.Drawing.Point(26, 22);
+            this.groupBox1.Location = new System.Drawing.Point(29, 22);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(848, 242);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Settings";
+            this.groupBox1.Text = "Batch Settings";
+            // 
+            // dgvBatchView
+            // 
+            this.dgvBatchView.AllowUserToAddRows = false;
+            this.dgvBatchView.AllowUserToDeleteRows = false;
+            this.dgvBatchView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvBatchView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBatchView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.batchid,
+            this.batch,
+            this.Log});
+            this.dgvBatchView.Location = new System.Drawing.Point(338, 19);
+            this.dgvBatchView.Name = "dgvBatchView";
+            this.dgvBatchView.ReadOnly = true;
+            this.dgvBatchView.Size = new System.Drawing.Size(493, 204);
+            this.dgvBatchView.TabIndex = 6;
+            this.dgvBatchView.DoubleClick += new System.EventHandler(this.dgvBatchView_DoubleClick);
             // 
             // btnDelete
             // 
@@ -148,8 +179,88 @@
             // tabNavigationPage2
             // 
             this.tabNavigationPage2.Caption = "Manage University";
+            this.tabNavigationPage2.Controls.Add(this.groupBox2);
             this.tabNavigationPage2.Name = "tabNavigationPage2";
             this.tabNavigationPage2.Size = new System.Drawing.Size(1118, 624);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dgvUniversityView);
+            this.groupBox2.Controls.Add(this.btnUniDelete);
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.btnUniSave);
+            this.groupBox2.Controls.Add(this.txtUniversity);
+            this.groupBox2.Location = new System.Drawing.Point(29, 24);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(848, 242);
+            this.groupBox2.TabIndex = 5;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "University Settings";
+            // 
+            // dgvUniversityView
+            // 
+            this.dgvUniversityView.AllowUserToAddRows = false;
+            this.dgvUniversityView.AllowUserToDeleteRows = false;
+            this.dgvUniversityView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvUniversityView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUniversityView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.uniid,
+            this.uniname,
+            this.dataGridViewTextBoxColumn3});
+            this.dgvUniversityView.Location = new System.Drawing.Point(338, 19);
+            this.dgvUniversityView.Name = "dgvUniversityView";
+            this.dgvUniversityView.ReadOnly = true;
+            this.dgvUniversityView.Size = new System.Drawing.Size(493, 204);
+            this.dgvUniversityView.TabIndex = 6;
+            this.dgvUniversityView.DoubleClick += new System.EventHandler(this.dgvUniversityView_DoubleClick);
+            // 
+            // btnUniDelete
+            // 
+            this.btnUniDelete.Enabled = false;
+            this.btnUniDelete.Location = new System.Drawing.Point(112, 84);
+            this.btnUniDelete.Name = "btnUniDelete";
+            this.btnUniDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnUniDelete.TabIndex = 5;
+            this.btnUniDelete.Text = "Delete";
+            this.btnUniDelete.UseVisualStyleBackColor = true;
+            this.btnUniDelete.Click += new System.EventHandler(this.btnUniDelete_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(206, 84);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Clear";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Batch : ";
+            // 
+            // btnUniSave
+            // 
+            this.btnUniSave.Location = new System.Drawing.Point(18, 84);
+            this.btnUniSave.Name = "btnUniSave";
+            this.btnUniSave.Size = new System.Drawing.Size(75, 23);
+            this.btnUniSave.TabIndex = 3;
+            this.btnUniSave.Text = "Save";
+            this.btnUniSave.UseVisualStyleBackColor = true;
+            this.btnUniSave.Click += new System.EventHandler(this.btnUniSave_Click);
+            // 
+            // txtUniversity
+            // 
+            this.txtUniversity.Location = new System.Drawing.Point(73, 39);
+            this.txtUniversity.Name = "txtUniversity";
+            this.txtUniversity.Size = new System.Drawing.Size(208, 20);
+            this.txtUniversity.TabIndex = 0;
             // 
             // tabNavigationPage3
             // 
@@ -163,22 +274,20 @@
             this.tabNavigationPage4.Name = "tabNavigationPage4";
             this.tabNavigationPage4.Size = new System.Drawing.Size(1118, 624);
             // 
-            // dgvBatchView
+            // Log
             // 
-            this.dgvBatchView.AllowUserToAddRows = false;
-            this.dgvBatchView.AllowUserToDeleteRows = false;
-            this.dgvBatchView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvBatchView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBatchView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.batchid,
-            this.batch,
-            this.Log});
-            this.dgvBatchView.Location = new System.Drawing.Point(338, 19);
-            this.dgvBatchView.Name = "dgvBatchView";
-            this.dgvBatchView.ReadOnly = true;
-            this.dgvBatchView.Size = new System.Drawing.Size(493, 204);
-            this.dgvBatchView.TabIndex = 6;
-            this.dgvBatchView.DoubleClick += new System.EventHandler(this.dgvBatchView_DoubleClick);
+            this.Log.DataPropertyName = "log";
+            this.Log.HeaderText = "Log";
+            this.Log.Name = "Log";
+            this.Log.ReadOnly = true;
+            this.Log.Width = 200;
+            // 
+            // batch
+            // 
+            this.batch.DataPropertyName = "batch";
+            this.batch.HeaderText = "Batch";
+            this.batch.Name = "batch";
+            this.batch.ReadOnly = true;
             // 
             // batchid
             // 
@@ -188,20 +297,28 @@
             this.batchid.ReadOnly = true;
             this.batchid.Visible = false;
             // 
-            // batch
+            // uniid
             // 
-            this.batch.DataPropertyName = "batch";
-            this.batch.HeaderText = "Batch";
-            this.batch.Name = "batch";
-            this.batch.ReadOnly = true;
+            this.uniid.DataPropertyName = "uniid";
+            this.uniid.HeaderText = "Uni ID";
+            this.uniid.Name = "uniid";
+            this.uniid.ReadOnly = true;
+            this.uniid.Visible = false;
             // 
-            // Log
+            // uniname
             // 
-            this.Log.DataPropertyName = "log";
-            this.Log.HeaderText = "Log";
-            this.Log.Name = "Log";
-            this.Log.ReadOnly = true;
-            this.Log.Width = 200;
+            this.uniname.DataPropertyName = "uniname";
+            this.uniname.HeaderText = "University";
+            this.uniname.Name = "uniname";
+            this.uniname.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "log";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Log";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 200;
             // 
             // frmManageBasicData
             // 
@@ -215,8 +332,13 @@
             this.tabNavigationPage1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBatch.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBatchView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBatch.Properties)).EndInit();
+            this.tabNavigationPage2.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUniversityView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUniversity.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -235,8 +357,18 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.DataGridView dgvBatchView;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView dgvUniversityView;
+        private System.Windows.Forms.Button btnUniDelete;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnUniSave;
+        private DevExpress.XtraEditors.TextEdit txtUniversity;
         private System.Windows.Forms.DataGridViewTextBoxColumn batchid;
         private System.Windows.Forms.DataGridViewTextBoxColumn batch;
         private System.Windows.Forms.DataGridViewTextBoxColumn Log;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uniid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uniname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }

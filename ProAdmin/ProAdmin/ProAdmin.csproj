@@ -71,6 +71,9 @@
     <Compile Include="basicdata_batch.cs">
       <DependentUpon>ProAdmin_Entity_v1.tt</DependentUpon>
     </Compile>
+    <Compile Include="basicdata_university.cs">
+      <DependentUpon>ProAdmin_Entity_v1.tt</DependentUpon>
+    </Compile>
     <Compile Include="frmDashborad.cs">
       <SubType>Form</SubType>
     </Compile>
