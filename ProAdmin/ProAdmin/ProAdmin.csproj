@@ -74,6 +74,9 @@
     <Compile Include="basicdata_school.cs">
       <DependentUpon>ProAdmin_Entity_v1.tt</DependentUpon>
     </Compile>
+    <Compile Include="basicdata_subject.cs">
+      <DependentUpon>ProAdmin_Entity_v1.tt</DependentUpon>
+    </Compile>
     <Compile Include="basicdata_university.cs">
       <DependentUpon>ProAdmin_Entity_v1.tt</DependentUpon>
     </Compile>

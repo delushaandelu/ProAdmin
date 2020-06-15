@@ -21,6 +21,15 @@
           <Property Name="schoolname" Type="varchar" MaxLength="200" />
           <Property Name="log" Type="varchar" MaxLength="200" />
         </EntityType>
+        <EntityType Name="basicdata_subject">
+          <Key>
+            <PropertyRef Name="subid" />
+          </Key>
+          <Property Name="subid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="subject" Type="varchar" MaxLength="100" />
+          <Property Name="teacher" Type="varchar" MaxLength="200" />
+          <Property Name="log" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="basicdata_university">
           <Key>
             <PropertyRef Name="uniid" />
@@ -32,6 +41,7 @@
         <EntityContainer Name="proadmin_v1ModelStoreContainer">
           <EntitySet Name="basicdata_batch" EntityType="Self.basicdata_batch" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="basicdata_school" EntityType="Self.basicdata_school" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="basicdata_subject" EntityType="Self.basicdata_subject" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="basicdata_university" EntityType="Self.basicdata_university" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -50,6 +60,7 @@
           <EntitySet Name="basicdata_batch" EntityType="Self.basicdata_batch" />
           <EntitySet Name="basicdata_university" EntityType="proadmin_v1Model.basicdata_university" />
           <EntitySet Name="basicdata_school" EntityType="proadmin_v1Model.basicdata_school" />
+          <EntitySet Name="basicdata_subject" EntityType="proadmin_v1Model.basicdata_subject" />
         </EntityContainer>
         <EntityType Name="basicdata_university">
           <Key>
@@ -66,6 +77,15 @@
           <Property Name="schid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="schoolname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="log" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="basicdata_subject">
+          <Key>
+            <PropertyRef Name="subid" />
+          </Key>
+          <Property Name="subid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="subject" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="teacher" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="log" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -97,6 +117,16 @@
                 <ScalarProperty Name="log" ColumnName="log" />
                 <ScalarProperty Name="schoolname" ColumnName="schoolname" />
                 <ScalarProperty Name="schid" ColumnName="schid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="basicdata_subject">
+            <EntityTypeMapping TypeName="proadmin_v1Model.basicdata_subject">
+              <MappingFragment StoreEntitySet="basicdata_subject">
+                <ScalarProperty Name="log" ColumnName="log" />
+                <ScalarProperty Name="teacher" ColumnName="teacher" />
+                <ScalarProperty Name="subject" ColumnName="subject" />
+                <ScalarProperty Name="subid" ColumnName="subid" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

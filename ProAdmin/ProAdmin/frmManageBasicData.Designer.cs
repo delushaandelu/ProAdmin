@@ -64,6 +64,19 @@
             this.schid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.schoolname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dgvSubjectView = new System.Windows.Forms.DataGridView();
+            this.btnsubdelete = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnsubsave = new System.Windows.Forms.Button();
+            this.txtsubject = new DevExpress.XtraEditors.TextEdit();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtteacher = new DevExpress.XtraEditors.TextEdit();
+            this.subid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teacher = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sublog = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
             this.tabPane1.SuspendLayout();
             this.tabNavigationPage1.SuspendLayout();
@@ -75,9 +88,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvUniversityView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUniversity.Properties)).BeginInit();
             this.tabNavigationPage3.SuspendLayout();
+            this.tabNavigationPage4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSchoolView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtschool.Properties)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsubject.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtteacher.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonPageGroup4
@@ -149,7 +167,7 @@
             this.btnDelete.Location = new System.Drawing.Point(112, 84);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 5;
+            this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -159,7 +177,7 @@
             this.btnClear.Location = new System.Drawing.Point(206, 84);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
-            this.btnClear.TabIndex = 4;
+            this.btnClear.TabIndex = 3;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -178,7 +196,7 @@
             this.btnSave.Location = new System.Drawing.Point(18, 84);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 3;
+            this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -232,20 +250,20 @@
             // btnUniDelete
             // 
             this.btnUniDelete.Enabled = false;
-            this.btnUniDelete.Location = new System.Drawing.Point(112, 84);
+            this.btnUniDelete.Location = new System.Drawing.Point(118, 84);
             this.btnUniDelete.Name = "btnUniDelete";
             this.btnUniDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnUniDelete.TabIndex = 5;
+            this.btnUniDelete.TabIndex = 2;
             this.btnUniDelete.Text = "Delete";
             this.btnUniDelete.UseVisualStyleBackColor = true;
             this.btnUniDelete.Click += new System.EventHandler(this.btnUniDelete_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(206, 84);
+            this.button2.Location = new System.Drawing.Point(212, 84);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
+            this.button2.TabIndex = 3;
             this.button2.Text = "Clear";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.btnClear_Click);
@@ -255,23 +273,23 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(15, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(62, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Batch : ";
+            this.label2.Text = "University : ";
             // 
             // btnUniSave
             // 
-            this.btnUniSave.Location = new System.Drawing.Point(18, 84);
+            this.btnUniSave.Location = new System.Drawing.Point(24, 84);
             this.btnUniSave.Name = "btnUniSave";
             this.btnUniSave.Size = new System.Drawing.Size(75, 23);
-            this.btnUniSave.TabIndex = 3;
+            this.btnUniSave.TabIndex = 1;
             this.btnUniSave.Text = "Save";
             this.btnUniSave.UseVisualStyleBackColor = true;
             this.btnUniSave.Click += new System.EventHandler(this.btnUniSave_Click);
             // 
             // txtUniversity
             // 
-            this.txtUniversity.Location = new System.Drawing.Point(73, 39);
+            this.txtUniversity.Location = new System.Drawing.Point(84, 39);
             this.txtUniversity.Name = "txtUniversity";
             this.txtUniversity.Size = new System.Drawing.Size(208, 20);
             this.txtUniversity.TabIndex = 0;
@@ -286,6 +304,7 @@
             // tabNavigationPage4
             // 
             this.tabNavigationPage4.Caption = "Manage Subject";
+            this.tabNavigationPage4.Controls.Add(this.groupBox4);
             this.tabNavigationPage4.Name = "tabNavigationPage4";
             this.tabNavigationPage4.Size = new System.Drawing.Size(1118, 624);
             // 
@@ -348,7 +367,7 @@
             this.groupBox3.Size = new System.Drawing.Size(848, 242);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Batch Settings";
+            this.groupBox3.Text = "School Settings";
             // 
             // dgvSchoolView
             // 
@@ -373,7 +392,7 @@
             this.btnSchoolDelete.Location = new System.Drawing.Point(112, 84);
             this.btnSchoolDelete.Name = "btnSchoolDelete";
             this.btnSchoolDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnSchoolDelete.TabIndex = 5;
+            this.btnSchoolDelete.TabIndex = 2;
             this.btnSchoolDelete.Text = "Delete";
             this.btnSchoolDelete.UseVisualStyleBackColor = true;
             this.btnSchoolDelete.Click += new System.EventHandler(this.btnSchoolDelete_Click);
@@ -383,7 +402,7 @@
             this.button3.Location = new System.Drawing.Point(206, 84);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 4;
+            this.button3.TabIndex = 3;
             this.button3.Text = "Clear";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.btnClear_Click);
@@ -393,16 +412,16 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(15, 42);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Batch : ";
+            this.label3.Text = "School : ";
             // 
             // btnSchoolSave
             // 
             this.btnSchoolSave.Location = new System.Drawing.Point(18, 84);
             this.btnSchoolSave.Name = "btnSchoolSave";
             this.btnSchoolSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSchoolSave.TabIndex = 3;
+            this.btnSchoolSave.TabIndex = 1;
             this.btnSchoolSave.Text = "Save";
             this.btnSchoolSave.UseVisualStyleBackColor = true;
             this.btnSchoolSave.Click += new System.EventHandler(this.btnSchoolSave_Click);
@@ -437,6 +456,133 @@
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Width = 200;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label5);
+            this.groupBox4.Controls.Add(this.txtteacher);
+            this.groupBox4.Controls.Add(this.dgvSubjectView);
+            this.groupBox4.Controls.Add(this.btnsubdelete);
+            this.groupBox4.Controls.Add(this.button4);
+            this.groupBox4.Controls.Add(this.label4);
+            this.groupBox4.Controls.Add(this.btnsubsave);
+            this.groupBox4.Controls.Add(this.txtsubject);
+            this.groupBox4.Location = new System.Drawing.Point(29, 24);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(848, 242);
+            this.groupBox4.TabIndex = 6;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Subject Settings";
+            // 
+            // dgvSubjectView
+            // 
+            this.dgvSubjectView.AllowUserToAddRows = false;
+            this.dgvSubjectView.AllowUserToDeleteRows = false;
+            this.dgvSubjectView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvSubjectView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSubjectView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.subid,
+            this.subject,
+            this.teacher,
+            this.sublog});
+            this.dgvSubjectView.Location = new System.Drawing.Point(338, 19);
+            this.dgvSubjectView.Name = "dgvSubjectView";
+            this.dgvSubjectView.ReadOnly = true;
+            this.dgvSubjectView.Size = new System.Drawing.Size(493, 204);
+            this.dgvSubjectView.TabIndex = 6;
+            this.dgvSubjectView.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
+            // 
+            // btnsubdelete
+            // 
+            this.btnsubdelete.Enabled = false;
+            this.btnsubdelete.Location = new System.Drawing.Point(112, 107);
+            this.btnsubdelete.Name = "btnsubdelete";
+            this.btnsubdelete.Size = new System.Drawing.Size(75, 23);
+            this.btnsubdelete.TabIndex = 3;
+            this.btnsubdelete.Text = "Delete";
+            this.btnsubdelete.UseVisualStyleBackColor = true;
+            this.btnsubdelete.Click += new System.EventHandler(this.btnsubdelete_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(206, 107);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Clear";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(15, 42);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "School : ";
+            // 
+            // btnsubsave
+            // 
+            this.btnsubsave.Location = new System.Drawing.Point(18, 107);
+            this.btnsubsave.Name = "btnsubsave";
+            this.btnsubsave.Size = new System.Drawing.Size(75, 23);
+            this.btnsubsave.TabIndex = 2;
+            this.btnsubsave.Text = "Save";
+            this.btnsubsave.UseVisualStyleBackColor = true;
+            this.btnsubsave.Click += new System.EventHandler(this.btnsubsave_Click);
+            // 
+            // txtsubject
+            // 
+            this.txtsubject.Location = new System.Drawing.Point(73, 39);
+            this.txtsubject.Name = "txtsubject";
+            this.txtsubject.Size = new System.Drawing.Size(208, 20);
+            this.txtsubject.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(15, 68);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Teacher :";
+            // 
+            // txtteacher
+            // 
+            this.txtteacher.Location = new System.Drawing.Point(73, 65);
+            this.txtteacher.Name = "txtteacher";
+            this.txtteacher.Size = new System.Drawing.Size(208, 20);
+            this.txtteacher.TabIndex = 1;
+            // 
+            // subid
+            // 
+            this.subid.DataPropertyName = "subid";
+            this.subid.HeaderText = "subid";
+            this.subid.Name = "subid";
+            this.subid.ReadOnly = true;
+            this.subid.Visible = false;
+            // 
+            // subject
+            // 
+            this.subject.DataPropertyName = "subject";
+            this.subject.HeaderText = "subject";
+            this.subject.Name = "subject";
+            this.subject.ReadOnly = true;
+            // 
+            // teacher
+            // 
+            this.teacher.DataPropertyName = "teacher";
+            this.teacher.HeaderText = "teacher";
+            this.teacher.Name = "teacher";
+            this.teacher.ReadOnly = true;
+            // 
+            // sublog
+            // 
+            this.sublog.DataPropertyName = "log";
+            this.sublog.HeaderText = "Log";
+            this.sublog.Name = "sublog";
+            this.sublog.ReadOnly = true;
+            // 
             // frmManageBasicData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -457,10 +603,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvUniversityView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUniversity.Properties)).EndInit();
             this.tabNavigationPage3.ResumeLayout(false);
+            this.tabNavigationPage4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSchoolView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtschool.Properties)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsubject.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtteacher.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -502,5 +654,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn schid;
         private System.Windows.Forms.DataGridViewTextBoxColumn schoolname;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.DataGridView dgvSubjectView;
+        private System.Windows.Forms.Button btnsubdelete;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnsubsave;
+        private DevExpress.XtraEditors.TextEdit txtsubject;
+        private System.Windows.Forms.Label label5;
+        private DevExpress.XtraEditors.TextEdit txtteacher;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subject;
+        private System.Windows.Forms.DataGridViewTextBoxColumn teacher;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sublog;
     }
 }

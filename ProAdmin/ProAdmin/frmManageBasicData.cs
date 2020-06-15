@@ -18,6 +18,7 @@ namespace ProAdmin
         basicdata_batch model_batch = new basicdata_batch();
         basicdata_university model_university = new basicdata_university();
         basicdata_school model_school = new basicdata_school();
+        basicdata_subject model_subject = new basicdata_subject();
 
         private static frmManageBasicData _instance;
 
@@ -37,6 +38,7 @@ namespace ProAdmin
             populate_batch_data_grid_view();
             populate_university_data_grid_view();
             populate_school_data_grid_view();
+            populate_subject_data_grid_view();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -49,6 +51,8 @@ namespace ProAdmin
             txtBatch.Text = null;
             txtUniversity.Text = null;
             txtschool.Text = null;
+            txtsubject.Text = null;
+            txtteacher.Text = null;
         }
 
         private void message_popup_ok(string messsage)
@@ -90,7 +94,17 @@ namespace ProAdmin
             {
                 dgvSchoolView.DataSource = db.basicdata_school.ToList<basicdata_school>();
             }
-        }       
+        }
+
+        private void populate_subject_data_grid_view()
+        {
+            dgvSubjectView.AutoGenerateColumns = false;
+
+            using (DBEntity db = new DBEntity())
+            {
+                dgvSubjectView.DataSource = db.basicdata_subject.ToList<basicdata_subject>();
+            }
+        }
 
         //Save Button Events
         private void btnSave_Click(object sender, EventArgs e)
@@ -178,7 +192,39 @@ namespace ProAdmin
 
                     //Reset normal after changes done
                     model_school.schid = 0;
-                    btnSave.Text = "Save";
+                    btnSchoolSave.Text = "Save";
+                }
+            }
+            else
+            {
+                message_popup_ok("Empty fields found.");
+            }
+        }
+
+        private void btnsubsave_Click(object sender, EventArgs e)
+        {
+            if (txtsubject.Text != "" || txtteacher.Text != "")
+            {
+                model_subject.subject = txtsubject.Text.Trim();
+                model_subject.teacher = txtteacher.Text.Trim();
+                model_subject.log = DateTime.Now.ToString();
+
+                using (DBEntity db = new DBEntity())
+                {
+
+                    if (model_subject.subid == 0)//Insert
+                        db.basicdata_subject.Add(model_subject);
+                    else //Update
+                        db.Entry(model_subject).State = EntityState.Modified;
+
+                    db.SaveChangesAsync();
+                    clear_fields();
+                    message_popup_ok("Data Record Saved!");
+                    populate_subject_data_grid_view();
+
+                    //Reset normal after changes done
+                    model_subject.subid = 0;
+                    btnsubsave.Text = "Save";
                 }
             }
             else
@@ -251,6 +297,27 @@ namespace ProAdmin
             }
         }
 
+        private void btnsubdelete_Click(object sender, EventArgs e)
+        {
+            if (XtraMessageBox.Show("Are you sure to delete the record?", "Delete Record", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                using (DBEntity db = new DBEntity())
+                {
+                    var entity = db.Entry(model_subject);
+                    if (entity.State == EntityState.Detached)
+                        db.basicdata_subject.Attach(model_subject);
+                    db.basicdata_subject.Remove(model_subject);
+                    db.SaveChangesAsync();
+
+                    populate_subject_data_grid_view();
+                    clear_fields();
+                    btnSchoolSave.Text = "Save";
+
+                    message_popup_ok("Data Deleted!");
+                }
+            }
+        }
+
         //Grid View Double Click Event
         private void dgvBatchView_DoubleClick(object sender, EventArgs e)
         {
@@ -308,5 +375,26 @@ namespace ProAdmin
                 btnSchoolDelete.Enabled = true;
             }
         }
+
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            if (dgvSubjectView.CurrentRow.Index != -1)
+            {
+                model_subject.subid = Convert.ToInt32(dgvSubjectView.CurrentRow.Cells["subid"].Value);
+
+                using (DBEntity db = new DBEntity())
+                {
+                    model_subject = db.basicdata_subject.Where(x => x.subid == model_subject.subid).FirstOrDefault();
+                    txtsubject.Text = model_subject.subject;
+                    txtteacher.Text = model_subject.teacher;
+                    string now = DateTime.Now.ToString();
+                    now = model_subject.log;
+                }
+
+                btnsubsave.Text = "Update";
+                btnsubdelete.Enabled = true;
+            }
+        }
+
     }
 }
