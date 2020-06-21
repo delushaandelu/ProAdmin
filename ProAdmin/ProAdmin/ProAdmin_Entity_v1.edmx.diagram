@@ -9,6 +9,7 @@
         <EntityTypeShape EntityType="proadmin_v1Model.basicdata_university" Width="1.5" PointX="2.75" PointY="0.75" />
         <EntityTypeShape EntityType="proadmin_v1Model.basicdata_school" Width="1.5" PointX="0.75" PointY="2.625" />
         <EntityTypeShape EntityType="proadmin_v1Model.basicdata_subject" Width="1.5" PointX="2.75" PointY="2.625" />
+        <EntityTypeShape EntityType="proadmin_v1Model.basicdata_users" Width="1.5" PointX="5.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

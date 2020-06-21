@@ -31,7 +31,13 @@ namespace ProAdmin
 
         private void accManageStudent_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Noifdksad ");
+            if (!panelContainer.Controls.Contains(frmUsers.Instance))
+            {
+                panelContainer.Controls.Add(frmUsers.Instance);
+                frmUsers.Instance.Dock = DockStyle.Fill;
+                frmUsers.Instance.BringToFront();
+            }
+            frmUsers.Instance.BringToFront();
         }
 
         private void accordionControlElement3_Click(object sender, EventArgs e)
