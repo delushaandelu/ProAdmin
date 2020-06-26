@@ -1,0 +1,17 @@
+src
++--- App
+|   +--student-details
+|   |   | student-details.components.ts|html|css
+|   |   |--student-detail
+|   |   |   |--student-detail.component.tc|html|css
+|   |   |   |
+|   |   +-- student-detail-list
+|   |   |   |--student-detail-list.component.tc|html|css
+|   |   | 
+|   |   +-- shared
+|   |       |--student-detail.service.ts
+|   |       |--student-detail.model.ts
+|   |
+|   |--app.model.ts
+|
+|--index.html(cdn path for bootstarp and fontawesome)
