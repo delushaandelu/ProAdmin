@@ -23,6 +23,6 @@ namespace ProAdminWebVersion.Models
 
         public DbSet<UniversityDetail> UniversityDetails { get; set; }
 
-        public DbSet<UsersDetail> GetUsersDetails { get; set; }
+        public DbSet<UsersDetail> UsersDetails { get; set; }
     }
 }

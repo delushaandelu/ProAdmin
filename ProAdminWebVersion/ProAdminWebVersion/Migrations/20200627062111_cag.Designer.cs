@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProAdminWebVersion.Models;
 
 namespace ProAdminWebVersion.Migrations
 {
     [DbContext(typeof(ManageStudentDetailsContext))]
-    partial class ManageStudentDetailsContextModelSnapshot : ModelSnapshot
+    [Migration("20200627062111_cag")]
+    partial class cag
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
