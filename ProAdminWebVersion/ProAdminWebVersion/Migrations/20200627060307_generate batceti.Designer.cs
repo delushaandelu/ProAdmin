@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProAdminWebVersion.Models;
 
 namespace ProAdminWebVersion.Migrations
 {
     [DbContext(typeof(ManageStudentDetailsContext))]
-    partial class ManageStudentDetailsContextModelSnapshot : ModelSnapshot
+    [Migration("20200627060307_generate batceti")]
+    partial class generatebatceti
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -35,25 +37,6 @@ namespace ProAdminWebVersion.Migrations
                     b.HasKey("batchid");
 
                     b.ToTable("BatchDetails");
-                });
-
-            modelBuilder.Entity("ProAdminWebVersion.Models.SchoolDetail", b =>
-                {
-                    b.Property<int>("schid")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("log")
-                        .IsRequired()
-                        .HasColumnType("varchar(200)");
-
-                    b.Property<string>("schoolname")
-                        .IsRequired()
-                        .HasColumnType("varchar(200)");
-
-                    b.HasKey("schid");
-
-                    b.ToTable("SchoolDetails");
                 });
 
             modelBuilder.Entity("ProAdminWebVersion.Models.StudentsDetail", b =>
@@ -130,95 +113,6 @@ namespace ProAdminWebVersion.Migrations
                     b.HasKey("Sid");
 
                     b.ToTable("StudentDetails");
-                });
-
-            modelBuilder.Entity("ProAdminWebVersion.Models.SubjectDetail", b =>
-                {
-                    b.Property<int>("subid")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("log")
-                        .IsRequired()
-                        .HasColumnType("varchar(200)");
-
-                    b.Property<string>("subject")
-                        .IsRequired()
-                        .HasColumnType("varchar(200)");
-
-                    b.Property<string>("teacher")
-                        .IsRequired()
-                        .HasColumnType("varchar(200)");
-
-                    b.HasKey("subid");
-
-                    b.ToTable("SubjectDetails");
-                });
-
-            modelBuilder.Entity("ProAdminWebVersion.Models.UniversityDetail", b =>
-                {
-                    b.Property<int>("uniid")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("log")
-                        .IsRequired()
-                        .HasColumnType("varchar(200)");
-
-                    b.Property<string>("uniname")
-                        .IsRequired()
-                        .HasColumnType("varchar(200)");
-
-                    b.HasKey("uniid");
-
-                    b.ToTable("UniversityDetails");
-                });
-
-            modelBuilder.Entity("ProAdminWebVersion.Models.UsersDetail", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("email")
-                        .IsRequired()
-                        .HasColumnType("varchar(200)");
-
-                    b.Property<string>("fullname")
-                        .IsRequired()
-                        .HasColumnType("varchar(200)");
-
-                    b.Property<string>("log")
-                        .IsRequired()
-                        .HasColumnType("varchar(200)");
-
-                    b.Property<string>("nic")
-                        .IsRequired()
-                        .HasColumnType("varchar(200)");
-
-                    b.Property<string>("password")
-                        .IsRequired()
-                        .HasColumnType("varchar(200)");
-
-                    b.Property<string>("phone")
-                        .IsRequired()
-                        .HasColumnType("varchar(200)");
-
-                    b.Property<string>("role")
-                        .IsRequired()
-                        .HasColumnType("varchar(200)");
-
-                    b.Property<string>("status")
-                        .IsRequired()
-                        .HasColumnType("varchar(200)");
-
-                    b.Property<string>("username")
-                        .IsRequired()
-                        .HasColumnType("varchar(200)");
-
-                    b.HasKey("id");
-
-                    b.ToTable("GetUsersDetails");
                 });
 #pragma warning restore 612, 618
         }

@@ -14,5 +14,15 @@ namespace ProAdminWebVersion.Models
         }
 
         public DbSet<StudentsDetail> StudentDetails { get; set; }
+
+        public DbSet<BatchDetail> BatchDetails { get; set; }
+
+        public DbSet<SchoolDetail> SchoolDetails { get; set; }
+
+        public DbSet<SubjectDetail> SubjectDetails { get; set; }
+
+        public DbSet<UniversityDetail> UniversityDetails { get; set; }
+
+        public DbSet<UsersDetail> GetUsersDetails { get; set; }
     }
 }
