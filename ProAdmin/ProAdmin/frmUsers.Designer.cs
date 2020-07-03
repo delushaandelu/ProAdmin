@@ -30,9 +30,9 @@
         {
             this.tabNavigationPage3 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnGenPwandUN = new System.Windows.Forms.Button();
+            this.cmbstate = new System.Windows.Forms.ComboBox();
             this.cmbrole = new System.Windows.Forms.ComboBox();
-            this.dgvUser = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.label7 = new System.Windows.Forms.Label();
             this.txtnic = new DevExpress.XtraEditors.TextEdit();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -51,12 +51,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtfullname = new DevExpress.XtraEditors.TextEdit();
             this.tabPane1 = new DevExpress.XtraBars.Navigation.TabPane();
-            this.cmbstate = new System.Windows.Forms.ComboBox();
-            this.btnGenPwandUN = new System.Windows.Forms.Button();
+            this.dgvUser = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nic = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.role = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.log = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabNavigationPage3.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtnic.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtusername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtpassword.Properties)).BeginInit();
@@ -65,6 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtfullname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
             this.tabPane1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.SuspendLayout();
             // 
             // tabNavigationPage3
@@ -76,10 +83,10 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.dgvUser);
             this.groupBox3.Controls.Add(this.btnGenPwandUN);
             this.groupBox3.Controls.Add(this.cmbstate);
             this.groupBox3.Controls.Add(this.cmbrole);
-            this.groupBox3.Controls.Add(this.dgvUser);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.txtnic);
             this.groupBox3.Controls.Add(this.btnDelete);
@@ -99,10 +106,31 @@
             this.groupBox3.Controls.Add(this.txtfullname);
             this.groupBox3.Location = new System.Drawing.Point(29, 24);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(848, 431);
+            this.groupBox3.Size = new System.Drawing.Size(848, 437);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "User Infromation Settings";
+            // 
+            // btnGenPwandUN
+            // 
+            this.btnGenPwandUN.Location = new System.Drawing.Point(87, 147);
+            this.btnGenPwandUN.Name = "btnGenPwandUN";
+            this.btnGenPwandUN.Size = new System.Drawing.Size(530, 23);
+            this.btnGenPwandUN.TabIndex = 23;
+            this.btnGenPwandUN.Text = "Generate Default Username and Password";
+            this.btnGenPwandUN.UseVisualStyleBackColor = true;
+            this.btnGenPwandUN.Click += new System.EventHandler(this.btnGenPwandUN_Click);
+            // 
+            // cmbstate
+            // 
+            this.cmbstate.FormattingEnabled = true;
+            this.cmbstate.Items.AddRange(new object[] {
+            "Active",
+            "Deactive"});
+            this.cmbstate.Location = new System.Drawing.Point(412, 107);
+            this.cmbstate.Name = "cmbstate";
+            this.cmbstate.Size = new System.Drawing.Size(205, 21);
+            this.cmbstate.TabIndex = 6;
             // 
             // cmbrole
             // 
@@ -116,22 +144,6 @@
             this.cmbrole.Name = "cmbrole";
             this.cmbrole.Size = new System.Drawing.Size(205, 21);
             this.cmbrole.TabIndex = 5;
-            // 
-            // dgvUser
-            // 
-            this.dgvUser.Location = new System.Drawing.Point(22, 207);
-            this.dgvUser.MainView = this.gridView1;
-            this.dgvUser.Name = "dgvUser";
-            this.dgvUser.Size = new System.Drawing.Size(811, 218);
-            this.dgvUser.TabIndex = 12;
-            this.dgvUser.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            this.dgvUser.DoubleClick += new System.EventHandler(this.dgvUser_DoubleClick);
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.dgvUser;
-            this.gridView1.Name = "gridView1";
             // 
             // label7
             // 
@@ -158,6 +170,7 @@
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClear
             // 
@@ -293,26 +306,92 @@
             this.tabPane1.TabIndex = 6;
             this.tabPane1.Text = "Manage User Information";
             // 
-            // cmbstate
+            // dgvUser
             // 
-            this.cmbstate.FormattingEnabled = true;
-            this.cmbstate.Items.AddRange(new object[] {
-            "Active",
-            "Deactive"});
-            this.cmbstate.Location = new System.Drawing.Point(412, 107);
-            this.cmbstate.Name = "cmbstate";
-            this.cmbstate.Size = new System.Drawing.Size(205, 21);
-            this.cmbstate.TabIndex = 6;
+            this.dgvUser.AllowUserToAddRows = false;
+            this.dgvUser.AllowUserToDeleteRows = false;
+            this.dgvUser.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.fullname,
+            this.nic,
+            this.email,
+            this.phone,
+            this.role,
+            this.status,
+            this.username,
+            this.log});
+            this.dgvUser.Location = new System.Drawing.Point(23, 221);
+            this.dgvUser.Name = "dgvUser";
+            this.dgvUser.ReadOnly = true;
+            this.dgvUser.Size = new System.Drawing.Size(798, 204);
+            this.dgvUser.TabIndex = 24;
+            this.dgvUser.DoubleClick += new System.EventHandler(this.dgvUser_DoubleClick_1);
             // 
-            // btnGenPwandUN
+            // id
             // 
-            this.btnGenPwandUN.Location = new System.Drawing.Point(87, 147);
-            this.btnGenPwandUN.Name = "btnGenPwandUN";
-            this.btnGenPwandUN.Size = new System.Drawing.Size(530, 23);
-            this.btnGenPwandUN.TabIndex = 23;
-            this.btnGenPwandUN.Text = "Generate Default Username and Password";
-            this.btnGenPwandUN.UseVisualStyleBackColor = true;
-            this.btnGenPwandUN.Click += new System.EventHandler(this.btnGenPwandUN_Click);
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // fullname
+            // 
+            this.fullname.DataPropertyName = "fullname";
+            this.fullname.HeaderText = "fullname";
+            this.fullname.Name = "fullname";
+            this.fullname.ReadOnly = true;
+            // 
+            // nic
+            // 
+            this.nic.DataPropertyName = "nic";
+            this.nic.HeaderText = "nic";
+            this.nic.Name = "nic";
+            this.nic.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "email";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // phone
+            // 
+            this.phone.DataPropertyName = "phone";
+            this.phone.HeaderText = "phone";
+            this.phone.Name = "phone";
+            this.phone.ReadOnly = true;
+            // 
+            // role
+            // 
+            this.role.DataPropertyName = "role";
+            this.role.HeaderText = "role";
+            this.role.Name = "role";
+            this.role.ReadOnly = true;
+            // 
+            // status
+            // 
+            this.status.DataPropertyName = "status";
+            this.status.HeaderText = "status";
+            this.status.Name = "status";
+            this.status.ReadOnly = true;
+            // 
+            // username
+            // 
+            this.username.DataPropertyName = "username";
+            this.username.HeaderText = "username";
+            this.username.Name = "username";
+            this.username.ReadOnly = true;
+            // 
+            // log
+            // 
+            this.log.DataPropertyName = "log";
+            this.log.HeaderText = "log";
+            this.log.Name = "log";
+            this.log.ReadOnly = true;
             // 
             // frmUsers
             // 
@@ -324,8 +403,6 @@
             this.tabNavigationPage3.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtnic.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtusername.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtpassword.Properties)).EndInit();
@@ -334,6 +411,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtfullname.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).EndInit();
             this.tabPane1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -360,10 +438,18 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label7;
         private DevExpress.XtraEditors.TextEdit txtnic;
-        private DevExpress.XtraGrid.GridControl dgvUser;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.ComboBox cmbrole;
         private System.Windows.Forms.ComboBox cmbstate;
         private System.Windows.Forms.Button btnGenPwandUN;
+        private System.Windows.Forms.DataGridView dgvUser;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fullname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nic;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn role;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn username;
+        private System.Windows.Forms.DataGridViewTextBoxColumn log;
     }
 }

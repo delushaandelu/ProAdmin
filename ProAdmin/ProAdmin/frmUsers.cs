@@ -56,6 +56,7 @@ namespace ProAdmin
 
         private void populate_users_data_grid_view()
         {
+            dgvUser.AutoGenerateColumns = false;
             using (DBEntity db = new DBEntity())
             {
                 dgvUser.DataSource = db.basicdata_users.ToList<basicdata_users>();
@@ -114,6 +115,53 @@ namespace ProAdmin
         private void dgvUser_DoubleClick(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvUser_DoubleClick_1(object sender, EventArgs e)
+        {
+            if (dgvUser.CurrentRow.Index != -1)
+            {
+                model_users.id = Convert.ToInt32(dgvUser.CurrentRow.Cells["id"].Value);
+
+                using (DBEntity db = new DBEntity())
+                {
+                    model_users = db.basicdata_users.Where(x => x.id == model_users.id).FirstOrDefault();
+                    txtfullname.Text = model_users.fullname;
+                    txtnic.Text = model_users.nic;
+                    txtemail.Text = model_users.email;
+                    txtphone.Text = model_users.phone.ToString();
+                    cmbrole.SelectedValue = model_users.role;
+                    cmbstate.SelectedValue = model_users.status;
+                    txtusername.Text = model_users.username;
+                    txtpassword.Text = model_users.password;
+                    string now = DateTime.Now.ToString();
+                    now = model_users.log;
+                }
+
+                btnSave.Text = "Update";
+                btnDelete.Enabled = true;
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (XtraMessageBox.Show("Are you sure to delete the record?", "Delete Record", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                using (DBEntity db = new DBEntity())
+                {
+                    var entity = db.Entry(model_users);
+                    if (entity.State == EntityState.Detached)
+                        db.basicdata_users.Attach(model_users);
+                    db.basicdata_users.Remove(model_users);
+                    db.SaveChangesAsync();
+
+                    populate_users_data_grid_view();
+                    clear_fields();
+                    btnSave.Text = "Save";
+
+                    message_popup_ok("Data Deleted!");
+                }
+            }
         }
     }
 }
