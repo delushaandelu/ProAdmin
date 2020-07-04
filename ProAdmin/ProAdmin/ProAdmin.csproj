@@ -74,6 +74,9 @@
     <Compile Include="basicdata_school.cs">
       <DependentUpon>ProAdmin_Entity_v1.tt</DependentUpon>
     </Compile>
+    <Compile Include="basicdata_student.cs">
+      <DependentUpon>ProAdmin_Entity_v1.tt</DependentUpon>
+    </Compile>
     <Compile Include="basicdata_subject.cs">
       <DependentUpon>ProAdmin_Entity_v1.tt</DependentUpon>
     </Compile>
@@ -94,6 +97,12 @@
     </Compile>
     <Compile Include="frmManageBasicData.Designer.cs">
       <DependentUpon>frmManageBasicData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmStudent.Designer.cs">
+      <DependentUpon>frmStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="frmUsers.cs">
       <SubType>UserControl</SubType>
@@ -123,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmManageBasicData.resx">
       <DependentUpon>frmManageBasicData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudent.resx">
+      <DependentUpon>frmStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUsers.resx">
       <DependentUpon>frmUsers.cs</DependentUpon>

@@ -21,6 +21,29 @@
           <Property Name="schoolname" Type="varchar" MaxLength="200" />
           <Property Name="log" Type="varchar" MaxLength="200" />
         </EntityType>
+        <EntityType Name="basicdata_student">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="regid" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="Firstname" Type="varchar" MaxLength="200" />
+          <Property Name="Lastname" Type="varchar" MaxLength="200" />
+          <Property Name="Nic" Type="varchar" MaxLength="200" />
+          <Property Name="Dob" Type="varchar" MaxLength="200" />
+          <Property Name="home_address" Type="varchar" MaxLength="200" />
+          <Property Name="Home_tell" Type="varchar" MaxLength="200" />
+          <Property Name="Staying_address" Type="varchar" MaxLength="200" />
+          <Property Name="Stay_home_tell" Type="varchar" MaxLength="200" />
+          <Property Name="Father_name" Type="varchar" MaxLength="200" />
+          <Property Name="Parents_contact" Type="varchar" MaxLength="200" />
+          <Property Name="Ol_School" Type="varchar" MaxLength="200" />
+          <Property Name="Al_school" Type="varchar" MaxLength="200" />
+          <Property Name="Ol_result" Type="varchar" MaxLength="200" />
+          <Property Name="JoinDate" Type="varchar" MaxLength="200" />
+          <Property Name="Batch" Type="varchar" MaxLength="200" />
+          <Property Name="Scholarship" Type="varchar" MaxLength="200" />
+        </EntityType>
         <EntityType Name="basicdata_subject">
           <Key>
             <PropertyRef Name="subid" />
@@ -56,6 +79,7 @@
         <EntityContainer Name="proadmin_v1ModelStoreContainer">
           <EntitySet Name="basicdata_batch" EntityType="Self.basicdata_batch" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="basicdata_school" EntityType="Self.basicdata_school" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="basicdata_student" EntityType="Self.basicdata_student" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="basicdata_subject" EntityType="Self.basicdata_subject" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="basicdata_university" EntityType="Self.basicdata_university" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="basicdata_users" EntityType="Self.basicdata_users" Schema="dbo" store:Type="Tables" />
@@ -78,6 +102,7 @@
           <EntitySet Name="basicdata_school" EntityType="proadmin_v1Model.basicdata_school" />
           <EntitySet Name="basicdata_subject" EntityType="proadmin_v1Model.basicdata_subject" />
           <EntitySet Name="basicdata_users" EntityType="proadmin_v1Model.basicdata_users" />
+          <EntitySet Name="basicdata_student" EntityType="proadmin_v1Model.basicdata_student" />
         </EntityContainer>
         <EntityType Name="basicdata_university">
           <Key>
@@ -118,6 +143,29 @@
           <Property Name="password" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="log" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="nic" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="basicdata_student">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="regid" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Firstname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Lastname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Nic" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Dob" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="home_address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Home_tell" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Staying_address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Stay_home_tell" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Father_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Parents_contact" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Ol_School" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Al_school" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Ol_result" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="JoinDate" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Batch" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Scholarship" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -175,6 +223,30 @@
                 <ScalarProperty Name="email" ColumnName="email" />
                 <ScalarProperty Name="fullname" ColumnName="fullname" />
                 <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="basicdata_student">
+            <EntityTypeMapping TypeName="proadmin_v1Model.basicdata_student">
+              <MappingFragment StoreEntitySet="basicdata_student">
+                <ScalarProperty Name="Scholarship" ColumnName="Scholarship" />
+                <ScalarProperty Name="Batch" ColumnName="Batch" />
+                <ScalarProperty Name="JoinDate" ColumnName="JoinDate" />
+                <ScalarProperty Name="Ol_result" ColumnName="Ol_result" />
+                <ScalarProperty Name="Al_school" ColumnName="Al_school" />
+                <ScalarProperty Name="Ol_School" ColumnName="Ol_School" />
+                <ScalarProperty Name="Parents_contact" ColumnName="Parents_contact" />
+                <ScalarProperty Name="Father_name" ColumnName="Father_name" />
+                <ScalarProperty Name="Stay_home_tell" ColumnName="Stay_home_tell" />
+                <ScalarProperty Name="Staying_address" ColumnName="Staying_address" />
+                <ScalarProperty Name="Home_tell" ColumnName="Home_tell" />
+                <ScalarProperty Name="home_address" ColumnName="home_address" />
+                <ScalarProperty Name="Dob" ColumnName="Dob" />
+                <ScalarProperty Name="Nic" ColumnName="Nic" />
+                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+                <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+                <ScalarProperty Name="regid" ColumnName="regid" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

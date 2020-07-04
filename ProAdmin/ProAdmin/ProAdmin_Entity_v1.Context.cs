@@ -30,5 +30,6 @@ namespace ProAdmin
         public virtual DbSet<basicdata_school> basicdata_school { get; set; }
         public virtual DbSet<basicdata_subject> basicdata_subject { get; set; }
         public virtual DbSet<basicdata_users> basicdata_users { get; set; }
+        public virtual DbSet<basicdata_student> basicdata_student { get; set; }
     }
 }

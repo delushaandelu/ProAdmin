@@ -32,8 +32,8 @@
             this.panelContainer = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accBasicData = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accManageStudent = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accBasicData = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -78,6 +78,13 @@
             this.accordionControlElement1.Name = "accordionControlElement1";
             this.accordionControlElement1.Text = "Primary Data Setting";
             // 
+            // accManageStudent
+            // 
+            this.accManageStudent.Name = "accManageStudent";
+            this.accManageStudent.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accManageStudent.Text = "User Settings";
+            this.accManageStudent.Click += new System.EventHandler(this.accManageStudent_Click);
+            // 
             // accBasicData
             // 
             this.accBasicData.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
@@ -89,13 +96,6 @@
             this.accBasicData.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accBasicData.Text = "Basic Data Setting";
             this.accBasicData.Click += new System.EventHandler(this.accBasicData_Click);
-            // 
-            // accManageStudent
-            // 
-            this.accManageStudent.Name = "accManageStudent";
-            this.accManageStudent.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accManageStudent.Text = "User Settings";
-            this.accManageStudent.Click += new System.EventHandler(this.accManageStudent_Click);
             // 
             // accordionControlElement2
             // 
@@ -111,6 +111,7 @@
             this.accordionControlElement4.Name = "accordionControlElement4";
             this.accordionControlElement4.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement4.Text = "New Admition";
+            this.accordionControlElement4.Click += new System.EventHandler(this.accordionControlElement4_Click);
             // 
             // accordionControlElement3
             // 

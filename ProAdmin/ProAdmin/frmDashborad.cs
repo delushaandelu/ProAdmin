@@ -45,6 +45,15 @@ namespace ProAdmin
 
         }
 
-        
+        private void accordionControlElement4_Click(object sender, EventArgs e)
+        {
+            if (!panelContainer.Controls.Contains(frmStudent.Instance))
+            {
+                panelContainer.Controls.Add(frmStudent.Instance);
+                frmStudent.Instance.Dock = DockStyle.Fill;
+                frmStudent.Instance.BringToFront();
+            }
+            frmStudent.Instance.BringToFront();
+        }
     }
 }
