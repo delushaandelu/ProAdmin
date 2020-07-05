@@ -33,6 +33,30 @@ namespace ProAdmin
             txtjoiningdate.Text = DateTime.Now.ToString();
             populate_student_data_grid_view();
             populate_all_student_data_grid_view();
+            get_combo_vale_list();
+        }
+
+        private void get_combo_vale_list()
+        {
+            using (DBEntity db = new DBEntity())
+            {
+                var school = db.basicdata_school.Select(x => new { x.schid, x.schoolname });
+                cmbalschool.DataSource = school.ToList();
+                cmbalschool.ValueMember = "schid";
+                cmbalschool.DisplayMember = "schoolname";
+                cmbalschool.SelectedItem = null;
+
+
+                cmbolschool.DataSource = school.ToList();
+                cmbolschool.DisplayMember = "schoolname";
+                cmbolschool.SelectedItem = null;
+
+                var batch = db.basicdata_batch.Select(y => new { y.batchid, y.batch });
+                cmbbatch.DataSource = batch.ToList();
+                cmbbatch.DisplayMember = "batch";
+                cmbbatch.SelectedItem = null;
+
+            }
         }
 
         private void message_popup_ok(string messsage)
@@ -97,11 +121,11 @@ namespace ProAdmin
                 model_students.Stay_home_tell   = txtstayingtell.Text;
                 model_students.Father_name      = txtfathername.Text;
                 model_students.Parents_contact  = txtparenttell.Text;
-                model_students.Ol_School        = cmbalschool.SelectedItem.ToString();
-                model_students.Al_school        = cmbalschool.SelectedItem.ToString();
+                model_students.Ol_School        = cmbalschool.Text;
+                model_students.Al_school        = cmbalschool.Text;
                 model_students.Ol_result        = txtolresult.Text;
                 model_students.JoinDate         = txtjoiningdate.Text;
-                model_students.Batch            = cmbbatch.SelectedItem.ToString();
+                model_students.Batch            = cmbbatch.Text;
                 model_students.Scholarship      = cmbscholership.SelectedItem.ToString();
 
 
@@ -148,11 +172,11 @@ namespace ProAdmin
                     txtstayingtell.Text         = model_students.Stay_home_tell;
                     txtfathername.Text          = model_students.Father_name;
                     txtparenttell.Text          = model_students.Parents_contact;
-                    cmbolschool.SelectedItem    = model_students.Ol_School;
-                    cmbalschool.SelectedItem    = model_students.Al_school;
+                    cmbolschool.Text            = model_students.Ol_School;
+                    cmbalschool.Text            = model_students.Al_school;
                     txtolresult.Text            = model_students.Ol_result;
                     txtjoiningdate.Text         = model_students.JoinDate;
-                    cmbbatch.SelectedItem       = model_students.Batch;
+                    cmbbatch.Text               = model_students.Batch;
                     cmbscholership.SelectedItem = model_students.Scholarship;
                 }
 
@@ -185,16 +209,46 @@ namespace ProAdmin
                     txtstayingtell.Text         = model_students.Stay_home_tell;
                     txtfathername.Text          = model_students.Father_name;
                     txtparenttell.Text          = model_students.Parents_contact;
-                    cmbolschool.SelectedItem    = model_students.Ol_School;
-                    cmbalschool.SelectedItem    = model_students.Al_school;
+                    cmbolschool.Text            = model_students.Ol_School;
+                    cmbalschool.Text            = model_students.Al_school;
                     txtolresult.Text            = model_students.Ol_result;
                     txtjoiningdate.Text         = model_students.JoinDate;
-                    cmbbatch.SelectedItem       = model_students.Batch;
+                    cmbbatch.Text               = model_students.Batch;
                     cmbscholership.SelectedItem = model_students.Scholarship;
                 }
 
                 btnSave.Text = "Update";
                 btnDelete.Enabled = true;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            txtjoiningdate.Text = DateTime.Now.ToString();
+            populate_student_data_grid_view();
+            populate_all_student_data_grid_view();
+            get_combo_vale_list();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (XtraMessageBox.Show("Are you sure to delete the record?", "Delete Record", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                using (DBEntity db = new DBEntity())
+                {
+                    var entity = db.Entry(model_students);
+                    if (entity.State == EntityState.Detached)
+                        db.basicdata_student.Attach(model_students);
+                    db.basicdata_student.Remove(model_students);
+                    db.SaveChangesAsync();
+
+                    populate_student_data_grid_view();
+                    populate_all_student_data_grid_view();
+                    clear_fields();
+                    btnSave.Text = "Save";
+
+                    message_popup_ok("Data Deleted!");
+                }
             }
         }
     }

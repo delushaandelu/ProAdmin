@@ -93,6 +93,7 @@
             this.tabNavigationPage1 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.dgvAllStudent = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txtsearch)).BeginInit();
             this.txtsearch.SuspendLayout();
             this.tabNavigationPage3.SuspendLayout();
@@ -136,6 +137,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnRefresh);
             this.groupBox3.Controls.Add(this.groupBox1);
             this.groupBox3.Controls.Add(this.dgvStudent);
             this.groupBox3.Controls.Add(this.cmbalschool);
@@ -216,6 +218,7 @@
             resources.ApplyResources(this.btnDelete, "btnDelete");
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClear
             // 
@@ -383,24 +386,18 @@
             // cmbalschool
             // 
             this.cmbalschool.FormattingEnabled = true;
-            this.cmbalschool.Items.AddRange(new object[] {
-            resources.GetString("cmbalschool.Items")});
             resources.ApplyResources(this.cmbalschool, "cmbalschool");
             this.cmbalschool.Name = "cmbalschool";
             // 
             // cmbolschool
             // 
             this.cmbolschool.FormattingEnabled = true;
-            this.cmbolschool.Items.AddRange(new object[] {
-            resources.GetString("cmbolschool.Items")});
             resources.ApplyResources(this.cmbolschool, "cmbolschool");
             this.cmbolschool.Name = "cmbolschool";
             // 
             // cmbbatch
             // 
             this.cmbbatch.FormattingEnabled = true;
-            this.cmbbatch.Items.AddRange(new object[] {
-            resources.GetString("cmbbatch.Items")});
             resources.ApplyResources(this.cmbbatch, "cmbbatch");
             this.cmbbatch.Name = "cmbbatch";
             // 
@@ -579,6 +576,14 @@
             this.gridView1.GridControl = this.dgvAllStudent;
             this.gridView1.Name = "gridView1";
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btnRefresh, "btnRefresh");
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmStudent
             // 
             resources.ApplyResources(this, "$this");
@@ -678,5 +683,6 @@
         private DevExpress.XtraBars.Navigation.TabNavigationPage tabNavigationPage1;
         private DevExpress.XtraGrid.GridControl dgvAllStudent;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }
