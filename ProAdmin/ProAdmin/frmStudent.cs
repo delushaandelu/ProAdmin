@@ -32,6 +32,7 @@ namespace ProAdmin
             InitializeComponent();
             txtjoiningdate.Text = DateTime.Now.ToString();
             populate_student_data_grid_view();
+            populate_all_student_data_grid_view();
         }
 
         private void message_popup_ok(string messsage)
@@ -49,6 +50,14 @@ namespace ProAdmin
             using (DBEntity db = new DBEntity())
             {
                 dgvStudent.DataSource = db.basicdata_student.ToList<basicdata_student>();
+            }
+        }
+
+        private void populate_all_student_data_grid_view()
+        {
+            using (DBEntity db = new DBEntity())
+            {
+                dgvAllStudent.DataSource = db.basicdata_student.ToList<basicdata_student>();
             }
         }
 
@@ -70,6 +79,7 @@ namespace ProAdmin
             txtjoiningdate.Text             = null;
             cmbbatch.SelectedItem           = null;
             cmbscholership.SelectedItem     = null;
+            txtfind.Text                    = null;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -160,26 +170,26 @@ namespace ProAdmin
         {
             if (txtsearch.Text != null)
             {
-                model_students.regid = txtsearch.Text;
+                model_students.regid = txtfind.Text;
 
                 using (DBEntity db = new DBEntity())
                 {
-                    model_students = db.basicdata_student.Where(x => x.Id == model_students.Id).FirstOrDefault();
-                    txtfirstname.Text = model_students.Firstname;
-                    txtlastname.Text = model_students.Lastname;
-                    txtnic.Text = model_students.Nic;
-                    dtpdob.Text = model_students.Dob;
-                    txthomeaddress.Text = model_students.home_address;
-                    txthometell.Text = model_students.Home_tell;
-                    txtstayingaddress.Text = model_students.Staying_address;
-                    txtstayingtell.Text = model_students.Stay_home_tell;
-                    txtfathername.Text = model_students.Father_name;
-                    txtparenttell.Text = model_students.Parents_contact;
-                    cmbolschool.SelectedItem = model_students.Ol_School;
-                    cmbalschool.SelectedItem = model_students.Al_school;
-                    txtolresult.Text = model_students.Ol_result;
-                    txtjoiningdate.Text = model_students.JoinDate;
-                    cmbbatch.SelectedItem = model_students.Batch;
+                    model_students              = db.basicdata_student.Where(x => x.regid == model_students.regid).FirstOrDefault();
+                    txtfirstname.Text           = model_students.Firstname;
+                    txtlastname.Text            = model_students.Lastname;
+                    txtnic.Text                 = model_students.Nic;
+                    dtpdob.Text                 = model_students.Dob;
+                    txthomeaddress.Text         = model_students.home_address;
+                    txthometell.Text            = model_students.Home_tell;
+                    txtstayingaddress.Text      = model_students.Staying_address;
+                    txtstayingtell.Text         = model_students.Stay_home_tell;
+                    txtfathername.Text          = model_students.Father_name;
+                    txtparenttell.Text          = model_students.Parents_contact;
+                    cmbolschool.SelectedItem    = model_students.Ol_School;
+                    cmbalschool.SelectedItem    = model_students.Al_school;
+                    txtolresult.Text            = model_students.Ol_result;
+                    txtjoiningdate.Text         = model_students.JoinDate;
+                    cmbbatch.SelectedItem       = model_students.Batch;
                     cmbscholership.SelectedItem = model_students.Scholarship;
                 }
 

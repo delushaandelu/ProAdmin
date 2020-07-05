@@ -119,6 +119,7 @@ namespace ProAdmin
 
         private void dgvUser_DoubleClick_1(object sender, EventArgs e)
         {
+
             if (dgvUser.CurrentRow.Index != -1)
             {
                 model_users.id = Convert.ToInt32(dgvUser.CurrentRow.Cells["id"].Value);

@@ -201,25 +201,25 @@
   <data name="&gt;&gt;btnsearch.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="textEdit1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="txtfind.Location" type="System.Drawing.Point, System.Drawing">
     <value>95, 79</value>
   </data>
-  <data name="textEdit1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtfind.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 20</value>
   </data>
-  <data name="textEdit1.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtfind.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
   </data>
-  <data name="&gt;&gt;textEdit1.Name" xml:space="preserve">
-    <value>textEdit1</value>
+  <data name="&gt;&gt;txtfind.Name" xml:space="preserve">
+    <value>txtfind</value>
   </data>
-  <data name="&gt;&gt;textEdit1.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtfind.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;textEdit1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtfind.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;textEdit1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtfind.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
@@ -1320,6 +1320,48 @@
   <data name="&gt;&gt;tabNavigationPage3.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="tabNavigationPage1.Caption" xml:space="preserve">
+    <value>View All Student</value>
+  </data>
+  <data name="dgvAllStudent.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dgvAllStudent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="dgvAllStudent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1151, 855</value>
+  </data>
+  <data name="dgvAllStudent.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dgvAllStudent.Name" xml:space="preserve">
+    <value>dgvAllStudent</value>
+  </data>
+  <data name="&gt;&gt;dgvAllStudent.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;dgvAllStudent.Parent" xml:space="preserve">
+    <value>tabNavigationPage1</value>
+  </data>
+  <data name="&gt;&gt;dgvAllStudent.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabNavigationPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1151, 855</value>
+  </data>
+  <data name="&gt;&gt;tabNavigationPage1.Name" xml:space="preserve">
+    <value>tabNavigationPage1</value>
+  </data>
+  <data name="&gt;&gt;tabNavigationPage1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Navigation.TabNavigationPage, DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;tabNavigationPage1.Parent" xml:space="preserve">
+    <value>txtsearch</value>
+  </data>
+  <data name="&gt;&gt;tabNavigationPage1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="txtsearch.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -1463,6 +1505,12 @@
   </data>
   <data name="&gt;&gt;Scholarship.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gridView1.Name" xml:space="preserve">
+    <value>gridView1</value>
+  </data>
+  <data name="&gt;&gt;gridView1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmStudent</value>
