@@ -31,6 +31,7 @@ namespace ProAdmin
         {
             InitializeComponent();
             txtjoiningdate.Text = DateTime.Now.ToString();
+            txtnewjoiningdate.Text = DateTime.Now.ToString();
             populate_student_data_grid_view();
             populate_all_student_data_grid_view();
             get_combo_vale_list();
@@ -51,10 +52,26 @@ namespace ProAdmin
                 cmbolschool.DisplayMember = "schoolname";
                 cmbolschool.SelectedItem = null;
 
+                cmbnewalschool.DataSource = school.ToList();
+                cmbnewalschool.ValueMember = "schid";
+                cmbnewalschool.DisplayMember = "schoolname";
+                cmbnewalschool.SelectedItem = null;
+
+
+                cmbnewolschool.DataSource = school.ToList();
+                cmbnewolschool.DisplayMember = "schoolname";
+                cmbnewolschool.SelectedItem = null;
+
+
+
                 var batch = db.basicdata_batch.Select(y => new { y.batchid, y.batch });
                 cmbbatch.DataSource = batch.ToList();
                 cmbbatch.DisplayMember = "batch";
                 cmbbatch.SelectedItem = null;
+
+                cmbnewbatch.DataSource = batch.ToList();
+                cmbnewbatch.DisplayMember = "batch";
+                cmbnewbatch.SelectedItem = null;
 
             }
         }
@@ -100,7 +117,6 @@ namespace ProAdmin
             cmbolschool.SelectedItem        = null;
             cmbalschool.SelectedItem        = null;
             txtolresult.Text                = null;
-            txtjoiningdate.Text             = null;
             cmbbatch.SelectedItem           = null;
             cmbscholership.SelectedItem     = null;
             txtfind.Text                    = null;
@@ -225,6 +241,7 @@ namespace ProAdmin
         private void button1_Click(object sender, EventArgs e)
         {
             txtjoiningdate.Text = DateTime.Now.ToString();
+            txtnewjoiningdate.Text = DateTime.Now.ToString();
             populate_student_data_grid_view();
             populate_all_student_data_grid_view();
             get_combo_vale_list();
@@ -250,6 +267,90 @@ namespace ProAdmin
                     message_popup_ok("Data Deleted!");
                 }
             }
+        }
+
+        private void btnnewsave_Click(object sender, EventArgs e)
+        {
+            if (txtfirstname.Text != null)
+            {
+                string regid = DateTime.Now.ToString("yyyMMhhmmss");
+                model_students.regid = regid;
+                model_students.Firstname = txtnewfullname.Text;
+                model_students.Lastname = txtnewlastname.Text;
+                model_students.Nic = txtnewnic.Text;
+                model_students.Dob = dtpnewdob.Text;
+                model_students.home_address = txtnewhomwaddress.Text;
+                model_students.Home_tell = txtnewhometell.Text;
+                model_students.Staying_address = txtnewstayaddress.Text;
+                model_students.Stay_home_tell = txtnewstaytell.Text;
+                model_students.Father_name = txtnewfathername.Text;
+                model_students.Parents_contact = txtnewparentsname.Text;
+                model_students.Ol_School = cmbnewolschool.Text;
+                model_students.Al_school = cmbnewalschool.Text;
+                model_students.Ol_result = txtnewolresult.Text;
+                model_students.JoinDate = txtnewjoiningdate.Text;
+                model_students.Batch = cmbnewbatch.Text;
+                model_students.Scholarship = cmbnewscol.SelectedItem.ToString();
+
+
+                using (DBEntity db = new DBEntity())
+                {
+
+                    if (model_students.Id == 0)//Insert
+                        db.basicdata_student.Add(model_students);
+                    else //Update
+                        db.Entry(model_students).State = EntityState.Modified;
+
+                    db.SaveChangesAsync();
+                    clear_fields();
+                    message_popup_ok("Data Record Saved!");
+                    populate_student_data_grid_view();
+
+                    //Reset normal after changes done
+                    model_students.Id = 0;
+                    btnSave.Text = "Save";
+                    txtmessage.Text = "New Student Reg ID : '" + regid + "'";
+
+                    txtnewfullname.Text         = null;
+                    txtnewlastname.Text         = null;
+                    txtnewnic.Text              = null;
+                    dtpnewdob.Text              = null;
+                    txtnewhomwaddress.Text      = null;
+                    txtnewhometell.Text         = null;
+                    txtnewstayaddress.Text      = null;
+                    txtnewstaytell.Text         = null;
+                    txtnewfathername.Text       = null;
+                    txtnewparentsname.Text      = null;
+                    cmbnewolschool.Text         = null;
+                    cmbnewalschool.Text         = null;
+                    txtnewolresult.Text         = null;
+                    cmbnewbatch.Text            = null;
+                    cmbnewscol.SelectedItem     = null;
+                }
+            }
+            else
+            {
+                message_popup_ok("Empty fields found.");
+            }
+        }
+
+        private void btnregresh2_Click(object sender, EventArgs e)
+        {
+            txtjoiningdate.Text = DateTime.Now.ToString();
+            txtnewjoiningdate.Text = DateTime.Now.ToString();
+            populate_student_data_grid_view();
+            populate_all_student_data_grid_view();
+            get_combo_vale_list();
+        }
+
+        private void btnnewrefresh_Click(object sender, EventArgs e)
+        {
+            txtjoiningdate.Text = DateTime.Now.ToString();
+            txtnewjoiningdate.Text = DateTime.Now.ToString();
+            populate_student_data_grid_view();
+            populate_all_student_data_grid_view();
+            get_combo_vale_list();
+            txtmessage.Text = null;
         }
     }
 }

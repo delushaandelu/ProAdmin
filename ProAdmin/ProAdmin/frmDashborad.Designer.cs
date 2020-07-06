@@ -110,14 +110,14 @@
             // 
             this.accordionControlElement4.Name = "accordionControlElement4";
             this.accordionControlElement4.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement4.Text = "New Admition";
+            this.accordionControlElement4.Text = "Student Basic Data Control";
             this.accordionControlElement4.Click += new System.EventHandler(this.accordionControlElement4_Click);
             // 
             // accordionControlElement3
             // 
             this.accordionControlElement3.Name = "accordionControlElement3";
             this.accordionControlElement3.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement3.Text = "Manage Students";
+            this.accordionControlElement3.Text = "Print Student ID";
             this.accordionControlElement3.Click += new System.EventHandler(this.accordionControlElement3_Click);
             // 
             // fluentDesignFormControl1

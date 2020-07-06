@@ -94,6 +94,44 @@
             this.dgvAllStudent = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.tabNavigationPage2 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.btnnewsave = new System.Windows.Forms.Button();
+            this.cmbnewalschool = new System.Windows.Forms.ComboBox();
+            this.cmbnewolschool = new System.Windows.Forms.ComboBox();
+            this.cmbnewbatch = new System.Windows.Forms.ComboBox();
+            this.cmbnewscol = new System.Windows.Forms.ComboBox();
+            this.dtpnewdob = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtnewjoiningdate = new DevExpress.XtraEditors.TextEdit();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtnewolresult = new DevExpress.XtraEditors.TextEdit();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.txtnewparentsname = new DevExpress.XtraEditors.TextEdit();
+            this.label26 = new System.Windows.Forms.Label();
+            this.txtnewfathername = new DevExpress.XtraEditors.TextEdit();
+            this.label27 = new System.Windows.Forms.Label();
+            this.txtnewstaytell = new DevExpress.XtraEditors.TextEdit();
+            this.label28 = new System.Windows.Forms.Label();
+            this.txtnewstayaddress = new DevExpress.XtraEditors.TextEdit();
+            this.label29 = new System.Windows.Forms.Label();
+            this.txtnewhometell = new DevExpress.XtraEditors.TextEdit();
+            this.label30 = new System.Windows.Forms.Label();
+            this.txtnewhomwaddress = new DevExpress.XtraEditors.TextEdit();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.txtnewnic = new DevExpress.XtraEditors.TextEdit();
+            this.label33 = new System.Windows.Forms.Label();
+            this.txtnewlastname = new DevExpress.XtraEditors.TextEdit();
+            this.label34 = new System.Windows.Forms.Label();
+            this.txtnewfullname = new DevExpress.XtraEditors.TextEdit();
+            this.txtmessage = new System.Windows.Forms.Label();
+            this.txtmessagename = new System.Windows.Forms.Label();
+            this.btnregresh2 = new System.Windows.Forms.Button();
+            this.btnnewrefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txtsearch)).BeginInit();
             this.txtsearch.SuspendLayout();
             this.tabNavigationPage3.SuspendLayout();
@@ -115,15 +153,29 @@
             this.tabNavigationPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.tabNavigationPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnewjoiningdate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnewolresult.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnewparentsname.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnewfathername.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnewstaytell.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnewstayaddress.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnewhometell.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnewhomwaddress.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnewnic.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnewlastname.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnewfullname.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // txtsearch
             // 
             this.txtsearch.Controls.Add(this.tabNavigationPage3);
             this.txtsearch.Controls.Add(this.tabNavigationPage1);
+            this.txtsearch.Controls.Add(this.tabNavigationPage2);
             resources.ApplyResources(this.txtsearch, "txtsearch");
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
+            this.tabNavigationPage2,
             this.tabNavigationPage3,
             this.tabNavigationPage1});
             this.txtsearch.RegularSize = new System.Drawing.Size(1151, 892);
@@ -560,6 +612,7 @@
             // tabNavigationPage1
             // 
             resources.ApplyResources(this.tabNavigationPage1, "tabNavigationPage1");
+            this.tabNavigationPage1.Controls.Add(this.btnregresh2);
             this.tabNavigationPage1.Controls.Add(this.dgvAllStudent);
             this.tabNavigationPage1.Name = "tabNavigationPage1";
             // 
@@ -583,6 +636,254 @@
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // tabNavigationPage2
+            // 
+            resources.ApplyResources(this.tabNavigationPage2, "tabNavigationPage2");
+            this.tabNavigationPage2.Controls.Add(this.btnnewrefresh);
+            this.tabNavigationPage2.Controls.Add(this.txtmessagename);
+            this.tabNavigationPage2.Controls.Add(this.txtmessage);
+            this.tabNavigationPage2.Controls.Add(this.cmbnewalschool);
+            this.tabNavigationPage2.Controls.Add(this.cmbnewolschool);
+            this.tabNavigationPage2.Controls.Add(this.btnnewsave);
+            this.tabNavigationPage2.Controls.Add(this.cmbnewbatch);
+            this.tabNavigationPage2.Controls.Add(this.cmbnewscol);
+            this.tabNavigationPage2.Controls.Add(this.dtpnewdob);
+            this.tabNavigationPage2.Controls.Add(this.label4);
+            this.tabNavigationPage2.Controls.Add(this.label5);
+            this.tabNavigationPage2.Controls.Add(this.label6);
+            this.tabNavigationPage2.Controls.Add(this.txtnewjoiningdate);
+            this.tabNavigationPage2.Controls.Add(this.label8);
+            this.tabNavigationPage2.Controls.Add(this.txtnewolresult);
+            this.tabNavigationPage2.Controls.Add(this.label23);
+            this.tabNavigationPage2.Controls.Add(this.label24);
+            this.tabNavigationPage2.Controls.Add(this.label25);
+            this.tabNavigationPage2.Controls.Add(this.txtnewparentsname);
+            this.tabNavigationPage2.Controls.Add(this.label26);
+            this.tabNavigationPage2.Controls.Add(this.txtnewfathername);
+            this.tabNavigationPage2.Controls.Add(this.label27);
+            this.tabNavigationPage2.Controls.Add(this.txtnewstaytell);
+            this.tabNavigationPage2.Controls.Add(this.label28);
+            this.tabNavigationPage2.Controls.Add(this.txtnewstayaddress);
+            this.tabNavigationPage2.Controls.Add(this.label29);
+            this.tabNavigationPage2.Controls.Add(this.txtnewhometell);
+            this.tabNavigationPage2.Controls.Add(this.label30);
+            this.tabNavigationPage2.Controls.Add(this.txtnewhomwaddress);
+            this.tabNavigationPage2.Controls.Add(this.label31);
+            this.tabNavigationPage2.Controls.Add(this.label32);
+            this.tabNavigationPage2.Controls.Add(this.txtnewnic);
+            this.tabNavigationPage2.Controls.Add(this.label33);
+            this.tabNavigationPage2.Controls.Add(this.txtnewlastname);
+            this.tabNavigationPage2.Controls.Add(this.label34);
+            this.tabNavigationPage2.Controls.Add(this.txtnewfullname);
+            this.tabNavigationPage2.Name = "tabNavigationPage2";
+            // 
+            // btnnewsave
+            // 
+            resources.ApplyResources(this.btnnewsave, "btnnewsave");
+            this.btnnewsave.Name = "btnnewsave";
+            this.btnnewsave.UseVisualStyleBackColor = true;
+            this.btnnewsave.Click += new System.EventHandler(this.btnnewsave_Click);
+            // 
+            // cmbnewalschool
+            // 
+            this.cmbnewalschool.FormattingEnabled = true;
+            resources.ApplyResources(this.cmbnewalschool, "cmbnewalschool");
+            this.cmbnewalschool.Name = "cmbnewalschool";
+            // 
+            // cmbnewolschool
+            // 
+            this.cmbnewolschool.FormattingEnabled = true;
+            resources.ApplyResources(this.cmbnewolschool, "cmbnewolschool");
+            this.cmbnewolschool.Name = "cmbnewolschool";
+            // 
+            // cmbnewbatch
+            // 
+            this.cmbnewbatch.FormattingEnabled = true;
+            resources.ApplyResources(this.cmbnewbatch, "cmbnewbatch");
+            this.cmbnewbatch.Name = "cmbnewbatch";
+            // 
+            // cmbnewscol
+            // 
+            this.cmbnewscol.FormattingEnabled = true;
+            this.cmbnewscol.Items.AddRange(new object[] {
+            resources.GetString("cmbnewscol.Items"),
+            resources.GetString("cmbnewscol.Items1")});
+            resources.ApplyResources(this.cmbnewscol, "cmbnewscol");
+            this.cmbnewscol.Name = "cmbnewscol";
+            // 
+            // dtpnewdob
+            // 
+            resources.ApplyResources(this.dtpnewdob, "dtpnewdob");
+            this.dtpnewdob.Name = "dtpnewdob";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            this.label5.Tag = "";
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
+            // txtnewjoiningdate
+            // 
+            resources.ApplyResources(this.txtnewjoiningdate, "txtnewjoiningdate");
+            this.txtnewjoiningdate.Name = "txtnewjoiningdate";
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            this.label8.Tag = "";
+            // 
+            // txtnewolresult
+            // 
+            resources.ApplyResources(this.txtnewolresult, "txtnewolresult");
+            this.txtnewolresult.Name = "txtnewolresult";
+            // 
+            // label23
+            // 
+            resources.ApplyResources(this.label23, "label23");
+            this.label23.Name = "label23";
+            // 
+            // label24
+            // 
+            resources.ApplyResources(this.label24, "label24");
+            this.label24.Name = "label24";
+            this.label24.Tag = "";
+            // 
+            // label25
+            // 
+            resources.ApplyResources(this.label25, "label25");
+            this.label25.Name = "label25";
+            // 
+            // txtnewparentsname
+            // 
+            resources.ApplyResources(this.txtnewparentsname, "txtnewparentsname");
+            this.txtnewparentsname.Name = "txtnewparentsname";
+            // 
+            // label26
+            // 
+            resources.ApplyResources(this.label26, "label26");
+            this.label26.Name = "label26";
+            this.label26.Tag = "";
+            // 
+            // txtnewfathername
+            // 
+            resources.ApplyResources(this.txtnewfathername, "txtnewfathername");
+            this.txtnewfathername.Name = "txtnewfathername";
+            // 
+            // label27
+            // 
+            resources.ApplyResources(this.label27, "label27");
+            this.label27.Name = "label27";
+            // 
+            // txtnewstaytell
+            // 
+            resources.ApplyResources(this.txtnewstaytell, "txtnewstaytell");
+            this.txtnewstaytell.Name = "txtnewstaytell";
+            // 
+            // label28
+            // 
+            resources.ApplyResources(this.label28, "label28");
+            this.label28.Name = "label28";
+            this.label28.Tag = "";
+            // 
+            // txtnewstayaddress
+            // 
+            resources.ApplyResources(this.txtnewstayaddress, "txtnewstayaddress");
+            this.txtnewstayaddress.Name = "txtnewstayaddress";
+            // 
+            // label29
+            // 
+            resources.ApplyResources(this.label29, "label29");
+            this.label29.Name = "label29";
+            // 
+            // txtnewhometell
+            // 
+            resources.ApplyResources(this.txtnewhometell, "txtnewhometell");
+            this.txtnewhometell.Name = "txtnewhometell";
+            // 
+            // label30
+            // 
+            resources.ApplyResources(this.label30, "label30");
+            this.label30.Name = "label30";
+            this.label30.Tag = "";
+            // 
+            // txtnewhomwaddress
+            // 
+            resources.ApplyResources(this.txtnewhomwaddress, "txtnewhomwaddress");
+            this.txtnewhomwaddress.Name = "txtnewhomwaddress";
+            // 
+            // label31
+            // 
+            resources.ApplyResources(this.label31, "label31");
+            this.label31.Name = "label31";
+            // 
+            // label32
+            // 
+            resources.ApplyResources(this.label32, "label32");
+            this.label32.Name = "label32";
+            this.label32.Tag = "";
+            // 
+            // txtnewnic
+            // 
+            resources.ApplyResources(this.txtnewnic, "txtnewnic");
+            this.txtnewnic.Name = "txtnewnic";
+            // 
+            // label33
+            // 
+            resources.ApplyResources(this.label33, "label33");
+            this.label33.Name = "label33";
+            // 
+            // txtnewlastname
+            // 
+            resources.ApplyResources(this.txtnewlastname, "txtnewlastname");
+            this.txtnewlastname.Name = "txtnewlastname";
+            // 
+            // label34
+            // 
+            resources.ApplyResources(this.label34, "label34");
+            this.label34.Name = "label34";
+            // 
+            // txtnewfullname
+            // 
+            resources.ApplyResources(this.txtnewfullname, "txtnewfullname");
+            this.txtnewfullname.Name = "txtnewfullname";
+            // 
+            // txtmessage
+            // 
+            resources.ApplyResources(this.txtmessage, "txtmessage");
+            this.txtmessage.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.txtmessage.Name = "txtmessage";
+            // 
+            // txtmessagename
+            // 
+            resources.ApplyResources(this.txtmessagename, "txtmessagename");
+            this.txtmessagename.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.txtmessagename.Name = "txtmessagename";
+            // 
+            // btnregresh2
+            // 
+            resources.ApplyResources(this.btnregresh2, "btnregresh2");
+            this.btnregresh2.Name = "btnregresh2";
+            this.btnregresh2.UseVisualStyleBackColor = true;
+            this.btnregresh2.Click += new System.EventHandler(this.btnregresh2_Click);
+            // 
+            // btnnewrefresh
+            // 
+            resources.ApplyResources(this.btnnewrefresh, "btnnewrefresh");
+            this.btnnewrefresh.Name = "btnnewrefresh";
+            this.btnnewrefresh.UseVisualStyleBackColor = true;
+            this.btnnewrefresh.Click += new System.EventHandler(this.btnnewrefresh_Click);
             // 
             // frmStudent
             // 
@@ -613,6 +914,19 @@
             this.tabNavigationPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllStudent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            this.tabNavigationPage2.ResumeLayout(false);
+            this.tabNavigationPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnewjoiningdate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnewolresult.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnewparentsname.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnewfathername.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnewstaytell.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnewstayaddress.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnewhometell.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnewhomwaddress.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnewnic.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnewlastname.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnewfullname.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -684,5 +998,43 @@
         private DevExpress.XtraGrid.GridControl dgvAllStudent;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.Button btnRefresh;
+        private DevExpress.XtraBars.Navigation.TabNavigationPage tabNavigationPage2;
+        private System.Windows.Forms.ComboBox cmbnewalschool;
+        private System.Windows.Forms.ComboBox cmbnewolschool;
+        private System.Windows.Forms.Button btnnewsave;
+        private System.Windows.Forms.ComboBox cmbnewbatch;
+        private System.Windows.Forms.ComboBox cmbnewscol;
+        private System.Windows.Forms.DateTimePicker dtpnewdob;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private DevExpress.XtraEditors.TextEdit txtnewjoiningdate;
+        private System.Windows.Forms.Label label8;
+        private DevExpress.XtraEditors.TextEdit txtnewolresult;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private DevExpress.XtraEditors.TextEdit txtnewparentsname;
+        private System.Windows.Forms.Label label26;
+        private DevExpress.XtraEditors.TextEdit txtnewfathername;
+        private System.Windows.Forms.Label label27;
+        private DevExpress.XtraEditors.TextEdit txtnewstaytell;
+        private System.Windows.Forms.Label label28;
+        private DevExpress.XtraEditors.TextEdit txtnewstayaddress;
+        private System.Windows.Forms.Label label29;
+        private DevExpress.XtraEditors.TextEdit txtnewhometell;
+        private System.Windows.Forms.Label label30;
+        private DevExpress.XtraEditors.TextEdit txtnewhomwaddress;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private DevExpress.XtraEditors.TextEdit txtnewnic;
+        private System.Windows.Forms.Label label33;
+        private DevExpress.XtraEditors.TextEdit txtnewlastname;
+        private System.Windows.Forms.Label label34;
+        private DevExpress.XtraEditors.TextEdit txtnewfullname;
+        private System.Windows.Forms.Label txtmessage;
+        private System.Windows.Forms.Label txtmessagename;
+        private System.Windows.Forms.Button btnregresh2;
+        private System.Windows.Forms.Button btnnewrefresh;
     }
 }
