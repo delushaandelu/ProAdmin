@@ -42,7 +42,13 @@ namespace ProAdmin
 
         private void accordionControlElement3_Click(object sender, EventArgs e)
         {
-
+            if (!panelContainer.Controls.Contains(frmStudentIDCard.Instance))
+            {
+                panelContainer.Controls.Add(frmStudentIDCard.Instance);
+                frmStudentIDCard.Instance.Dock = DockStyle.Fill;
+                frmStudentIDCard.Instance.BringToFront();
+            }
+            frmStudentIDCard.Instance.BringToFront();
         }
 
         private void accordionControlElement4_Click(object sender, EventArgs e)

@@ -310,22 +310,9 @@ namespace ProAdmin
                     model_students.Id = 0;
                     btnSave.Text = "Save";
                     txtmessage.Text = "New Student Reg ID : '" + regid + "'";
+                    txtmessagbarcode.Text = regid;
 
-                    txtnewfullname.Text         = null;
-                    txtnewlastname.Text         = null;
-                    txtnewnic.Text              = null;
-                    dtpnewdob.Text              = null;
-                    txtnewhomwaddress.Text      = null;
-                    txtnewhometell.Text         = null;
-                    txtnewstayaddress.Text      = null;
-                    txtnewstaytell.Text         = null;
-                    txtnewfathername.Text       = null;
-                    txtnewparentsname.Text      = null;
-                    cmbnewolschool.Text         = null;
-                    cmbnewalschool.Text         = null;
-                    txtnewolresult.Text         = null;
-                    cmbnewbatch.Text            = null;
-                    cmbnewscol.SelectedItem     = null;
+                   
                 }
             }
             else
@@ -345,12 +332,79 @@ namespace ProAdmin
 
         private void btnnewrefresh_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void btnGenID_Click(object sender, EventArgs e)
+        {
+            groupId.Visible = true;
+
+            lblname.Text = txtnewfullname.Text;
+            lblregid.Text = txtmessagbarcode.Text;
+            lblbatch.Text = cmbnewbatch.Text;
+            lbljoiningdate.Text = txtnewjoiningdate.Text;
+
+            string barCode = txtmessage.Text;
+            try
+            {
+                if(txtmessagbarcode != null)
+                {
+                    Zen.Barcode.Code128BarcodeDraw brCode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
+                    picbatcode.Image = brCode.Draw(barCode, 60);
+                }
+                
+            }
+            catch (Exception)
+            {
+
+            }
+
+            string batch = cmbnewbatch.Text;
+            txtsavefilename.Text = batch + "_" + txtmessagbarcode.Text;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            txtnewfullname.Text = null;
+            txtnewlastname.Text = null;
+            txtnewnic.Text = null;
+            dtpnewdob.Text = null;
+            txtnewhomwaddress.Text = null;
+            txtnewhometell.Text = null;
+            txtnewstayaddress.Text = null;
+            txtnewstaytell.Text = null;
+            txtnewfathername.Text = null;
+            txtnewparentsname.Text = null;
+            cmbnewolschool.Text = null;
+            cmbnewalschool.Text = null;
+            txtnewolresult.Text = null;
+            cmbnewbatch.Text = null;
+            cmbnewscol.SelectedItem = null;
+
+            lblbatch.Text = null;
+            lbljoiningdate.Text = null;
+            lblname.Text = null;
+            lblregid.Text = null;
+            txtmessagbarcode.Text = null;
+            txtmessage.Text = null;
+
             txtjoiningdate.Text = DateTime.Now.ToString();
             txtnewjoiningdate.Text = DateTime.Now.ToString();
             populate_student_data_grid_view();
             populate_all_student_data_grid_view();
             get_combo_vale_list();
             txtmessage.Text = null;
+            groupId.Visible = false;
+            //txtsavefilename.Text = null;
+
+            picbatcode.InitialImage = null;
+        }
+
+        private void cmbOpenSnip_Click(object sender, EventArgs e)
+        {
+            string invalidRegStr = string.Format(@"([{0}]*\.+$)|([{0}]+)", @"%windir%\system32\SnippingTool.exe");
+
+            System.Diagnostics.Process.Start(invalidRegStr);
         }
     }
 }

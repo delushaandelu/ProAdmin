@@ -32,6 +32,7 @@
             this.txtsearch = new DevExpress.XtraBars.Navigation.TabPane();
             this.tabNavigationPage3 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnsearch = new System.Windows.Forms.Button();
@@ -91,13 +92,25 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtfirstname = new DevExpress.XtraEditors.TextEdit();
             this.tabNavigationPage1 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.btnregresh2 = new System.Windows.Forms.Button();
             this.dgvAllStudent = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.tabNavigationPage2 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
-            this.btnnewsave = new System.Windows.Forms.Button();
+            this.btnGenID = new System.Windows.Forms.Button();
+            this.groupId = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtmessagbarcode = new System.Windows.Forms.Label();
+            this.txtmessage = new System.Windows.Forms.Label();
             this.cmbnewalschool = new System.Windows.Forms.ComboBox();
             this.cmbnewolschool = new System.Windows.Forms.ComboBox();
+            this.btnnewsave = new System.Windows.Forms.Button();
             this.cmbnewbatch = new System.Windows.Forms.ComboBox();
             this.cmbnewscol = new System.Windows.Forms.ComboBox();
             this.dtpnewdob = new System.Windows.Forms.DateTimePicker();
@@ -128,10 +141,24 @@
             this.txtnewlastname = new DevExpress.XtraEditors.TextEdit();
             this.label34 = new System.Windows.Forms.Label();
             this.txtnewfullname = new DevExpress.XtraEditors.TextEdit();
-            this.txtmessage = new System.Windows.Forms.Label();
-            this.txtmessagename = new System.Windows.Forms.Label();
-            this.btnregresh2 = new System.Windows.Forms.Button();
-            this.btnnewrefresh = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.lblname = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.lblregid = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.lblbatch = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.lbljoiningdate = new System.Windows.Forms.Label();
+            this.picbatcode = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label37 = new System.Windows.Forms.Label();
+            this.txtsavefilename = new DevExpress.XtraEditors.TextEdit();
+            this.cmbOpenSnip = new System.Windows.Forms.Button();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtsearch)).BeginInit();
             this.txtsearch.SuspendLayout();
             this.tabNavigationPage3.SuspendLayout();
@@ -154,6 +181,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.tabNavigationPage2.SuspendLayout();
+            this.groupId.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtnewjoiningdate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtnewolresult.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtnewparentsname.Properties)).BeginInit();
@@ -165,6 +199,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtnewnic.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtnewlastname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtnewfullname.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbatcode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsavefilename.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // txtsearch
@@ -227,6 +264,14 @@
             resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btnRefresh, "btnRefresh");
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
@@ -616,6 +661,13 @@
             this.tabNavigationPage1.Controls.Add(this.dgvAllStudent);
             this.tabNavigationPage1.Name = "tabNavigationPage1";
             // 
+            // btnregresh2
+            // 
+            resources.ApplyResources(this.btnregresh2, "btnregresh2");
+            this.btnregresh2.Name = "btnregresh2";
+            this.btnregresh2.UseVisualStyleBackColor = true;
+            this.btnregresh2.Click += new System.EventHandler(this.btnregresh2_Click);
+            // 
             // dgvAllStudent
             // 
             resources.ApplyResources(this.dgvAllStudent, "dgvAllStudent");
@@ -629,19 +681,13 @@
             this.gridView1.GridControl = this.dgvAllStudent;
             this.gridView1.Name = "gridView1";
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.btnRefresh, "btnRefresh");
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.button1_Click);
-            // 
             // tabNavigationPage2
             // 
             resources.ApplyResources(this.tabNavigationPage2, "tabNavigationPage2");
-            this.tabNavigationPage2.Controls.Add(this.btnnewrefresh);
-            this.tabNavigationPage2.Controls.Add(this.txtmessagename);
+            this.tabNavigationPage2.Controls.Add(this.button1);
+            this.tabNavigationPage2.Controls.Add(this.btnGenID);
+            this.tabNavigationPage2.Controls.Add(this.groupId);
+            this.tabNavigationPage2.Controls.Add(this.txtmessagbarcode);
             this.tabNavigationPage2.Controls.Add(this.txtmessage);
             this.tabNavigationPage2.Controls.Add(this.cmbnewalschool);
             this.tabNavigationPage2.Controls.Add(this.cmbnewolschool);
@@ -678,12 +724,113 @@
             this.tabNavigationPage2.Controls.Add(this.txtnewfullname);
             this.tabNavigationPage2.Name = "tabNavigationPage2";
             // 
-            // btnnewsave
+            // btnGenID
             // 
-            resources.ApplyResources(this.btnnewsave, "btnnewsave");
-            this.btnnewsave.Name = "btnnewsave";
-            this.btnnewsave.UseVisualStyleBackColor = true;
-            this.btnnewsave.Click += new System.EventHandler(this.btnnewsave_Click);
+            resources.ApplyResources(this.btnGenID, "btnGenID");
+            this.btnGenID.Name = "btnGenID";
+            this.btnGenID.UseVisualStyleBackColor = true;
+            this.btnGenID.Click += new System.EventHandler(this.btnGenID_Click);
+            // 
+            // groupId
+            // 
+            this.groupId.Controls.Add(this.cmbOpenSnip);
+            this.groupId.Controls.Add(this.label37);
+            this.groupId.Controls.Add(this.txtsavefilename);
+            this.groupId.Controls.Add(this.groupBox4);
+            this.groupId.Controls.Add(this.groupBox2);
+            resources.ApplyResources(this.groupId, "groupId");
+            this.groupId.Name = "groupId";
+            this.groupId.TabStop = false;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox4.Controls.Add(this.label44);
+            this.groupBox4.Controls.Add(this.label43);
+            this.groupBox4.Controls.Add(this.label41);
+            this.groupBox4.Controls.Add(this.label39);
+            this.groupBox4.Controls.Add(this.label35);
+            this.groupBox4.Controls.Add(this.pictureBox4);
+            this.groupBox4.Controls.Add(this.pictureBox2);
+            resources.ApplyResources(this.groupBox4, "groupBox4");
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.TabStop = false;
+            // 
+            // label35
+            // 
+            resources.ApplyResources(this.label35, "label35");
+            this.label35.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.label35.ForeColor = System.Drawing.SystemColors.Control;
+            this.label35.Name = "label35";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.pictureBox4.Image = global::ProAdmin.Properties.Resources.graduation;
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.CornflowerBlue;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox2.Controls.Add(this.picbatcode);
+            this.groupBox2.Controls.Add(this.lbljoiningdate);
+            this.groupBox2.Controls.Add(this.label42);
+            this.groupBox2.Controls.Add(this.lblbatch);
+            this.groupBox2.Controls.Add(this.label40);
+            this.groupBox2.Controls.Add(this.lblregid);
+            this.groupBox2.Controls.Add(this.label38);
+            this.groupBox2.Controls.Add(this.lblname);
+            this.groupBox2.Controls.Add(this.label36);
+            this.groupBox2.Controls.Add(this.pictureBox5);
+            this.groupBox2.Controls.Add(this.pictureBox3);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.pictureBox1);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.pictureBox3.Image = global::ProAdmin.Properties.Resources.graduation;
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.TabStop = false;
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Name = "label3";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.CornflowerBlue;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // txtmessagbarcode
+            // 
+            resources.ApplyResources(this.txtmessagbarcode, "txtmessagbarcode");
+            this.txtmessagbarcode.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.txtmessagbarcode.Name = "txtmessagbarcode";
+            // 
+            // txtmessage
+            // 
+            resources.ApplyResources(this.txtmessage, "txtmessage");
+            this.txtmessage.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.txtmessage.Name = "txtmessage";
             // 
             // cmbnewalschool
             // 
@@ -696,6 +843,13 @@
             this.cmbnewolschool.FormattingEnabled = true;
             resources.ApplyResources(this.cmbnewolschool, "cmbnewolschool");
             this.cmbnewolschool.Name = "cmbnewolschool";
+            // 
+            // btnnewsave
+            // 
+            resources.ApplyResources(this.btnnewsave, "btnnewsave");
+            this.btnnewsave.Name = "btnnewsave";
+            this.btnnewsave.UseVisualStyleBackColor = true;
+            this.btnnewsave.Click += new System.EventHandler(this.btnnewsave_Click);
             // 
             // cmbnewbatch
             // 
@@ -859,31 +1013,103 @@
             resources.ApplyResources(this.txtnewfullname, "txtnewfullname");
             this.txtnewfullname.Name = "txtnewfullname";
             // 
-            // txtmessage
+            // pictureBox5
             // 
-            resources.ApplyResources(this.txtmessage, "txtmessage");
-            this.txtmessage.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.txtmessage.Name = "txtmessage";
+            this.pictureBox5.Image = global::ProAdmin.Properties.Resources.user;
+            resources.ApplyResources(this.pictureBox5, "pictureBox5");
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.TabStop = false;
             // 
-            // txtmessagename
+            // label36
             // 
-            resources.ApplyResources(this.txtmessagename, "txtmessagename");
-            this.txtmessagename.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.txtmessagename.Name = "txtmessagename";
+            resources.ApplyResources(this.label36, "label36");
+            this.label36.Name = "label36";
             // 
-            // btnregresh2
+            // lblname
             // 
-            resources.ApplyResources(this.btnregresh2, "btnregresh2");
-            this.btnregresh2.Name = "btnregresh2";
-            this.btnregresh2.UseVisualStyleBackColor = true;
-            this.btnregresh2.Click += new System.EventHandler(this.btnregresh2_Click);
+            resources.ApplyResources(this.lblname, "lblname");
+            this.lblname.Name = "lblname";
             // 
-            // btnnewrefresh
+            // label38
             // 
-            resources.ApplyResources(this.btnnewrefresh, "btnnewrefresh");
-            this.btnnewrefresh.Name = "btnnewrefresh";
-            this.btnnewrefresh.UseVisualStyleBackColor = true;
-            this.btnnewrefresh.Click += new System.EventHandler(this.btnnewrefresh_Click);
+            resources.ApplyResources(this.label38, "label38");
+            this.label38.Name = "label38";
+            // 
+            // lblregid
+            // 
+            resources.ApplyResources(this.lblregid, "lblregid");
+            this.lblregid.Name = "lblregid";
+            // 
+            // label40
+            // 
+            resources.ApplyResources(this.label40, "label40");
+            this.label40.Name = "label40";
+            // 
+            // lblbatch
+            // 
+            resources.ApplyResources(this.lblbatch, "lblbatch");
+            this.lblbatch.Name = "lblbatch";
+            // 
+            // label42
+            // 
+            resources.ApplyResources(this.label42, "label42");
+            this.label42.Name = "label42";
+            // 
+            // lbljoiningdate
+            // 
+            resources.ApplyResources(this.lbljoiningdate, "lbljoiningdate");
+            this.lbljoiningdate.Name = "lbljoiningdate";
+            // 
+            // picbatcode
+            // 
+            resources.ApplyResources(this.picbatcode, "picbatcode");
+            this.picbatcode.Name = "picbatcode";
+            this.picbatcode.TabStop = false;
+            // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // label37
+            // 
+            resources.ApplyResources(this.label37, "label37");
+            this.label37.Name = "label37";
+            this.label37.Tag = "";
+            // 
+            // txtsavefilename
+            // 
+            resources.ApplyResources(this.txtsavefilename, "txtsavefilename");
+            this.txtsavefilename.Name = "txtsavefilename";
+            // 
+            // cmbOpenSnip
+            // 
+            resources.ApplyResources(this.cmbOpenSnip, "cmbOpenSnip");
+            this.cmbOpenSnip.Name = "cmbOpenSnip";
+            this.cmbOpenSnip.UseVisualStyleBackColor = true;
+            this.cmbOpenSnip.Click += new System.EventHandler(this.cmbOpenSnip_Click);
+            // 
+            // label39
+            // 
+            resources.ApplyResources(this.label39, "label39");
+            this.label39.Name = "label39";
+            // 
+            // label41
+            // 
+            resources.ApplyResources(this.label41, "label41");
+            this.label41.Name = "label41";
+            // 
+            // label43
+            // 
+            resources.ApplyResources(this.label43, "label43");
+            this.label43.Name = "label43";
+            // 
+            // label44
+            // 
+            resources.ApplyResources(this.label44, "label44");
+            this.label44.Name = "label44";
             // 
             // frmStudent
             // 
@@ -916,6 +1142,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.tabNavigationPage2.ResumeLayout(false);
             this.tabNavigationPage2.PerformLayout();
+            this.groupId.ResumeLayout(false);
+            this.groupId.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtnewjoiningdate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtnewolresult.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtnewparentsname.Properties)).EndInit();
@@ -927,6 +1163,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtnewnic.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtnewlastname.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtnewfullname.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbatcode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsavefilename.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1033,8 +1272,35 @@
         private System.Windows.Forms.Label label34;
         private DevExpress.XtraEditors.TextEdit txtnewfullname;
         private System.Windows.Forms.Label txtmessage;
-        private System.Windows.Forms.Label txtmessagename;
+        private System.Windows.Forms.Label txtmessagbarcode;
         private System.Windows.Forms.Button btnregresh2;
-        private System.Windows.Forms.Button btnnewrefresh;
+        private System.Windows.Forms.Button btnGenID;
+        private System.Windows.Forms.GroupBox groupId;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox picbatcode;
+        private System.Windows.Forms.Label lbljoiningdate;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label lblbatch;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label lblregid;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label lblname;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label37;
+        private DevExpress.XtraEditors.TextEdit txtsavefilename;
+        private System.Windows.Forms.Button cmbOpenSnip;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label39;
     }
 }
