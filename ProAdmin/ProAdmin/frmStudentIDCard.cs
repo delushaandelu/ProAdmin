@@ -54,11 +54,11 @@ namespace ProAdmin
                 {
                     if (db.basicdata_student.Where(data=> data.regid == txtfind.Text).Any())
                     {
-                        model_students = db.basicdata_student.Where(x => x.regid == model_students.regid).FirstOrDefault();
-                        lblname.Text = model_students.Firstname;
-                        lblregid.Text = model_students.regid;
+                        model_students      = db.basicdata_student.Where(x => x.regid == model_students.regid).FirstOrDefault();
+                        lblname.Text        = model_students.Firstname;
+                        lblregid.Text       = model_students.regid;
                         lbljoiningdate.Text = model_students.JoinDate;
-                        lblbatch.Text = model_students.Batch;
+                        lblbatch.Text       = model_students.Batch;
 
                     }
                     else

@@ -111,8 +111,8 @@ namespace ProAdmin
         {
             if (txtBatch.Text != "")
             {
-                model_batch.batch = txtBatch.Text.Trim();
-                model_batch.log = DateTime.Now.ToString();
+                model_batch.batch   = txtBatch.Text.Trim();
+                model_batch.log     = DateTime.Now.ToString();
 
                 using (DBEntity db = new DBEntity())
                 {
