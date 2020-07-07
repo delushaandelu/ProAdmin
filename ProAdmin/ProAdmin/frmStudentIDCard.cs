@@ -41,5 +41,71 @@ namespace ProAdmin
         {
 
         }
+
+        private void btnsearch_Click(object sender, EventArgs e)
+        {
+            if (txtfind.Text != null)
+            {
+                groupId.Visible = true;
+
+                model_students.regid = txtfind.Text;
+
+                using (DBEntity db = new DBEntity())
+                {
+                    if (db.basicdata_student.Where(data=> data.regid == txtfind.Text).Any())
+                    {
+                        model_students = db.basicdata_student.Where(x => x.regid == model_students.regid).FirstOrDefault();
+                        lblname.Text = model_students.Firstname;
+                        lblregid.Text = model_students.regid;
+                        lbljoiningdate.Text = model_students.JoinDate;
+                        lblbatch.Text = model_students.Batch;
+
+                    }
+                    else
+                    {
+                        clear();
+                        MessageBox.Show("Invalud Student Registration ID. Please Try Again!");
+                    }
+                }
+
+                string barCode = model_students.regid;
+                try
+                {
+                    if (barCode != null)
+                    {
+                        Zen.Barcode.Code128BarcodeDraw brCode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
+                        picbatcode.Image = brCode.Draw(barCode, 60);
+                    }
+
+                }
+                catch (Exception)
+                {
+
+                }
+
+
+                txtsavefilename.Text = "StudentIDCard_" + model_students.regid;
+            }
+            else
+            {
+                MessageBox.Show("Invalud Student Registration ID. Please Try Again!");
+                clear();
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            clear();
+        }
+
+        private void clear()
+        {
+            groupId.Visible = false;
+            txtfind.Text = null;
+            lblname.Text = null;
+            lblregid.Text = null;
+            lbljoiningdate.Text = null;
+            lblbatch.Text = null;
+        }
     }
 }

@@ -358,9 +358,7 @@ namespace ProAdmin
             {
 
             }
-
-            string batch = cmbnewbatch.Text;
-            txtsavefilename.Text = batch + "_" + txtmessagbarcode.Text;
+            txtsavefilename.Text = "StudentIDCard_" + txtmessagbarcode.Text;
         }
 
         private void button1_Click_1(object sender, EventArgs e)
