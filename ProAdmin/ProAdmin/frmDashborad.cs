@@ -61,5 +61,16 @@ namespace ProAdmin
             }
             frmStudent.Instance.BringToFront();
         }
+
+        private void accordionControlElement6_Click(object sender, EventArgs e)
+        {
+            if (!panelContainer.Controls.Contains(frmSheduleAnExam.Instance))
+            {
+                panelContainer.Controls.Add(frmSheduleAnExam.Instance);
+                frmSheduleAnExam.Instance.Dock = DockStyle.Fill;
+                frmSheduleAnExam.Instance.BringToFront();
+            }
+            frmSheduleAnExam.Instance.BringToFront();
+        }
     }
 }

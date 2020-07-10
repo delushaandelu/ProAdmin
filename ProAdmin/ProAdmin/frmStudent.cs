@@ -37,6 +37,13 @@ namespace ProAdmin
             get_combo_vale_list();
         }
 
+        bool TestForNullOrEmpty(string s)
+        {
+            bool result;
+            result = s == null || s == string.Empty;
+            return result;
+        }
+
         private void get_combo_vale_list()
         {
             using (DBEntity db = new DBEntity())
@@ -271,7 +278,9 @@ namespace ProAdmin
 
         private void btnnewsave_Click(object sender, EventArgs e)
         {
-            if (txtfirstname.Text != null)
+            if (txtfirstname.Text != null || txtnewlastname != null || txtnewnic != null || dtpnewdob != null || txtnewhomwaddress != null || 
+                txtnewhometell != null || txtnewfathername != null || txtnewparentsname != null || cmbnewolschool != null || cmbnewalschool != null ||
+                cmbnewbatch != null || TestForNullOrEmpty(cmbnewscol.Text))
             {
                 string regid = DateTime.Now.ToString("yyyMMhhmmss");
                 model_students.regid = regid;
