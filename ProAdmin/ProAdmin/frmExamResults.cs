@@ -43,7 +43,6 @@ namespace ProAdmin
             txtstudentid.Text       = null;
             cmbexam.Text            = null;
             cmbexam.Enabled         = false;
-            cmbexamtype.Enabled     = false;
             btnexamsearch.Enabled   = false;
             txtstudentname.Text     = null;
             txtbatch.Text           = null;
@@ -55,7 +54,6 @@ namespace ProAdmin
             txtgit.Text             = null;
             txttotal.Text           = null;
             txtaverage.Text         = null;
-            cmbexamtype.Text        = null;
 
         }
 
@@ -74,7 +72,6 @@ namespace ProAdmin
                         txtschool.Text          = model_students.Al_school;
                         cmbexam.Enabled         = true;
                         btnexamsearch.Enabled   = true;
-                        cmbexamtype.Enabled     = true;
                         get_student_exam_vale_list();
                     }
                     else
@@ -100,12 +97,6 @@ namespace ProAdmin
                 cmbexam.ValueMember = "id";
                 cmbexam.DisplayMember = "exam";
                 cmbexam.SelectedItem = null;
-
-                var batch_data2 = from data in db.basicdate_schedule where data.batch == txtbatch.Text select new { Name = data.id, ID = data.exam_type };
-                cmbexamtype.DataSource = batch_data2.ToList();
-                cmbexamtype.ValueMember = "id";
-                cmbexamtype.DisplayMember = "exam_type";
-                cmbexamtype.SelectedItem = null;
 
             }
         }

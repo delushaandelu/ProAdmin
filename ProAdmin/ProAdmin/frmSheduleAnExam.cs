@@ -88,7 +88,9 @@ namespace ProAdmin
         {
             if(txtexam.Text != null || dtpenddate.Text != null || dtpenddate.Text != null || cmbstate.Text != null || cmbexamtype.Text != null)
             {
-                model_examschedule.exam         = txtexam.Text;
+                string exam = txtexam.Text + '_' + cmbexamtype.Text;
+
+                model_examschedule.exam         = exam;
                 model_examschedule.start_date   = dtpstartdate.Text;
                 model_examschedule.end_date     = dtpenddate.Text;
                 model_examschedule.state        = cmbstate.Text;

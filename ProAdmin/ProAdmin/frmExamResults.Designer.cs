@@ -70,8 +70,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtstudentid = new DevExpress.XtraEditors.TextEdit();
-            this.label13 = new System.Windows.Forms.Label();
-            this.cmbexamtype = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtsearch)).BeginInit();
             this.txtsearch.SuspendLayout();
             this.tabNavigationPage1.SuspendLayout();
@@ -114,8 +112,6 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.cmbexamtype);
-            this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Controls.Add(this.dgvStudentResultData);
             this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Controls.Add(this.txtschool);
@@ -433,7 +429,7 @@
             this.btnexamsearch.Enabled = false;
             this.btnexamsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnexamsearch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnexamsearch.Location = new System.Drawing.Point(884, 21);
+            this.btnexamsearch.Location = new System.Drawing.Point(637, 21);
             this.btnexamsearch.Name = "btnexamsearch";
             this.btnexamsearch.Size = new System.Drawing.Size(31, 29);
             this.btnexamsearch.TabIndex = 62;
@@ -486,24 +482,6 @@
             this.txtstudentid.Name = "txtstudentid";
             this.txtstudentid.Size = new System.Drawing.Size(208, 20);
             this.txtstudentid.TabIndex = 0;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(638, 29);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(60, 13);
-            this.label13.TabIndex = 86;
-            this.label13.Text = "Exam Type";
-            // 
-            // cmbexamtype
-            // 
-            this.cmbexamtype.Enabled = false;
-            this.cmbexamtype.FormattingEnabled = true;
-            this.cmbexamtype.Location = new System.Drawing.Point(704, 26);
-            this.cmbexamtype.Name = "cmbexamtype";
-            this.cmbexamtype.Size = new System.Drawing.Size(174, 21);
-            this.cmbexamtype.TabIndex = 87;
             // 
             // frmExamResults
             // 
@@ -578,7 +556,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn state;
         private System.Windows.Forms.DataGridViewTextBoxColumn exam_type;
         private System.Windows.Forms.Button btnclear;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox cmbexamtype;
     }
 }
