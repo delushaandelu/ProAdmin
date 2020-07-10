@@ -88,6 +88,24 @@
           <Property Name="exam_type" Type="varchar" MaxLength="50" />
           <Property Name="batch" Type="varchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="data_examresults">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="exam" Type="varchar" MaxLength="50" />
+          <Property Name="batch" Type="varchar" MaxLength="50" />
+          <Property Name="regid" Type="varchar" MaxLength="50" />
+          <Property Name="subject_1" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="subject_2" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="subject_3" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="English" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="git" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="total_marks" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="average_marks" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="rank" Type="int" />
+          <Property Name="avg_state" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityContainer Name="proadmin_v1ModelStoreContainer">
           <EntitySet Name="basicdata_batch" EntityType="Self.basicdata_batch" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="basicdata_school" EntityType="Self.basicdata_school" Schema="dbo" store:Type="Tables" />
@@ -96,6 +114,7 @@
           <EntitySet Name="basicdata_university" EntityType="Self.basicdata_university" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="basicdata_users" EntityType="Self.basicdata_users" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="basicdate_schedule" EntityType="Self.basicdate_schedule" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="data_examresults" EntityType="Self.data_examresults" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -117,6 +136,7 @@
           <EntitySet Name="basicdata_users" EntityType="proadmin_v1Model.basicdata_users" />
           <EntitySet Name="basicdata_student" EntityType="proadmin_v1Model.basicdata_student" />
           <EntitySet Name="basicdate_schedule" EntityType="proadmin_v1Model.basicdate_schedule" />
+          <EntitySet Name="data_examresults" EntityType="proadmin_v1Model.data_examresults" />
         </EntityContainer>
         <EntityType Name="basicdata_university">
           <Key>
@@ -192,6 +212,24 @@
           <Property Name="state" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="exam_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="batch" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="data_examresults">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="exam" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="batch" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="regid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="subject_1" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="subject_2" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="subject_3" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="English" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="git" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="total_marks" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="average_marks" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="rank" Type="Int32" />
+          <Property Name="avg_state" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -284,6 +322,25 @@
                 <ScalarProperty Name="state" ColumnName="state" />
                 <ScalarProperty Name="end_date" ColumnName="end_date" />
                 <ScalarProperty Name="start_date" ColumnName="start_date" />
+                <ScalarProperty Name="exam" ColumnName="exam" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="data_examresults">
+            <EntityTypeMapping TypeName="proadmin_v1Model.data_examresults">
+              <MappingFragment StoreEntitySet="data_examresults">
+                <ScalarProperty Name="avg_state" ColumnName="avg_state" />
+                <ScalarProperty Name="rank" ColumnName="rank" />
+                <ScalarProperty Name="average_marks" ColumnName="average_marks" />
+                <ScalarProperty Name="total_marks" ColumnName="total_marks" />
+                <ScalarProperty Name="git" ColumnName="git" />
+                <ScalarProperty Name="English" ColumnName="English" />
+                <ScalarProperty Name="subject_3" ColumnName="subject_3" />
+                <ScalarProperty Name="subject_2" ColumnName="subject_2" />
+                <ScalarProperty Name="subject_1" ColumnName="subject_1" />
+                <ScalarProperty Name="regid" ColumnName="regid" />
+                <ScalarProperty Name="batch" ColumnName="batch" />
                 <ScalarProperty Name="exam" ColumnName="exam" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
