@@ -76,6 +76,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtstudentid = new DevExpress.XtraEditors.TextEdit();
+            this.tabNavigationPage2 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.dgvGenerateOverallReport = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.cmbgenbatch = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.cmbgenexam = new System.Windows.Forms.ComboBox();
+            this.btngenReport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txtsearch)).BeginInit();
             this.txtsearch.SuspendLayout();
             this.tabNavigationPage1.SuspendLayout();
@@ -94,16 +103,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtsubject2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtsubject1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtstudentid.Properties)).BeginInit();
+            this.tabNavigationPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGenerateOverallReport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtsearch
             // 
             this.txtsearch.Controls.Add(this.tabNavigationPage1);
+            this.txtsearch.Controls.Add(this.tabNavigationPage2);
             this.txtsearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtsearch.Location = new System.Drawing.Point(0, 0);
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
-            this.tabNavigationPage1});
+            this.tabNavigationPage1,
+            this.tabNavigationPage2});
             this.txtsearch.RegularSize = new System.Drawing.Size(1239, 629);
             this.txtsearch.SelectedPage = this.tabNavigationPage1;
             this.txtsearch.Size = new System.Drawing.Size(1239, 629);
@@ -510,7 +528,7 @@
             this.btnexamsearch.Enabled = false;
             this.btnexamsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnexamsearch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnexamsearch.Location = new System.Drawing.Point(637, 21);
+            this.btnexamsearch.Location = new System.Drawing.Point(688, 21);
             this.btnexamsearch.Name = "btnexamsearch";
             this.btnexamsearch.Size = new System.Drawing.Size(31, 29);
             this.btnexamsearch.TabIndex = 62;
@@ -536,7 +554,7 @@
             this.cmbexam.FormattingEnabled = true;
             this.cmbexam.Location = new System.Drawing.Point(411, 26);
             this.cmbexam.Name = "cmbexam";
-            this.cmbexam.Size = new System.Drawing.Size(208, 21);
+            this.cmbexam.Size = new System.Drawing.Size(257, 21);
             this.cmbexam.TabIndex = 18;
             // 
             // label7
@@ -563,6 +581,96 @@
             this.txtstudentid.Name = "txtstudentid";
             this.txtstudentid.Size = new System.Drawing.Size(208, 20);
             this.txtstudentid.TabIndex = 0;
+            // 
+            // tabNavigationPage2
+            // 
+            this.tabNavigationPage2.Caption = "Over All Mark Sheet";
+            this.tabNavigationPage2.Controls.Add(this.splitContainer1);
+            this.tabNavigationPage2.Name = "tabNavigationPage2";
+            this.tabNavigationPage2.Size = new System.Drawing.Size(1239, 592);
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.btngenReport);
+            this.splitContainer1.Panel1.Controls.Add(this.label15);
+            this.splitContainer1.Panel1.Controls.Add(this.cmbgenexam);
+            this.splitContainer1.Panel1.Controls.Add(this.label14);
+            this.splitContainer1.Panel1.Controls.Add(this.cmbgenbatch);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.dgvGenerateOverallReport);
+            this.splitContainer1.Size = new System.Drawing.Size(1239, 592);
+            this.splitContainer1.SplitterDistance = 37;
+            this.splitContainer1.TabIndex = 0;
+            // 
+            // dgvGenerateOverallReport
+            // 
+            this.dgvGenerateOverallReport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvGenerateOverallReport.Location = new System.Drawing.Point(0, 0);
+            this.dgvGenerateOverallReport.MainView = this.gridView1;
+            this.dgvGenerateOverallReport.Name = "dgvGenerateOverallReport";
+            this.dgvGenerateOverallReport.Size = new System.Drawing.Size(1239, 551);
+            this.dgvGenerateOverallReport.TabIndex = 0;
+            this.dgvGenerateOverallReport.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.dgvGenerateOverallReport;
+            this.gridView1.Name = "gridView1";
+            // 
+            // cmbgenbatch
+            // 
+            this.cmbgenbatch.FormattingEnabled = true;
+            this.cmbgenbatch.Location = new System.Drawing.Point(75, 11);
+            this.cmbgenbatch.Name = "cmbgenbatch";
+            this.cmbgenbatch.Size = new System.Drawing.Size(159, 21);
+            this.cmbgenbatch.TabIndex = 1;
+            this.cmbgenbatch.SelectedValueChanged += new System.EventHandler(this.cmbgenbatch_SelectedValueChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(19, 14);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(35, 13);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Batch";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(271, 14);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(33, 13);
+            this.label15.TabIndex = 4;
+            this.label15.Text = "Exam";
+            // 
+            // cmbgenexam
+            // 
+            this.cmbgenexam.FormattingEnabled = true;
+            this.cmbgenexam.Location = new System.Drawing.Point(310, 11);
+            this.cmbgenexam.Name = "cmbgenexam";
+            this.cmbgenexam.Size = new System.Drawing.Size(347, 21);
+            this.cmbgenexam.TabIndex = 3;
+            // 
+            // btngenReport
+            // 
+            this.btngenReport.Location = new System.Drawing.Point(681, 9);
+            this.btngenReport.Name = "btngenReport";
+            this.btngenReport.Size = new System.Drawing.Size(96, 23);
+            this.btngenReport.TabIndex = 5;
+            this.btngenReport.Text = "Generate";
+            this.btngenReport.UseVisualStyleBackColor = true;
+            this.btngenReport.Click += new System.EventHandler(this.btngenReport_Click);
             // 
             // frmExamResults
             // 
@@ -591,6 +699,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtsubject2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtsubject1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtstudentid.Properties)).EndInit();
+            this.tabNavigationPage2.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGenerateOverallReport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -644,5 +760,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn English;
         private System.Windows.Forms.DataGridViewTextBoxColumn git;
         private System.Windows.Forms.Button btnRefresh;
+        private DevExpress.XtraBars.Navigation.TabNavigationPage tabNavigationPage2;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox cmbgenexam;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox cmbgenbatch;
+        private DevExpress.XtraGrid.GridControl dgvGenerateOverallReport;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private System.Windows.Forms.Button btngenReport;
     }
 }

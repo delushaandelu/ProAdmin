@@ -17,11 +17,12 @@ namespace ProAdmin
         public frmExamResults()
         {
             InitializeComponent();
+            get_basicdate_for_generate_marks();
         }
 
-        basicdata_student model_students = new basicdata_student();
-        basicdate_schedule model_examschedule = new basicdate_schedule();
-        data_examresults model_results = new data_examresults();
+        basicdata_student   model_students      = new basicdata_student();
+        basicdate_schedule  model_examschedule  = new basicdate_schedule();
+        data_examresults    model_results       = new data_examresults();
 
         private static frmExamResults _instance;
 
@@ -32,6 +33,23 @@ namespace ProAdmin
                 if (_instance == null)
                     _instance = new frmExamResults();
                 return _instance;
+            }
+        }
+
+        public void populated_overall_mark_sheet()
+        {
+            if (cmbgenbatch.Text != null || cmbgenexam.Text != null)
+            {
+                using (DBEntity db = new DBEntity())
+                {
+                    model_results.exam = cmbgenexam.Text;
+                    model_results.batch = cmbgenbatch.Text;
+                    dgvGenerateOverallReport.DataSource = db.data_examresults.Where(x => x.batch == cmbgenbatch.Text && x.exam == cmbgenexam.Text).ToList<data_examresults>();
+                }
+            }
+            else
+            {
+                message_popup_ok("Invalud Data Query!");
             }
         }
 
@@ -101,19 +119,6 @@ namespace ProAdmin
             }
 
             populate_all_student_exam_marks_data();
-        }
-
-        private void get_student_exam_vale_list()
-        {        
-            using (DBEntity db = new DBEntity())
-            {
-                var batch_data = from data in db.basicdate_schedule  where data.batch == txtbatch.Text select new { Name = data.id, ID = data.exam };
-                cmbexam.DataSource = batch_data.ToList();
-                cmbexam.ValueMember = "id";
-                cmbexam.DisplayMember = "exam";
-                cmbexam.SelectedItem = null;
-
-            }
         }
 
         private void btnclear_Click(object sender, EventArgs e)
@@ -269,6 +274,47 @@ namespace ProAdmin
             {
                 message_popup_ok("Invalid Student ID!");
             }
+        }
+
+        private void get_student_exam_vale_list()
+        {
+            using (DBEntity db = new DBEntity())
+            {
+                var batch_data = from data in db.basicdate_schedule where data.batch == txtbatch.Text select new { Name = data.id, ID = data.exam };
+                cmbexam.DataSource = batch_data.ToList();
+                cmbexam.ValueMember = "id";
+                cmbexam.DisplayMember = "exam";
+                cmbexam.SelectedItem = null;
+
+            }
+        }
+
+        private void cmbgenbatch_SelectedValueChanged(object sender, EventArgs e)
+        {
+            using (DBEntity db = new DBEntity())
+            {
+                var exam = from data in db.basicdate_schedule where data.batch == cmbgenbatch.Text select new { Name = data.id, ID = data.exam };
+                cmbgenexam.DataSource = exam.ToList();
+                cmbgenexam.ValueMember = "id";
+                cmbgenexam.DisplayMember = "exam";
+                cmbgenexam.SelectedItem = null;
+            }
+        }
+
+        private void get_basicdate_for_generate_marks()
+        {
+            using (DBEntity db = new DBEntity())
+            {
+                var batch = db.basicdata_batch.Select(y => new { y.batchid, y.batch });
+                cmbgenbatch.DataSource = batch.ToList();
+                cmbgenbatch.DisplayMember = "batch";
+                cmbgenbatch.SelectedItem = null;
+            }
+        }
+
+        private void btngenReport_Click(object sender, EventArgs e)
+        {
+            populated_overall_mark_sheet();
         }
     }
 }
