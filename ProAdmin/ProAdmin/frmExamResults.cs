@@ -37,7 +37,12 @@ namespace ProAdmin
 
         public void populate_all_student_exam_marks_data()
         {
-            
+            dgvStudentResultData.AutoGenerateColumns = false;
+            using (DBEntity db = new DBEntity())
+            {
+                model_results.regid = txtstudentid.Text;
+                dgvStudentResultData.DataSource = db.data_examresults.Where(x => x.regid == model_results.regid).ToList<data_examresults>();
+            }
         }
 
         private void clear()
@@ -57,6 +62,8 @@ namespace ProAdmin
             txttotal.Text           = null;
             txtaverage.Text         = null;
             txtavgstate.Text        = null;
+            populate_all_student_exam_marks_data();
+
 
         }
 
@@ -89,6 +96,8 @@ namespace ProAdmin
                 MessageBox.Show("Invalud Student Registration ID. Please Try Again!");
                 clear();
             }
+
+            populate_all_student_exam_marks_data();
         }
 
         private void get_student_exam_vale_list()
@@ -143,7 +152,7 @@ namespace ProAdmin
                         txtsubject3.Enabled = true;
                         txtenglish.Enabled = true;
                         txtgit.Enabled = true;
-                    }
+                    }          
                 }
             }
             else
@@ -155,7 +164,30 @@ namespace ProAdmin
 
         private void btngenerate_Click(object sender, EventArgs e)
         {
-            
+            double sub1 = double.Parse(txtsubject1.Text);
+            double sub2 = double.Parse(txtsubject2.Text);
+            double sub3 = double.Parse(txtsubject3.Text);
+            double eng = double.Parse(txtenglish.Text);
+            double git = double.Parse(txtgit.Text);
+            txttotal.Text = (sub1 + sub2 + sub3).ToString();
+            txtaverage.Text = (double.Parse(txttotal.Text) / 3).ToString();
+
+            double goodpass = 64.9;
+            double midpass = 44.9;
+
+
+            if (goodpass < (double.Parse(txtaverage.Text)))
+            {
+                txtavgstate.Text = "GOOD PASS";
+            }
+            else if (midpass < (double.Parse(txtaverage.Text)))
+            {
+                txtavgstate.Text = "MID PASS";
+            }
+            else if (midpass > (double.Parse(txtaverage.Text)))
+            {
+                txtavgstate.Text = "FAIL";
+            }
         }
 
         private void message_popup_ok(string messsage)
@@ -192,6 +224,17 @@ namespace ProAdmin
 
             using (DBEntity db = new DBEntity())
             {
+                if (cmbexam.Text != null)
+                {
+                    model_examschedule.exam = cmbexam.Text;
+                    model_examschedule = db.basicdate_schedule.Where(x => x.exam == model_examschedule.exam).FirstOrDefault();
+
+                    model_results.exam_date = model_examschedule.start_date;
+                }
+                else
+                {
+                    message_popup_ok("Pleae fill all data fields!");
+                }                   
 
                 if (db.data_examresults.Where(data => data.regid == txtstudentid.Text && data.exam == cmbexam.Text).Any())//Insert
                     db.Entry(model_results).State = EntityState.Modified;
@@ -199,9 +242,26 @@ namespace ProAdmin
                     db.data_examresults.Add(model_results);
 
                 db.SaveChangesAsync();
-                clear();
                 message_popup_ok("Data Record Saved!");
 
+            }
+            populate_all_student_exam_marks_data(); 
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            if(txtstudentid.Text != null)
+            { 
+                dgvStudentResultData.AutoGenerateColumns = false;
+                using (DBEntity db = new DBEntity())
+                {
+                    model_results.regid = txtstudentid.Text;
+                    dgvStudentResultData.DataSource = db.data_examresults.Where(x => x.regid == model_results.regid).ToList<data_examresults>();
+                }
+            }
+            else
+            {
+                message_popup_ok("Invalid Student ID!");
             }
         }
     }

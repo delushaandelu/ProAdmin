@@ -55,10 +55,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnsubsave = new System.Windows.Forms.Button();
             this.txtexam = new DevExpress.XtraEditors.TextEdit();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.tabNavigationPage1 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.dgvAllExam = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             ((System.ComponentModel.ISupportInitialize)(this.txtsearch)).BeginInit();
             this.txtsearch.SuspendLayout();
             this.tabNavigationPage2.SuspendLayout();
@@ -140,8 +140,8 @@
             // 
             this.cmbexamtype.FormattingEnabled = true;
             this.cmbexamtype.Items.AddRange(new object[] {
-            "TERM EXAM",
-            "MONTHELY EXAM"});
+            "TERM_EXAM",
+            "MONTHELY_EXAM"});
             this.cmbexamtype.Location = new System.Drawing.Point(86, 183);
             this.cmbexamtype.Name = "cmbexamtype";
             this.cmbexamtype.Size = new System.Drawing.Size(208, 21);

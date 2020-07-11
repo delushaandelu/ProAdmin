@@ -33,13 +33,16 @@
             this.tabNavigationPage1 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dgvStudentResultData = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exam_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.exam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.batch = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.start_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.end_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.state = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.exam_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subject_1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subject_2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subject_3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total_marks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.average_marks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.avg_state = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.English = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.git = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label12 = new System.Windows.Forms.Label();
             this.txtschool = new DevExpress.XtraEditors.TextEdit();
             this.label11 = new System.Windows.Forms.Label();
@@ -47,6 +50,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtstudentname = new DevExpress.XtraEditors.TextEdit();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtavgstate = new DevExpress.XtraEditors.TextEdit();
+            this.label13 = new System.Windows.Forms.Label();
             this.btnclear = new System.Windows.Forms.Button();
             this.btnupdate = new System.Windows.Forms.Button();
             this.btngenerate = new System.Windows.Forms.Button();
@@ -70,8 +75,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtstudentid = new DevExpress.XtraEditors.TextEdit();
-            this.txtavgstate = new DevExpress.XtraEditors.TextEdit();
-            this.label13 = new System.Windows.Forms.Label();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txtsearch)).BeginInit();
             this.txtsearch.SuspendLayout();
             this.tabNavigationPage1.SuspendLayout();
@@ -81,6 +85,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtbatch.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtstudentname.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtavgstate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtaverage.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttotal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtgit.Properties)).BeginInit();
@@ -89,7 +94,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtsubject2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtsubject1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtstudentid.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtavgstate.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // txtsearch
@@ -115,6 +119,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.btnRefresh);
             this.groupBox4.Controls.Add(this.dgvStudentResultData);
             this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Controls.Add(this.txtschool);
@@ -143,68 +148,91 @@
             this.dgvStudentResultData.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvStudentResultData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStudentResultData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
+            this.exam_date,
             this.exam,
-            this.batch,
-            this.start_date,
-            this.end_date,
-            this.state,
-            this.exam_type});
+            this.subject_1,
+            this.subject_2,
+            this.subject_3,
+            this.total_marks,
+            this.average_marks,
+            this.avg_state,
+            this.English,
+            this.git});
             this.dgvStudentResultData.Location = new System.Drawing.Point(499, 160);
             this.dgvStudentResultData.Name = "dgvStudentResultData";
             this.dgvStudentResultData.ReadOnly = true;
             this.dgvStudentResultData.Size = new System.Drawing.Size(679, 257);
             this.dgvStudentResultData.TabIndex = 84;
             // 
-            // id
+            // exam_date
             // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
+            this.exam_date.DataPropertyName = "exam_date";
+            this.exam_date.HeaderText = "Exam Date";
+            this.exam_date.Name = "exam_date";
+            this.exam_date.ReadOnly = true;
             // 
             // exam
             // 
             this.exam.DataPropertyName = "exam";
-            this.exam.HeaderText = "exam";
+            this.exam.HeaderText = "Exam";
             this.exam.Name = "exam";
             this.exam.ReadOnly = true;
             // 
-            // batch
+            // subject_1
             // 
-            this.batch.DataPropertyName = "batch";
-            this.batch.HeaderText = "batch";
-            this.batch.Name = "batch";
-            this.batch.ReadOnly = true;
+            this.subject_1.DataPropertyName = "subject_1";
+            this.subject_1.HeaderText = "Economics";
+            this.subject_1.Name = "subject_1";
+            this.subject_1.ReadOnly = true;
             // 
-            // start_date
+            // subject_2
             // 
-            this.start_date.DataPropertyName = "start_date";
-            this.start_date.HeaderText = "start_date";
-            this.start_date.Name = "start_date";
-            this.start_date.ReadOnly = true;
+            this.subject_2.DataPropertyName = "subject_2";
+            this.subject_2.HeaderText = "Business Studies";
+            this.subject_2.Name = "subject_2";
+            this.subject_2.ReadOnly = true;
             // 
-            // end_date
+            // subject_3
             // 
-            this.end_date.DataPropertyName = "end_date";
-            this.end_date.HeaderText = "end_date";
-            this.end_date.Name = "end_date";
-            this.end_date.ReadOnly = true;
+            this.subject_3.DataPropertyName = "subject_3";
+            this.subject_3.HeaderText = "Accouniting";
+            this.subject_3.Name = "subject_3";
+            this.subject_3.ReadOnly = true;
             // 
-            // state
+            // total_marks
             // 
-            this.state.DataPropertyName = "state";
-            this.state.HeaderText = "state";
-            this.state.Name = "state";
-            this.state.ReadOnly = true;
+            this.total_marks.DataPropertyName = "total_marks";
+            this.total_marks.HeaderText = "Total Marks";
+            this.total_marks.Name = "total_marks";
+            this.total_marks.ReadOnly = true;
             // 
-            // exam_type
+            // average_marks
             // 
-            this.exam_type.DataPropertyName = "exam_type";
-            this.exam_type.HeaderText = "exam_type";
-            this.exam_type.Name = "exam_type";
-            this.exam_type.ReadOnly = true;
+            this.average_marks.DataPropertyName = "average_marks";
+            this.average_marks.HeaderText = "Average Marks";
+            this.average_marks.Name = "average_marks";
+            this.average_marks.ReadOnly = true;
+            // 
+            // avg_state
+            // 
+            this.avg_state.DataPropertyName = "avg_state";
+            this.avg_state.HeaderText = "Average State";
+            this.avg_state.Name = "avg_state";
+            this.avg_state.ReadOnly = true;
+            // 
+            // English
+            // 
+            this.English.DataPropertyName = "English";
+            this.English.HeaderText = "English";
+            this.English.Name = "English";
+            this.English.ReadOnly = true;
+            // 
+            // git
+            // 
+            this.git.DataPropertyName = "git";
+            this.git.HeaderText = "Git";
+            this.git.Name = "git";
+            this.git.ReadOnly = true;
             // 
             // label12
             // 
@@ -285,6 +313,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Exam Data";
             // 
+            // txtavgstate
+            // 
+            this.txtavgstate.EditValue = "0";
+            this.txtavgstate.Enabled = false;
+            this.txtavgstate.Location = new System.Drawing.Point(334, 116);
+            this.txtavgstate.Name = "txtavgstate";
+            this.txtavgstate.Size = new System.Drawing.Size(90, 20);
+            this.txtavgstate.TabIndex = 95;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(253, 119);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(75, 13);
+            this.label13.TabIndex = 94;
+            this.label13.Text = "Average State";
+            // 
             // btnclear
             // 
             this.btnclear.Location = new System.Drawing.Point(365, 142);
@@ -317,6 +363,7 @@
             // 
             // txtaverage
             // 
+            this.txtaverage.EditValue = "0";
             this.txtaverage.Enabled = false;
             this.txtaverage.Location = new System.Drawing.Point(334, 75);
             this.txtaverage.Name = "txtaverage";
@@ -343,6 +390,7 @@
             // 
             // txttotal
             // 
+            this.txttotal.EditValue = "0";
             this.txttotal.Enabled = false;
             this.txttotal.Location = new System.Drawing.Point(334, 32);
             this.txttotal.Name = "txttotal";
@@ -360,6 +408,7 @@
             // 
             // txtgit
             // 
+            this.txtgit.EditValue = "0";
             this.txtgit.Enabled = false;
             this.txtgit.Location = new System.Drawing.Point(140, 219);
             this.txtgit.Name = "txtgit";
@@ -377,6 +426,7 @@
             // 
             // txtenglish
             // 
+            this.txtenglish.EditValue = "0";
             this.txtenglish.Enabled = false;
             this.txtenglish.Location = new System.Drawing.Point(140, 183);
             this.txtenglish.Name = "txtenglish";
@@ -394,6 +444,7 @@
             // 
             // txtsubject3
             // 
+            this.txtsubject3.EditValue = "0";
             this.txtsubject3.Enabled = false;
             this.txtsubject3.Location = new System.Drawing.Point(140, 108);
             this.txtsubject3.Name = "txtsubject3";
@@ -411,6 +462,7 @@
             // 
             // txtsubject2
             // 
+            this.txtsubject2.EditValue = "0";
             this.txtsubject2.Enabled = false;
             this.txtsubject2.Location = new System.Drawing.Point(140, 69);
             this.txtsubject2.Name = "txtsubject2";
@@ -428,6 +480,7 @@
             // 
             // txtsubject1
             // 
+            this.txtsubject1.EditValue = "0";
             this.txtsubject1.Enabled = false;
             this.txtsubject1.Location = new System.Drawing.Point(140, 32);
             this.txtsubject1.Name = "txtsubject1";
@@ -495,22 +548,18 @@
             this.txtstudentid.Size = new System.Drawing.Size(208, 20);
             this.txtstudentid.TabIndex = 0;
             // 
-            // txtavgstate
+            // btnRefresh
             // 
-            this.txtavgstate.Enabled = false;
-            this.txtavgstate.Location = new System.Drawing.Point(334, 116);
-            this.txtavgstate.Name = "txtavgstate";
-            this.txtavgstate.Size = new System.Drawing.Size(90, 20);
-            this.txtavgstate.TabIndex = 95;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(253, 119);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(75, 13);
-            this.label13.TabIndex = 94;
-            this.label13.Text = "Average State";
+            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
+            this.btnRefresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefresh.BackgroundImage")));
+            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRefresh.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRefresh.Location = new System.Drawing.Point(506, 163);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(31, 29);
+            this.btnRefresh.TabIndex = 85;
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // frmExamResults
             // 
@@ -530,6 +579,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtstudentname.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtavgstate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtaverage.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttotal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtgit.Properties)).EndInit();
@@ -538,7 +588,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtsubject2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtsubject1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtstudentid.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtavgstate.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -578,15 +627,19 @@
         private System.Windows.Forms.Label label11;
         private DevExpress.XtraEditors.TextEdit txtbatch;
         private System.Windows.Forms.DataGridView dgvStudentResultData;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn exam;
-        private System.Windows.Forms.DataGridViewTextBoxColumn batch;
-        private System.Windows.Forms.DataGridViewTextBoxColumn start_date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn end_date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn state;
-        private System.Windows.Forms.DataGridViewTextBoxColumn exam_type;
         private System.Windows.Forms.Button btnclear;
         private DevExpress.XtraEditors.TextEdit txtavgstate;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn exam_date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn exam;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subject_1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subject_2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subject_3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn total_marks;
+        private System.Windows.Forms.DataGridViewTextBoxColumn average_marks;
+        private System.Windows.Forms.DataGridViewTextBoxColumn avg_state;
+        private System.Windows.Forms.DataGridViewTextBoxColumn English;
+        private System.Windows.Forms.DataGridViewTextBoxColumn git;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }
