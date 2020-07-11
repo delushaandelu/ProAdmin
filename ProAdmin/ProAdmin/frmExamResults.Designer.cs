@@ -70,6 +70,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtstudentid = new DevExpress.XtraEditors.TextEdit();
+            this.txtavgstate = new DevExpress.XtraEditors.TextEdit();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtsearch)).BeginInit();
             this.txtsearch.SuspendLayout();
             this.tabNavigationPage1.SuspendLayout();
@@ -87,6 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtsubject2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtsubject1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtstudentid.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtavgstate.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // txtsearch
@@ -256,6 +259,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtavgstate);
+            this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.btnclear);
             this.groupBox1.Controls.Add(this.btnupdate);
             this.groupBox1.Controls.Add(this.btngenerate);
@@ -298,6 +303,7 @@
             this.btnupdate.TabIndex = 92;
             this.btnupdate.Text = "Update";
             this.btnupdate.UseVisualStyleBackColor = true;
+            this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
             // 
             // btngenerate
             // 
@@ -307,6 +313,7 @@
             this.btngenerate.TabIndex = 91;
             this.btngenerate.Text = "Generate Total and Average";
             this.btngenerate.UseVisualStyleBackColor = true;
+            this.btngenerate.Click += new System.EventHandler(this.btngenerate_Click);
             // 
             // txtaverage
             // 
@@ -353,6 +360,7 @@
             // 
             // txtgit
             // 
+            this.txtgit.Enabled = false;
             this.txtgit.Location = new System.Drawing.Point(140, 219);
             this.txtgit.Name = "txtgit";
             this.txtgit.Size = new System.Drawing.Size(90, 20);
@@ -369,6 +377,7 @@
             // 
             // txtenglish
             // 
+            this.txtenglish.Enabled = false;
             this.txtenglish.Location = new System.Drawing.Point(140, 183);
             this.txtenglish.Name = "txtenglish";
             this.txtenglish.Size = new System.Drawing.Size(90, 20);
@@ -385,6 +394,7 @@
             // 
             // txtsubject3
             // 
+            this.txtsubject3.Enabled = false;
             this.txtsubject3.Location = new System.Drawing.Point(140, 108);
             this.txtsubject3.Name = "txtsubject3";
             this.txtsubject3.Size = new System.Drawing.Size(90, 20);
@@ -401,6 +411,7 @@
             // 
             // txtsubject2
             // 
+            this.txtsubject2.Enabled = false;
             this.txtsubject2.Location = new System.Drawing.Point(140, 69);
             this.txtsubject2.Name = "txtsubject2";
             this.txtsubject2.Size = new System.Drawing.Size(90, 20);
@@ -417,6 +428,7 @@
             // 
             // txtsubject1
             // 
+            this.txtsubject1.Enabled = false;
             this.txtsubject1.Location = new System.Drawing.Point(140, 32);
             this.txtsubject1.Name = "txtsubject1";
             this.txtsubject1.Size = new System.Drawing.Size(90, 20);
@@ -483,6 +495,23 @@
             this.txtstudentid.Size = new System.Drawing.Size(208, 20);
             this.txtstudentid.TabIndex = 0;
             // 
+            // txtavgstate
+            // 
+            this.txtavgstate.Enabled = false;
+            this.txtavgstate.Location = new System.Drawing.Point(334, 116);
+            this.txtavgstate.Name = "txtavgstate";
+            this.txtavgstate.Size = new System.Drawing.Size(90, 20);
+            this.txtavgstate.TabIndex = 95;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(253, 119);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(75, 13);
+            this.label13.TabIndex = 94;
+            this.label13.Text = "Average State";
+            // 
             // frmExamResults
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -509,6 +538,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtsubject2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtsubject1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtstudentid.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtavgstate.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -556,5 +586,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn state;
         private System.Windows.Forms.DataGridViewTextBoxColumn exam_type;
         private System.Windows.Forms.Button btnclear;
+        private DevExpress.XtraEditors.TextEdit txtavgstate;
+        private System.Windows.Forms.Label label13;
     }
 }

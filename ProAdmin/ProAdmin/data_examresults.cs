@@ -27,5 +27,6 @@ namespace ProAdmin
         public Nullable<decimal> average_marks { get; set; }
         public Nullable<int> rank { get; set; }
         public string avg_state { get; set; }
+        public string exam_date { get; set; }
     }
 }

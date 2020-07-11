@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.Data.Entity;
 
 namespace ProAdmin
 {
@@ -20,6 +21,7 @@ namespace ProAdmin
 
         basicdata_student model_students = new basicdata_student();
         basicdate_schedule model_examschedule = new basicdate_schedule();
+        data_examresults model_results = new data_examresults();
 
         private static frmExamResults _instance;
 
@@ -54,6 +56,7 @@ namespace ProAdmin
             txtgit.Text             = null;
             txttotal.Text           = null;
             txtaverage.Text         = null;
+            txtavgstate.Text        = null;
 
         }
 
@@ -108,7 +111,98 @@ namespace ProAdmin
 
         private void btnexamsearch_Click(object sender, EventArgs e)
         {
+            if (txtstudentid.Text != null && cmbexam.Text != null)
+            {
+                model_results.regid = txtstudentid.Text;
+                model_results.exam = cmbexam.Text;
+
+                using (DBEntity db = new DBEntity())
+                {
+                    if (db.data_examresults.Where(data => data.regid == txtstudentid.Text && data.exam == cmbexam.Text).Any())
+                    {
+                        model_results       = db.data_examresults.Where(data => data.regid == txtstudentid.Text && data.exam == cmbexam.Text).FirstOrDefault();
+                        txtsubject1.Text    = model_results.subject_1.ToString();
+                        txtsubject2.Text    = model_results.subject_2.ToString();
+                        txtsubject3.Text    = model_results.subject_3.ToString();
+                        txtenglish.Text     = model_results.English.ToString();
+                        txtgit.Text         = model_results.git.ToString();
+                        txttotal.Text       = model_results.total_marks.ToString();
+                        txtaverage.Text     = model_results.average_marks.ToString();
+                        txtavgstate.Text    = model_results.avg_state;
+
+                        txtsubject1.Enabled = true;
+                        txtsubject2.Enabled = true;
+                        txtsubject3.Enabled = true;
+                        txtenglish.Enabled  = true;
+                        txtgit.Enabled      = true;
+                    }
+                    else
+                    {
+                        txtsubject1.Enabled = true;
+                        txtsubject2.Enabled = true;
+                        txtsubject3.Enabled = true;
+                        txtenglish.Enabled = true;
+                        txtgit.Enabled = true;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please try again with correct data!");
+                clear();
+            }
+        }
+
+        private void btngenerate_Click(object sender, EventArgs e)
+        {
             
+        }
+
+        private void message_popup_ok(string messsage)
+        {
+            XtraMessageBoxArgs args = new XtraMessageBoxArgs();
+            args.Caption = "Notification!";
+            args.Text = messsage;
+            args.Buttons = new DialogResult[] { DialogResult.OK };
+            XtraMessageBox.Show(args).ToString();
+        }
+
+        private void btnupdate_Click(object sender, EventArgs e)
+        {
+            decimal sub1 = decimal.Parse(txtsubject1.Text);
+            decimal sub2 = decimal.Parse(txtsubject2.Text);
+            decimal sub3 = decimal.Parse(txtsubject3.Text);
+            decimal  eng = decimal.Parse(txtenglish.Text);
+            decimal  git = decimal.Parse(txtgit.Text);
+            decimal  tot = decimal.Parse(txttotal.Text);
+            decimal  avg = decimal.Parse(txtaverage.Text);
+
+            model_results.subject_1     = sub1;
+            model_results.subject_2     = sub2;
+            model_results.subject_3     = sub3;
+            model_results.English       = eng;
+            model_results.git           = git;
+            model_results.total_marks   = tot;
+            model_results.average_marks = avg;
+            model_results.avg_state     = txtavgstate.Text;
+            model_results.regid         = txtstudentid.Text;
+            model_results.exam          = cmbexam.Text;
+            model_results.batch = txtbatch.Text;
+
+
+            using (DBEntity db = new DBEntity())
+            {
+
+                if (db.data_examresults.Where(data => data.regid == txtstudentid.Text && data.exam == cmbexam.Text).Any())//Insert
+                    db.Entry(model_results).State = EntityState.Modified;
+                else //Update
+                    db.data_examresults.Add(model_results);
+
+                db.SaveChangesAsync();
+                clear();
+                message_popup_ok("Data Record Saved!");
+
+            }
         }
     }
 }

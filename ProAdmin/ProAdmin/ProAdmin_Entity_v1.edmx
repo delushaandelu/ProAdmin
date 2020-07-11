@@ -105,6 +105,7 @@
           <Property Name="average_marks" Type="decimal" Precision="18" Scale="2" />
           <Property Name="rank" Type="int" />
           <Property Name="avg_state" Type="varchar" MaxLength="50" />
+          <Property Name="exam_date" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="proadmin_v1ModelStoreContainer">
           <EntitySet Name="basicdata_batch" EntityType="Self.basicdata_batch" Schema="dbo" store:Type="Tables" />
@@ -230,6 +231,7 @@
           <Property Name="average_marks" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="rank" Type="Int32" />
           <Property Name="avg_state" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="exam_date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -330,6 +332,7 @@
           <EntitySetMapping Name="data_examresults">
             <EntityTypeMapping TypeName="proadmin_v1Model.data_examresults">
               <MappingFragment StoreEntitySet="data_examresults">
+                <ScalarProperty Name="exam_date" ColumnName="exam_date" />
                 <ScalarProperty Name="avg_state" ColumnName="avg_state" />
                 <ScalarProperty Name="rank" ColumnName="rank" />
                 <ScalarProperty Name="average_marks" ColumnName="average_marks" />
