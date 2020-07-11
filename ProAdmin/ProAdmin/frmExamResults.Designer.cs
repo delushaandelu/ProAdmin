@@ -32,6 +32,7 @@
             this.txtsearch = new DevExpress.XtraBars.Navigation.TabPane();
             this.tabNavigationPage1 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.dgvStudentResultData = new System.Windows.Forms.DataGridView();
             this.exam_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.exam = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,7 +76,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtstudentid = new DevExpress.XtraEditors.TextEdit();
-            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txtsearch)).BeginInit();
             this.txtsearch.SuspendLayout();
             this.tabNavigationPage1.SuspendLayout();
@@ -140,6 +140,19 @@
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Exam Data";
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
+            this.btnRefresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefresh.BackgroundImage")));
+            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRefresh.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRefresh.Location = new System.Drawing.Point(506, 163);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(31, 29);
+            this.btnRefresh.TabIndex = 85;
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // dgvStudentResultData
             // 
@@ -333,6 +346,7 @@
             // 
             // btnclear
             // 
+            this.btnclear.Enabled = false;
             this.btnclear.Location = new System.Drawing.Point(365, 142);
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(80, 23);
@@ -343,6 +357,7 @@
             // 
             // btnupdate
             // 
+            this.btnupdate.Enabled = false;
             this.btnupdate.Location = new System.Drawing.Point(262, 142);
             this.btnupdate.Name = "btnupdate";
             this.btnupdate.Size = new System.Drawing.Size(80, 23);
@@ -353,6 +368,7 @@
             // 
             // btngenerate
             // 
+            this.btngenerate.Enabled = false;
             this.btngenerate.Location = new System.Drawing.Point(42, 142);
             this.btngenerate.Name = "btngenerate";
             this.btngenerate.Size = new System.Drawing.Size(188, 23);
@@ -547,19 +563,6 @@
             this.txtstudentid.Name = "txtstudentid";
             this.txtstudentid.Size = new System.Drawing.Size(208, 20);
             this.txtstudentid.TabIndex = 0;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefresh.BackgroundImage")));
-            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRefresh.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRefresh.Location = new System.Drawing.Point(506, 163);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(31, 29);
-            this.btnRefresh.TabIndex = 85;
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // frmExamResults
             // 

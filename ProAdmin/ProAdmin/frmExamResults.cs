@@ -62,6 +62,9 @@ namespace ProAdmin
             txttotal.Text           = null;
             txtaverage.Text         = null;
             txtavgstate.Text        = null;
+            btngenerate.Enabled     = false;
+            btnupdate.Enabled       = false;
+            btnclear.Enabled        = false;
             populate_all_student_exam_marks_data();
 
 
@@ -144,6 +147,9 @@ namespace ProAdmin
                         txtsubject3.Enabled = true;
                         txtenglish.Enabled  = true;
                         txtgit.Enabled      = true;
+                        btngenerate.Enabled = true;
+                        btnupdate.Enabled   = true;
+                        btnclear.Enabled    = true;
                     }
                     else
                     {
