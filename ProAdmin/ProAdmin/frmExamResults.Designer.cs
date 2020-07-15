@@ -78,13 +78,13 @@
             this.txtstudentid = new DevExpress.XtraEditors.TextEdit();
             this.tabNavigationPage2 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.dgvGenerateOverallReport = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.cmbgenbatch = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.btngenReport = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.cmbgenexam = new System.Windows.Forms.ComboBox();
-            this.btngenReport = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cmbgenbatch = new System.Windows.Forms.ComboBox();
+            this.dgvGenerateOverallReport = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.txtsearch)).BeginInit();
             this.txtsearch.SuspendLayout();
             this.tabNavigationPage1.SuspendLayout();
@@ -364,7 +364,6 @@
             // 
             // btnclear
             // 
-            this.btnclear.Enabled = false;
             this.btnclear.Location = new System.Drawing.Point(365, 142);
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(80, 23);
@@ -375,7 +374,6 @@
             // 
             // btnupdate
             // 
-            this.btnupdate.Enabled = false;
             this.btnupdate.Location = new System.Drawing.Point(262, 142);
             this.btnupdate.Name = "btnupdate";
             this.btnupdate.Size = new System.Drawing.Size(80, 23);
@@ -386,7 +384,6 @@
             // 
             // btngenerate
             // 
-            this.btngenerate.Enabled = false;
             this.btngenerate.Location = new System.Drawing.Point(42, 142);
             this.btngenerate.Name = "btngenerate";
             this.btngenerate.Size = new System.Drawing.Size(188, 23);
@@ -611,39 +608,15 @@
             this.splitContainer1.SplitterDistance = 37;
             this.splitContainer1.TabIndex = 0;
             // 
-            // dgvGenerateOverallReport
+            // btngenReport
             // 
-            this.dgvGenerateOverallReport.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvGenerateOverallReport.Location = new System.Drawing.Point(0, 0);
-            this.dgvGenerateOverallReport.MainView = this.gridView1;
-            this.dgvGenerateOverallReport.Name = "dgvGenerateOverallReport";
-            this.dgvGenerateOverallReport.Size = new System.Drawing.Size(1239, 551);
-            this.dgvGenerateOverallReport.TabIndex = 0;
-            this.dgvGenerateOverallReport.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.dgvGenerateOverallReport;
-            this.gridView1.Name = "gridView1";
-            // 
-            // cmbgenbatch
-            // 
-            this.cmbgenbatch.FormattingEnabled = true;
-            this.cmbgenbatch.Location = new System.Drawing.Point(75, 11);
-            this.cmbgenbatch.Name = "cmbgenbatch";
-            this.cmbgenbatch.Size = new System.Drawing.Size(159, 21);
-            this.cmbgenbatch.TabIndex = 1;
-            this.cmbgenbatch.SelectedValueChanged += new System.EventHandler(this.cmbgenbatch_SelectedValueChanged);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(19, 14);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(35, 13);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "Batch";
+            this.btngenReport.Location = new System.Drawing.Point(681, 9);
+            this.btngenReport.Name = "btngenReport";
+            this.btngenReport.Size = new System.Drawing.Size(96, 23);
+            this.btngenReport.TabIndex = 5;
+            this.btngenReport.Text = "Generate";
+            this.btngenReport.UseVisualStyleBackColor = true;
+            this.btngenReport.Click += new System.EventHandler(this.btngenReport_Click);
             // 
             // label15
             // 
@@ -662,15 +635,39 @@
             this.cmbgenexam.Size = new System.Drawing.Size(347, 21);
             this.cmbgenexam.TabIndex = 3;
             // 
-            // btngenReport
+            // label14
             // 
-            this.btngenReport.Location = new System.Drawing.Point(681, 9);
-            this.btngenReport.Name = "btngenReport";
-            this.btngenReport.Size = new System.Drawing.Size(96, 23);
-            this.btngenReport.TabIndex = 5;
-            this.btngenReport.Text = "Generate";
-            this.btngenReport.UseVisualStyleBackColor = true;
-            this.btngenReport.Click += new System.EventHandler(this.btngenReport_Click);
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(19, 14);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(35, 13);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Batch";
+            // 
+            // cmbgenbatch
+            // 
+            this.cmbgenbatch.FormattingEnabled = true;
+            this.cmbgenbatch.Location = new System.Drawing.Point(75, 11);
+            this.cmbgenbatch.Name = "cmbgenbatch";
+            this.cmbgenbatch.Size = new System.Drawing.Size(159, 21);
+            this.cmbgenbatch.TabIndex = 1;
+            this.cmbgenbatch.SelectedValueChanged += new System.EventHandler(this.cmbgenbatch_SelectedValueChanged);
+            // 
+            // dgvGenerateOverallReport
+            // 
+            this.dgvGenerateOverallReport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvGenerateOverallReport.Location = new System.Drawing.Point(0, 0);
+            this.dgvGenerateOverallReport.MainView = this.gridView1;
+            this.dgvGenerateOverallReport.Name = "dgvGenerateOverallReport";
+            this.dgvGenerateOverallReport.Size = new System.Drawing.Size(1239, 551);
+            this.dgvGenerateOverallReport.TabIndex = 0;
+            this.dgvGenerateOverallReport.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.dgvGenerateOverallReport;
+            this.gridView1.Name = "gridView1";
             // 
             // frmExamResults
             // 

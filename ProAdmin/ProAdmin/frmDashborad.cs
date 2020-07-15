@@ -83,5 +83,16 @@ namespace ProAdmin
             }
             frmExamResults.Instance.BringToFront();
         }
+
+        private void accordionControlElement8_Click(object sender, EventArgs e)
+        {
+            if (!panelContainer.Controls.Contains(frmExamResultCharts.Instance))
+            {
+                panelContainer.Controls.Add(frmExamResultCharts.Instance);
+                frmExamResultCharts.Instance.Dock = DockStyle.Fill;
+                frmExamResultCharts.Instance.BringToFront();
+            }
+            frmExamResultCharts.Instance.BringToFront();
+        }
     }
 }

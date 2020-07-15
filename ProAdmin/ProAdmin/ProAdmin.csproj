@@ -119,6 +119,12 @@
     <Compile Include="frmDashborad.Designer.cs">
       <DependentUpon>frmDashborad.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmExamResultCharts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmExamResultCharts.Designer.cs">
+      <DependentUpon>frmExamResultCharts.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmExamResults.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -174,6 +180,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDashborad.resx">
       <DependentUpon>frmDashborad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExamResultCharts.resx">
+      <DependentUpon>frmExamResultCharts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmExamResults.resx">
       <DependentUpon>frmExamResults.cs</DependentUpon>
