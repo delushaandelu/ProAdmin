@@ -72,17 +72,14 @@ namespace ProAdmin
             txtstudentname.Text     = null;
             txtbatch.Text           = null;
             txtschool.Text          = null;
-            txtsubject1.Text        = null;
-            txtsubject2.Text        = null;
-            txtsubject3.Text        = null;
-            txtenglish.Text         = null;
-            txtgit.Text             = null;
-            txttotal.Text           = null;
-            txtaverage.Text         = null;
-            txtavgstate.Text        = null;
-            btngenerate.Enabled     = false;
-            btnupdate.Enabled       = false;
-            btnclear.Enabled        = false;
+            txtsubject1.Text        = "0";
+            txtsubject2.Text        = "0";
+            txtsubject3.Text        = "0";
+            txtenglish.Text         = "0";
+            txtgit.Text             = "0";
+            txttotal.Text           = "0";
+            txtaverage.Text         = "0";
+            txtavgstate.Text        = "0";
             populate_all_student_exam_marks_data();
 
 
