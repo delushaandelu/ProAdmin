@@ -107,6 +107,8 @@
           <Property Name="avg_state" Type="varchar" MaxLength="50" />
           <Property Name="exam_date" Type="varchar" MaxLength="50" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'proadmin_v1.dbo.view_missing_exam_results' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityContainer Name="proadmin_v1ModelStoreContainer">
           <EntitySet Name="basicdata_batch" EntityType="Self.basicdata_batch" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="basicdata_school" EntityType="Self.basicdata_school" Schema="dbo" store:Type="Tables" />

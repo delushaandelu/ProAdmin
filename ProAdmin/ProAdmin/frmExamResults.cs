@@ -227,7 +227,7 @@ namespace ProAdmin
             model_results.avg_state     = txtavgstate.Text;
             model_results.regid         = txtstudentid.Text;
             model_results.exam          = cmbexam.Text;
-            model_results.batch = txtbatch.Text;
+            model_results.batch         = txtbatch.Text;
 
 
             using (DBEntity db = new DBEntity())
@@ -329,6 +329,11 @@ namespace ProAdmin
                 cmbmissexam.DisplayMember = "exam";
                 cmbmissexam.SelectedItem = null;
             }
+        }
+
+        private void btnmissgen_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

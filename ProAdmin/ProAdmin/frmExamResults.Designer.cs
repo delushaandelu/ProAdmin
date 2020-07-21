@@ -609,7 +609,7 @@
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // 
+            // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.btngenReport);
             this.splitContainer1.Panel1.Controls.Add(this.label15);
@@ -718,6 +718,7 @@
             this.btnmissgen.TabIndex = 10;
             this.btnmissgen.Text = "Generate";
             this.btnmissgen.UseVisualStyleBackColor = true;
+            this.btnmissgen.Click += new System.EventHandler(this.btnmissgen_Click);
             // 
             // label16
             // 

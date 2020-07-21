@@ -22,7 +22,9 @@ namespace ProAdmin
             populate_all_examschedule_rich_data_grid_view();
         }
 
-        basicdate_schedule model_examschedule = new basicdate_schedule();
+        basicdate_schedule  model_examschedule = new basicdate_schedule();
+        basicdata_student   model_student = new basicdata_student();
+        data_examresults    model_results = new data_examresults();
 
         private static frmSheduleAnExam _instance;
         public static frmSheduleAnExam Instance
@@ -91,7 +93,7 @@ namespace ProAdmin
 
         private void btnsubsave_Click(object sender, EventArgs e)
         {
-            if(txtexam.Text != null || dtpenddate.Text != null || dtpenddate.Text != null || cmbstate.Text != null || cmbexamtype.Text != null)
+            if (txtexam.Text != null || dtpenddate.Text != null || dtpenddate.Text != null || cmbstate.Text != null || cmbexamtype.Text != null)
             {
                 string exam = txtexam.Text + '_' + cmbexamtype.Text;
 
@@ -105,9 +107,18 @@ namespace ProAdmin
                 using (DBEntity db = new DBEntity())
                 {
                     if (model_examschedule.id == 0)//Insert
+                    {
                         db.basicdate_schedule.Add(model_examschedule);
+
+                        if (XtraMessageBox.Show("If you created this record, there will be students marks list also generated at the same time. Are you sure you want to shedule an exam?", "Authentication Required!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        {
+                            generate_marks_list(cmbbatch.Text, exam);
+                        }
+                    }
                     else //Update
+                    {
                         db.Entry(model_examschedule).State = EntityState.Modified;
+                    } 
 
                     db.SaveChangesAsync();
                     clear_fields();
@@ -123,6 +134,33 @@ namespace ProAdmin
             else
             {
                 message_popup_ok("Empty fields found.");
+            }
+        }
+
+        private void generate_marks_list(string batch, string exam)
+        {
+            using (DBEntity db = new DBEntity())
+            {
+                var selectedStudents = db.basicdata_student.Where(i => i.Batch == batch).ToList();
+
+                foreach (basicdata_student student in selectedStudents)
+                {
+                    model_results.subject_1     = 0;
+                    model_results.subject_2     = 0;
+                    model_results.subject_3     = 0;
+                    model_results.English       = 0;
+                    model_results.git           = 0;
+                    model_results.total_marks   = 0;
+                    model_results.average_marks = 0;
+                    model_results.avg_state     = "";
+                    model_results.regid         = student.regid;
+                    model_results.exam          = exam;
+                    model_results.batch         = batch;
+                    model_results.exam_date     = dtpstartdate.Text;
+
+                    db.data_examresults.Add(model_results);
+                    db.SaveChanges();
+                }
             }
         }
 
@@ -145,8 +183,16 @@ namespace ProAdmin
 
                     populate_examschedule_data_grid_view();
                     populate_all_examschedule_rich_data_grid_view();
-                    clear_fields();
+                    
                     btnsubsave.Text = "Save";
+
+                    if (XtraMessageBox.Show("Do you want to delete all the Marks for this exam shedule too?", "Authentication Required!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        var data = db.data_examresults.Where(rec => rec.exam == txtexam.Text && rec.batch == cmbbatch.Text);
+                        db.data_examresults.RemoveRange(data);
+                        db.SaveChanges();
+                    }
+                    clear_fields();
 
                     message_popup_ok("Data Deleted!");
                 }
