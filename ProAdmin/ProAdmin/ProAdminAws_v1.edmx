@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="proadmin_v1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="proadmin_v1_Model1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="basicdata_batch">
           <Key>
             <PropertyRef Name="batchid" />
@@ -130,7 +130,7 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_exam_results_summary' does no
           <Property Name="git" Type="decimal" Precision="18" Scale="2" />
           <Property Name="exam" Type="varchar" MaxLength="50" />
         </EntityType>
-        <EntityContainer Name="proadmin_v1ModelStoreContainer">
+        <EntityContainer Name="proadmin_v1_Model1StoreContainer">
           <EntitySet Name="basicdata_batch" EntityType="Self.basicdata_batch" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="basicdata_school" EntityType="Self.basicdata_school" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="basicdata_student" EntityType="Self.basicdata_student" Schema="dbo" store:Type="Tables" />
@@ -160,10 +160,11 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_exam_results_summary' does no
     FROM [dbo].[view_exam_results_summary] AS [view_exam_results_summary]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="proadmin_v1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="proadmin_v1_Model1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="basicdata_batch">
           <Key>
             <PropertyRef Name="batchid" />
@@ -171,25 +172,6 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_exam_results_summary' does no
           <Property Name="batchid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="batch" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="log" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityContainer Name="DBEntity" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="basicdata_batch" EntityType="Self.basicdata_batch" />
-          <EntitySet Name="basicdata_university" EntityType="proadmin_v1Model.basicdata_university" />
-          <EntitySet Name="basicdata_school" EntityType="proadmin_v1Model.basicdata_school" />
-          <EntitySet Name="basicdata_subject" EntityType="proadmin_v1Model.basicdata_subject" />
-          <EntitySet Name="basicdata_users" EntityType="proadmin_v1Model.basicdata_users" />
-          <EntitySet Name="basicdata_student" EntityType="proadmin_v1Model.basicdata_student" />
-          <EntitySet Name="basicdate_schedule" EntityType="proadmin_v1Model.basicdate_schedule" />
-          <EntitySet Name="data_examresults" EntityType="proadmin_v1Model.data_examresults" />
-          <EntitySet Name="view_exam_results_summary" EntityType="proadmin_v1Model.view_exam_results_summary" />
-        </EntityContainer>
-        <EntityType Name="basicdata_university">
-          <Key>
-            <PropertyRef Name="uniid" />
-          </Key>
-          <Property Name="uniid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="uniname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="log" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="basicdata_school">
           <Key>
@@ -199,36 +181,12 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_exam_results_summary' does no
           <Property Name="schoolname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="log" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="basicdata_subject">
-          <Key>
-            <PropertyRef Name="subid" />
-          </Key>
-          <Property Name="subid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="subject" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="teacher" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="log" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="basicdata_users">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="fullname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="phone" Type="Int32" />
-          <Property Name="role" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="status" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="username" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="password" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="log" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="nic" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
-        </EntityType>
         <EntityType Name="basicdata_student">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="regid" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="regid" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Firstname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="Lastname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="Nic" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
@@ -245,6 +203,38 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_exam_results_summary' does no
           <Property Name="JoinDate" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="Batch" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="Scholarship" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="basicdata_subject">
+          <Key>
+            <PropertyRef Name="subid" />
+          </Key>
+          <Property Name="subid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="subject" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="teacher" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="log" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="basicdata_university">
+          <Key>
+            <PropertyRef Name="uniid" />
+          </Key>
+          <Property Name="uniid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="uniname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="log" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="basicdata_users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fullname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="nic" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="phone" Type="Int32" />
+          <Property Name="role" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="status" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="username" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="log" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="basicdate_schedule">
           <Key>
@@ -283,7 +273,7 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_exam_results_summary' does no
           </Key>
           <Property Name="batch" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="exam_date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="regid" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="regid" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Firstname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="Lastname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="Al_school" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
@@ -298,14 +288,25 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_exam_results_summary' does no
           <Property Name="git" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="exam" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityContainer Name="proadmin_v1Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="basicdata_batch" EntityType="Self.basicdata_batch" />
+          <EntitySet Name="basicdata_school" EntityType="Self.basicdata_school" />
+          <EntitySet Name="basicdata_student" EntityType="Self.basicdata_student" />
+          <EntitySet Name="basicdata_subject" EntityType="Self.basicdata_subject" />
+          <EntitySet Name="basicdata_university" EntityType="Self.basicdata_university" />
+          <EntitySet Name="basicdata_users" EntityType="Self.basicdata_users" />
+          <EntitySet Name="basicdate_schedule" EntityType="Self.basicdate_schedule" />
+          <EntitySet Name="data_examresults" EntityType="Self.data_examresults" />
+          <EntitySet Name="view_exam_results_summary" EntityType="Self.view_exam_results_summary" />
+        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="proadmin_v1ModelStoreContainer" CdmEntityContainer="DBEntity">
+        <EntityContainerMapping StorageEntityContainer="proadmin_v1_Model1StoreContainer" CdmEntityContainer="proadmin_v1Entities">
           <EntitySetMapping Name="basicdata_batch">
-            <EntityTypeMapping TypeName="proadmin_v1Model.basicdata_batch">
+            <EntityTypeMapping TypeName="proadmin_v1_Model1.basicdata_batch">
               <MappingFragment StoreEntitySet="basicdata_batch">
                 <ScalarProperty Name="batchid" ColumnName="batchid" />
                 <ScalarProperty Name="batch" ColumnName="batch" />
@@ -313,126 +314,126 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_exam_results_summary' does no
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="basicdata_university">
-            <EntityTypeMapping TypeName="proadmin_v1Model.basicdata_university">
-              <MappingFragment StoreEntitySet="basicdata_university">
-                <ScalarProperty Name="log" ColumnName="log" />
-                <ScalarProperty Name="uniname" ColumnName="uniname" />
-                <ScalarProperty Name="uniid" ColumnName="uniid" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="basicdata_school">
-            <EntityTypeMapping TypeName="proadmin_v1Model.basicdata_school">
+            <EntityTypeMapping TypeName="proadmin_v1_Model1.basicdata_school">
               <MappingFragment StoreEntitySet="basicdata_school">
-                <ScalarProperty Name="log" ColumnName="log" />
-                <ScalarProperty Name="schoolname" ColumnName="schoolname" />
                 <ScalarProperty Name="schid" ColumnName="schid" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="basicdata_subject">
-            <EntityTypeMapping TypeName="proadmin_v1Model.basicdata_subject">
-              <MappingFragment StoreEntitySet="basicdata_subject">
+                <ScalarProperty Name="schoolname" ColumnName="schoolname" />
                 <ScalarProperty Name="log" ColumnName="log" />
-                <ScalarProperty Name="teacher" ColumnName="teacher" />
-                <ScalarProperty Name="subject" ColumnName="subject" />
-                <ScalarProperty Name="subid" ColumnName="subid" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="basicdata_users">
-            <EntityTypeMapping TypeName="proadmin_v1Model.basicdata_users">
-              <MappingFragment StoreEntitySet="basicdata_users">
-                <ScalarProperty Name="nic" ColumnName="nic" />
-                <ScalarProperty Name="log" ColumnName="log" />
-                <ScalarProperty Name="password" ColumnName="password" />
-                <ScalarProperty Name="username" ColumnName="username" />
-                <ScalarProperty Name="status" ColumnName="status" />
-                <ScalarProperty Name="role" ColumnName="role" />
-                <ScalarProperty Name="phone" ColumnName="phone" />
-                <ScalarProperty Name="email" ColumnName="email" />
-                <ScalarProperty Name="fullname" ColumnName="fullname" />
-                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="basicdata_student">
-            <EntityTypeMapping TypeName="proadmin_v1Model.basicdata_student">
+            <EntityTypeMapping TypeName="proadmin_v1_Model1.basicdata_student">
               <MappingFragment StoreEntitySet="basicdata_student">
-                <ScalarProperty Name="Scholarship" ColumnName="Scholarship" />
-                <ScalarProperty Name="Batch" ColumnName="Batch" />
-                <ScalarProperty Name="JoinDate" ColumnName="JoinDate" />
-                <ScalarProperty Name="Ol_result" ColumnName="Ol_result" />
-                <ScalarProperty Name="Al_school" ColumnName="Al_school" />
-                <ScalarProperty Name="Ol_School" ColumnName="Ol_School" />
-                <ScalarProperty Name="Parents_contact" ColumnName="Parents_contact" />
-                <ScalarProperty Name="Father_name" ColumnName="Father_name" />
-                <ScalarProperty Name="Stay_home_tell" ColumnName="Stay_home_tell" />
-                <ScalarProperty Name="Staying_address" ColumnName="Staying_address" />
-                <ScalarProperty Name="Home_tell" ColumnName="Home_tell" />
-                <ScalarProperty Name="home_address" ColumnName="home_address" />
-                <ScalarProperty Name="Dob" ColumnName="Dob" />
-                <ScalarProperty Name="Nic" ColumnName="Nic" />
-                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
-                <ScalarProperty Name="Firstname" ColumnName="Firstname" />
-                <ScalarProperty Name="regid" ColumnName="regid" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="regid" ColumnName="regid" />
+                <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+                <ScalarProperty Name="Nic" ColumnName="Nic" />
+                <ScalarProperty Name="Dob" ColumnName="Dob" />
+                <ScalarProperty Name="home_address" ColumnName="home_address" />
+                <ScalarProperty Name="Home_tell" ColumnName="Home_tell" />
+                <ScalarProperty Name="Staying_address" ColumnName="Staying_address" />
+                <ScalarProperty Name="Stay_home_tell" ColumnName="Stay_home_tell" />
+                <ScalarProperty Name="Father_name" ColumnName="Father_name" />
+                <ScalarProperty Name="Parents_contact" ColumnName="Parents_contact" />
+                <ScalarProperty Name="Ol_School" ColumnName="Ol_School" />
+                <ScalarProperty Name="Al_school" ColumnName="Al_school" />
+                <ScalarProperty Name="Ol_result" ColumnName="Ol_result" />
+                <ScalarProperty Name="JoinDate" ColumnName="JoinDate" />
+                <ScalarProperty Name="Batch" ColumnName="Batch" />
+                <ScalarProperty Name="Scholarship" ColumnName="Scholarship" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="basicdata_subject">
+            <EntityTypeMapping TypeName="proadmin_v1_Model1.basicdata_subject">
+              <MappingFragment StoreEntitySet="basicdata_subject">
+                <ScalarProperty Name="subid" ColumnName="subid" />
+                <ScalarProperty Name="subject" ColumnName="subject" />
+                <ScalarProperty Name="teacher" ColumnName="teacher" />
+                <ScalarProperty Name="log" ColumnName="log" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="basicdata_university">
+            <EntityTypeMapping TypeName="proadmin_v1_Model1.basicdata_university">
+              <MappingFragment StoreEntitySet="basicdata_university">
+                <ScalarProperty Name="uniid" ColumnName="uniid" />
+                <ScalarProperty Name="uniname" ColumnName="uniname" />
+                <ScalarProperty Name="log" ColumnName="log" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="basicdata_users">
+            <EntityTypeMapping TypeName="proadmin_v1_Model1.basicdata_users">
+              <MappingFragment StoreEntitySet="basicdata_users">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fullname" ColumnName="fullname" />
+                <ScalarProperty Name="nic" ColumnName="nic" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="role" ColumnName="role" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="log" ColumnName="log" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="basicdate_schedule">
-            <EntityTypeMapping TypeName="proadmin_v1Model.basicdate_schedule">
+            <EntityTypeMapping TypeName="proadmin_v1_Model1.basicdate_schedule">
               <MappingFragment StoreEntitySet="basicdate_schedule">
-                <ScalarProperty Name="batch" ColumnName="batch" />
-                <ScalarProperty Name="exam_type" ColumnName="exam_type" />
-                <ScalarProperty Name="state" ColumnName="state" />
-                <ScalarProperty Name="end_date" ColumnName="end_date" />
-                <ScalarProperty Name="start_date" ColumnName="start_date" />
-                <ScalarProperty Name="exam" ColumnName="exam" />
                 <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="exam" ColumnName="exam" />
+                <ScalarProperty Name="start_date" ColumnName="start_date" />
+                <ScalarProperty Name="end_date" ColumnName="end_date" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="exam_type" ColumnName="exam_type" />
+                <ScalarProperty Name="batch" ColumnName="batch" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="data_examresults">
-            <EntityTypeMapping TypeName="proadmin_v1Model.data_examresults">
+            <EntityTypeMapping TypeName="proadmin_v1_Model1.data_examresults">
               <MappingFragment StoreEntitySet="data_examresults">
-                <ScalarProperty Name="exam_date" ColumnName="exam_date" />
-                <ScalarProperty Name="avg_state" ColumnName="avg_state" />
-                <ScalarProperty Name="rank" ColumnName="rank" />
-                <ScalarProperty Name="average_marks" ColumnName="average_marks" />
-                <ScalarProperty Name="total_marks" ColumnName="total_marks" />
-                <ScalarProperty Name="git" ColumnName="git" />
-                <ScalarProperty Name="English" ColumnName="English" />
-                <ScalarProperty Name="subject_3" ColumnName="subject_3" />
-                <ScalarProperty Name="subject_2" ColumnName="subject_2" />
-                <ScalarProperty Name="subject_1" ColumnName="subject_1" />
-                <ScalarProperty Name="regid" ColumnName="regid" />
-                <ScalarProperty Name="batch" ColumnName="batch" />
-                <ScalarProperty Name="exam" ColumnName="exam" />
                 <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="exam" ColumnName="exam" />
+                <ScalarProperty Name="batch" ColumnName="batch" />
+                <ScalarProperty Name="regid" ColumnName="regid" />
+                <ScalarProperty Name="subject_1" ColumnName="subject_1" />
+                <ScalarProperty Name="subject_2" ColumnName="subject_2" />
+                <ScalarProperty Name="subject_3" ColumnName="subject_3" />
+                <ScalarProperty Name="English" ColumnName="English" />
+                <ScalarProperty Name="git" ColumnName="git" />
+                <ScalarProperty Name="total_marks" ColumnName="total_marks" />
+                <ScalarProperty Name="average_marks" ColumnName="average_marks" />
+                <ScalarProperty Name="rank" ColumnName="rank" />
+                <ScalarProperty Name="avg_state" ColumnName="avg_state" />
+                <ScalarProperty Name="exam_date" ColumnName="exam_date" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="view_exam_results_summary">
-            <EntityTypeMapping TypeName="proadmin_v1Model.view_exam_results_summary">
+            <EntityTypeMapping TypeName="proadmin_v1_Model1.view_exam_results_summary">
               <MappingFragment StoreEntitySet="view_exam_results_summary">
-                <ScalarProperty Name="exam" ColumnName="exam" />
-                <ScalarProperty Name="git" ColumnName="git" />
-                <ScalarProperty Name="English" ColumnName="English" />
-                <ScalarProperty Name="average_marks" ColumnName="average_marks" />
-                <ScalarProperty Name="avg_state" ColumnName="avg_state" />
-                <ScalarProperty Name="rank" ColumnName="rank" />
-                <ScalarProperty Name="total_marks" ColumnName="total_marks" />
-                <ScalarProperty Name="subject_3" ColumnName="subject_3" />
-                <ScalarProperty Name="subject_2" ColumnName="subject_2" />
-                <ScalarProperty Name="subject_1" ColumnName="subject_1" />
-                <ScalarProperty Name="Al_school" ColumnName="Al_school" />
-                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
-                <ScalarProperty Name="Firstname" ColumnName="Firstname" />
-                <ScalarProperty Name="regid" ColumnName="regid" />
-                <ScalarProperty Name="exam_date" ColumnName="exam_date" />
                 <ScalarProperty Name="batch" ColumnName="batch" />
+                <ScalarProperty Name="exam_date" ColumnName="exam_date" />
+                <ScalarProperty Name="regid" ColumnName="regid" />
+                <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+                <ScalarProperty Name="Al_school" ColumnName="Al_school" />
+                <ScalarProperty Name="subject_1" ColumnName="subject_1" />
+                <ScalarProperty Name="subject_2" ColumnName="subject_2" />
+                <ScalarProperty Name="subject_3" ColumnName="subject_3" />
+                <ScalarProperty Name="total_marks" ColumnName="total_marks" />
+                <ScalarProperty Name="rank" ColumnName="rank" />
+                <ScalarProperty Name="avg_state" ColumnName="avg_state" />
+                <ScalarProperty Name="average_marks" ColumnName="average_marks" />
+                <ScalarProperty Name="English" ColumnName="English" />
+                <ScalarProperty Name="git" ColumnName="git" />
+                <ScalarProperty Name="exam" ColumnName="exam" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

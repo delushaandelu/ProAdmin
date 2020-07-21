@@ -42,7 +42,7 @@ namespace ProAdmin
         {
             if (cmbgenbatch.Text != null || cmbgenexam.Text != null)
             {
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
                     view_exam_result_summary.exam = cmbgenexam.Text;
                     view_exam_result_summary.batch = cmbgenbatch.Text;
@@ -58,7 +58,7 @@ namespace ProAdmin
         public void populate_all_student_exam_marks_data()
         {
             dgvStudentResultData.AutoGenerateColumns = false;
-            using (DBEntity db = new DBEntity())
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
                 model_results.regid = txtstudentid.Text;
                 dgvStudentResultData.DataSource = db.data_examresults.Where(x => x.regid == model_results.regid).ToList<data_examresults>();
@@ -92,7 +92,7 @@ namespace ProAdmin
             if (txtstudentid.Text != null)
             {
                 model_students.regid = txtstudentid.Text;
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
                     if (db.basicdata_student.Where(data => data.regid == txtstudentid.Text).Any())
                     {
@@ -132,7 +132,7 @@ namespace ProAdmin
                 model_results.regid = txtstudentid.Text;
                 model_results.exam = cmbexam.Text;
 
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
                     if (db.data_examresults.Where(data => data.regid == txtstudentid.Text && data.exam == cmbexam.Text).Any())
                     {
@@ -232,7 +232,7 @@ namespace ProAdmin
             model_results.batch         = txtbatch.Text;
 
 
-            using (DBEntity db = new DBEntity())
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
                 if (cmbexam.Text != null)
                 {
@@ -263,7 +263,7 @@ namespace ProAdmin
             if(txtstudentid.Text != null)
             { 
                 dgvStudentResultData.AutoGenerateColumns = false;
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
                     model_results.regid = txtstudentid.Text;
                     dgvStudentResultData.DataSource = db.data_examresults.Where(x => x.regid == model_results.regid).ToList<data_examresults>();
@@ -277,7 +277,7 @@ namespace ProAdmin
 
         private void get_student_exam_vale_list()
         {
-            using (DBEntity db = new DBEntity())
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
                 var batch_data = from data in db.basicdate_schedule where data.batch == txtbatch.Text select new { Name = data.id, ID = data.exam };
                 cmbexam.DataSource = batch_data.ToList();
@@ -290,7 +290,7 @@ namespace ProAdmin
 
         private void cmbgenbatch_SelectedValueChanged(object sender, EventArgs e)
         {
-            using (DBEntity db = new DBEntity())
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
                 var exam = from data in db.basicdate_schedule where data.batch == cmbgenbatch.Text select new { Name = data.id, ID = data.exam };
                 cmbgenexam.DataSource = exam.ToList();
@@ -302,7 +302,7 @@ namespace ProAdmin
 
         private void get_basicdate_for_generate_marks()
         {
-            using (DBEntity db = new DBEntity())
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
                 var batch = db.basicdata_batch.Select(y => new { y.batchid, y.batch });
                 cmbgenbatch.DataSource = batch.ToList();
@@ -322,7 +322,7 @@ namespace ProAdmin
 
         private void cmbmissbatch_SelectedIndexChanged(object sender, EventArgs e)
         {
-            using (DBEntity db = new DBEntity())
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
                 var exam = from data in db.basicdate_schedule where data.batch == cmbmissbatch.Text select new { Name = data.id, ID = data.exam };
 
@@ -337,7 +337,7 @@ namespace ProAdmin
         {
             if (cmbmissbatch.Text != null || cmbmissexam.Text != null)
             {
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
                     view_exam_result_summary.exam = cmbmissexam.Text;
                     view_exam_result_summary.batch = cmbmissbatch.Text;

@@ -70,7 +70,7 @@ namespace ProAdmin
         {
             dgvBatchView.AutoGenerateColumns = false;
 
-            using (DBEntity db = new DBEntity())
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
                 dgvBatchView.DataSource = db.basicdata_batch.ToList<basicdata_batch>();
             }
@@ -80,7 +80,7 @@ namespace ProAdmin
         {
             dgvUniversityView.AutoGenerateColumns = false;
 
-            using (DBEntity db = new DBEntity())
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
                 dgvUniversityView.DataSource = db.basicdata_university.ToList<basicdata_university>();
             }
@@ -90,7 +90,7 @@ namespace ProAdmin
         {
             dgvSchoolView.AutoGenerateColumns = false;
 
-            using (DBEntity db = new DBEntity())
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
                 dgvSchoolView.DataSource = db.basicdata_school.ToList<basicdata_school>();
             }
@@ -100,7 +100,7 @@ namespace ProAdmin
         {
             dgvSubjectView.AutoGenerateColumns = false;
 
-            using (DBEntity db = new DBEntity())
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
                 dgvSubjectView.DataSource = db.basicdata_subject.ToList<basicdata_subject>();
             }
@@ -114,7 +114,7 @@ namespace ProAdmin
                 model_batch.batch   = txtBatch.Text.Trim();
                 model_batch.log     = DateTime.Now.ToString();
 
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
 
                     if (model_batch.batchid == 0)//Insert
@@ -146,7 +146,7 @@ namespace ProAdmin
                 model_university.uniname = txtUniversity.Text.Trim();
                 model_university.log = DateTime.Now.ToString();
 
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
 
                     if (model_university.uniid == 0)//Insert
@@ -177,7 +177,7 @@ namespace ProAdmin
                 model_school.schoolname = txtschool.Text.Trim();
                 model_school.log = DateTime.Now.ToString();
 
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
 
                     if (model_school.schid == 0)//Insert
@@ -209,7 +209,7 @@ namespace ProAdmin
                 model_subject.teacher = txtteacher.Text.Trim();
                 model_subject.log = DateTime.Now.ToString();
 
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
 
                     if (model_subject.subid == 0)//Insert
@@ -238,7 +238,7 @@ namespace ProAdmin
         {
             if (XtraMessageBox.Show("Are you sure to delete the record?", "Delete Record", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
                     var entity = db.Entry(model_university);
                     if (entity.State == EntityState.Detached)
@@ -259,7 +259,7 @@ namespace ProAdmin
         {
             if (XtraMessageBox.Show("Are you sure to delete the record?", "Delete Record", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
                     var entity = db.Entry(model_batch);
                     if (entity.State == EntityState.Detached)
@@ -280,7 +280,7 @@ namespace ProAdmin
         {
             if (XtraMessageBox.Show("Are you sure to delete the record?", "Delete Record", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
                     var entity = db.Entry(model_school);
                     if (entity.State == EntityState.Detached)
@@ -301,7 +301,7 @@ namespace ProAdmin
         {
             if (XtraMessageBox.Show("Are you sure to delete the record?", "Delete Record", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
                     var entity = db.Entry(model_subject);
                     if (entity.State == EntityState.Detached)
@@ -325,7 +325,7 @@ namespace ProAdmin
             {
                 model_batch.batchid = Convert.ToInt32(dgvBatchView.CurrentRow.Cells["batchid"].Value);
 
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
                     model_batch = db.basicdata_batch.Where(x => x.batchid == model_batch.batchid).FirstOrDefault();
                     txtBatch.Text = model_batch.batch;
@@ -344,7 +344,7 @@ namespace ProAdmin
             {
                 model_university.uniid = Convert.ToInt32(dgvUniversityView.CurrentRow.Cells["uniid"].Value);
 
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
                     model_university = db.basicdata_university.Where(x => x.uniid == model_university.uniid).FirstOrDefault();
                     txtUniversity.Text = model_university.uniname;
@@ -363,7 +363,7 @@ namespace ProAdmin
             {
                 model_school.schid = Convert.ToInt32(dgvSchoolView.CurrentRow.Cells["schid"].Value);
 
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
                     model_school = db.basicdata_school.Where(x => x.schid == model_school.schid).FirstOrDefault();
                     txtschool.Text = model_school.schoolname;
@@ -382,7 +382,7 @@ namespace ProAdmin
             {
                 model_subject.subid = Convert.ToInt32(dgvSubjectView.CurrentRow.Cells["subid"].Value);
 
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
                     model_subject = db.basicdata_subject.Where(x => x.subid == model_subject.subid).FirstOrDefault();
                     txtsubject.Text = model_subject.subject;

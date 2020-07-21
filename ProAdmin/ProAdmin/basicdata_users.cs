@@ -16,6 +16,7 @@ namespace ProAdmin
     {
         public int id { get; set; }
         public string fullname { get; set; }
+        public string nic { get; set; }
         public string email { get; set; }
         public Nullable<int> phone { get; set; }
         public string role { get; set; }
@@ -23,6 +24,5 @@ namespace ProAdmin
         public string username { get; set; }
         public string password { get; set; }
         public string log { get; set; }
-        public string nic { get; set; }
     }
 }

@@ -108,28 +108,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="basicdata_batch.cs">
-      <DependentUpon>ProAdmin_Entity_v1.tt</DependentUpon>
+      <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
     </Compile>
     <Compile Include="basicdata_school.cs">
-      <DependentUpon>ProAdmin_Entity_v1.tt</DependentUpon>
+      <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
     </Compile>
     <Compile Include="basicdata_student.cs">
-      <DependentUpon>ProAdmin_Entity_v1.tt</DependentUpon>
+      <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
     </Compile>
     <Compile Include="basicdata_subject.cs">
-      <DependentUpon>ProAdmin_Entity_v1.tt</DependentUpon>
+      <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
     </Compile>
     <Compile Include="basicdata_university.cs">
-      <DependentUpon>ProAdmin_Entity_v1.tt</DependentUpon>
+      <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
     </Compile>
     <Compile Include="basicdata_users.cs">
-      <DependentUpon>ProAdmin_Entity_v1.tt</DependentUpon>
+      <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
     </Compile>
     <Compile Include="basicdate_schedule.cs">
-      <DependentUpon>ProAdmin_Entity_v1.tt</DependentUpon>
+      <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
     </Compile>
     <Compile Include="data_examresults.cs">
-      <DependentUpon>ProAdmin_Entity_v1.tt</DependentUpon>
+      <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
     </Compile>
     <Compile Include="frmDashborad.cs">
       <SubType>Form</SubType>
@@ -179,25 +179,25 @@
     <Compile Include="frmUsers.Designer.cs">
       <DependentUpon>frmUsers.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProAdmin_Entity_v1.Context.cs">
+    <Compile Include="ProAdminAws_v1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ProAdmin_Entity_v1.Context.tt</DependentUpon>
+      <DependentUpon>ProAdminAws_v1.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="ProAdmin_Entity_v1.cs">
+    <Compile Include="ProAdminAws_v1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ProAdmin_Entity_v1.tt</DependentUpon>
+      <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
     </Compile>
-    <Compile Include="ProAdmin_Entity_v1.Designer.cs">
+    <Compile Include="ProAdminAws_v1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ProAdmin_Entity_v1.edmx</DependentUpon>
+      <DependentUpon>ProAdminAws_v1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="view_exam_results_summary.cs">
-      <DependentUpon>ProAdmin_Entity_v1.tt</DependentUpon>
+      <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmDashborad.resx">
       <DependentUpon>frmDashborad.cs</DependentUpon>
@@ -235,12 +235,12 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
-    <EntityDeploy Include="ProAdmin_Entity_v1.edmx">
+    <EntityDeploy Include="ProAdminAws_v1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ProAdmin_Entity_v1.Designer.cs</LastGenOutput>
+      <LastGenOutput>ProAdminAws_v1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="ProAdmin_Entity_v1.edmx.diagram">
-      <DependentUpon>ProAdmin_Entity_v1.edmx</DependentUpon>
+    <None Include="ProAdminAws_v1.edmx.diagram">
+      <DependentUpon>ProAdminAws_v1.edmx</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -259,15 +259,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ProAdmin_Entity_v1.Context.tt">
+    <Content Include="ProAdminAws_v1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ProAdmin_Entity_v1.edmx</DependentUpon>
-      <LastGenOutput>ProAdmin_Entity_v1.Context.cs</LastGenOutput>
+      <DependentUpon>ProAdminAws_v1.edmx</DependentUpon>
+      <LastGenOutput>ProAdminAws_v1.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="ProAdmin_Entity_v1.tt">
+    <Content Include="ProAdminAws_v1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ProAdmin_Entity_v1.edmx</DependentUpon>
-      <LastGenOutput>ProAdmin_Entity_v1.cs</LastGenOutput>
+      <DependentUpon>ProAdminAws_v1.edmx</DependentUpon>
+      <LastGenOutput>ProAdminAws_v1.cs</LastGenOutput>
     </Content>
     <None Include="Resources\user.png" />
     <None Include="Resources\graduation.png" />

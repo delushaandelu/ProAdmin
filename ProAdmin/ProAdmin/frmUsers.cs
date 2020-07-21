@@ -57,7 +57,7 @@ namespace ProAdmin
         private void populate_users_data_grid_view()
         {
             dgvUser.AutoGenerateColumns = false;
-            using (DBEntity db = new DBEntity())
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
                 dgvUser.DataSource = db.basicdata_users.ToList<basicdata_users>();
             }
@@ -77,7 +77,7 @@ namespace ProAdmin
                 model_users.password = txtpassword.Text;
                 model_users.log = DateTime.Now.ToString();
 
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
 
                     if (model_users.id == 0)//Insert
@@ -124,7 +124,7 @@ namespace ProAdmin
             {
                 model_users.id = Convert.ToInt32(dgvUser.CurrentRow.Cells["id"].Value);
 
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
                     model_users = db.basicdata_users.Where(x => x.id == model_users.id).FirstOrDefault();
                     txtfullname.Text = model_users.fullname;
@@ -148,7 +148,7 @@ namespace ProAdmin
         {
             if (XtraMessageBox.Show("Are you sure to delete the record?", "Delete Record", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
                     var entity = db.Entry(model_users);
                     if (entity.State == EntityState.Detached)

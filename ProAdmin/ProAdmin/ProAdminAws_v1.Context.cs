@@ -13,10 +13,10 @@ namespace ProAdmin
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DBEntity : DbContext
+    public partial class proadmin_v1Entities : DbContext
     {
-        public DBEntity()
-            : base("name=DBEntity")
+        public proadmin_v1Entities()
+            : base("name=proadmin_v1Entities")
         {
         }
     
@@ -26,11 +26,11 @@ namespace ProAdmin
         }
     
         public virtual DbSet<basicdata_batch> basicdata_batch { get; set; }
-        public virtual DbSet<basicdata_university> basicdata_university { get; set; }
         public virtual DbSet<basicdata_school> basicdata_school { get; set; }
-        public virtual DbSet<basicdata_subject> basicdata_subject { get; set; }
-        public virtual DbSet<basicdata_users> basicdata_users { get; set; }
         public virtual DbSet<basicdata_student> basicdata_student { get; set; }
+        public virtual DbSet<basicdata_subject> basicdata_subject { get; set; }
+        public virtual DbSet<basicdata_university> basicdata_university { get; set; }
+        public virtual DbSet<basicdata_users> basicdata_users { get; set; }
         public virtual DbSet<basicdate_schedule> basicdate_schedule { get; set; }
         public virtual DbSet<data_examresults> data_examresults { get; set; }
         public virtual DbSet<view_exam_results_summary> view_exam_results_summary { get; set; }

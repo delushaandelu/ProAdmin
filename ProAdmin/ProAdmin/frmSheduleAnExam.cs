@@ -39,7 +39,7 @@ namespace ProAdmin
 
         private void get_combo_vale_list()
         {
-            using (DBEntity db = new DBEntity())
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
                 var school = db.basicdata_batch.Select(x => new { x.batchid, x.batch });
                 cmbbatch.DataSource = school.ToList();
@@ -76,7 +76,7 @@ namespace ProAdmin
         private void populate_examschedule_data_grid_view()
         {
             dgvExamSchedule.AutoGenerateColumns = false;
-            using (DBEntity db = new DBEntity())
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
                 dgvExamSchedule.DataSource = db.basicdate_schedule.ToList<basicdate_schedule>();
             }
@@ -84,7 +84,7 @@ namespace ProAdmin
 
         private void populate_all_examschedule_rich_data_grid_view()
         {
-            using (DBEntity db = new DBEntity())
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
                 dgvAllExam.DataSource = db.basicdate_schedule.ToList<basicdate_schedule>();
             }
@@ -104,7 +104,7 @@ namespace ProAdmin
                 model_examschedule.exam_type    = cmbexamtype.Text;
                 model_examschedule.batch        = cmbbatch.Text;
 
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
                     if (model_examschedule.id == 0)//Insert
                     {
@@ -139,7 +139,7 @@ namespace ProAdmin
 
         private void generate_marks_list(string batch, string exam)
         {
-            using (DBEntity db = new DBEntity())
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
                 var selectedStudents = db.basicdata_student.Where(i => i.Batch == batch).ToList();
 
@@ -173,7 +173,7 @@ namespace ProAdmin
         {
             if (XtraMessageBox.Show("Are you sure to delete the record?", "Delete Record", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
                     var entity = db.Entry(model_examschedule);
                     if (entity.State == EntityState.Detached)
@@ -205,7 +205,7 @@ namespace ProAdmin
             {
                 model_examschedule.id = Convert.ToInt32(dgvExamSchedule.CurrentRow.Cells["id"].Value);
 
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
                     model_examschedule  = db.basicdate_schedule.Where(x => x.id == model_examschedule.id).FirstOrDefault();
                     txtexam.Text        = model_examschedule.exam;
@@ -224,7 +224,7 @@ namespace ProAdmin
         private void cmbsearchbybatch_SelectedIndexChanged(object sender, EventArgs e)
         {
             dgvExamSchedule.AutoGenerateColumns = false;
-            using (DBEntity db = new DBEntity())
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
                 model_examschedule.batch = cmbsearchbybatch.Text;
 

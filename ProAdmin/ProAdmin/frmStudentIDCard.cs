@@ -50,7 +50,7 @@ namespace ProAdmin
 
                 model_students.regid = txtfind.Text;
 
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
                     if (db.basicdata_student.Where(data=> data.regid == txtfind.Text).Any())
                     {

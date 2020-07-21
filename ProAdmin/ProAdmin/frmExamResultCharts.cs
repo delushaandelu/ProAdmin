@@ -65,7 +65,7 @@ namespace ProAdmin
 
 
             model_students.regid = txtstudentid.Text;
-            using (DBEntity db = new DBEntity())
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
                 if (db.basicdata_student.Where(data => data.regid == txtstudentid.Text).Any())
                 {
@@ -87,7 +87,7 @@ namespace ProAdmin
         public void populate_all_student_exam_marks_data()
         {
             dgvStudentResultData.AutoGenerateColumns = false;
-            using (DBEntity db = new DBEntity())
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
                 model_results.regid = txtstudentid.Text;
                 dgvStudentResultData.DataSource = db.data_examresults.Where(x => x.regid == model_results.regid).ToList<data_examresults>();

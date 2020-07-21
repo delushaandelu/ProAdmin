@@ -46,7 +46,7 @@ namespace ProAdmin
 
         private void get_combo_vale_list()
         {
-            using (DBEntity db = new DBEntity())
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
                 var school = db.basicdata_school.Select(x => new { x.schid, x.schoolname });
                 cmbalschool.DataSource = school.ToList();
@@ -95,7 +95,7 @@ namespace ProAdmin
         private void populate_student_data_grid_view()
         {
             dgvStudent.AutoGenerateColumns = false;
-            using (DBEntity db = new DBEntity())
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
                 dgvStudent.DataSource = db.basicdata_student.ToList<basicdata_student>();
             }
@@ -103,7 +103,7 @@ namespace ProAdmin
 
         private void populate_all_student_data_grid_view()
         {
-            using (DBEntity db = new DBEntity())
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
                 dgvAllStudent.DataSource = db.basicdata_student.ToList<basicdata_student>();
             }
@@ -152,7 +152,7 @@ namespace ProAdmin
                 model_students.Scholarship      = cmbscholership.SelectedItem.ToString();
 
 
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
 
                     if (model_students.Id == 0)//Insert
@@ -182,7 +182,7 @@ namespace ProAdmin
             {
                 model_students.Id = Convert.ToInt32(dgvStudent.CurrentRow.Cells["Id"].Value);
 
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
                     model_students = db.basicdata_student.Where(x => x.Id == model_students.Id).FirstOrDefault();
                     txtfirstname.Text           = model_students.Firstname;
@@ -219,7 +219,7 @@ namespace ProAdmin
             {
                 model_students.regid = txtfind.Text;
 
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
                     model_students              = db.basicdata_student.Where(x => x.regid == model_students.regid).FirstOrDefault();
                     txtfirstname.Text           = model_students.Firstname;
@@ -258,7 +258,7 @@ namespace ProAdmin
         {
             if (XtraMessageBox.Show("Are you sure to delete the record?", "Delete Record", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
                     var entity = db.Entry(model_students);
                     if (entity.State == EntityState.Detached)
@@ -302,7 +302,7 @@ namespace ProAdmin
                 model_students.Scholarship = cmbnewscol.SelectedItem.ToString();
 
 
-                using (DBEntity db = new DBEntity())
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
 
                     if (model_students.Id == 0)//Insert
