@@ -95,7 +95,7 @@ namespace ProAdmin
                     if (db.basicdata_student.Where(data => data.regid == txtstudentid.Text).Any())
                     {
                         model_students          = db.basicdata_student.Where(x => x.regid == model_students.regid).FirstOrDefault();
-                        txtstudentname.Text     = model_students.Lastname;
+                        txtstudentname.Text     = model_students.Firstname;
                         txtbatch.Text           = model_students.Batch;
                         txtschool.Text          = model_students.Al_school;
                         cmbexam.Enabled         = true;

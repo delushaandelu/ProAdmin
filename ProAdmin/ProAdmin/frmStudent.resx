@@ -120,7 +120,40 @@
   <data name="tabNavigationPage3.Caption" xml:space="preserve">
     <value>Manage Student Information</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dtpdob.EditValue" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="dtpdob.Location" type="System.Drawing.Point, System.Drawing">
+    <value>427, 61</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v19.2" name="DevExpress.Utils.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="dtpdob.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v19.2">
+    <value>Combo</value>
+  </data>
+  <data name="dtpdob.Properties.CalendarTimeProperties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v19.2">
+    <value>Combo</value>
+  </data>
+  <data name="dtpdob.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 20</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dtpdob.TabIndex" type="System.Int32, mscorlib">
+    <value>98</value>
+  </data>
+  <data name="&gt;&gt;dtpdob.Name" xml:space="preserve">
+    <value>dtpdob</value>
+  </data>
+  <data name="&gt;&gt;dtpdob.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;dtpdob.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;dtpdob.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="btnRefresh.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
@@ -404,7 +437,6 @@
         dGcuTtsZ6gvxFgX7qxTsz0mfyXMTHlAnt8f/B79XdXqJ7qSbAAAAAElFTkSuQmCC
 </value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnRefresh.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
@@ -417,7 +449,6 @@
   <data name="btnRefresh.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 29</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnRefresh.TabIndex" type="System.Int32, mscorlib">
     <value>61</value>
   </data>
@@ -431,7 +462,7 @@
     <value>groupBox3</value>
   </data>
   <data name="&gt;&gt;btnRefresh.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -629,7 +660,7 @@
     <value>groupBox3</value>
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <metadata name="Id.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -650,7 +681,7 @@
     <value>True</value>
   </metadata>
   <data name="Firstname.HeaderText" xml:space="preserve">
-    <value>Firstname</value>
+    <value>Full Name</value>
   </data>
   <metadata name="Lastname.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -761,7 +792,7 @@
     <value>groupBox3</value>
   </data>
   <data name="&gt;&gt;dgvStudent.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="cmbalschool.Location" type="System.Drawing.Point, System.Drawing">
     <value>427, 204</value>
@@ -782,7 +813,7 @@
     <value>groupBox3</value>
   </data>
   <data name="&gt;&gt;cmbalschool.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="cmbolschool.Location" type="System.Drawing.Point, System.Drawing">
     <value>118, 204</value>
@@ -803,7 +834,7 @@
     <value>groupBox3</value>
   </data>
   <data name="&gt;&gt;cmbolschool.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="cmbbatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>118, 278</value>
@@ -824,7 +855,7 @@
     <value>groupBox3</value>
   </data>
   <data name="&gt;&gt;cmbbatch.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="cmbscholership.Items" xml:space="preserve">
     <value>NO</value>
@@ -851,27 +882,6 @@
     <value>groupBox3</value>
   </data>
   <data name="&gt;&gt;cmbscholership.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="dtpdob.Location" type="System.Drawing.Point, System.Drawing">
-    <value>427, 59</value>
-  </data>
-  <data name="dtpdob.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 20</value>
-  </data>
-  <data name="dtpdob.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;dtpdob.Name" xml:space="preserve">
-    <value>dtpdob</value>
-  </data>
-  <data name="&gt;&gt;dtpdob.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dtpdob.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;dtpdob.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
   <data name="label21.AutoSize" type="System.Boolean, mscorlib">
@@ -1973,6 +1983,36 @@
   <data name="tabNavigationPage2.Caption" xml:space="preserve">
     <value>New Admition</value>
   </data>
+  <data name="dtpnewdob.EditValue" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dtpnewdob.Location" type="System.Drawing.Point, System.Drawing">
+    <value>426, 57</value>
+  </data>
+  <data name="dtpnewdob.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v19.2">
+    <value>Combo</value>
+  </data>
+  <data name="dtpnewdob.Properties.CalendarTimeProperties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v19.2">
+    <value>Combo</value>
+  </data>
+  <data name="dtpnewdob.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 20</value>
+  </data>
+  <data name="dtpnewdob.TabIndex" type="System.Int32, mscorlib">
+    <value>97</value>
+  </data>
+  <data name="&gt;&gt;dtpnewdob.Name" xml:space="preserve">
+    <value>dtpnewdob</value>
+  </data>
+  <data name="&gt;&gt;dtpnewdob.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;dtpnewdob.Parent" xml:space="preserve">
+    <value>tabNavigationPage2</value>
+  </data>
+  <data name="&gt;&gt;dtpnewdob.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1998,7 +2038,7 @@
     <value>tabNavigationPage2</value>
   </data>
   <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="btnGenID.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2025,7 +2065,7 @@
     <value>tabNavigationPage2</value>
   </data>
   <data name="&gt;&gt;btnGenID.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="cmbOpenSnip.Location" type="System.Drawing.Point, System.Drawing">
     <value>368, 345</value>
@@ -2772,7 +2812,7 @@
     <value>tabNavigationPage2</value>
   </data>
   <data name="&gt;&gt;groupId.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="txtmessagbarcode.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2805,7 +2845,7 @@
     <value>tabNavigationPage2</value>
   </data>
   <data name="&gt;&gt;txtmessagbarcode.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="txtmessage.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2835,7 +2875,7 @@
     <value>tabNavigationPage2</value>
   </data>
   <data name="&gt;&gt;txtmessage.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="cmbnewalschool.Location" type="System.Drawing.Point, System.Drawing">
     <value>426, 202</value>
@@ -2856,7 +2896,7 @@
     <value>tabNavigationPage2</value>
   </data>
   <data name="&gt;&gt;cmbnewalschool.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="cmbnewolschool.Location" type="System.Drawing.Point, System.Drawing">
     <value>117, 202</value>
@@ -2877,7 +2917,7 @@
     <value>tabNavigationPage2</value>
   </data>
   <data name="&gt;&gt;cmbnewolschool.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="btnnewsave.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2904,7 +2944,7 @@
     <value>tabNavigationPage2</value>
   </data>
   <data name="&gt;&gt;btnnewsave.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="cmbnewbatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>117, 276</value>
@@ -2925,7 +2965,7 @@
     <value>tabNavigationPage2</value>
   </data>
   <data name="&gt;&gt;cmbnewbatch.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="cmbnewscol.Items" xml:space="preserve">
     <value>NO</value>
@@ -2952,27 +2992,6 @@
     <value>tabNavigationPage2</value>
   </data>
   <data name="&gt;&gt;cmbnewscol.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="dtpnewdob.Location" type="System.Drawing.Point, System.Drawing">
-    <value>426, 57</value>
-  </data>
-  <data name="dtpnewdob.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 20</value>
-  </data>
-  <data name="dtpnewdob.TabIndex" type="System.Int32, mscorlib">
-    <value>53</value>
-  </data>
-  <data name="&gt;&gt;dtpnewdob.Name" xml:space="preserve">
-    <value>dtpnewdob</value>
-  </data>
-  <data name="&gt;&gt;dtpnewdob.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dtpnewdob.Parent" xml:space="preserve">
-    <value>tabNavigationPage2</value>
-  </data>
-  <data name="&gt;&gt;dtpnewdob.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
@@ -3731,6 +3750,9 @@
   <data name="&gt;&gt;txtsearch.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="dateTimeChartRangeControlClient1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -3739,6 +3761,18 @@
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>1151, 892</value>
+  </data>
+  <data name="&gt;&gt;gridView1.Name" xml:space="preserve">
+    <value>gridView1</value>
+  </data>
+  <data name="&gt;&gt;gridView1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;dateTimeChartRangeControlClient1.Name" xml:space="preserve">
+    <value>dateTimeChartRangeControlClient1</value>
+  </data>
+  <data name="&gt;&gt;dateTimeChartRangeControlClient1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DateTimeChartRangeControlClient, DevExpress.XtraEditors.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;Id.Name" xml:space="preserve">
     <value>Id</value>
@@ -3847,12 +3881,6 @@
   </data>
   <data name="&gt;&gt;Scholarship.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gridView1.Name" xml:space="preserve">
-    <value>gridView1</value>
-  </data>
-  <data name="&gt;&gt;gridView1.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmStudent</value>

@@ -32,6 +32,7 @@
             this.txtsearch = new DevExpress.XtraBars.Navigation.TabPane();
             this.tabNavigationPage3 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dtpdob = new DevExpress.XtraEditors.DateEdit();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,29 +42,10 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.dgvStudent = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.regid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nic = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dob = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.home_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Home_tell = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Staying_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stay_home_tell = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Father_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Parents_contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ol_School = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Al_school = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ol_result = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JoinDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Batch = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Scholarship = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmbalschool = new System.Windows.Forms.ComboBox();
             this.cmbolschool = new System.Windows.Forms.ComboBox();
             this.cmbbatch = new System.Windows.Forms.ComboBox();
             this.cmbscholership = new System.Windows.Forms.ComboBox();
-            this.dtpdob = new System.Windows.Forms.DateTimePicker();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -96,6 +78,7 @@
             this.dgvAllStudent = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.tabNavigationPage2 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.dtpnewdob = new DevExpress.XtraEditors.DateEdit();
             this.button1 = new System.Windows.Forms.Button();
             this.btnGenID = new System.Windows.Forms.Button();
             this.groupId = new System.Windows.Forms.GroupBox();
@@ -131,7 +114,6 @@
             this.btnnewsave = new System.Windows.Forms.Button();
             this.cmbnewbatch = new System.Windows.Forms.ComboBox();
             this.cmbnewscol = new System.Windows.Forms.ComboBox();
-            this.dtpnewdob = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -159,10 +141,31 @@
             this.txtnewlastname = new DevExpress.XtraEditors.TextEdit();
             this.label34 = new System.Windows.Forms.Label();
             this.txtnewfullname = new DevExpress.XtraEditors.TextEdit();
+            this.dateTimeChartRangeControlClient1 = new DevExpress.XtraEditors.DateTimeChartRangeControlClient();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.regid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nic = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dob = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.home_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Home_tell = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Staying_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stay_home_tell = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Father_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Parents_contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ol_School = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Al_school = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ol_result = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JoinDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Batch = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Scholarship = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtsearch)).BeginInit();
             this.txtsearch.SuspendLayout();
             this.tabNavigationPage3.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpdob.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpdob.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtfind.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
@@ -181,6 +184,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.tabNavigationPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpnewdob.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpnewdob.Properties)).BeginInit();
             this.groupId.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtsavefilename.Properties)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -202,6 +207,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtnewnic.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtnewlastname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtnewfullname.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtsearch
@@ -226,6 +232,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.dtpdob);
             this.groupBox3.Controls.Add(this.btnRefresh);
             this.groupBox3.Controls.Add(this.groupBox1);
             this.groupBox3.Controls.Add(this.dgvStudent);
@@ -233,7 +240,6 @@
             this.groupBox3.Controls.Add(this.cmbolschool);
             this.groupBox3.Controls.Add(this.cmbbatch);
             this.groupBox3.Controls.Add(this.cmbscholership);
-            this.groupBox3.Controls.Add(this.dtpdob);
             this.groupBox3.Controls.Add(this.label21);
             this.groupBox3.Controls.Add(this.label22);
             this.groupBox3.Controls.Add(this.label19);
@@ -264,6 +270,15 @@
             resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
+            // 
+            // dtpdob
+            // 
+            resources.ApplyResources(this.dtpdob, "dtpdob");
+            this.dtpdob.Name = "dtpdob";
+            this.dtpdob.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dtpdob.Properties.Buttons"))))});
+            this.dtpdob.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dtpdob.Properties.CalendarTimeProperties.Buttons"))))});
             // 
             // btnRefresh
             // 
@@ -354,132 +369,6 @@
             this.dgvStudent.ReadOnly = true;
             this.dgvStudent.DoubleClick += new System.EventHandler(this.dgvStudent_DoubleClick);
             // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            resources.ApplyResources(this.Id, "Id");
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // regid
-            // 
-            this.regid.DataPropertyName = "regid";
-            resources.ApplyResources(this.regid, "regid");
-            this.regid.Name = "regid";
-            this.regid.ReadOnly = true;
-            // 
-            // Firstname
-            // 
-            this.Firstname.DataPropertyName = "Firstname";
-            resources.ApplyResources(this.Firstname, "Firstname");
-            this.Firstname.Name = "Firstname";
-            this.Firstname.ReadOnly = true;
-            // 
-            // Lastname
-            // 
-            this.Lastname.DataPropertyName = "Lastname";
-            resources.ApplyResources(this.Lastname, "Lastname");
-            this.Lastname.Name = "Lastname";
-            this.Lastname.ReadOnly = true;
-            // 
-            // Nic
-            // 
-            this.Nic.DataPropertyName = "Nic";
-            resources.ApplyResources(this.Nic, "Nic");
-            this.Nic.Name = "Nic";
-            this.Nic.ReadOnly = true;
-            // 
-            // Dob
-            // 
-            this.Dob.DataPropertyName = "Dob";
-            resources.ApplyResources(this.Dob, "Dob");
-            this.Dob.Name = "Dob";
-            this.Dob.ReadOnly = true;
-            // 
-            // home_address
-            // 
-            this.home_address.DataPropertyName = "home_address";
-            resources.ApplyResources(this.home_address, "home_address");
-            this.home_address.Name = "home_address";
-            this.home_address.ReadOnly = true;
-            // 
-            // Home_tell
-            // 
-            this.Home_tell.DataPropertyName = "Home_tell";
-            resources.ApplyResources(this.Home_tell, "Home_tell");
-            this.Home_tell.Name = "Home_tell";
-            this.Home_tell.ReadOnly = true;
-            // 
-            // Staying_address
-            // 
-            this.Staying_address.DataPropertyName = "Staying_address";
-            resources.ApplyResources(this.Staying_address, "Staying_address");
-            this.Staying_address.Name = "Staying_address";
-            this.Staying_address.ReadOnly = true;
-            // 
-            // Stay_home_tell
-            // 
-            this.Stay_home_tell.DataPropertyName = "Stay_home_tell";
-            resources.ApplyResources(this.Stay_home_tell, "Stay_home_tell");
-            this.Stay_home_tell.Name = "Stay_home_tell";
-            this.Stay_home_tell.ReadOnly = true;
-            // 
-            // Father_name
-            // 
-            this.Father_name.DataPropertyName = "Father_name";
-            resources.ApplyResources(this.Father_name, "Father_name");
-            this.Father_name.Name = "Father_name";
-            this.Father_name.ReadOnly = true;
-            // 
-            // Parents_contact
-            // 
-            this.Parents_contact.DataPropertyName = "Parents_contact";
-            resources.ApplyResources(this.Parents_contact, "Parents_contact");
-            this.Parents_contact.Name = "Parents_contact";
-            this.Parents_contact.ReadOnly = true;
-            // 
-            // Ol_School
-            // 
-            this.Ol_School.DataPropertyName = "Ol_School";
-            resources.ApplyResources(this.Ol_School, "Ol_School");
-            this.Ol_School.Name = "Ol_School";
-            this.Ol_School.ReadOnly = true;
-            // 
-            // Al_school
-            // 
-            this.Al_school.DataPropertyName = "Al_school";
-            resources.ApplyResources(this.Al_school, "Al_school");
-            this.Al_school.Name = "Al_school";
-            this.Al_school.ReadOnly = true;
-            // 
-            // Ol_result
-            // 
-            this.Ol_result.DataPropertyName = "Ol_result";
-            resources.ApplyResources(this.Ol_result, "Ol_result");
-            this.Ol_result.Name = "Ol_result";
-            this.Ol_result.ReadOnly = true;
-            // 
-            // JoinDate
-            // 
-            this.JoinDate.DataPropertyName = "JoinDate";
-            resources.ApplyResources(this.JoinDate, "JoinDate");
-            this.JoinDate.Name = "JoinDate";
-            this.JoinDate.ReadOnly = true;
-            // 
-            // Batch
-            // 
-            this.Batch.DataPropertyName = "Batch";
-            resources.ApplyResources(this.Batch, "Batch");
-            this.Batch.Name = "Batch";
-            this.Batch.ReadOnly = true;
-            // 
-            // Scholarship
-            // 
-            this.Scholarship.DataPropertyName = "Scholarship";
-            resources.ApplyResources(this.Scholarship, "Scholarship");
-            this.Scholarship.Name = "Scholarship";
-            this.Scholarship.ReadOnly = true;
-            // 
             // cmbalschool
             // 
             this.cmbalschool.FormattingEnabled = true;
@@ -506,11 +395,6 @@
             resources.GetString("cmbscholership.Items1")});
             resources.ApplyResources(this.cmbscholership, "cmbscholership");
             this.cmbscholership.Name = "cmbscholership";
-            // 
-            // dtpdob
-            // 
-            resources.ApplyResources(this.dtpdob, "dtpdob");
-            this.dtpdob.Name = "dtpdob";
             // 
             // label21
             // 
@@ -684,6 +568,7 @@
             // tabNavigationPage2
             // 
             resources.ApplyResources(this.tabNavigationPage2, "tabNavigationPage2");
+            this.tabNavigationPage2.Controls.Add(this.dtpnewdob);
             this.tabNavigationPage2.Controls.Add(this.button1);
             this.tabNavigationPage2.Controls.Add(this.btnGenID);
             this.tabNavigationPage2.Controls.Add(this.groupId);
@@ -694,7 +579,6 @@
             this.tabNavigationPage2.Controls.Add(this.btnnewsave);
             this.tabNavigationPage2.Controls.Add(this.cmbnewbatch);
             this.tabNavigationPage2.Controls.Add(this.cmbnewscol);
-            this.tabNavigationPage2.Controls.Add(this.dtpnewdob);
             this.tabNavigationPage2.Controls.Add(this.label4);
             this.tabNavigationPage2.Controls.Add(this.label5);
             this.tabNavigationPage2.Controls.Add(this.label6);
@@ -723,6 +607,15 @@
             this.tabNavigationPage2.Controls.Add(this.label34);
             this.tabNavigationPage2.Controls.Add(this.txtnewfullname);
             this.tabNavigationPage2.Name = "tabNavigationPage2";
+            // 
+            // dtpnewdob
+            // 
+            resources.ApplyResources(this.dtpnewdob, "dtpnewdob");
+            this.dtpnewdob.Name = "dtpnewdob";
+            this.dtpnewdob.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dtpnewdob.Properties.Buttons"))))});
+            this.dtpnewdob.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dtpnewdob.Properties.CalendarTimeProperties.Buttons"))))});
             // 
             // button1
             // 
@@ -964,11 +857,6 @@
             resources.ApplyResources(this.cmbnewscol, "cmbnewscol");
             this.cmbnewscol.Name = "cmbnewscol";
             // 
-            // dtpnewdob
-            // 
-            resources.ApplyResources(this.dtpnewdob, "dtpnewdob");
-            this.dtpnewdob.Name = "dtpnewdob";
-            // 
             // label4
             // 
             resources.ApplyResources(this.label4, "label4");
@@ -1111,6 +999,132 @@
             resources.ApplyResources(this.txtnewfullname, "txtnewfullname");
             this.txtnewfullname.Name = "txtnewfullname";
             // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            resources.ApplyResources(this.Id, "Id");
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // regid
+            // 
+            this.regid.DataPropertyName = "regid";
+            resources.ApplyResources(this.regid, "regid");
+            this.regid.Name = "regid";
+            this.regid.ReadOnly = true;
+            // 
+            // Firstname
+            // 
+            this.Firstname.DataPropertyName = "Firstname";
+            resources.ApplyResources(this.Firstname, "Firstname");
+            this.Firstname.Name = "Firstname";
+            this.Firstname.ReadOnly = true;
+            // 
+            // Lastname
+            // 
+            this.Lastname.DataPropertyName = "Lastname";
+            resources.ApplyResources(this.Lastname, "Lastname");
+            this.Lastname.Name = "Lastname";
+            this.Lastname.ReadOnly = true;
+            // 
+            // Nic
+            // 
+            this.Nic.DataPropertyName = "Nic";
+            resources.ApplyResources(this.Nic, "Nic");
+            this.Nic.Name = "Nic";
+            this.Nic.ReadOnly = true;
+            // 
+            // Dob
+            // 
+            this.Dob.DataPropertyName = "Dob";
+            resources.ApplyResources(this.Dob, "Dob");
+            this.Dob.Name = "Dob";
+            this.Dob.ReadOnly = true;
+            // 
+            // home_address
+            // 
+            this.home_address.DataPropertyName = "home_address";
+            resources.ApplyResources(this.home_address, "home_address");
+            this.home_address.Name = "home_address";
+            this.home_address.ReadOnly = true;
+            // 
+            // Home_tell
+            // 
+            this.Home_tell.DataPropertyName = "Home_tell";
+            resources.ApplyResources(this.Home_tell, "Home_tell");
+            this.Home_tell.Name = "Home_tell";
+            this.Home_tell.ReadOnly = true;
+            // 
+            // Staying_address
+            // 
+            this.Staying_address.DataPropertyName = "Staying_address";
+            resources.ApplyResources(this.Staying_address, "Staying_address");
+            this.Staying_address.Name = "Staying_address";
+            this.Staying_address.ReadOnly = true;
+            // 
+            // Stay_home_tell
+            // 
+            this.Stay_home_tell.DataPropertyName = "Stay_home_tell";
+            resources.ApplyResources(this.Stay_home_tell, "Stay_home_tell");
+            this.Stay_home_tell.Name = "Stay_home_tell";
+            this.Stay_home_tell.ReadOnly = true;
+            // 
+            // Father_name
+            // 
+            this.Father_name.DataPropertyName = "Father_name";
+            resources.ApplyResources(this.Father_name, "Father_name");
+            this.Father_name.Name = "Father_name";
+            this.Father_name.ReadOnly = true;
+            // 
+            // Parents_contact
+            // 
+            this.Parents_contact.DataPropertyName = "Parents_contact";
+            resources.ApplyResources(this.Parents_contact, "Parents_contact");
+            this.Parents_contact.Name = "Parents_contact";
+            this.Parents_contact.ReadOnly = true;
+            // 
+            // Ol_School
+            // 
+            this.Ol_School.DataPropertyName = "Ol_School";
+            resources.ApplyResources(this.Ol_School, "Ol_School");
+            this.Ol_School.Name = "Ol_School";
+            this.Ol_School.ReadOnly = true;
+            // 
+            // Al_school
+            // 
+            this.Al_school.DataPropertyName = "Al_school";
+            resources.ApplyResources(this.Al_school, "Al_school");
+            this.Al_school.Name = "Al_school";
+            this.Al_school.ReadOnly = true;
+            // 
+            // Ol_result
+            // 
+            this.Ol_result.DataPropertyName = "Ol_result";
+            resources.ApplyResources(this.Ol_result, "Ol_result");
+            this.Ol_result.Name = "Ol_result";
+            this.Ol_result.ReadOnly = true;
+            // 
+            // JoinDate
+            // 
+            this.JoinDate.DataPropertyName = "JoinDate";
+            resources.ApplyResources(this.JoinDate, "JoinDate");
+            this.JoinDate.Name = "JoinDate";
+            this.JoinDate.ReadOnly = true;
+            // 
+            // Batch
+            // 
+            this.Batch.DataPropertyName = "Batch";
+            resources.ApplyResources(this.Batch, "Batch");
+            this.Batch.Name = "Batch";
+            this.Batch.ReadOnly = true;
+            // 
+            // Scholarship
+            // 
+            this.Scholarship.DataPropertyName = "Scholarship";
+            resources.ApplyResources(this.Scholarship, "Scholarship");
+            this.Scholarship.Name = "Scholarship";
+            this.Scholarship.ReadOnly = true;
+            // 
             // frmStudent
             // 
             resources.ApplyResources(this, "$this");
@@ -1122,6 +1136,8 @@
             this.tabNavigationPage3.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpdob.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpdob.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtfind.Properties)).EndInit();
@@ -1142,6 +1158,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.tabNavigationPage2.ResumeLayout(false);
             this.tabNavigationPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpnewdob.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpnewdob.Properties)).EndInit();
             this.groupId.ResumeLayout(false);
             this.groupId.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtsavefilename.Properties)).EndInit();
@@ -1166,6 +1184,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtnewnic.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtnewlastname.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtnewfullname.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1186,7 +1205,6 @@
         private System.Windows.Forms.ComboBox cmbolschool;
         private System.Windows.Forms.ComboBox cmbbatch;
         private System.Windows.Forms.ComboBox cmbscholership;
-        private System.Windows.Forms.DateTimePicker dtpdob;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label19;
@@ -1215,24 +1233,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnsearch;
         private DevExpress.XtraEditors.TextEdit txtfind;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn regid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Firstname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Lastname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nic;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Dob;
-        private System.Windows.Forms.DataGridViewTextBoxColumn home_address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Home_tell;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Staying_address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Stay_home_tell;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Father_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Parents_contact;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ol_School;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Al_school;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ol_result;
-        private System.Windows.Forms.DataGridViewTextBoxColumn JoinDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Batch;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Scholarship;
         private DevExpress.XtraBars.Navigation.TabNavigationPage tabNavigationPage1;
         private DevExpress.XtraGrid.GridControl dgvAllStudent;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
@@ -1243,7 +1243,6 @@
         private System.Windows.Forms.Button btnnewsave;
         private System.Windows.Forms.ComboBox cmbnewbatch;
         private System.Windows.Forms.ComboBox cmbnewscol;
-        private System.Windows.Forms.DateTimePicker dtpnewdob;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -1302,5 +1301,26 @@
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label39;
+        private DevExpress.XtraEditors.DateEdit dtpnewdob;
+        private DevExpress.XtraEditors.DateTimeChartRangeControlClient dateTimeChartRangeControlClient1;
+        private DevExpress.XtraEditors.DateEdit dtpdob;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn regid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Firstname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Lastname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nic;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dob;
+        private System.Windows.Forms.DataGridViewTextBoxColumn home_address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Home_tell;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Staying_address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stay_home_tell;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Father_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Parents_contact;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ol_School;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Al_school;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ol_result;
+        private System.Windows.Forms.DataGridViewTextBoxColumn JoinDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Batch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Scholarship;
     }
 }

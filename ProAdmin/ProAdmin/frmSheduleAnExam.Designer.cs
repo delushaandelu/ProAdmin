@@ -31,6 +31,10 @@
             this.txtsearch = new DevExpress.XtraBars.Navigation.TabPane();
             this.tabNavigationPage2 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dtpenddate = new DevExpress.XtraEditors.DateEdit();
+            this.dtpstartdate = new DevExpress.XtraEditors.DateEdit();
+            this.cmbsearchbybatch = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.cmbbatch = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbexamtype = new System.Windows.Forms.ComboBox();
@@ -38,8 +42,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cmbstate = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dtpenddate = new System.Windows.Forms.DateTimePicker();
-            this.dtpstartdate = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dgvExamSchedule = new System.Windows.Forms.DataGridView();
@@ -59,12 +61,14 @@
             this.dgvAllExam = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.cmbsearchbybatch = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtsearch)).BeginInit();
             this.txtsearch.SuspendLayout();
             this.tabNavigationPage2.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpenddate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpenddate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpstartdate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpstartdate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExamSchedule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtexam.Properties)).BeginInit();
             this.tabNavigationPage1.SuspendLayout();
@@ -97,6 +101,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.dtpenddate);
+            this.groupBox4.Controls.Add(this.dtpstartdate);
             this.groupBox4.Controls.Add(this.cmbsearchbybatch);
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.cmbbatch);
@@ -106,8 +112,6 @@
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.cmbstate);
             this.groupBox4.Controls.Add(this.label2);
-            this.groupBox4.Controls.Add(this.dtpenddate);
-            this.groupBox4.Controls.Add(this.dtpstartdate);
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Controls.Add(this.dgvExamSchedule);
@@ -122,6 +126,50 @@
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Exam Data";
+            // 
+            // dtpenddate
+            // 
+            this.dtpenddate.EditValue = null;
+            this.dtpenddate.Location = new System.Drawing.Point(387, 76);
+            this.dtpenddate.Name = "dtpenddate";
+            this.dtpenddate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpenddate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpenddate.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.dtpenddate.Size = new System.Drawing.Size(208, 20);
+            this.dtpenddate.TabIndex = 22;
+            // 
+            // dtpstartdate
+            // 
+            this.dtpstartdate.EditValue = null;
+            this.dtpstartdate.Location = new System.Drawing.Point(86, 76);
+            this.dtpstartdate.Name = "dtpstartdate";
+            this.dtpstartdate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpstartdate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpstartdate.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.dtpstartdate.Size = new System.Drawing.Size(208, 20);
+            this.dtpstartdate.TabIndex = 21;
+            // 
+            // cmbsearchbybatch
+            // 
+            this.cmbsearchbybatch.FormattingEnabled = true;
+            this.cmbsearchbybatch.Location = new System.Drawing.Point(427, 183);
+            this.cmbsearchbybatch.Name = "cmbsearchbybatch";
+            this.cmbsearchbybatch.Size = new System.Drawing.Size(208, 21);
+            this.cmbsearchbybatch.TabIndex = 20;
+            this.cmbsearchbybatch.SelectedIndexChanged += new System.EventHandler(this.cmbsearchbybatch_SelectedIndexChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(335, 186);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(86, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Search by Batch";
             // 
             // cmbbatch
             // 
@@ -188,20 +236,6 @@
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 12;
             this.label2.Text = "Active";
-            // 
-            // dtpenddate
-            // 
-            this.dtpenddate.Location = new System.Drawing.Point(387, 76);
-            this.dtpenddate.Name = "dtpenddate";
-            this.dtpenddate.Size = new System.Drawing.Size(208, 20);
-            this.dtpenddate.TabIndex = 2;
-            // 
-            // dtpstartdate
-            // 
-            this.dtpstartdate.Location = new System.Drawing.Point(85, 76);
-            this.dtpstartdate.Name = "dtpstartdate";
-            this.dtpstartdate.Size = new System.Drawing.Size(208, 20);
-            this.dtpstartdate.TabIndex = 1;
             // 
             // label1
             // 
@@ -362,24 +396,6 @@
             this.gridView1.GridControl = this.dgvAllExam;
             this.gridView1.Name = "gridView1";
             // 
-            // cmbsearchbybatch
-            // 
-            this.cmbsearchbybatch.FormattingEnabled = true;
-            this.cmbsearchbybatch.Location = new System.Drawing.Point(427, 183);
-            this.cmbsearchbybatch.Name = "cmbsearchbybatch";
-            this.cmbsearchbybatch.Size = new System.Drawing.Size(208, 21);
-            this.cmbsearchbybatch.TabIndex = 20;
-            this.cmbsearchbybatch.SelectedIndexChanged += new System.EventHandler(this.cmbsearchbybatch_SelectedIndexChanged);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(335, 186);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 13);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Search by Batch";
-            // 
             // frmSheduleAnExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -392,6 +408,10 @@
             this.tabNavigationPage2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpenddate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpenddate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpstartdate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpstartdate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExamSchedule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtexam.Properties)).EndInit();
             this.tabNavigationPage1.ResumeLayout(false);
@@ -406,8 +426,6 @@
         private DevExpress.XtraBars.Navigation.TabPane txtsearch;
         private DevExpress.XtraBars.Navigation.TabNavigationPage tabNavigationPage2;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.DateTimePicker dtpenddate;
-        private System.Windows.Forms.DateTimePicker dtpstartdate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgvExamSchedule;
@@ -436,5 +454,7 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.ComboBox cmbsearchbybatch;
         private System.Windows.Forms.Label label8;
+        private DevExpress.XtraEditors.DateEdit dtpstartdate;
+        private DevExpress.XtraEditors.DateEdit dtpenddate;
     }
 }
