@@ -20,6 +20,8 @@ namespace ProAdmin
         }
 
         data_examresults model_results = new data_examresults();
+        basicdata_student model_students = new basicdata_student();
+
         private static frmExamResultCharts _instance;
 
         public static frmExamResultCharts Instance
@@ -60,6 +62,26 @@ namespace ProAdmin
             chartBusiness.Series["BusinessStudies"].YValueMembers = "subject_2";
             chartBusiness.DataSource = dgvStudentResultData.DataSource;
             chartBusiness.DataBind();
+
+
+            model_students.regid = txtstudentid.Text;
+            using (DBEntity db = new DBEntity())
+            {
+                if (db.basicdata_student.Where(data => data.regid == txtstudentid.Text).Any())
+                {
+                    model_students = db.basicdata_student.Where(x => x.regid == model_students.regid).FirstOrDefault();
+                    txtfirstname.Text = model_students.Firstname;
+                    txtlastname.Text = model_students.Lastname;
+                    txtbatch.Text = model_students.Batch;
+                    txtschool.Text = model_students.Al_school;
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Invalud Student Registration ID. Please Try Again!");
+                }
+            }
+
         }
 
         public void populate_all_student_exam_marks_data()

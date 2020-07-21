@@ -13,6 +13,7 @@
         <EntityTypeShape EntityType="proadmin_v1Model.basicdata_student" Width="1.5" PointX="5.5" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="proadmin_v1Model.basicdate_schedule" Width="1.5" PointX="10.75" PointY="0.5" />
         <EntityTypeShape EntityType="proadmin_v1Model.data_examresults" Width="1.5" PointX="7.875" PointY="2.625" />
+        <EntityTypeShape EntityType="proadmin_v1Model.view_exam_results_summary" Width="1.5" PointX="0.75" PointY="5.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

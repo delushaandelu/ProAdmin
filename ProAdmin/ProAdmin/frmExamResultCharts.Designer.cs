@@ -60,6 +60,13 @@
             this.tabNavigationPage8 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.chartEconomics = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dgvStudentResultData = new System.Windows.Forms.DataGridView();
+            this.btnstudentsearch = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtstudentid = new DevExpress.XtraEditors.TextEdit();
+            this.tabNavigationPage2 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.dgvGenerateOverallReport = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.exam_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.exam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subject_1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,13 +77,14 @@
             this.avg_state = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.English = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.git = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnstudentsearch = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtstudentid = new DevExpress.XtraEditors.TextEdit();
-            this.tabNavigationPage2 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.dgvGenerateOverallReport = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtfirstname = new DevExpress.XtraEditors.TextEdit();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtlastname = new DevExpress.XtraEditors.TextEdit();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtschool = new DevExpress.XtraEditors.TextEdit();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtbatch = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtsearch)).BeginInit();
             this.txtsearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
@@ -101,6 +109,10 @@
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGenerateOverallReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtfirstname.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtlastname.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtschool.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtbatch.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // txtsearch
@@ -109,9 +121,9 @@
             this.txtsearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtsearch.Location = new System.Drawing.Point(0, 0);
             this.txtsearch.Name = "txtsearch";
-            this.txtsearch.RegularSize = new System.Drawing.Size(1159, 591);
+            this.txtsearch.RegularSize = new System.Drawing.Size(1419, 591);
             this.txtsearch.SelectedPage = null;
-            this.txtsearch.Size = new System.Drawing.Size(1159, 591);
+            this.txtsearch.Size = new System.Drawing.Size(1419, 591);
             this.txtsearch.TabIndex = 9;
             this.txtsearch.Text = "Manage User Information";
             // 
@@ -123,22 +135,30 @@
             this.tabPane1.Name = "tabPane1";
             this.tabPane1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.tabNavigationPage1});
-            this.tabPane1.RegularSize = new System.Drawing.Size(1159, 591);
+            this.tabPane1.RegularSize = new System.Drawing.Size(1419, 591);
             this.tabPane1.SelectedPage = this.tabNavigationPage1;
-            this.tabPane1.Size = new System.Drawing.Size(1159, 591);
+            this.tabPane1.Size = new System.Drawing.Size(1419, 591);
             this.tabPane1.TabIndex = 0;
             this.tabPane1.Text = "Chart By Batch";
             // 
             // tabNavigationPage1
             // 
             this.tabNavigationPage1.Caption = "Chart By Student";
+            this.tabNavigationPage1.Controls.Add(this.label5);
+            this.tabNavigationPage1.Controls.Add(this.txtbatch);
+            this.tabNavigationPage1.Controls.Add(this.label3);
+            this.tabNavigationPage1.Controls.Add(this.txtschool);
+            this.tabNavigationPage1.Controls.Add(this.label2);
+            this.tabNavigationPage1.Controls.Add(this.txtlastname);
+            this.tabNavigationPage1.Controls.Add(this.label1);
+            this.tabNavigationPage1.Controls.Add(this.txtfirstname);
             this.tabNavigationPage1.Controls.Add(this.sidePanel1);
             this.tabNavigationPage1.Controls.Add(this.dgvStudentResultData);
             this.tabNavigationPage1.Controls.Add(this.btnstudentsearch);
             this.tabNavigationPage1.Controls.Add(this.label4);
             this.tabNavigationPage1.Controls.Add(this.txtstudentid);
             this.tabNavigationPage1.Name = "tabNavigationPage1";
-            this.tabNavigationPage1.Size = new System.Drawing.Size(1159, 554);
+            this.tabNavigationPage1.Size = new System.Drawing.Size(1419, 554);
             // 
             // sidePanel1
             // 
@@ -146,7 +166,7 @@
             this.sidePanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.sidePanel1.Location = new System.Drawing.Point(0, 249);
             this.sidePanel1.Name = "sidePanel1";
-            this.sidePanel1.Size = new System.Drawing.Size(1159, 305);
+            this.sidePanel1.Size = new System.Drawing.Size(1419, 305);
             this.sidePanel1.TabIndex = 86;
             this.sidePanel1.Text = "sidePanel1";
             // 
@@ -166,9 +186,9 @@
             this.tabNavigationPage6,
             this.tabNavigationPage7,
             this.tabNavigationPage8});
-            this.chartBusinessStudies.RegularSize = new System.Drawing.Size(1159, 304);
+            this.chartBusinessStudies.RegularSize = new System.Drawing.Size(1419, 304);
             this.chartBusinessStudies.SelectedPage = this.tabNavigationPage5;
-            this.chartBusinessStudies.Size = new System.Drawing.Size(1159, 304);
+            this.chartBusinessStudies.Size = new System.Drawing.Size(1419, 304);
             this.chartBusinessStudies.TabIndex = 0;
             this.chartBusinessStudies.Text = "Over All average";
             // 
@@ -203,7 +223,7 @@
             this.tabNavigationPage5.Caption = "Overall Average Bar Chart";
             this.tabNavigationPage5.Controls.Add(this.charAvgBar);
             this.tabNavigationPage5.Name = "tabNavigationPage5";
-            this.tabNavigationPage5.Size = new System.Drawing.Size(1159, 267);
+            this.tabNavigationPage5.Size = new System.Drawing.Size(1419, 267);
             // 
             // charAvgBar
             // 
@@ -314,8 +334,69 @@
             this.dgvStudentResultData.Location = new System.Drawing.Point(31, 61);
             this.dgvStudentResultData.Name = "dgvStudentResultData";
             this.dgvStudentResultData.ReadOnly = true;
-            this.dgvStudentResultData.Size = new System.Drawing.Size(1046, 182);
+            this.dgvStudentResultData.Size = new System.Drawing.Size(1177, 182);
             this.dgvStudentResultData.TabIndex = 85;
+            // 
+            // btnstudentsearch
+            // 
+            this.btnstudentsearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnstudentsearch.BackgroundImage")));
+            this.btnstudentsearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnstudentsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnstudentsearch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnstudentsearch.Location = new System.Drawing.Point(321, 12);
+            this.btnstudentsearch.Name = "btnstudentsearch";
+            this.btnstudentsearch.Size = new System.Drawing.Size(31, 29);
+            this.btnstudentsearch.TabIndex = 64;
+            this.btnstudentsearch.UseVisualStyleBackColor = true;
+            this.btnstudentsearch.Click += new System.EventHandler(this.btnstudentsearch_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(28, 20);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 13);
+            this.label4.TabIndex = 63;
+            this.label4.Text = "Student ID";
+            // 
+            // txtstudentid
+            // 
+            this.txtstudentid.Location = new System.Drawing.Point(109, 17);
+            this.txtstudentid.Name = "txtstudentid";
+            this.txtstudentid.Size = new System.Drawing.Size(208, 20);
+            this.txtstudentid.TabIndex = 62;
+            // 
+            // tabNavigationPage2
+            // 
+            this.tabNavigationPage2.Caption = "Over All Mark Sheet";
+            this.tabNavigationPage2.Name = "tabNavigationPage2";
+            this.tabNavigationPage2.Size = new System.Drawing.Size(1159, 554);
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.splitContainer1.Size = new System.Drawing.Size(1159, 554);
+            this.splitContainer1.SplitterDistance = 34;
+            this.splitContainer1.TabIndex = 0;
+            // 
+            // dgvGenerateOverallReport
+            // 
+            this.dgvGenerateOverallReport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvGenerateOverallReport.Location = new System.Drawing.Point(0, 0);
+            this.dgvGenerateOverallReport.MainView = this.gridView1;
+            this.dgvGenerateOverallReport.Name = "dgvGenerateOverallReport";
+            this.dgvGenerateOverallReport.Size = new System.Drawing.Size(1159, 516);
+            this.dgvGenerateOverallReport.TabIndex = 0;
+            this.dgvGenerateOverallReport.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.dgvGenerateOverallReport;
+            this.gridView1.Name = "gridView1";
             // 
             // exam_date
             // 
@@ -387,66 +468,73 @@
             this.git.Name = "git";
             this.git.ReadOnly = true;
             // 
-            // btnstudentsearch
+            // label1
             // 
-            this.btnstudentsearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnstudentsearch.BackgroundImage")));
-            this.btnstudentsearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnstudentsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnstudentsearch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnstudentsearch.Location = new System.Drawing.Point(321, 12);
-            this.btnstudentsearch.Name = "btnstudentsearch";
-            this.btnstudentsearch.Size = new System.Drawing.Size(31, 29);
-            this.btnstudentsearch.TabIndex = 64;
-            this.btnstudentsearch.UseVisualStyleBackColor = true;
-            this.btnstudentsearch.Click += new System.EventHandler(this.btnstudentsearch_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1213, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 13);
+            this.label1.TabIndex = 88;
+            this.label1.Text = "Full Name";
             // 
-            // label4
+            // txtfirstname
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 20);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 13);
-            this.label4.TabIndex = 63;
-            this.label4.Text = "Student ID";
+            this.txtfirstname.Enabled = false;
+            this.txtfirstname.Location = new System.Drawing.Point(1279, 77);
+            this.txtfirstname.Name = "txtfirstname";
+            this.txtfirstname.Size = new System.Drawing.Size(208, 20);
+            this.txtfirstname.TabIndex = 87;
             // 
-            // txtstudentid
+            // label2
             // 
-            this.txtstudentid.Location = new System.Drawing.Point(109, 17);
-            this.txtstudentid.Name = "txtstudentid";
-            this.txtstudentid.Size = new System.Drawing.Size(208, 20);
-            this.txtstudentid.TabIndex = 62;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(1213, 115);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.TabIndex = 90;
+            this.label2.Text = "last Name";
             // 
-            // tabNavigationPage2
+            // txtlastname
             // 
-            this.tabNavigationPage2.Caption = "Over All Mark Sheet";
-            this.tabNavigationPage2.Name = "tabNavigationPage2";
-            this.tabNavigationPage2.Size = new System.Drawing.Size(1159, 554);
+            this.txtlastname.Enabled = false;
+            this.txtlastname.Location = new System.Drawing.Point(1279, 112);
+            this.txtlastname.Name = "txtlastname";
+            this.txtlastname.Size = new System.Drawing.Size(208, 20);
+            this.txtlastname.TabIndex = 89;
             // 
-            // splitContainer1
+            // label3
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.splitContainer1.Size = new System.Drawing.Size(1159, 554);
-            this.splitContainer1.SplitterDistance = 34;
-            this.splitContainer1.TabIndex = 0;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(1227, 154);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.TabIndex = 92;
+            this.label3.Text = "School";
             // 
-            // dgvGenerateOverallReport
+            // txtschool
             // 
-            this.dgvGenerateOverallReport.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvGenerateOverallReport.Location = new System.Drawing.Point(0, 0);
-            this.dgvGenerateOverallReport.MainView = this.gridView1;
-            this.dgvGenerateOverallReport.Name = "dgvGenerateOverallReport";
-            this.dgvGenerateOverallReport.Size = new System.Drawing.Size(1159, 516);
-            this.dgvGenerateOverallReport.TabIndex = 0;
-            this.dgvGenerateOverallReport.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.txtschool.Enabled = false;
+            this.txtschool.Location = new System.Drawing.Point(1279, 151);
+            this.txtschool.Name = "txtschool";
+            this.txtschool.Size = new System.Drawing.Size(208, 20);
+            this.txtschool.TabIndex = 91;
             // 
-            // gridView1
+            // label5
             // 
-            this.gridView1.GridControl = this.dgvGenerateOverallReport;
-            this.gridView1.Name = "gridView1";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(1232, 192);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 94;
+            this.label5.Text = "Batch";
+            // 
+            // txtbatch
+            // 
+            this.txtbatch.Enabled = false;
+            this.txtbatch.Location = new System.Drawing.Point(1279, 189);
+            this.txtbatch.Name = "txtbatch";
+            this.txtbatch.Size = new System.Drawing.Size(208, 20);
+            this.txtbatch.TabIndex = 93;
             // 
             // frmExamResultCharts
             // 
@@ -454,7 +542,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.txtsearch);
             this.Name = "frmExamResultCharts";
-            this.Size = new System.Drawing.Size(1159, 591);
+            this.Size = new System.Drawing.Size(1419, 591);
             ((System.ComponentModel.ISupportInitialize)(this.txtsearch)).EndInit();
             this.txtsearch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).EndInit();
@@ -480,6 +568,10 @@
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGenerateOverallReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtfirstname.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtlastname.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtschool.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtbatch.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -497,16 +589,6 @@
         private System.Windows.Forms.Label label4;
         private DevExpress.XtraEditors.TextEdit txtstudentid;
         private System.Windows.Forms.DataGridView dgvStudentResultData;
-        private System.Windows.Forms.DataGridViewTextBoxColumn exam_date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn exam;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subject_1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subject_2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subject_3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn total_marks;
-        private System.Windows.Forms.DataGridViewTextBoxColumn average_marks;
-        private System.Windows.Forms.DataGridViewTextBoxColumn avg_state;
-        private System.Windows.Forms.DataGridViewTextBoxColumn English;
-        private System.Windows.Forms.DataGridViewTextBoxColumn git;
         private DevExpress.XtraEditors.SidePanel sidePanel1;
         private DevExpress.XtraBars.Navigation.TabPane chartBusinessStudies;
         private DevExpress.XtraBars.Navigation.TabNavigationPage tabNavigationPage4;
@@ -519,5 +601,23 @@
         private DevExpress.XtraBars.Navigation.TabNavigationPage tabNavigationPage8;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartAccounting;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartEconomics;
+        private System.Windows.Forms.DataGridViewTextBoxColumn exam_date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn exam;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subject_1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subject_2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subject_3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn total_marks;
+        private System.Windows.Forms.DataGridViewTextBoxColumn average_marks;
+        private System.Windows.Forms.DataGridViewTextBoxColumn avg_state;
+        private System.Windows.Forms.DataGridViewTextBoxColumn English;
+        private System.Windows.Forms.DataGridViewTextBoxColumn git;
+        private System.Windows.Forms.Label label5;
+        private DevExpress.XtraEditors.TextEdit txtbatch;
+        private System.Windows.Forms.Label label3;
+        private DevExpress.XtraEditors.TextEdit txtschool;
+        private System.Windows.Forms.Label label2;
+        private DevExpress.XtraEditors.TextEdit txtlastname;
+        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.TextEdit txtfirstname;
     }
 }

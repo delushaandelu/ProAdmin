@@ -33,5 +33,6 @@ namespace ProAdmin
         public virtual DbSet<basicdata_student> basicdata_student { get; set; }
         public virtual DbSet<basicdate_schedule> basicdate_schedule { get; set; }
         public virtual DbSet<data_examresults> data_examresults { get; set; }
+        public virtual DbSet<view_exam_results_summary> view_exam_results_summary { get; set; }
     }
 }

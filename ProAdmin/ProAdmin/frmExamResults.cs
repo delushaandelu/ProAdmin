@@ -23,6 +23,8 @@ namespace ProAdmin
         basicdata_student   model_students      = new basicdata_student();
         basicdate_schedule  model_examschedule  = new basicdate_schedule();
         data_examresults    model_results       = new data_examresults();
+        view_exam_results_summary view_exam_result_summary = new view_exam_results_summary();
+                
 
         private static frmExamResults _instance;
 
@@ -42,9 +44,9 @@ namespace ProAdmin
             {
                 using (DBEntity db = new DBEntity())
                 {
-                    model_results.exam = cmbgenexam.Text;
-                    model_results.batch = cmbgenbatch.Text;
-                    dgvGenerateOverallReport.DataSource = db.data_examresults.Where(x => x.batch == cmbgenbatch.Text && x.exam == cmbgenexam.Text).ToList<data_examresults>();
+                    view_exam_result_summary.exam = cmbgenexam.Text;
+                    view_exam_result_summary.batch = cmbgenbatch.Text;
+                    dgvGenerateOverallReport.DataSource = db.view_exam_results_summary.Where(x => x.batch == cmbgenbatch.Text && x.exam == cmbgenexam.Text).ToList<view_exam_results_summary>();
                 }
             }
             else
@@ -333,7 +335,19 @@ namespace ProAdmin
 
         private void btnmissgen_Click(object sender, EventArgs e)
         {
-
+            if (cmbmissbatch.Text != null || cmbmissexam.Text != null)
+            {
+                using (DBEntity db = new DBEntity())
+                {
+                    view_exam_result_summary.exam = cmbmissexam.Text;
+                    view_exam_result_summary.batch = cmbmissbatch.Text;
+                    dgvMissRecords.DataSource = db.view_exam_results_summary.Where(x => x.batch == cmbmissbatch.Text && x.exam == cmbmissexam.Text && x.average_marks < 1 ).ToList<view_exam_results_summary>();
+                }
+            }
+            else
+            {
+                message_popup_ok("Invalud Data Query!");
+            }
         }
     }
 }
