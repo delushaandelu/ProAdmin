@@ -46,18 +46,18 @@ namespace ProAdmin
             charAvgBar.DataSource = dgvStudentResultData.DataSource;
             charAvgBar.DataBind();
 
-            chartEconomics.Series["Average"].XValueMember = "exam";
-            chartEconomics.Series["Average"].YValueMembers = "subject_1";
+            chartEconomics.Series["Economics"].XValueMember = "exam";
+            chartEconomics.Series["Economics"].YValueMembers = "subject_1";
             chartEconomics.DataSource = dgvStudentResultData.DataSource;
             chartEconomics.DataBind();
 
-            chartAccounting.Series["Average"].XValueMember = "exam";
-            chartAccounting.Series["Average"].YValueMembers = "subject_3";
+            chartAccounting.Series["Accounting"].XValueMember = "exam";
+            chartAccounting.Series["Accounting"].YValueMembers = "subject_3";
             chartAccounting.DataSource = dgvStudentResultData.DataSource;
             chartAccounting.DataBind();
 
-            chartBusiness.Series["Average"].XValueMember = "exam";
-            chartBusiness.Series["Average"].YValueMembers = "subject_2";
+            chartBusiness.Series["BusinessStudies"].XValueMember = "exam";
+            chartBusiness.Series["BusinessStudies"].YValueMembers = "subject_2";
             chartBusiness.DataSource = dgvStudentResultData.DataSource;
             chartBusiness.DataBind();
         }

@@ -306,12 +306,29 @@ namespace ProAdmin
                 cmbgenbatch.DataSource = batch.ToList();
                 cmbgenbatch.DisplayMember = "batch";
                 cmbgenbatch.SelectedItem = null;
+
+                cmbmissbatch.DataSource = batch.ToList();
+                cmbmissbatch.DisplayMember = "batch";
+                cmbmissbatch.SelectedItem = null;
             }
         }
 
         private void btngenReport_Click(object sender, EventArgs e)
         {
             populated_overall_mark_sheet();
+        }
+
+        private void cmbmissbatch_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            using (DBEntity db = new DBEntity())
+            {
+                var exam = from data in db.basicdate_schedule where data.batch == cmbmissbatch.Text select new { Name = data.id, ID = data.exam };
+
+                cmbmissexam.DataSource = exam.ToList();
+                cmbmissexam.ValueMember = "id";
+                cmbmissexam.DisplayMember = "exam";
+                cmbmissexam.SelectedItem = null;
+            }
         }
     }
 }

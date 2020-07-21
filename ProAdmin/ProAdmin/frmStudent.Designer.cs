@@ -96,13 +96,31 @@
             this.dgvAllStudent = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.tabNavigationPage2 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnGenID = new System.Windows.Forms.Button();
             this.groupId = new System.Windows.Forms.GroupBox();
+            this.cmbOpenSnip = new System.Windows.Forms.Button();
+            this.label37 = new System.Windows.Forms.Label();
+            this.txtsavefilename = new DevExpress.XtraEditors.TextEdit();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.picbatcode = new System.Windows.Forms.PictureBox();
+            this.lbljoiningdate = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.lblbatch = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.lblregid = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.lblname = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -141,24 +159,6 @@
             this.txtnewlastname = new DevExpress.XtraEditors.TextEdit();
             this.label34 = new System.Windows.Forms.Label();
             this.txtnewfullname = new DevExpress.XtraEditors.TextEdit();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.lblname = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.lblregid = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.lblbatch = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.lbljoiningdate = new System.Windows.Forms.Label();
-            this.picbatcode = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label37 = new System.Windows.Forms.Label();
-            this.txtsavefilename = new DevExpress.XtraEditors.TextEdit();
-            this.cmbOpenSnip = new System.Windows.Forms.Button();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtsearch)).BeginInit();
             this.txtsearch.SuspendLayout();
             this.tabNavigationPage3.SuspendLayout();
@@ -182,10 +182,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.tabNavigationPage2.SuspendLayout();
             this.groupId.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsavefilename.Properties)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbatcode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtnewjoiningdate.Properties)).BeginInit();
@@ -199,9 +202,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtnewnic.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtnewlastname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtnewfullname.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picbatcode)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtsavefilename.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // txtsearch
@@ -724,6 +724,13 @@
             this.tabNavigationPage2.Controls.Add(this.txtnewfullname);
             this.tabNavigationPage2.Name = "tabNavigationPage2";
             // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // btnGenID
             // 
             resources.ApplyResources(this.btnGenID, "btnGenID");
@@ -742,6 +749,24 @@
             this.groupId.Name = "groupId";
             this.groupId.TabStop = false;
             // 
+            // cmbOpenSnip
+            // 
+            resources.ApplyResources(this.cmbOpenSnip, "cmbOpenSnip");
+            this.cmbOpenSnip.Name = "cmbOpenSnip";
+            this.cmbOpenSnip.UseVisualStyleBackColor = true;
+            this.cmbOpenSnip.Click += new System.EventHandler(this.cmbOpenSnip_Click);
+            // 
+            // label37
+            // 
+            resources.ApplyResources(this.label37, "label37");
+            this.label37.Name = "label37";
+            this.label37.Tag = "";
+            // 
+            // txtsavefilename
+            // 
+            resources.ApplyResources(this.txtsavefilename, "txtsavefilename");
+            this.txtsavefilename.Name = "txtsavefilename";
+            // 
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -755,6 +780,26 @@
             resources.ApplyResources(this.groupBox4, "groupBox4");
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.TabStop = false;
+            // 
+            // label44
+            // 
+            resources.ApplyResources(this.label44, "label44");
+            this.label44.Name = "label44";
+            // 
+            // label43
+            // 
+            resources.ApplyResources(this.label43, "label43");
+            this.label43.Name = "label43";
+            // 
+            // label41
+            // 
+            resources.ApplyResources(this.label41, "label41");
+            this.label41.Name = "label41";
+            // 
+            // label39
+            // 
+            resources.ApplyResources(this.label39, "label39");
+            this.label39.Name = "label39";
             // 
             // label35
             // 
@@ -797,6 +842,59 @@
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
+            // 
+            // picbatcode
+            // 
+            resources.ApplyResources(this.picbatcode, "picbatcode");
+            this.picbatcode.Name = "picbatcode";
+            this.picbatcode.TabStop = false;
+            // 
+            // lbljoiningdate
+            // 
+            resources.ApplyResources(this.lbljoiningdate, "lbljoiningdate");
+            this.lbljoiningdate.Name = "lbljoiningdate";
+            // 
+            // label42
+            // 
+            resources.ApplyResources(this.label42, "label42");
+            this.label42.Name = "label42";
+            // 
+            // lblbatch
+            // 
+            resources.ApplyResources(this.lblbatch, "lblbatch");
+            this.lblbatch.Name = "lblbatch";
+            // 
+            // label40
+            // 
+            resources.ApplyResources(this.label40, "label40");
+            this.label40.Name = "label40";
+            // 
+            // lblregid
+            // 
+            resources.ApplyResources(this.lblregid, "lblregid");
+            this.lblregid.Name = "lblregid";
+            // 
+            // label38
+            // 
+            resources.ApplyResources(this.label38, "label38");
+            this.label38.Name = "label38";
+            // 
+            // lblname
+            // 
+            resources.ApplyResources(this.lblname, "lblname");
+            this.lblname.Name = "lblname";
+            // 
+            // label36
+            // 
+            resources.ApplyResources(this.label36, "label36");
+            this.label36.Name = "label36";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::ProAdmin.Properties.Resources.user;
+            resources.ApplyResources(this.pictureBox5, "pictureBox5");
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -1013,104 +1111,6 @@
             resources.ApplyResources(this.txtnewfullname, "txtnewfullname");
             this.txtnewfullname.Name = "txtnewfullname";
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::ProAdmin.Properties.Resources.user;
-            resources.ApplyResources(this.pictureBox5, "pictureBox5");
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.TabStop = false;
-            // 
-            // label36
-            // 
-            resources.ApplyResources(this.label36, "label36");
-            this.label36.Name = "label36";
-            // 
-            // lblname
-            // 
-            resources.ApplyResources(this.lblname, "lblname");
-            this.lblname.Name = "lblname";
-            // 
-            // label38
-            // 
-            resources.ApplyResources(this.label38, "label38");
-            this.label38.Name = "label38";
-            // 
-            // lblregid
-            // 
-            resources.ApplyResources(this.lblregid, "lblregid");
-            this.lblregid.Name = "lblregid";
-            // 
-            // label40
-            // 
-            resources.ApplyResources(this.label40, "label40");
-            this.label40.Name = "label40";
-            // 
-            // lblbatch
-            // 
-            resources.ApplyResources(this.lblbatch, "lblbatch");
-            this.lblbatch.Name = "lblbatch";
-            // 
-            // label42
-            // 
-            resources.ApplyResources(this.label42, "label42");
-            this.label42.Name = "label42";
-            // 
-            // lbljoiningdate
-            // 
-            resources.ApplyResources(this.lbljoiningdate, "lbljoiningdate");
-            this.lbljoiningdate.Name = "lbljoiningdate";
-            // 
-            // picbatcode
-            // 
-            resources.ApplyResources(this.picbatcode, "picbatcode");
-            this.picbatcode.Name = "picbatcode";
-            this.picbatcode.TabStop = false;
-            // 
-            // button1
-            // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // label37
-            // 
-            resources.ApplyResources(this.label37, "label37");
-            this.label37.Name = "label37";
-            this.label37.Tag = "";
-            // 
-            // txtsavefilename
-            // 
-            resources.ApplyResources(this.txtsavefilename, "txtsavefilename");
-            this.txtsavefilename.Name = "txtsavefilename";
-            // 
-            // cmbOpenSnip
-            // 
-            resources.ApplyResources(this.cmbOpenSnip, "cmbOpenSnip");
-            this.cmbOpenSnip.Name = "cmbOpenSnip";
-            this.cmbOpenSnip.UseVisualStyleBackColor = true;
-            this.cmbOpenSnip.Click += new System.EventHandler(this.cmbOpenSnip_Click);
-            // 
-            // label39
-            // 
-            resources.ApplyResources(this.label39, "label39");
-            this.label39.Name = "label39";
-            // 
-            // label41
-            // 
-            resources.ApplyResources(this.label41, "label41");
-            this.label41.Name = "label41";
-            // 
-            // label43
-            // 
-            resources.ApplyResources(this.label43, "label43");
-            this.label43.Name = "label43";
-            // 
-            // label44
-            // 
-            resources.ApplyResources(this.label44, "label44");
-            this.label44.Name = "label44";
-            // 
             // frmStudent
             // 
             resources.ApplyResources(this, "$this");
@@ -1144,12 +1144,15 @@
             this.tabNavigationPage2.PerformLayout();
             this.groupId.ResumeLayout(false);
             this.groupId.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsavefilename.Properties)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbatcode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtnewjoiningdate.Properties)).EndInit();
@@ -1163,9 +1166,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtnewnic.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtnewlastname.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtnewfullname.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picbatcode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtsavefilename.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

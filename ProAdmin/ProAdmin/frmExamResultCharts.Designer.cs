@@ -360,6 +360,7 @@
             this.chartAvg.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.LabelAngle = 4;
             series1.Legend = "Legend1";
             series1.Name = "Average";
             this.chartAvg.Series.Add(series1);
@@ -416,7 +417,7 @@
             this.chartBusiness.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
             series3.ChartArea = "ChartArea1";
             series3.Legend = "Legend1";
-            series3.Name = "Average";
+            series3.Name = "BusinessStudies";
             this.chartBusiness.Series.Add(series3);
             this.chartBusiness.Size = new System.Drawing.Size(1177, 641);
             this.chartBusiness.TabIndex = 88;
@@ -433,7 +434,7 @@
             this.chartAccounting.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
             series4.ChartArea = "ChartArea1";
             series4.Legend = "Legend1";
-            series4.Name = "Average";
+            series4.Name = "Accounting";
             this.chartAccounting.Series.Add(series4);
             this.chartAccounting.Size = new System.Drawing.Size(1177, 641);
             this.chartAccounting.TabIndex = 88;
@@ -450,7 +451,7 @@
             this.chartEconomics.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
             series5.ChartArea = "ChartArea1";
             series5.Legend = "Legend1";
-            series5.Name = "Average";
+            series5.Name = "Economics";
             this.chartEconomics.Series.Add(series5);
             this.chartEconomics.Size = new System.Drawing.Size(1177, 641);
             this.chartEconomics.TabIndex = 88;

@@ -45,6 +45,11 @@ namespace ProAdmin
                 cmbbatch.DisplayMember = "batch";
                 cmbbatch.SelectedItem = null;
 
+                cmbsearchbybatch.DataSource = school.ToList();
+                cmbsearchbybatch.ValueMember = "batchid";
+                cmbsearchbybatch.DisplayMember = "batch";
+                cmbsearchbybatch.SelectedItem = null;
+
             }
         }
 
@@ -167,6 +172,17 @@ namespace ProAdmin
 
                 btnsubsave.Text = "Update";
                 btnsubdelete.Enabled = true;
+            }
+        }
+
+        private void cmbsearchbybatch_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dgvExamSchedule.AutoGenerateColumns = false;
+            using (DBEntity db = new DBEntity())
+            {
+                model_examschedule.batch = cmbsearchbybatch.Text;
+
+                dgvExamSchedule.DataSource = db.basicdate_schedule.Where(x => x.batch == model_examschedule.batch).ToList<basicdate_schedule>();
             }
         }
     }

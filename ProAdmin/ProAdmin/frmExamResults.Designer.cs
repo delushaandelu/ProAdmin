@@ -85,6 +85,15 @@
             this.cmbgenbatch = new System.Windows.Forms.ComboBox();
             this.dgvGenerateOverallReport = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.tabNavigationPage3 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.btnmissgen = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.cmbmissexam = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.cmbmissbatch = new System.Windows.Forms.ComboBox();
+            this.dgvMissRecords = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.txtsearch)).BeginInit();
             this.txtsearch.SuspendLayout();
             this.tabNavigationPage1.SuspendLayout();
@@ -110,18 +119,25 @@
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGenerateOverallReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.tabNavigationPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
+            this.splitContainerControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMissRecords)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // txtsearch
             // 
             this.txtsearch.Controls.Add(this.tabNavigationPage1);
             this.txtsearch.Controls.Add(this.tabNavigationPage2);
+            this.txtsearch.Controls.Add(this.tabNavigationPage3);
             this.txtsearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtsearch.Location = new System.Drawing.Point(0, 0);
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.tabNavigationPage1,
-            this.tabNavigationPage2});
+            this.tabNavigationPage2,
+            this.tabNavigationPage3});
             this.txtsearch.RegularSize = new System.Drawing.Size(1239, 629);
             this.txtsearch.SelectedPage = this.tabNavigationPage1;
             this.txtsearch.Size = new System.Drawing.Size(1239, 629);
@@ -593,7 +609,7 @@
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // splitContainer1.Panel1
+            // 
             // 
             this.splitContainer1.Panel1.Controls.Add(this.btngenReport);
             this.splitContainer1.Panel1.Controls.Add(this.label15);
@@ -669,6 +685,91 @@
             this.gridView1.GridControl = this.dgvGenerateOverallReport;
             this.gridView1.Name = "gridView1";
             // 
+            // tabNavigationPage3
+            // 
+            this.tabNavigationPage3.Caption = "Missing Results Student Details";
+            this.tabNavigationPage3.Controls.Add(this.splitContainerControl1);
+            this.tabNavigationPage3.Name = "tabNavigationPage3";
+            this.tabNavigationPage3.Size = new System.Drawing.Size(1239, 592);
+            // 
+            // splitContainerControl1
+            // 
+            this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerControl1.Horizontal = false;
+            this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerControl1.Name = "splitContainerControl1";
+            this.splitContainerControl1.Panel1.Controls.Add(this.btnmissgen);
+            this.splitContainerControl1.Panel1.Controls.Add(this.label16);
+            this.splitContainerControl1.Panel1.Controls.Add(this.cmbmissexam);
+            this.splitContainerControl1.Panel1.Controls.Add(this.label17);
+            this.splitContainerControl1.Panel1.Controls.Add(this.cmbmissbatch);
+            this.splitContainerControl1.Panel1.Text = "Panel1";
+            this.splitContainerControl1.Panel2.Controls.Add(this.dgvMissRecords);
+            this.splitContainerControl1.Panel2.Text = "Panel2";
+            this.splitContainerControl1.Size = new System.Drawing.Size(1239, 592);
+            this.splitContainerControl1.SplitterPosition = 39;
+            this.splitContainerControl1.TabIndex = 0;
+            // 
+            // btnmissgen
+            // 
+            this.btnmissgen.Location = new System.Drawing.Point(682, 7);
+            this.btnmissgen.Name = "btnmissgen";
+            this.btnmissgen.Size = new System.Drawing.Size(96, 23);
+            this.btnmissgen.TabIndex = 10;
+            this.btnmissgen.Text = "Generate";
+            this.btnmissgen.UseVisualStyleBackColor = true;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(272, 12);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(33, 13);
+            this.label16.TabIndex = 9;
+            this.label16.Text = "Exam";
+            // 
+            // cmbmissexam
+            // 
+            this.cmbmissexam.FormattingEnabled = true;
+            this.cmbmissexam.Location = new System.Drawing.Point(311, 9);
+            this.cmbmissexam.Name = "cmbmissexam";
+            this.cmbmissexam.Size = new System.Drawing.Size(347, 21);
+            this.cmbmissexam.TabIndex = 8;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(20, 12);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(34, 13);
+            this.label17.TabIndex = 7;
+            this.label17.Text = "Batch";
+            // 
+            // cmbmissbatch
+            // 
+            this.cmbmissbatch.FormattingEnabled = true;
+            this.cmbmissbatch.Location = new System.Drawing.Point(76, 9);
+            this.cmbmissbatch.Name = "cmbmissbatch";
+            this.cmbmissbatch.Size = new System.Drawing.Size(159, 21);
+            this.cmbmissbatch.TabIndex = 6;
+            this.cmbmissbatch.SelectedIndexChanged += new System.EventHandler(this.cmbmissbatch_SelectedIndexChanged);
+            // 
+            // dgvMissRecords
+            // 
+            this.dgvMissRecords.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvMissRecords.Location = new System.Drawing.Point(0, 0);
+            this.dgvMissRecords.MainView = this.gridView2;
+            this.dgvMissRecords.Name = "dgvMissRecords";
+            this.dgvMissRecords.Size = new System.Drawing.Size(1239, 543);
+            this.dgvMissRecords.TabIndex = 1;
+            this.dgvMissRecords.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            // 
+            // gridView2
+            // 
+            this.gridView2.GridControl = this.dgvMissRecords;
+            this.gridView2.Name = "gridView2";
+            // 
             // frmExamResults
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -704,6 +805,11 @@
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGenerateOverallReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            this.tabNavigationPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
+            this.splitContainerControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMissRecords)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -766,5 +872,14 @@
         private DevExpress.XtraGrid.GridControl dgvGenerateOverallReport;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.Button btngenReport;
+        private DevExpress.XtraBars.Navigation.TabNavigationPage tabNavigationPage3;
+        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
+        private System.Windows.Forms.Button btnmissgen;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox cmbmissexam;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.ComboBox cmbmissbatch;
+        private DevExpress.XtraGrid.GridControl dgvMissRecords;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
     }
 }

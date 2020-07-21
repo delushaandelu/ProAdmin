@@ -353,10 +353,10 @@ namespace ProAdmin
             lblbatch.Text = cmbnewbatch.Text;
             lbljoiningdate.Text = txtnewjoiningdate.Text;
 
-            string barCode = txtmessage.Text;
+            string barCode = txtmessagbarcode.Text;
             try
             {
-                if(txtmessagbarcode != null)
+                if (txtmessagbarcode != null)
                 {
                     Zen.Barcode.Code128BarcodeDraw brCode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
                     picbatcode.Image = brCode.Draw(barCode, 60);

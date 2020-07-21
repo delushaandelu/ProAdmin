@@ -59,6 +59,8 @@
             this.dgvAllExam = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.cmbsearchbybatch = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtsearch)).BeginInit();
             this.txtsearch.SuspendLayout();
             this.tabNavigationPage2.SuspendLayout();
@@ -95,6 +97,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.cmbsearchbybatch);
+            this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.cmbbatch);
             this.groupBox4.Controls.Add(this.label7);
             this.groupBox4.Controls.Add(this.cmbexamtype);
@@ -114,7 +118,7 @@
             this.groupBox4.Controls.Add(this.txtexam);
             this.groupBox4.Location = new System.Drawing.Point(18, 26);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1033, 312);
+            this.groupBox4.Size = new System.Drawing.Size(1033, 448);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Exam Data";
@@ -122,7 +126,7 @@
             // cmbbatch
             // 
             this.cmbbatch.FormattingEnabled = true;
-            this.cmbbatch.Location = new System.Drawing.Point(86, 68);
+            this.cmbbatch.Location = new System.Drawing.Point(387, 26);
             this.cmbbatch.Name = "cmbbatch";
             this.cmbbatch.Size = new System.Drawing.Size(208, 21);
             this.cmbbatch.TabIndex = 18;
@@ -130,7 +134,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 71);
+            this.label7.Location = new System.Drawing.Point(317, 29);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 13);
             this.label7.TabIndex = 17;
@@ -142,7 +146,7 @@
             this.cmbexamtype.Items.AddRange(new object[] {
             "TERM_EXAM",
             "MONTHELY_EXAM"});
-            this.cmbexamtype.Location = new System.Drawing.Point(86, 183);
+            this.cmbexamtype.Location = new System.Drawing.Point(687, 26);
             this.cmbexamtype.Name = "cmbexamtype";
             this.cmbexamtype.Size = new System.Drawing.Size(208, 21);
             this.cmbexamtype.TabIndex = 4;
@@ -150,7 +154,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 186);
+            this.label6.Location = new System.Drawing.Point(617, 29);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 13);
             this.label6.TabIndex = 15;
@@ -171,7 +175,7 @@
             this.cmbstate.Items.AddRange(new object[] {
             "Active",
             "Closed"});
-            this.cmbstate.Location = new System.Drawing.Point(86, 152);
+            this.cmbstate.Location = new System.Drawing.Point(687, 71);
             this.cmbstate.Name = "cmbstate";
             this.cmbstate.Size = new System.Drawing.Size(208, 21);
             this.cmbstate.TabIndex = 3;
@@ -179,7 +183,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 155);
+            this.label2.Location = new System.Drawing.Point(617, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 12;
@@ -187,14 +191,14 @@
             // 
             // dtpenddate
             // 
-            this.dtpenddate.Location = new System.Drawing.Point(85, 123);
+            this.dtpenddate.Location = new System.Drawing.Point(387, 76);
             this.dtpenddate.Name = "dtpenddate";
             this.dtpenddate.Size = new System.Drawing.Size(208, 20);
             this.dtpenddate.TabIndex = 2;
             // 
             // dtpstartdate
             // 
-            this.dtpstartdate.Location = new System.Drawing.Point(86, 95);
+            this.dtpstartdate.Location = new System.Drawing.Point(85, 76);
             this.dtpstartdate.Name = "dtpstartdate";
             this.dtpstartdate.Size = new System.Drawing.Size(208, 20);
             this.dtpstartdate.TabIndex = 1;
@@ -202,7 +206,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 129);
+            this.label1.Location = new System.Drawing.Point(318, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 9;
@@ -211,7 +215,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 98);
+            this.label5.Location = new System.Drawing.Point(15, 79);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 13);
             this.label5.TabIndex = 8;
@@ -231,10 +235,10 @@
             this.end_date,
             this.state,
             this.exam_type});
-            this.dgvExamSchedule.Location = new System.Drawing.Point(338, 19);
+            this.dgvExamSchedule.Location = new System.Drawing.Point(19, 210);
             this.dgvExamSchedule.Name = "dgvExamSchedule";
             this.dgvExamSchedule.ReadOnly = true;
-            this.dgvExamSchedule.Size = new System.Drawing.Size(679, 221);
+            this.dgvExamSchedule.Size = new System.Drawing.Size(996, 221);
             this.dgvExamSchedule.TabIndex = 8;
             this.dgvExamSchedule.DoubleClick += new System.EventHandler(this.dgvExamSchedule_DoubleClick);
             // 
@@ -291,7 +295,7 @@
             // btnsubdelete
             // 
             this.btnsubdelete.Enabled = false;
-            this.btnsubdelete.Location = new System.Drawing.Point(116, 223);
+            this.btnsubdelete.Location = new System.Drawing.Point(445, 128);
             this.btnsubdelete.Name = "btnsubdelete";
             this.btnsubdelete.Size = new System.Drawing.Size(75, 23);
             this.btnsubdelete.TabIndex = 6;
@@ -301,7 +305,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(210, 223);
+            this.button4.Location = new System.Drawing.Point(539, 128);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 7;
@@ -320,7 +324,7 @@
             // 
             // btnsubsave
             // 
-            this.btnsubsave.Location = new System.Drawing.Point(22, 223);
+            this.btnsubsave.Location = new System.Drawing.Point(351, 128);
             this.btnsubsave.Name = "btnsubsave";
             this.btnsubsave.Size = new System.Drawing.Size(75, 23);
             this.btnsubsave.TabIndex = 5;
@@ -357,6 +361,24 @@
             // 
             this.gridView1.GridControl = this.dgvAllExam;
             this.gridView1.Name = "gridView1";
+            // 
+            // cmbsearchbybatch
+            // 
+            this.cmbsearchbybatch.FormattingEnabled = true;
+            this.cmbsearchbybatch.Location = new System.Drawing.Point(427, 183);
+            this.cmbsearchbybatch.Name = "cmbsearchbybatch";
+            this.cmbsearchbybatch.Size = new System.Drawing.Size(208, 21);
+            this.cmbsearchbybatch.TabIndex = 20;
+            this.cmbsearchbybatch.SelectedIndexChanged += new System.EventHandler(this.cmbsearchbybatch_SelectedIndexChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(335, 186);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(86, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Search by Batch";
             // 
             // frmSheduleAnExam
             // 
@@ -412,5 +434,7 @@
         private DevExpress.XtraBars.Navigation.TabNavigationPage tabNavigationPage1;
         private DevExpress.XtraGrid.GridControl dgvAllExam;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private System.Windows.Forms.ComboBox cmbsearchbybatch;
+        private System.Windows.Forms.Label label8;
     }
 }
