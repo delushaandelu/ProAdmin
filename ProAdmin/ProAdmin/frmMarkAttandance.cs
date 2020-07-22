@@ -54,26 +54,31 @@ namespace ProAdmin
                         clear();
                         lblmessage.Text = "Invalid Class Entry..";
                     }
+                }
 
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
+                {
                     model_attandance.intime = DateTime.Now.ToString();
                     model_attandance.attandance = "1";
 
-                    if (db.data_attandance.Where( data => data.regid == txtstudentid.Text && data.batch == txtbatch.Text && data.classdate == txttoday.Text).Any())//Update attandance
+                    if (db.data_attandance.Where(data => data.regid == txtstudentid.Text && data.batch == txtbatch.Text && data.classdate == txttoday.Text).Any())//Update attandance
                     {
                         model_attandance = db.data_attandance.Where(x => x.regid == txtstudentid.Text && x.batch == txtbatch.Text && x.classdate == txttoday.Text).FirstOrDefault();
                         model_attandance.intime = DateTime.Now.ToString();
                         model_attandance.attandance = "1";
+
                         db.Entry(model_attandance).State = EntityState.Modified;
-                        db.SaveChangesAsync();
-                        txtstudentid.Text = null;
-                        txtbatch.Text = null;
+                        db.SaveChanges();
+
                         lblmessage.Text = "Welcome : " + model_student.Firstname;
-                    } 
+                    }
                     else
                     {
                         lblmessage.Text = "Invalid Class Entry..";
-                    }                   
+                    }
                 }
+                txtstudentid.Text = null;
+                txtbatch.Text = null;
             }
         }
 
