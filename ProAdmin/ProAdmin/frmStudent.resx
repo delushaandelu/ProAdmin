@@ -3762,18 +3762,6 @@
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>1151, 892</value>
   </data>
-  <data name="&gt;&gt;gridView1.Name" xml:space="preserve">
-    <value>gridView1</value>
-  </data>
-  <data name="&gt;&gt;gridView1.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;dateTimeChartRangeControlClient1.Name" xml:space="preserve">
-    <value>dateTimeChartRangeControlClient1</value>
-  </data>
-  <data name="&gt;&gt;dateTimeChartRangeControlClient1.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.DateTimeChartRangeControlClient, DevExpress.XtraEditors.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;Id.Name" xml:space="preserve">
     <value>Id</value>
   </data>
@@ -3881,6 +3869,18 @@
   </data>
   <data name="&gt;&gt;Scholarship.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gridView1.Name" xml:space="preserve">
+    <value>gridView1</value>
+  </data>
+  <data name="&gt;&gt;gridView1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;dateTimeChartRangeControlClient1.Name" xml:space="preserve">
+    <value>dateTimeChartRangeControlClient1</value>
+  </data>
+  <data name="&gt;&gt;dateTimeChartRangeControlClient1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DateTimeChartRangeControlClient, DevExpress.XtraEditors.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmStudent</value>

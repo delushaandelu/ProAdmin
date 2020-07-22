@@ -94,5 +94,38 @@ namespace ProAdmin
             }
             frmExamResultCharts.Instance.BringToFront();
         }
+
+        private void accordionControlElement10_Click(object sender, EventArgs e)
+        {
+            if (!panelContainer.Controls.Contains(frmScheduleClass.Instance))
+            {
+                panelContainer.Controls.Add(frmScheduleClass.Instance);
+                frmScheduleClass.Instance.Dock = DockStyle.Fill;
+                frmScheduleClass.Instance.BringToFront();
+            }
+            frmScheduleClass.Instance.BringToFront();
+        }
+
+        private void accordionControlElement11_Click(object sender, EventArgs e)
+        {
+            if (!panelContainer.Controls.Contains(frmMarkAttandance.Instance))
+            {
+                panelContainer.Controls.Add(frmMarkAttandance.Instance);
+                frmMarkAttandance.Instance.Dock = DockStyle.Fill;
+                frmMarkAttandance.Instance.BringToFront();
+            }
+            frmMarkAttandance.Instance.BringToFront();
+        }
+
+        private void accordionControlElement12_Click(object sender, EventArgs e)
+        {
+            if (!panelContainer.Controls.Contains(frmAttandanceSummary.Instance))
+            {
+                panelContainer.Controls.Add(frmAttandanceSummary.Instance);
+                frmAttandanceSummary.Instance.Dock = DockStyle.Fill;
+                frmAttandanceSummary.Instance.BringToFront();
+            }
+            frmAttandanceSummary.Instance.BringToFront();
+        }
     }
 }

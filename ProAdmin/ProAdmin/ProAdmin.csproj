@@ -110,6 +110,9 @@
     <Compile Include="basicdata_batch.cs">
       <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
     </Compile>
+    <Compile Include="basicdata_class.cs">
+      <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
+    </Compile>
     <Compile Include="basicdata_school.cs">
       <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
     </Compile>
@@ -126,6 +129,9 @@
       <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
     </Compile>
     <Compile Include="basicdate_schedule.cs">
+      <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data_attandance.cs">
       <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
     </Compile>
     <Compile Include="data_examresults.cs">

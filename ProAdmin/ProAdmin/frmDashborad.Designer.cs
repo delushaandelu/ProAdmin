@@ -40,11 +40,15 @@
             this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement8 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barToolbarsListItem1 = new DevExpress.XtraBars.BarToolbarsListItem();
             this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
-            this.accordionControlElement8 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement9 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement10 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement11 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement12 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +58,7 @@
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContainer.Location = new System.Drawing.Point(260, 31);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(588, 443);
+            this.panelContainer.Size = new System.Drawing.Size(795, 613);
             this.panelContainer.TabIndex = 0;
             // 
             // accordionControl1
@@ -63,11 +67,12 @@
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement1,
             this.accordionControlElement2,
-            this.accordionControlElement5});
+            this.accordionControlElement5,
+            this.accordionControlElement9});
             this.accordionControl1.Location = new System.Drawing.Point(0, 31);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(260, 443);
+            this.accordionControl1.Size = new System.Drawing.Size(260, 613);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -151,6 +156,13 @@
             this.accordionControlElement7.Text = "Exam Results Details";
             this.accordionControlElement7.Click += new System.EventHandler(this.accordionControlElement7_Click);
             // 
+            // accordionControlElement8
+            // 
+            this.accordionControlElement8.Name = "accordionControlElement8";
+            this.accordionControlElement8.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement8.Text = "Exam Results in Chart";
+            this.accordionControlElement8.Click += new System.EventHandler(this.accordionControlElement8_Click);
+            // 
             // fluentDesignFormControl1
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
@@ -160,7 +172,7 @@
             this.skinDropDownButtonItem1});
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(848, 31);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1055, 31);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.barButtonItem1);
@@ -184,18 +196,42 @@
             this.skinDropDownButtonItem1.Id = 1;
             this.skinDropDownButtonItem1.Name = "skinDropDownButtonItem1";
             // 
-            // accordionControlElement8
+            // accordionControlElement9
             // 
-            this.accordionControlElement8.Name = "accordionControlElement8";
-            this.accordionControlElement8.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement8.Text = "Exam Results in Chart";
-            this.accordionControlElement8.Click += new System.EventHandler(this.accordionControlElement8_Click);
+            this.accordionControlElement9.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement10,
+            this.accordionControlElement11,
+            this.accordionControlElement12});
+            this.accordionControlElement9.Expanded = true;
+            this.accordionControlElement9.Name = "accordionControlElement9";
+            this.accordionControlElement9.Text = "Attandance";
+            // 
+            // accordionControlElement10
+            // 
+            this.accordionControlElement10.Name = "accordionControlElement10";
+            this.accordionControlElement10.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement10.Text = "Schedule Class";
+            this.accordionControlElement10.Click += new System.EventHandler(this.accordionControlElement10_Click);
+            // 
+            // accordionControlElement11
+            // 
+            this.accordionControlElement11.Name = "accordionControlElement11";
+            this.accordionControlElement11.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement11.Text = "Mark Attandance";
+            this.accordionControlElement11.Click += new System.EventHandler(this.accordionControlElement11_Click);
+            // 
+            // accordionControlElement12
+            // 
+            this.accordionControlElement12.Name = "accordionControlElement12";
+            this.accordionControlElement12.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement12.Text = "Attandance Summary";
+            this.accordionControlElement12.Click += new System.EventHandler(this.accordionControlElement12_Click);
             // 
             // frmDashborad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(848, 474);
+            this.ClientSize = new System.Drawing.Size(1055, 644);
             this.ControlContainer = this.panelContainer;
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.accordionControl1);
@@ -229,5 +265,9 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement6;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement7;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement8;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement9;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement10;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement11;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement12;
     }
 }
