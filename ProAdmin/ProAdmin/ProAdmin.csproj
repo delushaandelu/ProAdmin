@@ -137,6 +137,12 @@
     <Compile Include="data_examresults.cs">
       <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
     </Compile>
+    <Compile Include="frmAttandanceSummary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmAttandanceSummary.Designer.cs">
+      <DependentUpon>frmAttandanceSummary.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDashborad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,18 @@
     </Compile>
     <Compile Include="frmManageBasicData.Designer.cs">
       <DependentUpon>frmManageBasicData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMarkAttandance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmMarkAttandance.Designer.cs">
+      <DependentUpon>frmMarkAttandance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmScheduleClass.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmScheduleClass.Designer.cs">
+      <DependentUpon>frmScheduleClass.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSheduleAnExam.cs">
       <SubType>UserControl</SubType>
@@ -205,6 +223,9 @@
     <Compile Include="view_exam_results_summary.cs">
       <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmAttandanceSummary.resx">
+      <DependentUpon>frmAttandanceSummary.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDashborad.resx">
       <DependentUpon>frmDashborad.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +237,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmManageBasicData.resx">
       <DependentUpon>frmManageBasicData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMarkAttandance.resx">
+      <DependentUpon>frmMarkAttandance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScheduleClass.resx">
+      <DependentUpon>frmScheduleClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSheduleAnExam.resx">
       <DependentUpon>frmSheduleAnExam.cs</DependentUpon>
