@@ -220,6 +220,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="view_attandance_summary.cs">
+      <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
+    </Compile>
     <Compile Include="view_exam_results_summary.cs">
       <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
     </Compile>

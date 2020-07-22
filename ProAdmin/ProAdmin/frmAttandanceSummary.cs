@@ -18,6 +18,9 @@ namespace ProAdmin
             InitializeComponent();
         }
 
+        basicdata_class model_class = new basicdata_class();
+        view_attandance_summary view_attandance = new view_attandance_summary();
+
         private static frmAttandanceSummary _instance;
 
         public static frmAttandanceSummary Instance
@@ -27,6 +30,31 @@ namespace ProAdmin
                 if (_instance == null)
                     _instance = new frmAttandanceSummary();
                 return _instance;
+            }
+        }
+
+        private void txtdate_SelectionChanged(object sender, EventArgs e)
+        {
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
+            {
+                var batch_data = from data in db.basicdata_class where data.classdate == txtdate.Text select new { Name = data.id, ID = data.batch };
+                cmbbatch.DataSource = batch_data.ToList();
+                cmbbatch.ValueMember = "id";
+                cmbbatch.DisplayMember = "batch";
+                cmbbatch.SelectedItem = null;
+
+            }
+        }
+
+        private void btnprocess_Click(object sender, EventArgs e)
+        {
+            if (txtdate.Text != null && cmbbatch.Text != null)
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("Please fill all fields..");
             }
         }
     }

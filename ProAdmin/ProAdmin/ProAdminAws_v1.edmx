@@ -128,6 +128,23 @@
           <Property Name="exam_date" Type="varchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
+warning 6002: The table/view 'proadmin_v1.dbo.view_attandance_summary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="view_attandance_summary">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="batch" Type="varchar" MaxLength="50" />
+          <Property Name="regid" Type="varchar" MaxLength="50" />
+          <Property Name="Firstname" Type="varchar" MaxLength="200" />
+          <Property Name="Lastname" Type="varchar" MaxLength="200" />
+          <Property Name="classdate" Type="varchar" MaxLength="50" />
+          <Property Name="intime" Type="varchar" MaxLength="50" />
+          <Property Name="attandance" Type="varchar" MaxLength="50" />
+          <Property Name="Al_school" Type="varchar" MaxLength="200" />
+          <Property Name="Parents_contact" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <!--Errors Found During Generation:
 warning 6002: The table/view 'proadmin_v1.dbo.view_exam_results_summary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="view_exam_results_summary">
           <Key>
@@ -161,6 +178,20 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_exam_results_summary' does no
           <EntitySet Name="basicdate_schedule" EntityType="Self.basicdate_schedule" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="data_attandance" EntityType="Self.data_attandance" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="data_examresults" EntityType="Self.data_examresults" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="view_attandance_summary" EntityType="Self.view_attandance_summary" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [view_attandance_summary].[id] AS [id], 
+    [view_attandance_summary].[batch] AS [batch], 
+    [view_attandance_summary].[regid] AS [regid], 
+    [view_attandance_summary].[Firstname] AS [Firstname], 
+    [view_attandance_summary].[Lastname] AS [Lastname], 
+    [view_attandance_summary].[classdate] AS [classdate], 
+    [view_attandance_summary].[intime] AS [intime], 
+    [view_attandance_summary].[attandance] AS [attandance], 
+    [view_attandance_summary].[Al_school] AS [Al_school], 
+    [view_attandance_summary].[Parents_contact] AS [Parents_contact]
+    FROM [dbo].[view_attandance_summary] AS [view_attandance_summary]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="view_exam_results_summary" EntityType="Self.view_exam_results_summary" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [view_exam_results_summary].[batch] AS [batch], 
@@ -321,6 +352,7 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_exam_results_summary' does no
           <EntitySet Name="view_exam_results_summary" EntityType="Self.view_exam_results_summary" />
           <EntitySet Name="basicdata_class" EntityType="proadmin_v1_Model1.basicdata_class" />
           <EntitySet Name="data_attandance" EntityType="proadmin_v1_Model1.data_attandance" />
+          <EntitySet Name="view_attandance_summary" EntityType="proadmin_v1_Model1.view_attandance_summary" />
         </EntityContainer>
         <EntityType Name="basicdata_class">
           <Key>
@@ -341,6 +373,21 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_exam_results_summary' does no
           <Property Name="regid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="intime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="attandance" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="view_attandance_summary">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="batch" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="regid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Firstname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Lastname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="classdate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="intime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="attandance" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Al_school" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Parents_contact" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -497,6 +544,22 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_exam_results_summary' does no
                 <ScalarProperty Name="intime" ColumnName="intime" />
                 <ScalarProperty Name="regid" ColumnName="regid" />
                 <ScalarProperty Name="classdate" ColumnName="classdate" />
+                <ScalarProperty Name="batch" ColumnName="batch" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="view_attandance_summary">
+            <EntityTypeMapping TypeName="proadmin_v1_Model1.view_attandance_summary">
+              <MappingFragment StoreEntitySet="view_attandance_summary">
+                <ScalarProperty Name="Parents_contact" ColumnName="Parents_contact" />
+                <ScalarProperty Name="Al_school" ColumnName="Al_school" />
+                <ScalarProperty Name="attandance" ColumnName="attandance" />
+                <ScalarProperty Name="intime" ColumnName="intime" />
+                <ScalarProperty Name="classdate" ColumnName="classdate" />
+                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+                <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+                <ScalarProperty Name="regid" ColumnName="regid" />
                 <ScalarProperty Name="batch" ColumnName="batch" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
