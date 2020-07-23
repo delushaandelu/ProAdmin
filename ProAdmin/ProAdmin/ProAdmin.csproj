@@ -128,6 +128,9 @@
     <Compile Include="basicdata_users.cs">
       <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
     </Compile>
+    <Compile Include="basicdate_fee.cs">
+      <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
+    </Compile>
     <Compile Include="basicdate_schedule.cs">
       <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
     </Compile>

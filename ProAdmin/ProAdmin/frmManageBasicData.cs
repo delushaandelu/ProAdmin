@@ -15,10 +15,11 @@ namespace ProAdmin
     public partial class frmManageBasicData : System.Windows.Forms.UserControl
     {
         //Declare Object of the Models
-        basicdata_batch model_batch = new basicdata_batch();
-        basicdata_university model_university = new basicdata_university();
-        basicdata_school model_school = new basicdata_school();
-        basicdata_subject model_subject = new basicdata_subject();
+        basicdata_batch         model_batch         = new basicdata_batch();
+        basicdata_university    model_university    = new basicdata_university();
+        basicdata_school        model_school        = new basicdata_school();
+        basicdata_subject       model_subject       = new basicdata_subject();
+        basicdate_fee           model_fee           = new basicdate_fee();
 
         private static frmManageBasicData _instance;
 
@@ -39,6 +40,8 @@ namespace ProAdmin
             populate_university_data_grid_view();
             populate_school_data_grid_view();
             populate_subject_data_grid_view();
+            populate_batch_date_to_comboboc();
+            populate_fee_data_grid_view();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -53,6 +56,9 @@ namespace ProAdmin
             txtschool.Text = null;
             txtsubject.Text = null;
             txtteacher.Text = null;
+            cmbfeebatch.Text = null;
+            txtfeeamount.Text = null;
+            cmbfeestate.Text = null;
         }
 
         private void message_popup_ok(string messsage)
@@ -103,6 +109,27 @@ namespace ProAdmin
             using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
                 dgvSubjectView.DataSource = db.basicdata_subject.ToList<basicdata_subject>();
+            }
+        }
+
+        private void populate_fee_data_grid_view()
+        {
+            dgvSubjectView.AutoGenerateColumns = false;
+
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
+            {
+                dgvfee.DataSource = db.basicdate_fee.ToList<basicdate_fee>();
+            }
+        }
+
+        private void populate_batch_date_to_comboboc()
+        {
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
+            {
+                var batch = db.basicdata_batch.Select(y => new { y.batchid, y.batch });
+                cmbfeebatch.DataSource = batch.ToList();
+                cmbfeebatch.DisplayMember = "batch";
+                cmbfeebatch.SelectedItem = null;
             }
         }
 
@@ -233,6 +260,37 @@ namespace ProAdmin
             }
         }
 
+        private void btnfeesave_Click(object sender, EventArgs e)
+        {
+            if (cmbfeebatch.Text != "" || txtfeeamount.Text != "" || cmbfeestate.Text != "")
+            {
+                model_fee.batch_ = cmbfeebatch.Text;
+                model_fee.amount = txtfeeamount.Text;
+                model_fee.state  = cmbfeestate.Text;
+
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
+                {
+
+                    if (model_fee.id == 0)//Insert
+                        db.basicdate_fee.Add(model_fee);
+                    else //Update
+                        db.Entry(model_fee).State = EntityState.Modified;
+
+                    db.SaveChangesAsync();
+                    clear_fields();
+                    message_popup_ok("Data Record Saved!");
+                    populate_fee_data_grid_view();
+
+                    //Reset normal after changes done
+                    model_fee.id = 0;
+                    btnfeesave.Text = "Save";
+                }
+            }
+            else
+            {
+                message_popup_ok("Empty fields found.");
+            }
+        }
         //Delete Button Events
         private void btnUniDelete_Click(object sender, EventArgs e)
         {
@@ -318,6 +376,28 @@ namespace ProAdmin
             }
         }
 
+        private void btnfeedelete_Click(object sender, EventArgs e)
+        {
+            if (XtraMessageBox.Show("Are you sure to delete the record?", "Delete Record", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
+                {
+                    var entity = db.Entry(model_fee);
+                    if (entity.State == EntityState.Detached)
+                        db.basicdate_fee.Attach(model_fee);
+                    db.basicdate_fee.Remove(model_fee);
+                    db.SaveChangesAsync();
+
+                    populate_fee_data_grid_view();
+                    clear_fields();
+                    btnfeesave.Text = "Save";
+                    btnfeedelete.Enabled = false;
+
+                    message_popup_ok("Data Deleted!");
+                }
+            }
+        }
+
         //Grid View Double Click Event
         private void dgvBatchView_DoubleClick(object sender, EventArgs e)
         {
@@ -393,6 +473,26 @@ namespace ProAdmin
 
                 btnsubsave.Text = "Update";
                 btnsubdelete.Enabled = true;
+            }
+        }
+
+        private void dgvfee_DoubleClick(object sender, EventArgs e)
+        {
+            if (dgvfee.CurrentRow.Index != -1)
+            {
+                model_fee.id = Convert.ToInt32(dgvfee.CurrentRow.Cells["id"].Value);
+
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
+                {
+                    model_fee = db.basicdate_fee.Where(x => x.id == model_fee.id).FirstOrDefault();
+                    cmbfeestate.Text = model_fee.state;
+                    cmbfeebatch.Text = model_fee.batch_;
+                    txtfeeamount.Text = model_fee.amount;
+
+                }
+
+                btnfeesave.Text = "Update";
+                btnfeedelete.Enabled = true;
             }
         }
 

@@ -17,6 +17,7 @@
         <EntityTypeShape EntityType="proadmin_v1_Model1.basicdata_class" Width="1.5" PointX="2.5" PointY="2.25" />
         <EntityTypeShape EntityType="proadmin_v1_Model1.data_attandance" Width="1.5" PointX="11.125" PointY="0.625" />
         <EntityTypeShape EntityType="proadmin_v1_Model1.view_attandance_summary" Width="1.5" PointX="11.5" PointY="6.25" />
+        <EntityTypeShape EntityType="proadmin_v1_Model1.basicdate_fee" Width="1.5" PointX="5.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
