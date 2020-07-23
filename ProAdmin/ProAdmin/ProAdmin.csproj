@@ -253,6 +253,12 @@
     <Compile Include="view_exam_results_summary.cs">
       <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
     </Compile>
+    <Compile Include="view_payment_summary.cs">
+      <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="view_schoarshipstd_summary.cs">
+      <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmAttandanceSummary.resx">
       <DependentUpon>frmAttandanceSummary.cs</DependentUpon>
     </EmbeddedResource>

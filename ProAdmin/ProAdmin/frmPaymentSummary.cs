@@ -20,7 +20,8 @@ namespace ProAdmin
             txtyear.Text = DateTime.Now.ToString("yyyy");
         }
 
-        
+        view_payment_summary view_fee_summary = new view_payment_summary();
+        view_schoarshipstd_summary view_scol_summary = new view_schoarshipstd_summary();
 
         private static frmPaymentSummary _instance;
 
@@ -50,7 +51,12 @@ namespace ProAdmin
         {
             if(txtmonth.Text != null && txtyear.Text != null && cmbbatch.Text != null)
             {
-
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
+                {
+                    dgvpadi.DataSource = db.view_payment_summary.Where(x => x.batch == cmbbatch.Text && x.feeschedule == txtmonth.Text && x.year == txtyear.Text && x.payment == "Paid").ToList<view_payment_summary>();
+                    dgvnotpadi.DataSource = db.view_payment_summary.Where(x => x.batch == cmbbatch.Text && x.feeschedule == txtmonth.Text && x.year == txtyear.Text && x.payment == "Not Paid").ToList<view_payment_summary>();
+                    dgvsolview.DataSource = db.view_schoarshipstd_summary.Where(x => x.Scholarship == "YES" && x.Batch == cmbbatch.Text).ToList<view_schoarshipstd_summary>();
+                }
             }
         }
     }

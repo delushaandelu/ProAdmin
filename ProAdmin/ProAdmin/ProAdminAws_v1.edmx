@@ -201,20 +201,36 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_exam_results_summary' does no
           <Property Name="exam" Type="varchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6013: The table/view 'proadmin_v1.dbo.view_freecollection_summary' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="view_freecollection_summary">
+warning 6002: The table/view 'proadmin_v1.dbo.view_payment_summary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="view_payment_summary">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
           <Property Name="feeschedule" Type="varchar" MaxLength="50" />
+          <Property Name="year" Type="varchar" MaxLength="50" />
           <Property Name="batch" Type="varchar" MaxLength="50" />
           <Property Name="regid" Type="varchar" MaxLength="50" />
           <Property Name="Firstname" Type="varchar" MaxLength="200" />
           <Property Name="Lastname" Type="varchar" MaxLength="200" />
-          <Property Name="Al_school" Type="varchar" MaxLength="200" />
           <Property Name="payment" Type="varchar" MaxLength="50" />
-          <Property Name="payment_date" Type="varchar" MaxLength="50" />
           <Property Name="amount" Type="varchar" MaxLength="50" />
-          <Property Name="year" Type="varchar" MaxLength="50" />
+          <Property Name="payment_date" Type="varchar" MaxLength="50" />
+          <Property Name="Al_school" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'proadmin_v1.dbo.view_schoarshipstd_summary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="view_schoarshipstd_summary">
+          <Key>
+            <PropertyRef Name="regid" />
+          </Key>
+          <Property Name="regid" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="Firstname" Type="varchar" MaxLength="200" />
+          <Property Name="Lastname" Type="varchar" MaxLength="200" />
+          <Property Name="Al_school" Type="varchar" MaxLength="200" />
           <Property Name="Scholarship" Type="varchar" MaxLength="200" />
-        </EntityType>-->
+          <Property Name="Batch" Type="varchar" MaxLength="200" />
+        </EntityType>
         <EntityContainer Name="proadmin_v1_Model1StoreContainer">
           <EntitySet Name="basicdata_batch" EntityType="Self.basicdata_batch" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="basicdata_class" EntityType="Self.basicdata_class" Schema="dbo" store:Type="Tables" />
@@ -262,6 +278,31 @@ warning 6013: The table/view 'proadmin_v1.dbo.view_freecollection_summary' does 
     [view_exam_results_summary].[git] AS [git], 
     [view_exam_results_summary].[exam] AS [exam]
     FROM [dbo].[view_exam_results_summary] AS [view_exam_results_summary]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="view_payment_summary" EntityType="Self.view_payment_summary" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [view_payment_summary].[id] AS [id], 
+    [view_payment_summary].[feeschedule] AS [feeschedule], 
+    [view_payment_summary].[year] AS [year], 
+    [view_payment_summary].[batch] AS [batch], 
+    [view_payment_summary].[regid] AS [regid], 
+    [view_payment_summary].[Firstname] AS [Firstname], 
+    [view_payment_summary].[Lastname] AS [Lastname], 
+    [view_payment_summary].[payment] AS [payment], 
+    [view_payment_summary].[amount] AS [amount], 
+    [view_payment_summary].[payment_date] AS [payment_date], 
+    [view_payment_summary].[Al_school] AS [Al_school]
+    FROM [dbo].[view_payment_summary] AS [view_payment_summary]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="view_schoarshipstd_summary" EntityType="Self.view_schoarshipstd_summary" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [view_schoarshipstd_summary].[regid] AS [regid], 
+    [view_schoarshipstd_summary].[Firstname] AS [Firstname], 
+    [view_schoarshipstd_summary].[Lastname] AS [Lastname], 
+    [view_schoarshipstd_summary].[Al_school] AS [Al_school], 
+    [view_schoarshipstd_summary].[Scholarship] AS [Scholarship], 
+    [view_schoarshipstd_summary].[Batch] AS [Batch]
+    FROM [dbo].[view_schoarshipstd_summary] AS [view_schoarshipstd_summary]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -394,11 +435,13 @@ warning 6013: The table/view 'proadmin_v1.dbo.view_freecollection_summary' does 
           <EntitySet Name="view_exam_results_summary" EntityType="Self.view_exam_results_summary" />
           <EntitySet Name="basicdata_class" EntityType="proadmin_v1_Model1.basicdata_class" />
           <EntitySet Name="data_attandance" EntityType="proadmin_v1_Model1.data_attandance" />
-          <EntitySet Name="view_attandance_summary" EntityType="proadmin_v1_Model1.view_attandance_summary" />
           <EntitySet Name="basicdate_fee" EntityType="proadmin_v1_Model1.basicdate_fee" />
           <EntitySet Name="basicdata_batch" EntityType="proadmin_v1_Model1.basicdata_batch" />
           <EntitySet Name="basicdate_feeschedule" EntityType="proadmin_v1_Model1.basicdate_feeschedule" />
           <EntitySet Name="data_feecollection" EntityType="proadmin_v1_Model1.data_feecollection" />
+          <EntitySet Name="view_attandance_summary" EntityType="proadmin_v1_Model1.view_attandance_summary" />
+          <EntitySet Name="view_payment_summary" EntityType="proadmin_v1_Model1.view_payment_summary" />
+          <EntitySet Name="view_schoarshipstd_summary" EntityType="proadmin_v1_Model1.view_schoarshipstd_summary" />
         </EntityContainer>
         <EntityType Name="basicdata_class">
           <Key>
@@ -419,21 +462,6 @@ warning 6013: The table/view 'proadmin_v1.dbo.view_freecollection_summary' does 
           <Property Name="regid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="intime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="attandance" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="view_attandance_summary">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" />
-          <Property Name="batch" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="regid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Firstname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="Lastname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="classdate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="intime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="attandance" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Al_school" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="Parents_contact" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="basicdate_fee">
           <Key>
@@ -475,6 +503,48 @@ warning 6013: The table/view 'proadmin_v1.dbo.view_freecollection_summary' does 
           <Property Name="payment_date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="amount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="year" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="view_attandance_summary">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="batch" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="regid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Firstname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Lastname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="classdate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="intime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="attandance" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Al_school" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Parents_contact" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="view_payment_summary">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="feeschedule" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="year" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="batch" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="regid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Firstname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Lastname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="payment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="amount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="payment_date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Al_school" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="view_schoarshipstd_summary">
+          <Key>
+            <PropertyRef Name="regid" />
+          </Key>
+          <Property Name="regid" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Firstname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Lastname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Al_school" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Scholarship" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Batch" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -627,22 +697,6 @@ warning 6013: The table/view 'proadmin_v1.dbo.view_freecollection_summary' does 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="view_attandance_summary">
-            <EntityTypeMapping TypeName="proadmin_v1_Model1.view_attandance_summary">
-              <MappingFragment StoreEntitySet="view_attandance_summary">
-                <ScalarProperty Name="Parents_contact" ColumnName="Parents_contact" />
-                <ScalarProperty Name="Al_school" ColumnName="Al_school" />
-                <ScalarProperty Name="attandance" ColumnName="attandance" />
-                <ScalarProperty Name="intime" ColumnName="intime" />
-                <ScalarProperty Name="classdate" ColumnName="classdate" />
-                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
-                <ScalarProperty Name="Firstname" ColumnName="Firstname" />
-                <ScalarProperty Name="regid" ColumnName="regid" />
-                <ScalarProperty Name="batch" ColumnName="batch" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="basicdate_fee">
             <EntityTypeMapping TypeName="proadmin_v1_Model1.basicdate_fee">
               <MappingFragment StoreEntitySet="basicdate_fee">
@@ -685,6 +739,51 @@ warning 6013: The table/view 'proadmin_v1.dbo.view_freecollection_summary' does 
                 <ScalarProperty Name="batch" ColumnName="batch" />
                 <ScalarProperty Name="feeschedule" ColumnName="feeschedule" />
                 <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="view_attandance_summary">
+            <EntityTypeMapping TypeName="proadmin_v1_Model1.view_attandance_summary">
+              <MappingFragment StoreEntitySet="view_attandance_summary">
+                <ScalarProperty Name="Parents_contact" ColumnName="Parents_contact" />
+                <ScalarProperty Name="Al_school" ColumnName="Al_school" />
+                <ScalarProperty Name="attandance" ColumnName="attandance" />
+                <ScalarProperty Name="intime" ColumnName="intime" />
+                <ScalarProperty Name="classdate" ColumnName="classdate" />
+                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+                <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+                <ScalarProperty Name="regid" ColumnName="regid" />
+                <ScalarProperty Name="batch" ColumnName="batch" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="view_payment_summary">
+            <EntityTypeMapping TypeName="proadmin_v1_Model1.view_payment_summary">
+              <MappingFragment StoreEntitySet="view_payment_summary">
+                <ScalarProperty Name="Al_school" ColumnName="Al_school" />
+                <ScalarProperty Name="payment_date" ColumnName="payment_date" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="payment" ColumnName="payment" />
+                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+                <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+                <ScalarProperty Name="regid" ColumnName="regid" />
+                <ScalarProperty Name="batch" ColumnName="batch" />
+                <ScalarProperty Name="year" ColumnName="year" />
+                <ScalarProperty Name="feeschedule" ColumnName="feeschedule" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="view_schoarshipstd_summary">
+            <EntityTypeMapping TypeName="proadmin_v1_Model1.view_schoarshipstd_summary">
+              <MappingFragment StoreEntitySet="view_schoarshipstd_summary">
+                <ScalarProperty Name="Batch" ColumnName="Batch" />
+                <ScalarProperty Name="Scholarship" ColumnName="Scholarship" />
+                <ScalarProperty Name="Al_school" ColumnName="Al_school" />
+                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+                <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+                <ScalarProperty Name="regid" ColumnName="regid" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

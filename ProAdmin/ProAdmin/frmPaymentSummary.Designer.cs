@@ -32,6 +32,10 @@
             this.tabNavigationPage3 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.txtmonth = new DevExpress.XtraScheduler.UI.MonthEdit();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtyear = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.btnprocess = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbbatch = new System.Windows.Forms.ComboBox();
@@ -43,12 +47,8 @@
             this.dgvnotpadi = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.dgvsolview = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.txtmonth = new DevExpress.XtraScheduler.UI.MonthEdit();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtyear = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
             this.tabPane1.SuspendLayout();
             this.tabNavigationPage3.SuspendLayout();
@@ -58,6 +58,7 @@
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtmonth.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvscol)).BeginInit();
             this.dgvscol.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -67,9 +68,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvnotpadi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.xtraTabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvsolview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtmonth.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPane1
@@ -125,6 +125,41 @@
             this.groupControl1.Size = new System.Drawing.Size(656, 179);
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "Summary Process Query";
+            // 
+            // txtmonth
+            // 
+            this.txtmonth.Location = new System.Drawing.Point(79, 66);
+            this.txtmonth.Name = "txtmonth";
+            this.txtmonth.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtmonth.Size = new System.Drawing.Size(100, 20);
+            this.txtmonth.TabIndex = 65;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(222, 68);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(29, 13);
+            this.label3.TabIndex = 64;
+            this.label3.Text = "Year";
+            // 
+            // txtyear
+            // 
+            this.txtyear.Enabled = false;
+            this.txtyear.Location = new System.Drawing.Point(257, 65);
+            this.txtyear.Name = "txtyear";
+            this.txtyear.Size = new System.Drawing.Size(100, 21);
+            this.txtyear.TabIndex = 63;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(36, 69);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.TabIndex = 62;
+            this.label4.Text = "Month";
             // 
             // btnprocess
             // 
@@ -214,61 +249,26 @@
             // 
             // xtraTabPage3
             // 
-            this.xtraTabPage3.Controls.Add(this.gridControl1);
+            this.xtraTabPage3.Controls.Add(this.dgvsolview);
             this.xtraTabPage3.Name = "xtraTabPage3";
             this.xtraTabPage3.Size = new System.Drawing.Size(1129, 366);
             this.xtraTabPage3.Text = "Scholarships";
             // 
-            // gridControl1
+            // dgvsolview
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
-            this.gridControl1.MainView = this.gridView3;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1129, 366);
-            this.gridControl1.TabIndex = 1;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvsolview.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvsolview.Location = new System.Drawing.Point(0, 0);
+            this.dgvsolview.MainView = this.gridView3;
+            this.dgvsolview.Name = "dgvsolview";
+            this.dgvsolview.Size = new System.Drawing.Size(1129, 366);
+            this.dgvsolview.TabIndex = 1;
+            this.dgvsolview.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
             // 
             // gridView3
             // 
-            this.gridView3.GridControl = this.gridControl1;
+            this.gridView3.GridControl = this.dgvsolview;
             this.gridView3.Name = "gridView3";
-            // 
-            // txtmonth
-            // 
-            this.txtmonth.Location = new System.Drawing.Point(79, 66);
-            this.txtmonth.Name = "txtmonth";
-            this.txtmonth.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtmonth.Size = new System.Drawing.Size(100, 20);
-            this.txtmonth.TabIndex = 65;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(222, 68);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 13);
-            this.label3.TabIndex = 64;
-            this.label3.Text = "Year";
-            // 
-            // txtyear
-            // 
-            this.txtyear.Enabled = false;
-            this.txtyear.Location = new System.Drawing.Point(257, 65);
-            this.txtyear.Name = "txtyear";
-            this.txtyear.Size = new System.Drawing.Size(100, 21);
-            this.txtyear.TabIndex = 63;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 69);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 13);
-            this.label4.TabIndex = 62;
-            this.label4.Text = "Month";
             // 
             // frmPaymentSummary
             // 
@@ -287,6 +287,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtmonth.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvscol)).EndInit();
             this.dgvscol.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
@@ -296,9 +297,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvnotpadi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.xtraTabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvsolview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtmonth.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -320,7 +320,7 @@
         private DevExpress.XtraGrid.GridControl dgvnotpadi;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage3;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl dgvsolview;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
         private DevExpress.XtraScheduler.UI.MonthEdit txtmonth;
         private System.Windows.Forms.Label label3;
