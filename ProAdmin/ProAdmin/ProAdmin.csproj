@@ -131,6 +131,9 @@
     <Compile Include="basicdate_fee.cs">
       <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
     </Compile>
+    <Compile Include="basicdate_feeschedule.cs">
+      <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
+    </Compile>
     <Compile Include="basicdate_schedule.cs">
       <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
     </Compile>
@@ -140,11 +143,20 @@
     <Compile Include="data_examresults.cs">
       <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
     </Compile>
+    <Compile Include="data_feecollection.cs">
+      <DependentUpon>ProAdminAws_v1.tt</DependentUpon>
+    </Compile>
     <Compile Include="frmAttandanceSummary.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="frmAttandanceSummary.Designer.cs">
       <DependentUpon>frmAttandanceSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCollectPayment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmCollectPayment.Designer.cs">
+      <DependentUpon>frmCollectPayment.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDashborad.cs">
       <SubType>Form</SubType>
@@ -176,11 +188,23 @@
     <Compile Include="frmMarkAttandance.Designer.cs">
       <DependentUpon>frmMarkAttandance.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPaymentSummary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmPaymentSummary.Designer.cs">
+      <DependentUpon>frmPaymentSummary.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmScheduleClass.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="frmScheduleClass.Designer.cs">
       <DependentUpon>frmScheduleClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSchedulePayment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmSchedulePayment.Designer.cs">
+      <DependentUpon>frmSchedulePayment.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSheduleAnExam.cs">
       <SubType>UserControl</SubType>
@@ -232,6 +256,9 @@
     <EmbeddedResource Include="frmAttandanceSummary.resx">
       <DependentUpon>frmAttandanceSummary.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCollectPayment.resx">
+      <DependentUpon>frmCollectPayment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDashborad.resx">
       <DependentUpon>frmDashborad.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,8 +274,14 @@
     <EmbeddedResource Include="frmMarkAttandance.resx">
       <DependentUpon>frmMarkAttandance.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPaymentSummary.resx">
+      <DependentUpon>frmPaymentSummary.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmScheduleClass.resx">
       <DependentUpon>frmScheduleClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSchedulePayment.resx">
+      <DependentUpon>frmSchedulePayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSheduleAnExam.resx">
       <DependentUpon>frmSheduleAnExam.cs</DependentUpon>

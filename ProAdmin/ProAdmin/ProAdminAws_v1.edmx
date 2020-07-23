@@ -95,6 +95,16 @@
           <Property Name="amount" Type="varchar" MaxLength="50" />
           <Property Name="state" Type="varchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="basicdate_feeschedule">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="batch" Type="varchar" MaxLength="50" />
+          <Property Name="feemonth" Type="varchar" MaxLength="50" />
+          <Property Name="state" Type="varchar" MaxLength="50" />
+          <Property Name="year" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="basicdate_schedule">
           <Key>
             <PropertyRef Name="id" />
@@ -137,6 +147,19 @@
           <Property Name="avg_state" Type="varchar" MaxLength="50" />
           <Property Name="exam_date" Type="varchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="data_feecollection">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="feeschedule" Type="varchar" MaxLength="50" />
+          <Property Name="batch" Type="varchar" MaxLength="50" />
+          <Property Name="regid" Type="varchar" MaxLength="50" />
+          <Property Name="payment" Type="varchar" MaxLength="50" />
+          <Property Name="payment_date" Type="varchar" MaxLength="50" />
+          <Property Name="amount" Type="varchar" MaxLength="50" />
+          <Property Name="year" Type="varchar" MaxLength="50" />
+        </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'proadmin_v1.dbo.view_attandance_summary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="view_attandance_summary">
@@ -177,6 +200,21 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_exam_results_summary' does no
           <Property Name="git" Type="decimal" Precision="18" Scale="2" />
           <Property Name="exam" Type="varchar" MaxLength="50" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'proadmin_v1.dbo.view_freecollection_summary' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="view_freecollection_summary">
+          <Property Name="feeschedule" Type="varchar" MaxLength="50" />
+          <Property Name="batch" Type="varchar" MaxLength="50" />
+          <Property Name="regid" Type="varchar" MaxLength="50" />
+          <Property Name="Firstname" Type="varchar" MaxLength="200" />
+          <Property Name="Lastname" Type="varchar" MaxLength="200" />
+          <Property Name="Al_school" Type="varchar" MaxLength="200" />
+          <Property Name="payment" Type="varchar" MaxLength="50" />
+          <Property Name="payment_date" Type="varchar" MaxLength="50" />
+          <Property Name="amount" Type="varchar" MaxLength="50" />
+          <Property Name="year" Type="varchar" MaxLength="50" />
+          <Property Name="Scholarship" Type="varchar" MaxLength="200" />
+        </EntityType>-->
         <EntityContainer Name="proadmin_v1_Model1StoreContainer">
           <EntitySet Name="basicdata_batch" EntityType="Self.basicdata_batch" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="basicdata_class" EntityType="Self.basicdata_class" Schema="dbo" store:Type="Tables" />
@@ -186,9 +224,11 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_exam_results_summary' does no
           <EntitySet Name="basicdata_university" EntityType="Self.basicdata_university" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="basicdata_users" EntityType="Self.basicdata_users" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="basicdate_fee" EntityType="Self.basicdate_fee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="basicdate_feeschedule" EntityType="Self.basicdate_feeschedule" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="basicdate_schedule" EntityType="Self.basicdate_schedule" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="data_attandance" EntityType="Self.data_attandance" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="data_examresults" EntityType="Self.data_examresults" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="data_feecollection" EntityType="Self.data_feecollection" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="view_attandance_summary" EntityType="Self.view_attandance_summary" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [view_attandance_summary].[id] AS [id], 
@@ -357,6 +397,8 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_exam_results_summary' does no
           <EntitySet Name="view_attandance_summary" EntityType="proadmin_v1_Model1.view_attandance_summary" />
           <EntitySet Name="basicdate_fee" EntityType="proadmin_v1_Model1.basicdate_fee" />
           <EntitySet Name="basicdata_batch" EntityType="proadmin_v1_Model1.basicdata_batch" />
+          <EntitySet Name="basicdate_feeschedule" EntityType="proadmin_v1_Model1.basicdate_feeschedule" />
+          <EntitySet Name="data_feecollection" EntityType="proadmin_v1_Model1.data_feecollection" />
         </EntityContainer>
         <EntityType Name="basicdata_class">
           <Key>
@@ -410,6 +452,29 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_exam_results_summary' does no
           <Property Name="batch" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="log" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="batchstate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="basicdate_feeschedule">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="batch" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="feemonth" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="state" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="year" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="data_feecollection">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="feeschedule" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="batch" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="regid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="payment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="payment_date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="amount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="year" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -595,6 +660,31 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_exam_results_summary' does no
                 <ScalarProperty Name="log" ColumnName="log" />
                 <ScalarProperty Name="batch" ColumnName="batch" />
                 <ScalarProperty Name="batchid" ColumnName="batchid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="basicdate_feeschedule">
+            <EntityTypeMapping TypeName="proadmin_v1_Model1.basicdate_feeschedule">
+              <MappingFragment StoreEntitySet="basicdate_feeschedule">
+                <ScalarProperty Name="year" ColumnName="year" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="feemonth" ColumnName="feemonth" />
+                <ScalarProperty Name="batch" ColumnName="batch" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="data_feecollection">
+            <EntityTypeMapping TypeName="proadmin_v1_Model1.data_feecollection">
+              <MappingFragment StoreEntitySet="data_feecollection">
+                <ScalarProperty Name="year" ColumnName="year" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="payment_date" ColumnName="payment_date" />
+                <ScalarProperty Name="payment" ColumnName="payment" />
+                <ScalarProperty Name="regid" ColumnName="regid" />
+                <ScalarProperty Name="batch" ColumnName="batch" />
+                <ScalarProperty Name="feeschedule" ColumnName="feeschedule" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -38,5 +38,7 @@ namespace ProAdmin
         public virtual DbSet<view_attandance_summary> view_attandance_summary { get; set; }
         public virtual DbSet<basicdate_fee> basicdate_fee { get; set; }
         public virtual DbSet<basicdata_batch> basicdata_batch { get; set; }
+        public virtual DbSet<basicdate_feeschedule> basicdate_feeschedule { get; set; }
+        public virtual DbSet<data_feecollection> data_feecollection { get; set; }
     }
 }

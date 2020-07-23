@@ -1,6 +1,6 @@
 ﻿namespace ProAdmin
 {
-    partial class frmMarkAttandance
+    partial class frmCollectPayment
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,25 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.tabPane1 = new DevExpress.XtraBars.Navigation.TabPane();
             this.tabNavigationPage3 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.lblmessage = new System.Windows.Forms.Label();
-            this.txtbatch = new System.Windows.Forms.TextBox();
+            this.txtyear = new System.Windows.Forms.TextBox();
             this.btnregister = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.txttoday = new DevExpress.XtraEditors.DateEdit();
             this.txtstudentid = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtmonth = new DevExpress.XtraScheduler.UI.MonthEdit();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
             this.tabPane1.SuspendLayout();
             this.tabNavigationPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txttoday.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txttoday.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtmonth.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPane1
@@ -57,52 +55,53 @@
             this.tabPane1.Name = "tabPane1";
             this.tabPane1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.tabNavigationPage3});
-            this.tabPane1.RegularSize = new System.Drawing.Size(1127, 583);
+            this.tabPane1.RegularSize = new System.Drawing.Size(1098, 632);
             this.tabPane1.SelectedPage = this.tabNavigationPage3;
-            this.tabPane1.Size = new System.Drawing.Size(1127, 583);
-            this.tabPane1.TabIndex = 8;
+            this.tabPane1.Size = new System.Drawing.Size(1098, 632);
+            this.tabPane1.TabIndex = 9;
             this.tabPane1.Text = "Manage Attandance Register";
             // 
             // tabNavigationPage3
             // 
-            this.tabNavigationPage3.Caption = "Manage Attandance Register";
+            this.tabNavigationPage3.Caption = "Receive payment";
             this.tabNavigationPage3.Controls.Add(this.groupControl1);
             this.tabNavigationPage3.Name = "tabNavigationPage3";
-            this.tabNavigationPage3.Size = new System.Drawing.Size(1127, 546);
+            this.tabNavigationPage3.Size = new System.Drawing.Size(1098, 595);
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.txtmonth);
+            this.groupControl1.Controls.Add(this.label3);
             this.groupControl1.Controls.Add(this.lblmessage);
-            this.groupControl1.Controls.Add(this.txtbatch);
+            this.groupControl1.Controls.Add(this.txtyear);
             this.groupControl1.Controls.Add(this.btnregister);
             this.groupControl1.Controls.Add(this.label2);
-            this.groupControl1.Controls.Add(this.txttoday);
             this.groupControl1.Controls.Add(this.txtstudentid);
             this.groupControl1.Controls.Add(this.label1);
             this.groupControl1.Location = new System.Drawing.Point(26, 20);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(683, 366);
             this.groupControl1.TabIndex = 2;
-            this.groupControl1.Text = "Attandance";
+            this.groupControl1.Text = "Fee Payment";
             // 
             // lblmessage
             // 
             this.lblmessage.AutoSize = true;
             this.lblmessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblmessage.ForeColor = System.Drawing.Color.Red;
-            this.lblmessage.Location = new System.Drawing.Point(205, 262);
+            this.lblmessage.Location = new System.Drawing.Point(154, 239);
             this.lblmessage.Name = "lblmessage";
             this.lblmessage.Size = new System.Drawing.Size(0, 24);
             this.lblmessage.TabIndex = 6;
             this.lblmessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtbatch
+            // txtyear
             // 
-            this.txtbatch.Location = new System.Drawing.Point(310, 31);
-            this.txtbatch.Name = "txtbatch";
-            this.txtbatch.Size = new System.Drawing.Size(100, 21);
-            this.txtbatch.TabIndex = 5;
-            this.txtbatch.Visible = false;
+            this.txtyear.Enabled = false;
+            this.txtyear.Location = new System.Drawing.Point(241, 31);
+            this.txtyear.Name = "txtyear";
+            this.txtyear.Size = new System.Drawing.Size(100, 21);
+            this.txtyear.TabIndex = 5;
             // 
             // btnregister
             // 
@@ -119,21 +118,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(20, 35);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Today Date";
-            // 
-            // txttoday
-            // 
-            this.txttoday.EditValue = null;
-            this.txttoday.Location = new System.Drawing.Point(89, 32);
-            this.txttoday.Name = "txttoday";
-            this.txttoday.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txttoday.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txttoday.Size = new System.Drawing.Size(116, 20);
-            this.txttoday.TabIndex = 2;
+            this.label2.Text = "Month";
             // 
             // txtstudentid
             // 
@@ -155,26 +142,38 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "ENTER THE STUDENT ID";
             // 
-            // contextMenuStrip1
+            // label3
             // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(206, 34);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(29, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Year";
             // 
-            // frmMarkAttandance
+            // txtmonth
+            // 
+            this.txtmonth.Location = new System.Drawing.Point(63, 32);
+            this.txtmonth.Name = "txtmonth";
+            this.txtmonth.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtmonth.Size = new System.Drawing.Size(100, 20);
+            this.txtmonth.TabIndex = 61;
+            // 
+            // frmCollectPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tabPane1);
-            this.Name = "frmMarkAttandance";
-            this.Size = new System.Drawing.Size(1127, 583);
+            this.Name = "frmCollectPayment";
+            this.Size = new System.Drawing.Size(1098, 632);
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).EndInit();
             this.tabPane1.ResumeLayout(false);
             this.tabNavigationPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txttoday.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txttoday.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtmonth.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -183,14 +182,14 @@
 
         private DevExpress.XtraBars.Navigation.TabPane tabPane1;
         private DevExpress.XtraBars.Navigation.TabNavigationPage tabNavigationPage3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtstudentid;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private System.Windows.Forms.Label label2;
-        private DevExpress.XtraEditors.DateEdit txttoday;
-        private System.Windows.Forms.Button btnregister;
-        private System.Windows.Forms.TextBox txtbatch;
         private System.Windows.Forms.Label lblmessage;
+        private System.Windows.Forms.TextBox txtyear;
+        private System.Windows.Forms.Button btnregister;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtstudentid;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private DevExpress.XtraScheduler.UI.MonthEdit txtmonth;
     }
 }

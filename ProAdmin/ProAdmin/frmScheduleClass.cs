@@ -18,7 +18,6 @@ namespace ProAdmin
         {
             InitializeComponent();
             get_combo_vale_list();
-            populate_shedule();
         }
 
         basicdata_class model_class      = new basicdata_class();

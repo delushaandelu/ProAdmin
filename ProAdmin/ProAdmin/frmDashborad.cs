@@ -127,5 +127,38 @@ namespace ProAdmin
             }
             frmAttandanceSummary.Instance.BringToFront();
         }
+
+        private void accordionControlElement14_Click(object sender, EventArgs e)
+        {
+            if (!panelContainer.Controls.Contains(frmSchedulePayment.Instance))
+            {
+                panelContainer.Controls.Add(frmSchedulePayment.Instance);
+                frmSchedulePayment.Instance.Dock = DockStyle.Fill;
+                frmSchedulePayment.Instance.BringToFront();
+            }
+            frmSchedulePayment.Instance.BringToFront();
+        }
+
+        private void accordionControlElement15_Click(object sender, EventArgs e)
+        {
+            if (!panelContainer.Controls.Contains(frmCollectPayment.Instance))
+            {
+                panelContainer.Controls.Add(frmCollectPayment.Instance);
+                frmCollectPayment.Instance.Dock = DockStyle.Fill;
+                frmCollectPayment.Instance.BringToFront();
+            }
+            frmCollectPayment.Instance.BringToFront();
+        }
+
+        private void accordionControlElement16_Click(object sender, EventArgs e)
+        {
+            if (!panelContainer.Controls.Contains(frmPaymentSummary.Instance))
+            {
+                panelContainer.Controls.Add(frmPaymentSummary.Instance);
+                frmPaymentSummary.Instance.Dock = DockStyle.Fill;
+                frmPaymentSummary.Instance.BringToFront();
+            }
+            frmPaymentSummary.Instance.BringToFront();
+        }
     }
 }

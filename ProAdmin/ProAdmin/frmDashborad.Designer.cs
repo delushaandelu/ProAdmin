@@ -45,14 +45,14 @@
             this.accordionControlElement10 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement11 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement12 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barToolbarsListItem1 = new DevExpress.XtraBars.BarToolbarsListItem();
-            this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
             this.accordionControlElement13 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement14 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement15 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement16 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barToolbarsListItem1 = new DevExpress.XtraBars.BarToolbarsListItem();
+            this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.SuspendLayout();
@@ -199,6 +199,37 @@
             this.accordionControlElement12.Text = "Attandance Summary";
             this.accordionControlElement12.Click += new System.EventHandler(this.accordionControlElement12_Click);
             // 
+            // accordionControlElement13
+            // 
+            this.accordionControlElement13.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement14,
+            this.accordionControlElement15,
+            this.accordionControlElement16});
+            this.accordionControlElement13.Expanded = true;
+            this.accordionControlElement13.Name = "accordionControlElement13";
+            this.accordionControlElement13.Text = "Fee Payment";
+            // 
+            // accordionControlElement14
+            // 
+            this.accordionControlElement14.Name = "accordionControlElement14";
+            this.accordionControlElement14.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement14.Text = "Payment Schedule";
+            this.accordionControlElement14.Click += new System.EventHandler(this.accordionControlElement14_Click);
+            // 
+            // accordionControlElement15
+            // 
+            this.accordionControlElement15.Name = "accordionControlElement15";
+            this.accordionControlElement15.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement15.Text = "Collect Payment";
+            this.accordionControlElement15.Click += new System.EventHandler(this.accordionControlElement15_Click);
+            // 
+            // accordionControlElement16
+            // 
+            this.accordionControlElement16.Name = "accordionControlElement16";
+            this.accordionControlElement16.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement16.Text = "Payment Summary";
+            this.accordionControlElement16.Click += new System.EventHandler(this.accordionControlElement16_Click);
+            // 
             // fluentDesignFormControl1
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
@@ -231,34 +262,6 @@
             // 
             this.skinDropDownButtonItem1.Id = 1;
             this.skinDropDownButtonItem1.Name = "skinDropDownButtonItem1";
-            // 
-            // accordionControlElement13
-            // 
-            this.accordionControlElement13.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionControlElement14,
-            this.accordionControlElement15,
-            this.accordionControlElement16});
-            this.accordionControlElement13.Expanded = true;
-            this.accordionControlElement13.Name = "accordionControlElement13";
-            this.accordionControlElement13.Text = "Fee Payment";
-            // 
-            // accordionControlElement14
-            // 
-            this.accordionControlElement14.Name = "accordionControlElement14";
-            this.accordionControlElement14.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement14.Text = "Collection Schedule";
-            // 
-            // accordionControlElement15
-            // 
-            this.accordionControlElement15.Name = "accordionControlElement15";
-            this.accordionControlElement15.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement15.Text = "Collect Payment";
-            // 
-            // accordionControlElement16
-            // 
-            this.accordionControlElement16.Name = "accordionControlElement16";
-            this.accordionControlElement16.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement16.Text = "Payment Summary";
             // 
             // frmDashborad
             // 
