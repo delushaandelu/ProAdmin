@@ -32,8 +32,11 @@
             this.tabPane1 = new DevExpress.XtraBars.Navigation.TabPane();
             this.tabNavigationPage1 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbbatchstate = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.dgvBatchView = new System.Windows.Forms.DataGridView();
             this.batchid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.batchstate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.batch = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Log = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -79,20 +82,20 @@
             this.txtsubject = new DevExpress.XtraEditors.TextEdit();
             this.tabNavigationPage5 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.cmbfeestate = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cmbfeebatch = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtfeeamount = new DevExpress.XtraEditors.TextEdit();
             this.dgvfee = new System.Windows.Forms.DataGridView();
-            this.btnfeedelete = new System.Windows.Forms.Button();
-            this.btnfeeclear = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnfeesave = new System.Windows.Forms.Button();
-            this.cmbfeebatch = new System.Windows.Forms.ComboBox();
-            this.cmbfeestate = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.batch_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.state = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnfeedelete = new System.Windows.Forms.Button();
+            this.btnfeeclear = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnfeesave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
             this.tabPane1.SuspendLayout();
             this.tabNavigationPage1.SuspendLayout();
@@ -153,6 +156,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbbatchstate);
+            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.dgvBatchView);
             this.groupBox1.Controls.Add(this.btnDelete);
             this.groupBox1.Controls.Add(this.btnClear);
@@ -166,6 +171,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Batch Settings";
             // 
+            // cmbbatchstate
+            // 
+            this.cmbbatchstate.FormattingEnabled = true;
+            this.cmbbatchstate.Items.AddRange(new object[] {
+            "Active",
+            "Inactive"});
+            this.cmbbatchstate.Location = new System.Drawing.Point(73, 70);
+            this.cmbbatchstate.Name = "cmbbatchstate";
+            this.cmbbatchstate.Size = new System.Drawing.Size(208, 21);
+            this.cmbbatchstate.TabIndex = 69;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(15, 74);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(41, 13);
+            this.label9.TabIndex = 68;
+            this.label9.Text = "State : ";
+            // 
             // dgvBatchView
             // 
             this.dgvBatchView.AllowUserToAddRows = false;
@@ -174,6 +199,7 @@
             this.dgvBatchView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBatchView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.batchid,
+            this.batchstate,
             this.batch,
             this.Log});
             this.dgvBatchView.Location = new System.Drawing.Point(338, 19);
@@ -190,6 +216,13 @@
             this.batchid.Name = "batchid";
             this.batchid.ReadOnly = true;
             this.batchid.Visible = false;
+            // 
+            // batchstate
+            // 
+            this.batchstate.DataPropertyName = "batchstate";
+            this.batchstate.HeaderText = "Active State";
+            this.batchstate.Name = "batchstate";
+            this.batchstate.ReadOnly = true;
             // 
             // batch
             // 
@@ -209,7 +242,7 @@
             // btnDelete
             // 
             this.btnDelete.Enabled = false;
-            this.btnDelete.Location = new System.Drawing.Point(112, 84);
+            this.btnDelete.Location = new System.Drawing.Point(112, 104);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 2;
@@ -219,7 +252,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(206, 84);
+            this.btnClear.Location = new System.Drawing.Point(206, 104);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 3;
@@ -238,7 +271,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(18, 84);
+            this.btnSave.Location = new System.Drawing.Point(18, 104);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 1;
@@ -631,6 +664,34 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Fee Settings";
             // 
+            // cmbfeestate
+            // 
+            this.cmbfeestate.FormattingEnabled = true;
+            this.cmbfeestate.Items.AddRange(new object[] {
+            "Active",
+            "Inactive"});
+            this.cmbfeestate.Location = new System.Drawing.Point(73, 91);
+            this.cmbfeestate.Name = "cmbfeestate";
+            this.cmbfeestate.Size = new System.Drawing.Size(208, 21);
+            this.cmbfeestate.TabIndex = 67;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(15, 95);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(41, 13);
+            this.label8.TabIndex = 66;
+            this.label8.Text = "State : ";
+            // 
+            // cmbfeebatch
+            // 
+            this.cmbfeebatch.FormattingEnabled = true;
+            this.cmbfeebatch.Location = new System.Drawing.Point(73, 38);
+            this.cmbfeebatch.Name = "cmbfeebatch";
+            this.cmbfeebatch.Size = new System.Drawing.Size(208, 21);
+            this.cmbfeebatch.TabIndex = 65;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -664,6 +725,35 @@
             this.dgvfee.Size = new System.Drawing.Size(493, 204);
             this.dgvfee.TabIndex = 6;
             this.dgvfee.DoubleClick += new System.EventHandler(this.dgvfee_DoubleClick);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // batch_
+            // 
+            this.batch_.DataPropertyName = "batch_";
+            this.batch_.HeaderText = "Batch";
+            this.batch_.Name = "batch_";
+            this.batch_.ReadOnly = true;
+            // 
+            // amount
+            // 
+            this.amount.DataPropertyName = "amount";
+            this.amount.HeaderText = "Amount";
+            this.amount.Name = "amount";
+            this.amount.ReadOnly = true;
+            // 
+            // state
+            // 
+            this.state.DataPropertyName = "state";
+            this.state.HeaderText = "State";
+            this.state.Name = "state";
+            this.state.ReadOnly = true;
             // 
             // btnfeedelete
             // 
@@ -703,63 +793,6 @@
             this.btnfeesave.Text = "Save";
             this.btnfeesave.UseVisualStyleBackColor = true;
             this.btnfeesave.Click += new System.EventHandler(this.btnfeesave_Click);
-            // 
-            // cmbfeebatch
-            // 
-            this.cmbfeebatch.FormattingEnabled = true;
-            this.cmbfeebatch.Location = new System.Drawing.Point(73, 38);
-            this.cmbfeebatch.Name = "cmbfeebatch";
-            this.cmbfeebatch.Size = new System.Drawing.Size(208, 21);
-            this.cmbfeebatch.TabIndex = 65;
-            // 
-            // cmbfeestate
-            // 
-            this.cmbfeestate.FormattingEnabled = true;
-            this.cmbfeestate.Items.AddRange(new object[] {
-            "Active",
-            "Inactive"});
-            this.cmbfeestate.Location = new System.Drawing.Point(73, 91);
-            this.cmbfeestate.Name = "cmbfeestate";
-            this.cmbfeestate.Size = new System.Drawing.Size(208, 21);
-            this.cmbfeestate.TabIndex = 67;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(15, 95);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(41, 13);
-            this.label8.TabIndex = 66;
-            this.label8.Text = "State : ";
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            // 
-            // batch_
-            // 
-            this.batch_.DataPropertyName = "batch_";
-            this.batch_.HeaderText = "Batch";
-            this.batch_.Name = "batch_";
-            this.batch_.ReadOnly = true;
-            // 
-            // amount
-            // 
-            this.amount.DataPropertyName = "amount";
-            this.amount.HeaderText = "Amount";
-            this.amount.Name = "amount";
-            this.amount.ReadOnly = true;
-            // 
-            // state
-            // 
-            this.state.DataPropertyName = "state";
-            this.state.HeaderText = "State";
-            this.state.Name = "state";
-            this.state.ReadOnly = true;
             // 
             // frmManageBasicData
             // 
@@ -821,9 +854,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnUniSave;
         private DevExpress.XtraEditors.TextEdit txtUniversity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn batchid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn batch;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Log;
         private System.Windows.Forms.DataGridViewTextBoxColumn uniid;
         private System.Windows.Forms.DataGridViewTextBoxColumn uniname;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -866,5 +896,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn batch_;
         private System.Windows.Forms.DataGridViewTextBoxColumn amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn state;
+        private System.Windows.Forms.DataGridViewTextBoxColumn batchid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn batchstate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn batch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Log;
+        private System.Windows.Forms.ComboBox cmbbatchstate;
+        private System.Windows.Forms.Label label9;
     }
 }

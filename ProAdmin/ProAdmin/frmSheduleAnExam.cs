@@ -41,7 +41,7 @@ namespace ProAdmin
         {
             using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
-                var school = db.basicdata_batch.Select(x => new { x.batchid, x.batch });
+                var school = db.basicdata_batch.Select(y => new { y.batchid, y.batch, y.batchstate }).Where(y => y.batchstate == "Active");
                 cmbbatch.DataSource = school.ToList();
                 cmbbatch.ValueMember = "batchid";
                 cmbbatch.DisplayMember = "batch";

@@ -25,7 +25,6 @@ namespace ProAdmin
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<basicdata_batch> basicdata_batch { get; set; }
         public virtual DbSet<basicdata_school> basicdata_school { get; set; }
         public virtual DbSet<basicdata_student> basicdata_student { get; set; }
         public virtual DbSet<basicdata_subject> basicdata_subject { get; set; }
@@ -38,5 +37,6 @@ namespace ProAdmin
         public virtual DbSet<data_attandance> data_attandance { get; set; }
         public virtual DbSet<view_attandance_summary> view_attandance_summary { get; set; }
         public virtual DbSet<basicdate_fee> basicdate_fee { get; set; }
+        public virtual DbSet<basicdata_batch> basicdata_batch { get; set; }
     }
 }

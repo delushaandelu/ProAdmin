@@ -12,6 +12,7 @@
           <Property Name="batchid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="batch" Type="varchar" MaxLength="50" />
           <Property Name="log" Type="varchar" MaxLength="50" />
+          <Property Name="batchstate" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="basicdata_class">
           <Key>
@@ -227,14 +228,6 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_exam_results_summary' does no
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="proadmin_v1_Model1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="basicdata_batch">
-          <Key>
-            <PropertyRef Name="batchid" />
-          </Key>
-          <Property Name="batchid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="batch" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="log" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-        </EntityType>
         <EntityType Name="basicdata_school">
           <Key>
             <PropertyRef Name="schid" />
@@ -351,7 +344,6 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_exam_results_summary' does no
           <Property Name="exam" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityContainer Name="proadmin_v1Entities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="basicdata_batch" EntityType="Self.basicdata_batch" />
           <EntitySet Name="basicdata_school" EntityType="Self.basicdata_school" />
           <EntitySet Name="basicdata_student" EntityType="Self.basicdata_student" />
           <EntitySet Name="basicdata_subject" EntityType="Self.basicdata_subject" />
@@ -364,6 +356,7 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_exam_results_summary' does no
           <EntitySet Name="data_attandance" EntityType="proadmin_v1_Model1.data_attandance" />
           <EntitySet Name="view_attandance_summary" EntityType="proadmin_v1_Model1.view_attandance_summary" />
           <EntitySet Name="basicdate_fee" EntityType="proadmin_v1_Model1.basicdate_fee" />
+          <EntitySet Name="basicdata_batch" EntityType="proadmin_v1_Model1.basicdata_batch" />
         </EntityContainer>
         <EntityType Name="basicdata_class">
           <Key>
@@ -409,21 +402,21 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_exam_results_summary' does no
           <Property Name="amount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="state" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="basicdata_batch">
+          <Key>
+            <PropertyRef Name="batchid" />
+          </Key>
+          <Property Name="batchid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="batch" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="log" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="batchstate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="proadmin_v1_Model1StoreContainer" CdmEntityContainer="proadmin_v1Entities">
-          <EntitySetMapping Name="basicdata_batch">
-            <EntityTypeMapping TypeName="proadmin_v1_Model1.basicdata_batch">
-              <MappingFragment StoreEntitySet="basicdata_batch">
-                <ScalarProperty Name="batchid" ColumnName="batchid" />
-                <ScalarProperty Name="batch" ColumnName="batch" />
-                <ScalarProperty Name="log" ColumnName="log" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="basicdata_school">
             <EntityTypeMapping TypeName="proadmin_v1_Model1.basicdata_school">
               <MappingFragment StoreEntitySet="basicdata_school">
@@ -592,6 +585,16 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_exam_results_summary' does no
                 <ScalarProperty Name="amount" ColumnName="amount" />
                 <ScalarProperty Name="batch_" ColumnName="batch_" />
                 <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="basicdata_batch">
+            <EntityTypeMapping TypeName="proadmin_v1_Model1.basicdata_batch">
+              <MappingFragment StoreEntitySet="basicdata_batch">
+                <ScalarProperty Name="batchstate" ColumnName="batchstate" />
+                <ScalarProperty Name="log" ColumnName="log" />
+                <ScalarProperty Name="batch" ColumnName="batch" />
+                <ScalarProperty Name="batchid" ColumnName="batchid" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

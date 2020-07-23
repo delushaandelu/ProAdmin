@@ -71,7 +71,7 @@ namespace ProAdmin
 
 
 
-                var batch = db.basicdata_batch.Select(y => new { y.batchid, y.batch });
+                var batch = db.basicdata_batch.Select(y => new { y.batchid, y.batch, y.batchstate }).Where(y => y.batchstate == "Active");
                 cmbbatch.DataSource = batch.ToList();
                 cmbbatch.DisplayMember = "batch";
                 cmbbatch.SelectedItem = null;

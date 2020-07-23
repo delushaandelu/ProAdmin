@@ -17,5 +17,6 @@ namespace ProAdmin
         public int batchid { get; set; }
         public string batch { get; set; }
         public string log { get; set; }
+        public string batchstate { get; set; }
     }
 }

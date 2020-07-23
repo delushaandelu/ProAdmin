@@ -126,7 +126,7 @@ namespace ProAdmin
         {
             using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
-                var batch = db.basicdata_batch.Select(y => new { y.batchid, y.batch });
+                var batch = db.basicdata_batch.Select(y => new { y.batchid, y.batch , y.batchstate}).Where(y => y.batchstate == "Active");
                 cmbfeebatch.DataSource = batch.ToList();
                 cmbfeebatch.DisplayMember = "batch";
                 cmbfeebatch.SelectedItem = null;
@@ -139,6 +139,7 @@ namespace ProAdmin
             if (txtBatch.Text != "")
             {
                 model_batch.batch   = txtBatch.Text.Trim();
+                model_batch.batchstate = cmbbatchstate.Text;
                 model_batch.log     = DateTime.Now.ToString();
 
                 using (proadmin_v1Entities db = new proadmin_v1Entities())
@@ -409,6 +410,7 @@ namespace ProAdmin
                 {
                     model_batch = db.basicdata_batch.Where(x => x.batchid == model_batch.batchid).FirstOrDefault();
                     txtBatch.Text = model_batch.batch;
+                    cmbbatchstate.Text = model_batch.batchstate;
                     string now = DateTime.Now.ToString();
                     now = model_batch.log;
                 }
