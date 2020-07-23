@@ -131,9 +131,16 @@ namespace ProAdmin
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if(txtfirstname.Text != null)
+            int seq_val = 0;
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
-                model_students.regid            = DateTime.Now.ToString("yyyMMhhmmss");
+                var seq = db.GetNextSequenceValue();
+                int? nextSequenceValue = seq.Single();
+                seq_val = nextSequenceValue.Value;
+            }
+
+            if (txtfirstname.Text != null)
+            {              
                 model_students.Firstname        = txtfirstname.Text;
                 model_students.Lastname         = txtlastname.Text;
                 model_students.Nic              = txtnic.Text;
@@ -156,7 +163,10 @@ namespace ProAdmin
                 {
 
                     if (model_students.Id == 0)//Insert
+                    {
+                        model_students.regid = cmbbatch.Text + "01" + seq_val;
                         db.basicdata_student.Add(model_students);
+                    }                  
                     else //Update
                         db.Entry(model_students).State = EntityState.Modified;
 
@@ -278,11 +288,19 @@ namespace ProAdmin
 
         private void btnnewsave_Click(object sender, EventArgs e)
         {
+            int seq_val = 0;
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
+            {
+                var seq = db.GetNextSequenceValue();
+                int? nextSequenceValue = seq.Single();
+                seq_val = nextSequenceValue.Value;
+            }
+
             if (txtfirstname.Text != null || txtnewlastname != null || txtnewnic != null || dtpnewdob != null || txtnewhomwaddress != null || 
                 txtnewhometell != null || txtnewfathername != null || txtnewparentsname != null || cmbnewolschool != null || cmbnewalschool != null ||
                 cmbnewbatch != null || TestForNullOrEmpty(cmbnewscol.Text))
             {
-                string regid = DateTime.Now.ToString("yyyMMhhmmss");
+                string regid = cmbnewbatch.Text + "01" + seq_val;
                 model_students.regid = regid;
                 model_students.Firstname = txtnewfullname.Text;
                 model_students.Lastname = txtnewlastname.Text;

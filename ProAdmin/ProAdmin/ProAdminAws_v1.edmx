@@ -231,6 +231,7 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_schoarshipstd_summary' does n
           <Property Name="Scholarship" Type="varchar" MaxLength="200" />
           <Property Name="Batch" Type="varchar" MaxLength="200" />
         </EntityType>
+        <Function Name="GetNextSequenceValue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="proadmin_v1_Model1StoreContainer">
           <EntitySet Name="basicdata_batch" EntityType="Self.basicdata_batch" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="basicdata_class" EntityType="Self.basicdata_class" Schema="dbo" store:Type="Tables" />
@@ -442,6 +443,7 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_schoarshipstd_summary' does n
           <EntitySet Name="view_attandance_summary" EntityType="proadmin_v1_Model1.view_attandance_summary" />
           <EntitySet Name="view_payment_summary" EntityType="proadmin_v1_Model1.view_payment_summary" />
           <EntitySet Name="view_schoarshipstd_summary" EntityType="proadmin_v1_Model1.view_schoarshipstd_summary" />
+          <FunctionImport Name="GetNextSequenceValue" ReturnType="Collection(Int32)" />
         </EntityContainer>
         <EntityType Name="basicdata_class">
           <Key>
@@ -787,6 +789,7 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_schoarshipstd_summary' does n
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetNextSequenceValue" FunctionName="proadmin_v1_Model1.Store.GetNextSequenceValue" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

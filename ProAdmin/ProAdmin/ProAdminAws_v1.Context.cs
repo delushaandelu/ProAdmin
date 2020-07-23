@@ -12,6 +12,8 @@ namespace ProAdmin
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class proadmin_v1Entities : DbContext
     {
@@ -42,5 +44,10 @@ namespace ProAdmin
         public virtual DbSet<view_attandance_summary> view_attandance_summary { get; set; }
         public virtual DbSet<view_payment_summary> view_payment_summary { get; set; }
         public virtual DbSet<view_schoarshipstd_summary> view_schoarshipstd_summary { get; set; }
+    
+        public virtual ObjectResult<Nullable<int>> GetNextSequenceValue()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("GetNextSequenceValue");
+        }
     }
 }
