@@ -31,10 +31,16 @@ namespace ProAdmin
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void PrintStudentInfrobybatchandschool_Click(object sender, EventArgs e)
         {
-
             ReportStudentInfoCondition studentReport = new ReportStudentInfoCondition();
+            ReportPrintTool printtool = new ReportPrintTool(studentReport);
+            printtool.ShowPreview();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ReportStudentInfoByBatch studentReport = new ReportStudentInfoByBatch();
             ReportPrintTool printtool = new ReportPrintTool(studentReport);
             printtool.ShowPreview();
         }
