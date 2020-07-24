@@ -96,6 +96,7 @@ namespace ProAdmin
                 {
                     if (db.basicdata_student.Where(data => data.regid == txtstudentid.Text).Any())
                     {
+
                         model_students          = db.basicdata_student.Where(x => x.regid == model_students.regid).FirstOrDefault();
                         txtstudentname.Text     = model_students.Firstname;
                         txtbatch.Text           = model_students.Batch;
@@ -277,6 +278,7 @@ namespace ProAdmin
 
         private void get_student_exam_vale_list()
         {
+            cmbexam.Text = null;
             using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
                 var batch_data = from data in db.basicdate_schedule where data.batch == txtbatch.Text select new { Name = data.id, ID = data.exam };
@@ -290,6 +292,7 @@ namespace ProAdmin
 
         private void cmbgenbatch_SelectedValueChanged(object sender, EventArgs e)
         {
+            cmbgenexam.Text = null;
             using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
                 var exam = from data in db.basicdate_schedule where data.batch == cmbgenbatch.Text select new { Name = data.id, ID = data.exam };
