@@ -160,5 +160,16 @@ namespace ProAdmin
             }
             frmPaymentSummary.Instance.BringToFront();
         }
+
+        private void accordionControlElement18_Click(object sender, EventArgs e)
+        {
+            if (!panelContainer.Controls.Contains(frmReportStudentDetails.Instance))
+            {
+                panelContainer.Controls.Add(frmReportStudentDetails.Instance);
+                frmReportStudentDetails.Instance.Dock = DockStyle.Fill;
+                frmReportStudentDetails.Instance.BringToFront();
+            }
+            frmReportStudentDetails.Instance.BringToFront();
+        }
     }
 }
