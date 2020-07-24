@@ -83,5 +83,10 @@ namespace ProAdmin
                 txtstudentid.Text = null;
             }
         }
+
+        private void txtstudentid_VisibleChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

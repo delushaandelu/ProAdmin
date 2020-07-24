@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.Data.Entity;
 
 namespace ProAdmin
 {
@@ -123,6 +124,54 @@ namespace ProAdmin
         {
             cmbbatch.Text = null;
             txtmonth.Text = null;
+            lblmonth.Text = null;
+        }
+
+        private void dgvpaymentschedule_DoubleClick(object sender, EventArgs e)
+        {
+            if (dgvpaymentschedule.CurrentRow.Index != -1)
+            {
+                model_feeschedule.id = Convert.ToInt32(dgvpaymentschedule.CurrentRow.Cells["id"].Value);
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
+                {
+                    model_feeschedule = db.basicdate_feeschedule.Where(x => x.id == model_feeschedule.id).FirstOrDefault();
+                    lblmonth.Text = model_feeschedule.feemonth;
+                    txtyear.Text = model_feeschedule.year;
+                    cmbbatch.Text = model_feeschedule.batch;
+                }
+                btndelete.Enabled = true;
+
+            }
+        }
+
+        private void btndelete_Click(object sender, EventArgs e)
+        {
+            if (XtraMessageBox.Show("Are you sure to delete the record?", "Delete Record", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
+                {
+                    var entity = db.Entry(model_feeschedule);
+                    if (entity.State == EntityState.Detached)
+                        db.basicdate_feeschedule.Attach(model_feeschedule);
+                    db.basicdate_feeschedule.Remove(model_feeschedule);
+                    db.SaveChangesAsync();
+
+                    btndelete.Enabled = false;
+
+                    if (XtraMessageBox.Show("Do you want to delete all the fee records for this shedule too?", "Authentication Required!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        var data = db.data_feecollection.Where(rec => rec.batch == cmbbatch.Text && rec.feeschedule == lblmonth.Text);
+                        db.data_feecollection.RemoveRange(data);
+                        db.SaveChanges();
+                    }
+
+                    clear_feild();
+
+                    MessageBox.Show("Data Deleted!");
+
+                    dgvpaymentschedule.DataSource = db.basicdate_feeschedule.Where(data => data.batch == cmbbatch.Text).ToList<basicdate_feeschedule>();
+                }
+            }
         }
     }
 }

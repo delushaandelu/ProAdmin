@@ -38,15 +38,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtmonth = new DevExpress.XtraScheduler.UI.MonthEdit();
             this.dgvpaymentschedule = new System.Windows.Forms.DataGridView();
+            this.btndelete = new System.Windows.Forms.Button();
+            this.btnsave = new System.Windows.Forms.Button();
+            this.cmbbatch = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.batch = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.feemonth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.year = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.state = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btndelete = new System.Windows.Forms.Button();
-            this.btnsave = new System.Windows.Forms.Button();
-            this.cmbbatch = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblmonth = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
             this.tabPane1.SuspendLayout();
             this.tabNavigationPage3.SuspendLayout();
@@ -80,6 +81,7 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.lblmonth);
             this.groupControl1.Controls.Add(this.cmbsearchbybatch);
             this.groupControl1.Controls.Add(this.label1);
             this.groupControl1.Controls.Add(this.label4);
@@ -167,9 +169,50 @@
             this.dgvpaymentschedule.ReadOnly = true;
             this.dgvpaymentschedule.Size = new System.Drawing.Size(826, 428);
             this.dgvpaymentschedule.TabIndex = 58;
+            this.dgvpaymentschedule.DoubleClick += new System.EventHandler(this.dgvpaymentschedule_DoubleClick);
+            // 
+            // btndelete
+            // 
+            this.btndelete.Enabled = false;
+            this.btndelete.Location = new System.Drawing.Point(772, 53);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.Size = new System.Drawing.Size(75, 23);
+            this.btndelete.TabIndex = 9;
+            this.btndelete.Text = "Delete";
+            this.btndelete.UseVisualStyleBackColor = true;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
+            // 
+            // btnsave
+            // 
+            this.btnsave.Location = new System.Drawing.Point(691, 53);
+            this.btnsave.Name = "btnsave";
+            this.btnsave.Size = new System.Drawing.Size(75, 23);
+            this.btnsave.TabIndex = 8;
+            this.btnsave.Text = "Save";
+            this.btnsave.UseVisualStyleBackColor = true;
+            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
+            // 
+            // cmbbatch
+            // 
+            this.cmbbatch.FormattingEnabled = true;
+            this.cmbbatch.Location = new System.Drawing.Point(421, 55);
+            this.cmbbatch.Name = "cmbbatch";
+            this.cmbbatch.Size = new System.Drawing.Size(204, 21);
+            this.cmbbatch.TabIndex = 6;
+            this.cmbbatch.SelectedValueChanged += new System.EventHandler(this.cmbbatch_SelectedValueChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(381, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Batch";
             // 
             // id
             // 
+            this.id.DataPropertyName = "id";
             this.id.HeaderText = "id";
             this.id.Name = "id";
             this.id.ReadOnly = true;
@@ -203,43 +246,13 @@
             this.state.Name = "state";
             this.state.ReadOnly = true;
             // 
-            // btndelete
+            // lblmonth
             // 
-            this.btndelete.Enabled = false;
-            this.btndelete.Location = new System.Drawing.Point(772, 53);
-            this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(75, 23);
-            this.btndelete.TabIndex = 9;
-            this.btndelete.Text = "Delete";
-            this.btndelete.UseVisualStyleBackColor = true;
-            // 
-            // btnsave
-            // 
-            this.btnsave.Location = new System.Drawing.Point(691, 53);
-            this.btnsave.Name = "btnsave";
-            this.btnsave.Size = new System.Drawing.Size(75, 23);
-            this.btnsave.TabIndex = 8;
-            this.btnsave.Text = "Save";
-            this.btnsave.UseVisualStyleBackColor = true;
-            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
-            // 
-            // cmbbatch
-            // 
-            this.cmbbatch.FormattingEnabled = true;
-            this.cmbbatch.Location = new System.Drawing.Point(421, 55);
-            this.cmbbatch.Name = "cmbbatch";
-            this.cmbbatch.Size = new System.Drawing.Size(204, 21);
-            this.cmbbatch.TabIndex = 6;
-            this.cmbbatch.SelectedValueChanged += new System.EventHandler(this.cmbbatch_SelectedValueChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(381, 56);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Batch";
+            this.lblmonth.AutoSize = true;
+            this.lblmonth.Location = new System.Drawing.Point(78, 58);
+            this.lblmonth.Name = "lblmonth";
+            this.lblmonth.Size = new System.Drawing.Size(0, 13);
+            this.lblmonth.TabIndex = 66;
             // 
             // frmSchedulePayment
             // 
@@ -275,12 +288,13 @@
         private System.Windows.Forms.Label label4;
         private DevExpress.XtraEditors.TextEdit txtyear;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cmbsearchbybatch;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn batch;
         private System.Windows.Forms.DataGridViewTextBoxColumn feemonth;
         private System.Windows.Forms.DataGridViewTextBoxColumn year;
         private System.Windows.Forms.DataGridViewTextBoxColumn state;
-        private System.Windows.Forms.ComboBox cmbsearchbybatch;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblmonth;
     }
 }

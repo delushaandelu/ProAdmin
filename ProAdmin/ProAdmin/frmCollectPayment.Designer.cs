@@ -31,14 +31,14 @@
             this.tabPane1 = new DevExpress.XtraBars.Navigation.TabPane();
             this.tabNavigationPage3 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.txtmonth = new DevExpress.XtraScheduler.UI.MonthEdit();
+            this.label3 = new System.Windows.Forms.Label();
             this.lblmessage = new System.Windows.Forms.Label();
             this.txtyear = new System.Windows.Forms.TextBox();
             this.btnregister = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtstudentid = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtmonth = new DevExpress.XtraScheduler.UI.MonthEdit();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
             this.tabPane1.SuspendLayout();
             this.tabNavigationPage3.SuspendLayout();
@@ -83,6 +83,24 @@
             this.groupControl1.Size = new System.Drawing.Size(683, 366);
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "Fee Payment";
+            // 
+            // txtmonth
+            // 
+            this.txtmonth.Location = new System.Drawing.Point(63, 32);
+            this.txtmonth.Name = "txtmonth";
+            this.txtmonth.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtmonth.Size = new System.Drawing.Size(100, 20);
+            this.txtmonth.TabIndex = 61;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(206, 34);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(29, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Year";
             // 
             // lblmessage
             // 
@@ -131,6 +149,7 @@
             this.txtstudentid.Size = new System.Drawing.Size(349, 38);
             this.txtstudentid.TabIndex = 0;
             this.txtstudentid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtstudentid.VisibleChanged += new System.EventHandler(this.txtstudentid_VisibleChanged);
             // 
             // label1
             // 
@@ -141,24 +160,6 @@
             this.label1.Size = new System.Drawing.Size(255, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "ENTER THE STUDENT ID";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(206, 34);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Year";
-            // 
-            // txtmonth
-            // 
-            this.txtmonth.Location = new System.Drawing.Point(63, 32);
-            this.txtmonth.Name = "txtmonth";
-            this.txtmonth.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtmonth.Size = new System.Drawing.Size(100, 20);
-            this.txtmonth.TabIndex = 61;
             // 
             // frmCollectPayment
             // 
