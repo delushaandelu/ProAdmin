@@ -32,18 +32,23 @@
             this.tabNavigationPage3 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.txtnotattend = new System.Windows.Forms.TextBox();
+            this.txtattend = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnprocess = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbbatch = new System.Windows.Forms.ComboBox();
             this.txtdate = new DevExpress.XtraEditors.DateEdit();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
-            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this.dgvabsentee = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.dgvattendees = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.dgvabsentee = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.lblattandance = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
             this.tabPane1.SuspendLayout();
             this.tabNavigationPage3.SuspendLayout();
@@ -57,12 +62,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtdate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
-            this.xtraTabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvabsentee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvattendees)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.xtraTabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvabsentee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPane1
@@ -106,6 +111,11 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.lblattandance);
+            this.groupControl1.Controls.Add(this.txtnotattend);
+            this.groupControl1.Controls.Add(this.txtattend);
+            this.groupControl1.Controls.Add(this.label4);
+            this.groupControl1.Controls.Add(this.label3);
             this.groupControl1.Controls.Add(this.btnprocess);
             this.groupControl1.Controls.Add(this.label2);
             this.groupControl1.Controls.Add(this.label1);
@@ -113,9 +123,43 @@
             this.groupControl1.Controls.Add(this.txtdate);
             this.groupControl1.Location = new System.Drawing.Point(13, 16);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(656, 179);
+            this.groupControl1.Size = new System.Drawing.Size(866, 179);
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "Summary Process Query";
+            // 
+            // txtnotattend
+            // 
+            this.txtnotattend.Enabled = false;
+            this.txtnotattend.Location = new System.Drawing.Point(707, 94);
+            this.txtnotattend.Name = "txtnotattend";
+            this.txtnotattend.Size = new System.Drawing.Size(100, 21);
+            this.txtnotattend.TabIndex = 8;
+            // 
+            // txtattend
+            // 
+            this.txtattend.Enabled = false;
+            this.txtattend.Location = new System.Drawing.Point(707, 62);
+            this.txtattend.Name = "txtattend";
+            this.txtattend.Size = new System.Drawing.Size(100, 21);
+            this.txtattend.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(596, 65);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Student Attend :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(595, 97);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Student Absent :";
             // 
             // btnprocess
             // 
@@ -178,29 +222,6 @@
             this.xtraTabPage1,
             this.xtraTabPage2});
             // 
-            // xtraTabPage2
-            // 
-            this.xtraTabPage2.Controls.Add(this.dgvabsentee);
-            this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1209, 384);
-            this.xtraTabPage2.Text = "Absentees";
-            // 
-            // dgvabsentee
-            // 
-            this.dgvabsentee.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvabsentee.Location = new System.Drawing.Point(0, 0);
-            this.dgvabsentee.MainView = this.gridView2;
-            this.dgvabsentee.Name = "dgvabsentee";
-            this.dgvabsentee.Size = new System.Drawing.Size(1209, 384);
-            this.dgvabsentee.TabIndex = 0;
-            this.dgvabsentee.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
-            // 
-            // gridView2
-            // 
-            this.gridView2.GridControl = this.dgvabsentee;
-            this.gridView2.Name = "gridView2";
-            // 
             // xtraTabPage1
             // 
             this.xtraTabPage1.Controls.Add(this.dgvattendees);
@@ -224,6 +245,40 @@
             this.gridView1.GridControl = this.dgvattendees;
             this.gridView1.Name = "gridView1";
             // 
+            // xtraTabPage2
+            // 
+            this.xtraTabPage2.Controls.Add(this.dgvabsentee);
+            this.xtraTabPage2.Name = "xtraTabPage2";
+            this.xtraTabPage2.Size = new System.Drawing.Size(1209, 384);
+            this.xtraTabPage2.Text = "Absentees";
+            // 
+            // dgvabsentee
+            // 
+            this.dgvabsentee.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvabsentee.Location = new System.Drawing.Point(0, 0);
+            this.dgvabsentee.MainView = this.gridView2;
+            this.dgvabsentee.Name = "dgvabsentee";
+            this.dgvabsentee.Size = new System.Drawing.Size(1209, 384);
+            this.dgvabsentee.TabIndex = 0;
+            this.dgvabsentee.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            // 
+            // gridView2
+            // 
+            this.gridView2.GridControl = this.dgvabsentee;
+            this.gridView2.Name = "gridView2";
+            // 
+            // lblattandance
+            // 
+            this.lblattandance.AutoSize = true;
+            this.lblattandance.Location = new System.Drawing.Point(616, 136);
+            this.lblattandance.Name = "lblattandance";
+            this.lblattandance.Size = new System.Drawing.Size(176, 13);
+            this.lblattandance.TabIndex = 9;
+            this.lblattandance.TabStop = true;
+            this.lblattandance.Text = "Print Student Attandance Summary";
+            this.lblattandance.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblattandance_LinkClicked);
+            // 
             // frmAttandanceSummary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,12 +300,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtdate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
-            this.xtraTabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvabsentee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.xtraTabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvattendees)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            this.xtraTabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvabsentee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -273,5 +328,10 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraGrid.GridControl dgvattendees;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private System.Windows.Forms.TextBox txtnotattend;
+        private System.Windows.Forms.TextBox txtattend;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.LinkLabel lblattandance;
     }
 }

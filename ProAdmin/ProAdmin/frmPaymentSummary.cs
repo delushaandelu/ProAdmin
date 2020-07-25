@@ -56,6 +56,10 @@ namespace ProAdmin
                     dgvpadi.DataSource = db.view_payment_summary.Where(x => x.batch == cmbbatch.Text && x.feeschedule == txtmonth.Text && x.year == txtyear.Text && x.payment == "Paid").ToList<view_payment_summary>();
                     dgvnotpadi.DataSource = db.view_payment_summary.Where(x => x.batch == cmbbatch.Text && x.feeschedule == txtmonth.Text && x.year == txtyear.Text && x.payment == "Not Paid").ToList<view_payment_summary>();
                     dgvsolview.DataSource = db.view_schoarshipstd_summary.Where(x => x.Scholarship == "YES" && x.Batch == cmbbatch.Text).ToList<view_schoarshipstd_summary>();
+
+                    txtspaid.Text = db.view_payment_summary.Where(x => x.batch == cmbbatch.Text && x.feeschedule == txtmonth.Text && x.year == txtyear.Text && x.payment == "Paid").Count().ToString();
+                    txtsnotpaid.Text = db.view_payment_summary.Where(x => x.batch == cmbbatch.Text && x.feeschedule == txtmonth.Text && x.year == txtyear.Text && x.payment == "Not Paid").Count().ToString();
+                    txtsscol.Text = db.view_schoarshipstd_summary.Where(x => x.Scholarship == "YES" && x.Batch == cmbbatch.Text).Count<view_schoarshipstd_summary>().ToString();
                 }
             }
         }

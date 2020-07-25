@@ -36,15 +36,19 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.lblattandance = new System.Windows.Forms.LinkLabel();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.lblStudentProgressPageByBatch = new System.Windows.Forms.LinkLabel();
             this.lblFileFronpage = new System.Windows.Forms.LinkLabel();
             this.lblreportbatch = new System.Windows.Forms.LinkLabel();
-            this.lblStudentProgressPageByBatch = new System.Windows.Forms.LinkLabel();
+            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.lblpyamentsummary = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
+            this.groupControl4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -134,6 +138,17 @@
             this.groupControl3.TabIndex = 9;
             this.groupControl3.Text = "Examiniation Information";
             // 
+            // lblStudentProgressPageByBatch
+            // 
+            this.lblStudentProgressPageByBatch.AutoSize = true;
+            this.lblStudentProgressPageByBatch.Location = new System.Drawing.Point(22, 114);
+            this.lblStudentProgressPageByBatch.Name = "lblStudentProgressPageByBatch";
+            this.lblStudentProgressPageByBatch.Size = new System.Drawing.Size(191, 13);
+            this.lblStudentProgressPageByBatch.TabIndex = 9;
+            this.lblStudentProgressPageByBatch.TabStop = true;
+            this.lblStudentProgressPageByBatch.Text = "Print Student Progress Page For Batch";
+            this.lblStudentProgressPageByBatch.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblStudentProgressPageByBatch_LinkClicked);
+            // 
             // lblFileFronpage
             // 
             this.lblFileFronpage.AutoSize = true;
@@ -156,21 +171,30 @@
             this.lblreportbatch.Text = "Print Exam Results by Batch and Exam";
             this.lblreportbatch.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblreportbatch_LinkClicked);
             // 
-            // lblStudentProgressPageByBatch
+            // groupControl4
             // 
-            this.lblStudentProgressPageByBatch.AutoSize = true;
-            this.lblStudentProgressPageByBatch.Location = new System.Drawing.Point(22, 114);
-            this.lblStudentProgressPageByBatch.Name = "lblStudentProgressPageByBatch";
-            this.lblStudentProgressPageByBatch.Size = new System.Drawing.Size(191, 13);
-            this.lblStudentProgressPageByBatch.TabIndex = 9;
-            this.lblStudentProgressPageByBatch.TabStop = true;
-            this.lblStudentProgressPageByBatch.Text = "Print Student Progress Page For Batch";
-            this.lblStudentProgressPageByBatch.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblStudentProgressPageByBatch_LinkClicked);
+            this.groupControl4.Controls.Add(this.lblpyamentsummary);
+            this.groupControl4.Location = new System.Drawing.Point(481, 130);
+            this.groupControl4.Name = "groupControl4";
+            this.groupControl4.Size = new System.Drawing.Size(414, 82);
+            this.groupControl4.TabIndex = 9;
+            this.groupControl4.Text = "Fee Payment Information";
+            // 
+            // lblpyamentsummary
+            // 
+            this.lblpyamentsummary.AutoSize = true;
+            this.lblpyamentsummary.Location = new System.Drawing.Point(22, 34);
+            this.lblpyamentsummary.Name = "lblpyamentsummary";
+            this.lblpyamentsummary.Size = new System.Drawing.Size(162, 13);
+            this.lblpyamentsummary.TabIndex = 7;
+            this.lblpyamentsummary.TabStop = true;
+            this.lblpyamentsummary.Text = "Print Student Payment Summary";
             // 
             // frmReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.groupControl4);
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
@@ -185,6 +209,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             this.groupControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
+            this.groupControl4.ResumeLayout(false);
+            this.groupControl4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -201,5 +228,7 @@
         private System.Windows.Forms.LinkLabel lblreportbatch;
         private System.Windows.Forms.LinkLabel lblFileFronpage;
         private System.Windows.Forms.LinkLabel lblStudentProgressPageByBatch;
+        private DevExpress.XtraEditors.GroupControl groupControl4;
+        private System.Windows.Forms.LinkLabel lblpyamentsummary;
     }
 }

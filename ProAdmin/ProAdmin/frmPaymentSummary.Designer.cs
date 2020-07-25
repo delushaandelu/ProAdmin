@@ -49,6 +49,12 @@
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.dgvsolview = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.txtsnotpaid = new System.Windows.Forms.TextBox();
+            this.txtspaid = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtsscol = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
             this.tabPane1.SuspendLayout();
             this.tabNavigationPage3.SuspendLayout();
@@ -113,6 +119,12 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.txtsscol);
+            this.groupControl1.Controls.Add(this.label6);
+            this.groupControl1.Controls.Add(this.txtsnotpaid);
+            this.groupControl1.Controls.Add(this.txtspaid);
+            this.groupControl1.Controls.Add(this.label1);
+            this.groupControl1.Controls.Add(this.label5);
             this.groupControl1.Controls.Add(this.txtmonth);
             this.groupControl1.Controls.Add(this.label3);
             this.groupControl1.Controls.Add(this.txtyear);
@@ -122,7 +134,7 @@
             this.groupControl1.Controls.Add(this.cmbbatch);
             this.groupControl1.Location = new System.Drawing.Point(13, 16);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(656, 179);
+            this.groupControl1.Size = new System.Drawing.Size(999, 179);
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "Summary Process Query";
             // 
@@ -270,6 +282,57 @@
             this.gridView3.GridControl = this.dgvsolview;
             this.gridView3.Name = "gridView3";
             // 
+            // txtsnotpaid
+            // 
+            this.txtsnotpaid.Enabled = false;
+            this.txtsnotpaid.Location = new System.Drawing.Point(836, 78);
+            this.txtsnotpaid.Name = "txtsnotpaid";
+            this.txtsnotpaid.Size = new System.Drawing.Size(100, 21);
+            this.txtsnotpaid.TabIndex = 69;
+            // 
+            // txtspaid
+            // 
+            this.txtspaid.Enabled = false;
+            this.txtspaid.Location = new System.Drawing.Point(836, 46);
+            this.txtspaid.Name = "txtspaid";
+            this.txtspaid.Size = new System.Drawing.Size(100, 21);
+            this.txtspaid.TabIndex = 68;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(711, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 13);
+            this.label1.TabIndex = 67;
+            this.label1.Text = "Student Paid :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(710, 81);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(95, 13);
+            this.label5.TabIndex = 66;
+            this.label5.Text = "Student Not Paid :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(711, 114);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(119, 13);
+            this.label6.TabIndex = 70;
+            this.label6.Text = "Scholerships Students :";
+            // 
+            // txtsscol
+            // 
+            this.txtsscol.Enabled = false;
+            this.txtsscol.Location = new System.Drawing.Point(836, 111);
+            this.txtsscol.Name = "txtsscol";
+            this.txtsscol.Size = new System.Drawing.Size(100, 21);
+            this.txtsscol.TabIndex = 71;
+            // 
             // frmPaymentSummary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,5 +389,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtyear;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtsscol;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtsnotpaid;
+        private System.Windows.Forms.TextBox txtspaid;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label5;
     }
 }

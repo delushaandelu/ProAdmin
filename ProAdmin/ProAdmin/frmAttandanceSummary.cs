@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DevExpress.XtraReports.UI;
 
 namespace ProAdmin
 {
@@ -54,12 +55,22 @@ namespace ProAdmin
                 {
                     dgvattendees.DataSource = db.view_attandance_summary.Where(x => x.batch == cmbbatch.Text && x.classdate == txtdate.Text && x.attandance == "Attend").ToList<view_attandance_summary>();
                     dgvabsentee.DataSource = db.view_attandance_summary.Where(x => x.batch == cmbbatch.Text && x.classdate == txtdate.Text && x.attandance == "Not Attend").ToList<view_attandance_summary>();
+
+                    txtattend.Text = db.view_attandance_summary.Where(x => x.batch == cmbbatch.Text && x.classdate == txtdate.Text && x.attandance == "Attend").Count().ToString();
+                    txtnotattend.Text = db.view_attandance_summary.Where(x => x.batch == cmbbatch.Text && x.classdate == txtdate.Text && x.attandance == "Not Attend").Count().ToString();
                 }
             }
             else
             {
                 MessageBox.Show("Please fill all fields..");
             }
+        }
+
+        private void lblattandance_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ReportAttdanceSummary studentReport = new ReportAttdanceSummary();
+            ReportPrintTool printtool = new ReportPrintTool(studentReport);
+            printtool.ShowRibbonPreview();
         }
     }
 }
