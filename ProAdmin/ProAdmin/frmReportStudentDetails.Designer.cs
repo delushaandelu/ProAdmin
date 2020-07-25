@@ -31,12 +31,14 @@
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.PrintStudentInfrobybatchandschool = new System.Windows.Forms.LinkLabel();
+            this.lblemptystudentlist = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.lblemptystudentlist);
             this.groupControl1.Controls.Add(this.linkLabel1);
             this.groupControl1.Controls.Add(this.PrintStudentInfrobybatchandschool);
             this.groupControl1.Location = new System.Drawing.Point(42, 42);
@@ -67,6 +69,17 @@
             this.PrintStudentInfrobybatchandschool.Text = "Print Student Information By Batch and School";
             this.PrintStudentInfrobybatchandschool.Click += new System.EventHandler(this.PrintStudentInfrobybatchandschool_Click);
             // 
+            // lblemptystudentlist
+            // 
+            this.lblemptystudentlist.AutoSize = true;
+            this.lblemptystudentlist.Location = new System.Drawing.Point(22, 122);
+            this.lblemptystudentlist.Name = "lblemptystudentlist";
+            this.lblemptystudentlist.Size = new System.Drawing.Size(171, 13);
+            this.lblemptystudentlist.TabIndex = 6;
+            this.lblemptystudentlist.TabStop = true;
+            this.lblemptystudentlist.Text = "Print Student Empty Signing Sheet";
+            this.lblemptystudentlist.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblemptystudentlist_LinkClicked);
+            // 
             // frmReportStudentDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -85,5 +98,6 @@
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private System.Windows.Forms.LinkLabel PrintStudentInfrobybatchandschool;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel lblemptystudentlist;
     }
 }

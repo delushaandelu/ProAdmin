@@ -35,14 +35,21 @@ namespace ProAdmin
         {
             ReportStudentInfoCondition studentReport = new ReportStudentInfoCondition();
             ReportPrintTool printtool = new ReportPrintTool(studentReport);
-            printtool.ShowPreview();
+            printtool.ShowRibbonPreview();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ReportStudentInfoByBatch studentReport = new ReportStudentInfoByBatch();
             ReportPrintTool printtool = new ReportPrintTool(studentReport);
-            printtool.ShowPreview();
+            printtool.ShowRibbonPreview();
+        }
+
+        private void lblemptystudentlist_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ReportStudentEmpyReport studentReport = new ReportStudentEmpyReport();
+            ReportPrintTool printtool = new ReportPrintTool(studentReport);
+            printtool.ShowRibbonPreview();
         }
     }
 }
