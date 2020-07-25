@@ -59,13 +59,13 @@ namespace ProAdmin
                 using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
                     model_attandance.intime = DateTime.Now.ToString();
-                    model_attandance.attandance = "1";
+                    model_attandance.attandance = "Attend";
 
                     if (db.data_attandance.Where(data => data.regid == txtstudentid.Text && data.batch == txtbatch.Text && data.classdate == txttoday.Text).Any())//Update attandance
                     {
                         model_attandance = db.data_attandance.Where(x => x.regid == txtstudentid.Text && x.batch == txtbatch.Text && x.classdate == txttoday.Text).FirstOrDefault();
                         model_attandance.intime = DateTime.Now.ToString();
-                        model_attandance.attandance = "1";
+                        model_attandance.attandance = "Attend";
 
                         db.Entry(model_attandance).State = EntityState.Modified;
                         db.SaveChanges();

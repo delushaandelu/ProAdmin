@@ -118,7 +118,7 @@ namespace ProAdmin
                 foreach (basicdata_student student in selectedStudents)
                 {
                     model_attandance.classdate  = txtdate.Text;
-                    model_attandance.attandance = "0";
+                    model_attandance.attandance = "Not Attend";
                     model_attandance.batch      = cmbbatch.Text;
                     model_attandance.intime     = "0";
                     model_attandance.regid      = student.regid;

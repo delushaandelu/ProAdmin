@@ -52,8 +52,8 @@ namespace ProAdmin
             {
                 using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
-                    dgvattendees.DataSource = db.view_attandance_summary.Where(x => x.batch == cmbbatch.Text && x.classdate == txtdate.Text && x.attandance == "1").ToList<view_attandance_summary>();
-                    dgvabsentee.DataSource = db.view_attandance_summary.Where(x => x.batch == cmbbatch.Text && x.classdate == txtdate.Text && x.attandance == "0").ToList<view_attandance_summary>();
+                    dgvattendees.DataSource = db.view_attandance_summary.Where(x => x.batch == cmbbatch.Text && x.classdate == txtdate.Text && x.attandance == "Attend").ToList<view_attandance_summary>();
+                    dgvabsentee.DataSource = db.view_attandance_summary.Where(x => x.batch == cmbbatch.Text && x.classdate == txtdate.Text && x.attandance == "Not Attend").ToList<view_attandance_summary>();
                 }
             }
             else
