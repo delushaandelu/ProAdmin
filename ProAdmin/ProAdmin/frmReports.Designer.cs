@@ -37,6 +37,7 @@
             this.lblattandance = new System.Windows.Forms.LinkLabel();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.lblreportbatch = new System.Windows.Forms.LinkLabel();
+            this.lblFileFronpage = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -123,10 +124,11 @@
             // 
             // groupControl3
             // 
+            this.groupControl3.Controls.Add(this.lblFileFronpage);
             this.groupControl3.Controls.Add(this.lblreportbatch);
             this.groupControl3.Location = new System.Drawing.Point(42, 240);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(414, 82);
+            this.groupControl3.Size = new System.Drawing.Size(414, 156);
             this.groupControl3.TabIndex = 9;
             this.groupControl3.Text = "Examiniation Information";
             // 
@@ -135,11 +137,22 @@
             this.lblreportbatch.AutoSize = true;
             this.lblreportbatch.Location = new System.Drawing.Point(22, 34);
             this.lblreportbatch.Name = "lblreportbatch";
-            this.lblreportbatch.Size = new System.Drawing.Size(166, 13);
+            this.lblreportbatch.Size = new System.Drawing.Size(191, 13);
             this.lblreportbatch.TabIndex = 7;
             this.lblreportbatch.TabStop = true;
-            this.lblreportbatch.Text = "Exam Results by Batch and Exam";
+            this.lblreportbatch.Text = "Print Exam Results by Batch and Exam";
             this.lblreportbatch.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblreportbatch_LinkClicked);
+            // 
+            // lblFileFronpage
+            // 
+            this.lblFileFronpage.AutoSize = true;
+            this.lblFileFronpage.Location = new System.Drawing.Point(22, 71);
+            this.lblFileFronpage.Name = "lblFileFronpage";
+            this.lblFileFronpage.Size = new System.Drawing.Size(185, 13);
+            this.lblFileFronpage.TabIndex = 8;
+            this.lblFileFronpage.TabStop = true;
+            this.lblFileFronpage.Text = "Print Exam Results Folder Front Page";
+            this.lblFileFronpage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblFileFronpage_LinkClicked);
             // 
             // frmReports
             // 
@@ -173,5 +186,6 @@
         private System.Windows.Forms.LinkLabel lblattandance;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private System.Windows.Forms.LinkLabel lblreportbatch;
+        private System.Windows.Forms.LinkLabel lblFileFronpage;
     }
 }

@@ -117,14 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="customStringConnectionParameters1.ConnectionString" xml:space="preserve">
+    <value>XpoProvider=MSSqlServer;Data Source=proadmin.ciynukd5ndgs.ap-southeast-1.rds.amazonaws.com;Initial Catalog=proadmin_v1;Persist Security Info=True;User ID=proadmin;Password=proadmin;MultipleActiveResultSets=True;Application Name=EntityFramework</value>
   </data>
-  <data name="graduation" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\graduation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="teacher" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\teacher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9InZpZXdfZXhhbV9yZXN1bHRzX3N1bW1hcnkiPjxGaWVsZCBOYW1lPSJiYXRjaCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJleGFtX2RhdGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0icmVnaWQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRmlyc3RuYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ikxhc3RuYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkFsX3NjaG9vbCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJzdWJqZWN0XzEiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9InN1YmplY3RfMiIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0ic3ViamVjdF8zIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJ0b3RhbF9tYXJrcyIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0icmFuayIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9ImF2Z19zdGF0ZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJhdmVyYWdlX21hcmtzIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJFbmdsaXNoIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJnaXQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9ImV4YW0iIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
   </data>
 </root>

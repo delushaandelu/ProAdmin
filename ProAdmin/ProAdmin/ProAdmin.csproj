@@ -280,6 +280,12 @@
     <Compile Include="ReportAttdanceSummary.Designer.cs">
       <DependentUpon>ReportAttdanceSummary.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportExamMeetingFileCover.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportExamMeetingFileCover.Designer.cs">
+      <DependentUpon>ReportExamMeetingFileCover.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportExamResultSummary.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -381,6 +387,9 @@
     <EmbeddedResource Include="ReportAttdanceSummary.resx">
       <DependentUpon>ReportAttdanceSummary.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportExamMeetingFileCover.resx">
+      <DependentUpon>ReportExamMeetingFileCover.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportExamResultSummary.resx">
       <DependentUpon>ReportExamResultSummary.cs</DependentUpon>
     </EmbeddedResource>
@@ -431,6 +440,7 @@
       <DependentUpon>ProAdminAws_v1.edmx</DependentUpon>
       <LastGenOutput>ProAdminAws_v1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\teacher.png" />
     <None Include="Resources\user.png" />
     <None Include="Resources\graduation.png" />
   </ItemGroup>
