@@ -286,6 +286,12 @@
     <Compile Include="ReportExamMeetingFileCover.Designer.cs">
       <DependentUpon>ReportExamMeetingFileCover.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportExamResultPersonalSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportExamResultPersonalSummary.Designer.cs">
+      <DependentUpon>ReportExamResultPersonalSummary.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportExamResultSummary.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -389,6 +395,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportExamMeetingFileCover.resx">
       <DependentUpon>ReportExamMeetingFileCover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportExamResultPersonalSummary.resx">
+      <DependentUpon>ReportExamResultPersonalSummary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportExamResultSummary.resx">
       <DependentUpon>ReportExamResultSummary.cs</DependentUpon>

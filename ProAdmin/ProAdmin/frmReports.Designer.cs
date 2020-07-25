@@ -36,8 +36,9 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.lblattandance = new System.Windows.Forms.LinkLabel();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.lblreportbatch = new System.Windows.Forms.LinkLabel();
             this.lblFileFronpage = new System.Windows.Forms.LinkLabel();
+            this.lblreportbatch = new System.Windows.Forms.LinkLabel();
+            this.lblStudentProgressPageByBatch = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -124,6 +125,7 @@
             // 
             // groupControl3
             // 
+            this.groupControl3.Controls.Add(this.lblStudentProgressPageByBatch);
             this.groupControl3.Controls.Add(this.lblFileFronpage);
             this.groupControl3.Controls.Add(this.lblreportbatch);
             this.groupControl3.Location = new System.Drawing.Point(42, 240);
@@ -131,6 +133,17 @@
             this.groupControl3.Size = new System.Drawing.Size(414, 156);
             this.groupControl3.TabIndex = 9;
             this.groupControl3.Text = "Examiniation Information";
+            // 
+            // lblFileFronpage
+            // 
+            this.lblFileFronpage.AutoSize = true;
+            this.lblFileFronpage.Location = new System.Drawing.Point(22, 74);
+            this.lblFileFronpage.Name = "lblFileFronpage";
+            this.lblFileFronpage.Size = new System.Drawing.Size(185, 13);
+            this.lblFileFronpage.TabIndex = 8;
+            this.lblFileFronpage.TabStop = true;
+            this.lblFileFronpage.Text = "Print Exam Results Folder Front Page";
+            this.lblFileFronpage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblFileFronpage_LinkClicked);
             // 
             // lblreportbatch
             // 
@@ -143,16 +156,16 @@
             this.lblreportbatch.Text = "Print Exam Results by Batch and Exam";
             this.lblreportbatch.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblreportbatch_LinkClicked);
             // 
-            // lblFileFronpage
+            // lblStudentProgressPageByBatch
             // 
-            this.lblFileFronpage.AutoSize = true;
-            this.lblFileFronpage.Location = new System.Drawing.Point(22, 71);
-            this.lblFileFronpage.Name = "lblFileFronpage";
-            this.lblFileFronpage.Size = new System.Drawing.Size(185, 13);
-            this.lblFileFronpage.TabIndex = 8;
-            this.lblFileFronpage.TabStop = true;
-            this.lblFileFronpage.Text = "Print Exam Results Folder Front Page";
-            this.lblFileFronpage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblFileFronpage_LinkClicked);
+            this.lblStudentProgressPageByBatch.AutoSize = true;
+            this.lblStudentProgressPageByBatch.Location = new System.Drawing.Point(22, 114);
+            this.lblStudentProgressPageByBatch.Name = "lblStudentProgressPageByBatch";
+            this.lblStudentProgressPageByBatch.Size = new System.Drawing.Size(191, 13);
+            this.lblStudentProgressPageByBatch.TabIndex = 9;
+            this.lblStudentProgressPageByBatch.TabStop = true;
+            this.lblStudentProgressPageByBatch.Text = "Print Student Progress Page For Batch";
+            this.lblStudentProgressPageByBatch.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblStudentProgressPageByBatch_LinkClicked);
             // 
             // frmReports
             // 
@@ -187,5 +200,6 @@
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private System.Windows.Forms.LinkLabel lblreportbatch;
         private System.Windows.Forms.LinkLabel lblFileFronpage;
+        private System.Windows.Forms.LinkLabel lblStudentProgressPageByBatch;
     }
 }

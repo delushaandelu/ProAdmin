@@ -79,5 +79,12 @@ namespace ProAdmin
             ReportPrintTool printtool = new ReportPrintTool(studentReport);
             printtool.ShowRibbonPreview();
         }
+
+        private void lblStudentProgressPageByBatch_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ReportExamResultPersonalSummary studentReport = new ReportExamResultPersonalSummary();
+            ReportPrintTool printtool = new ReportPrintTool(studentReport);
+            printtool.ShowRibbonPreview();
+        }
     }
 }
