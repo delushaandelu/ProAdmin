@@ -163,13 +163,13 @@ namespace ProAdmin
 
         private void accordionControlElement18_Click(object sender, EventArgs e)
         {
-            if (!panelContainer.Controls.Contains(frmReportStudentDetails.Instance))
+            if (!panelContainer.Controls.Contains(frmReports.Instance))
             {
-                panelContainer.Controls.Add(frmReportStudentDetails.Instance);
-                frmReportStudentDetails.Instance.Dock = DockStyle.Fill;
-                frmReportStudentDetails.Instance.BringToFront();
+                panelContainer.Controls.Add(frmReports.Instance);
+                frmReports.Instance.Dock = DockStyle.Fill;
+                frmReports.Instance.BringToFront();
             }
-            frmReportStudentDetails.Instance.BringToFront();
+            frmReports.Instance.BringToFront();
         }
     }
 }

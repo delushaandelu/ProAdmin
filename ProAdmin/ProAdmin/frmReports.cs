@@ -12,21 +12,21 @@ using DevExpress.XtraReports.UI;
 
 namespace ProAdmin
 {
-    public partial class frmReportStudentDetails : System.Windows.Forms.UserControl
+    public partial class frmReports : System.Windows.Forms.UserControl
     {
-        public frmReportStudentDetails()
+        public frmReports()
         {
             InitializeComponent();
         }
 
-        private static frmReportStudentDetails _instance;
+        private static frmReports _instance;
 
-        public static frmReportStudentDetails Instance
+        public static frmReports Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new frmReportStudentDetails();
+                    _instance = new frmReports();
                 return _instance;
             }
         }
@@ -48,6 +48,13 @@ namespace ProAdmin
         private void lblemptystudentlist_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ReportStudentEmpyReport studentReport = new ReportStudentEmpyReport();
+            ReportPrintTool printtool = new ReportPrintTool(studentReport);
+            printtool.ShowRibbonPreview();
+        }
+
+        private void lblstudentadminon_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ReportStudentAdmissionForm studentReport = new ReportStudentAdmissionForm();
             ReportPrintTool printtool = new ReportPrintTool(studentReport);
             printtool.ShowRibbonPreview();
         }

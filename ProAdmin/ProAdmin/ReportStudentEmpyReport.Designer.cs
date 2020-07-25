@@ -58,6 +58,8 @@
             this.pageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.pageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
+            this.xrRichText4 = new DevExpress.XtraReports.UI.XRRichText();
+            this.xrRichText3 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrRichText2 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrRichText1 = new DevExpress.XtraReports.UI.XRRichText();
             this.label1 = new DevExpress.XtraReports.UI.XRLabel();
@@ -79,8 +81,10 @@
             this.tableCell9 = new DevExpress.XtraReports.UI.XRTableCell();
             this.tableCell10 = new DevExpress.XtraReports.UI.XRTableCell();
             this.tableCell12 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.Batch = new DevExpress.XtraReports.Parameters.Parameter();
             this.Gender = new DevExpress.XtraReports.Parameters.Parameter();
+            this.Batch = new DevExpress.XtraReports.Parameters.Parameter();
+            ((System.ComponentModel.ISupportInitialize)(this.xrRichText4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrRichText3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table1)).BeginInit();
@@ -209,12 +213,33 @@
             // ReportHeader
             // 
             this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrRichText4,
+            this.xrRichText3,
             this.xrRichText2,
             this.xrRichText1,
             this.label1,
             this.xrLabel1});
             this.ReportHeader.HeightF = 63.83333F;
             this.ReportHeader.Name = "ReportHeader";
+            // 
+            // xrRichText4
+            // 
+            this.xrRichText4.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.xrRichText4.LocationFloat = new DevExpress.Utils.PointFloat(642.682F, 30.83332F);
+            this.xrRichText4.Name = "xrRichText4";
+            this.xrRichText4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrRichText4.SerializableRtfString = resources.GetString("xrRichText4.SerializableRtfString");
+            this.xrRichText4.SizeF = new System.Drawing.SizeF(71.31799F, 23F);
+            this.xrRichText4.StylePriority.UseFont = false;
+            // 
+            // xrRichText3
+            // 
+            this.xrRichText3.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.xrRichText3.LocationFloat = new DevExpress.Utils.PointFloat(558.2501F, 30.83332F);
+            this.xrRichText3.Name = "xrRichText3";
+            this.xrRichText3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrRichText3.SerializableRtfString = resources.GetString("xrRichText3.SerializableRtfString");
+            this.xrRichText3.SizeF = new System.Drawing.SizeF(100F, 23F);
             // 
             // xrRichText2
             // 
@@ -224,6 +249,7 @@
             this.xrRichText2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrRichText2.SerializableRtfString = resources.GetString("xrRichText2.SerializableRtfString");
             this.xrRichText2.SizeF = new System.Drawing.SizeF(100F, 23F);
+            this.xrRichText2.StylePriority.UseFont = false;
             // 
             // xrRichText1
             // 
@@ -236,10 +262,12 @@
             // 
             // label1
             // 
+            this.label1.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.label1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.label1.Name = "label1";
             this.label1.SizeF = new System.Drawing.SizeF(723.9999F, 32.52767F);
             this.label1.StyleName = "Title";
+            this.label1.StylePriority.UseFont = false;
             this.label1.StylePriority.UseTextAlignment = false;
             this.label1.Text = "NEW HIGHER EDUCATION CENTRE (PVT) LTD";
             this.label1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
@@ -399,29 +427,29 @@
             this.tableCell12.StyleName = "DetailData1";
             this.tableCell12.Weight = 0.31009879068930568D;
             // 
+            // Gender
+            // 
+            this.Gender.Description = "Gender";
+            this.Gender.Name = "Gender";
+            dynamicListLookUpSettings1.DataMember = "basicdata_student";
+            dynamicListLookUpSettings1.DataSource = this.sqlDataSource1;
+            dynamicListLookUpSettings1.DisplayMember = "Gender";
+            dynamicListLookUpSettings1.SortMember = null;
+            dynamicListLookUpSettings1.ValueMember = "Gender";
+            this.Gender.ValueSourceSettings = dynamicListLookUpSettings1;
+            // 
             // Batch
             // 
             this.Batch.Description = "Batch";
             this.Batch.Name = "Batch";
             this.Batch.Type = typeof(int);
             this.Batch.ValueInfo = "0";
-            dynamicListLookUpSettings1.DataMember = "basicdata_student";
-            dynamicListLookUpSettings1.DataSource = this.sqlDataSource1;
-            dynamicListLookUpSettings1.DisplayMember = "Batch";
-            dynamicListLookUpSettings1.SortMember = "regid";
-            dynamicListLookUpSettings1.ValueMember = "Batch";
-            this.Batch.ValueSourceSettings = dynamicListLookUpSettings1;
-            // 
-            // Gender
-            // 
-            this.Gender.Description = "Gender";
-            this.Gender.Name = "Gender";
             dynamicListLookUpSettings2.DataMember = "basicdata_student";
             dynamicListLookUpSettings2.DataSource = this.sqlDataSource1;
-            dynamicListLookUpSettings2.DisplayMember = "Gender";
+            dynamicListLookUpSettings2.DisplayMember = "Batch";
             dynamicListLookUpSettings2.SortMember = null;
-            dynamicListLookUpSettings2.ValueMember = "Gender";
-            this.Gender.ValueSourceSettings = dynamicListLookUpSettings2;
+            dynamicListLookUpSettings2.ValueMember = "Batch";
+            this.Batch.ValueSourceSettings = dynamicListLookUpSettings2;
             // 
             // ReportStudentEmpyReport
             // 
@@ -442,8 +470,8 @@
             this.PageWidth = 827;
             this.PaperKind = System.Drawing.Printing.PaperKind.A4;
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
-            this.Batch,
-            this.Gender});
+            this.Gender,
+            this.Batch});
             this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
             this.Title,
             this.DetailCaption1,
@@ -451,6 +479,8 @@
             this.DetailData3_Odd,
             this.PageInfo});
             this.Version = "19.2";
+            ((System.ComponentModel.ISupportInitialize)(this.xrRichText4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrRichText3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.table1)).EndInit();
@@ -493,7 +523,9 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
         private DevExpress.XtraReports.UI.XRRichText xrRichText2;
         private DevExpress.XtraReports.UI.XRRichText xrRichText1;
-        private DevExpress.XtraReports.Parameters.Parameter Batch;
         private DevExpress.XtraReports.Parameters.Parameter Gender;
+        private DevExpress.XtraReports.Parameters.Parameter Batch;
+        private DevExpress.XtraReports.UI.XRRichText xrRichText4;
+        private DevExpress.XtraReports.UI.XRRichText xrRichText3;
     }
 }

@@ -316,10 +316,12 @@
             // 
             // label1
             // 
+            this.label1.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.label1.LocationFloat = new DevExpress.Utils.PointFloat(5.999979F, 6.00001F);
             this.label1.Name = "label1";
             this.label1.SizeF = new System.Drawing.SizeF(1102F, 24.19433F);
             this.label1.StyleName = "Title";
+            this.label1.StylePriority.UseFont = false;
             this.label1.StylePriority.UseTextAlignment = false;
             this.label1.Text = "NEW HIGHER EDUCATION CENTRE (PVT) LTD";
             this.label1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;

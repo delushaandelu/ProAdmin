@@ -1,6 +1,6 @@
 ﻿namespace ProAdmin
 {
-    partial class frmReportStudentDetails
+    partial class frmReports
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,28 +29,41 @@
         private void InitializeComponent()
         {
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.lblemptystudentlist = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.PrintStudentInfrobybatchandschool = new System.Windows.Forms.LinkLabel();
-            this.lblemptystudentlist = new System.Windows.Forms.LinkLabel();
+            this.lblstudentadminon = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.lblstudentadminon);
             this.groupControl1.Controls.Add(this.lblemptystudentlist);
             this.groupControl1.Controls.Add(this.linkLabel1);
             this.groupControl1.Controls.Add(this.PrintStudentInfrobybatchandschool);
             this.groupControl1.Location = new System.Drawing.Point(42, 42);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(414, 153);
+            this.groupControl1.Size = new System.Drawing.Size(414, 171);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Student Information";
+            // 
+            // lblemptystudentlist
+            // 
+            this.lblemptystudentlist.AutoSize = true;
+            this.lblemptystudentlist.Location = new System.Drawing.Point(22, 143);
+            this.lblemptystudentlist.Name = "lblemptystudentlist";
+            this.lblemptystudentlist.Size = new System.Drawing.Size(171, 13);
+            this.lblemptystudentlist.TabIndex = 6;
+            this.lblemptystudentlist.TabStop = true;
+            this.lblemptystudentlist.Text = "Print Student Empty Signing Sheet";
+            this.lblemptystudentlist.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblemptystudentlist_LinkClicked);
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(22, 84);
+            this.linkLabel1.Location = new System.Drawing.Point(22, 105);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(177, 13);
             this.linkLabel1.TabIndex = 5;
@@ -61,7 +74,7 @@
             // PrintStudentInfrobybatchandschool
             // 
             this.PrintStudentInfrobybatchandschool.AutoSize = true;
-            this.PrintStudentInfrobybatchandschool.Location = new System.Drawing.Point(22, 48);
+            this.PrintStudentInfrobybatchandschool.Location = new System.Drawing.Point(22, 69);
             this.PrintStudentInfrobybatchandschool.Name = "PrintStudentInfrobybatchandschool";
             this.PrintStudentInfrobybatchandschool.Size = new System.Drawing.Size(229, 13);
             this.PrintStudentInfrobybatchandschool.TabIndex = 4;
@@ -69,23 +82,23 @@
             this.PrintStudentInfrobybatchandschool.Text = "Print Student Information By Batch and School";
             this.PrintStudentInfrobybatchandschool.Click += new System.EventHandler(this.PrintStudentInfrobybatchandschool_Click);
             // 
-            // lblemptystudentlist
+            // lblstudentadminon
             // 
-            this.lblemptystudentlist.AutoSize = true;
-            this.lblemptystudentlist.Location = new System.Drawing.Point(22, 122);
-            this.lblemptystudentlist.Name = "lblemptystudentlist";
-            this.lblemptystudentlist.Size = new System.Drawing.Size(171, 13);
-            this.lblemptystudentlist.TabIndex = 6;
-            this.lblemptystudentlist.TabStop = true;
-            this.lblemptystudentlist.Text = "Print Student Empty Signing Sheet";
-            this.lblemptystudentlist.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblemptystudentlist_LinkClicked);
+            this.lblstudentadminon.AutoSize = true;
+            this.lblstudentadminon.Location = new System.Drawing.Point(22, 34);
+            this.lblstudentadminon.Name = "lblstudentadminon";
+            this.lblstudentadminon.Size = new System.Drawing.Size(147, 13);
+            this.lblstudentadminon.TabIndex = 7;
+            this.lblstudentadminon.TabStop = true;
+            this.lblstudentadminon.Text = "Print Student Admission Form";
+            this.lblstudentadminon.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblstudentadminon_LinkClicked);
             // 
-            // frmReportStudentDetails
+            // frmReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupControl1);
-            this.Name = "frmReportStudentDetails";
+            this.Name = "frmReports";
             this.Size = new System.Drawing.Size(1219, 664);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
@@ -99,5 +112,6 @@
         private System.Windows.Forms.LinkLabel PrintStudentInfrobybatchandschool;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel lblemptystudentlist;
+        private System.Windows.Forms.LinkLabel lblstudentadminon;
     }
 }

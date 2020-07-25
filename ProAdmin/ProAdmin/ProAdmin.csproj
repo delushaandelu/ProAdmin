@@ -215,11 +215,11 @@
     <Compile Include="frmPaymentSummary.Designer.cs">
       <DependentUpon>frmPaymentSummary.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmReportStudentDetails.cs">
+    <Compile Include="frmReports.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="frmReportStudentDetails.Designer.cs">
-      <DependentUpon>frmReportStudentDetails.cs</DependentUpon>
+    <Compile Include="frmReports.Designer.cs">
+      <DependentUpon>frmReports.cs</DependentUpon>
     </Compile>
     <Compile Include="frmScheduleClass.cs">
       <SubType>UserControl</SubType>
@@ -274,6 +274,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportStudentAdmissionForm.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportStudentAdmissionForm.Designer.cs">
+      <DependentUpon>ReportStudentAdmissionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportStudentEmpyReport.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -328,8 +334,8 @@
     <EmbeddedResource Include="frmPaymentSummary.resx">
       <DependentUpon>frmPaymentSummary.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmReportStudentDetails.resx">
-      <DependentUpon>frmReportStudentDetails.cs</DependentUpon>
+    <EmbeddedResource Include="frmReports.resx">
+      <DependentUpon>frmReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmScheduleClass.resx">
       <DependentUpon>frmScheduleClass.cs</DependentUpon>
@@ -360,6 +366,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReportStudentAdmissionForm.resx">
+      <DependentUpon>ReportStudentAdmissionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportStudentEmpyReport.resx">
       <DependentUpon>ReportStudentEmpyReport.cs</DependentUpon>
     </EmbeddedResource>
