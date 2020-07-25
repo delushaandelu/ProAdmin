@@ -298,6 +298,12 @@
     <Compile Include="ReportExamResultSummary.Designer.cs">
       <DependentUpon>ReportExamResultSummary.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportFeePayment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportFeePayment.Designer.cs">
+      <DependentUpon>ReportFeePayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportStudentAdmissionForm.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -401,6 +407,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportExamResultSummary.resx">
       <DependentUpon>ReportExamResultSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportFeePayment.resx">
+      <DependentUpon>ReportFeePayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportStudentAdmissionForm.resx">
       <DependentUpon>ReportStudentAdmissionForm.cs</DependentUpon>

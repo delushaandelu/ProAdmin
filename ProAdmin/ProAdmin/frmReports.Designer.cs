@@ -189,6 +189,7 @@
             this.lblpyamentsummary.TabIndex = 7;
             this.lblpyamentsummary.TabStop = true;
             this.lblpyamentsummary.Text = "Print Student Payment Summary";
+            this.lblpyamentsummary.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblpyamentsummary_LinkClicked);
             // 
             // frmReports
             // 

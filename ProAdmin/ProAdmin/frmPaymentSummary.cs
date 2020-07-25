@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DevExpress.XtraReports.UI;
 
 namespace ProAdmin
 {
@@ -62,6 +63,13 @@ namespace ProAdmin
                     txtsscol.Text = db.view_schoarshipstd_summary.Where(x => x.Scholarship == "YES" && x.Batch == cmbbatch.Text).Count<view_schoarshipstd_summary>().ToString();
                 }
             }
+        }
+
+        private void lblpyamentsummary_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ReportFeePayment studentReport = new ReportFeePayment();
+            ReportPrintTool printtool = new ReportPrintTool(studentReport);
+            printtool.ShowRibbonPreview();
         }
     }
 }

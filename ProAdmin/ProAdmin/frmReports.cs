@@ -86,5 +86,12 @@ namespace ProAdmin
             ReportPrintTool printtool = new ReportPrintTool(studentReport);
             printtool.ShowRibbonPreview();
         }
+
+        private void lblpyamentsummary_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ReportFeePayment studentReport = new ReportFeePayment();
+            ReportPrintTool printtool = new ReportPrintTool(studentReport);
+            printtool.ShowRibbonPreview();
+        }
     }
 }
