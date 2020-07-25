@@ -127,6 +127,7 @@ namespace ProAdmin
             cmbbatch.SelectedItem           = null;
             cmbscholership.SelectedItem     = null;
             txtfind.Text                    = null;
+            cmbgender.Text                  = null;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -156,6 +157,7 @@ namespace ProAdmin
                 model_students.Ol_result        = txtolresult.Text;
                 model_students.JoinDate         = txtjoiningdate.Text;
                 model_students.Batch            = cmbbatch.Text;
+                model_students.Gender           = cmbgender.Text;
                 model_students.Scholarship      = cmbscholership.SelectedItem.ToString();
 
 
@@ -210,6 +212,7 @@ namespace ProAdmin
                     txtolresult.Text            = model_students.Ol_result;
                     txtjoiningdate.Text         = model_students.JoinDate;
                     cmbbatch.Text               = model_students.Batch;
+                    cmbgender.Text              = model_students.Gender;
                     cmbscholership.SelectedItem = model_students.Scholarship;
                 }
 
@@ -247,6 +250,7 @@ namespace ProAdmin
                     txtolresult.Text            = model_students.Ol_result;
                     txtjoiningdate.Text         = model_students.JoinDate;
                     cmbbatch.Text               = model_students.Batch;
+                    cmbgender.Text              = model_students.Gender;
                     cmbscholership.SelectedItem = model_students.Scholarship;
                 }
 
@@ -298,7 +302,7 @@ namespace ProAdmin
 
             if (txtfirstname.Text != null || txtnewlastname != null || txtnewnic != null || dtpnewdob != null || txtnewhomwaddress != null || 
                 txtnewhometell != null || txtnewfathername != null || txtnewparentsname != null || cmbnewolschool != null || cmbnewalschool != null ||
-                cmbnewbatch != null || TestForNullOrEmpty(cmbnewscol.Text))
+                cmbnewbatch != null || TestForNullOrEmpty(cmbnewscol.Text) || cmbnewgender !=null)
             {
                 string regid = cmbnewbatch.Text + "01" + seq_val;
                 model_students.regid = regid;
@@ -317,6 +321,7 @@ namespace ProAdmin
                 model_students.Ol_result = txtnewolresult.Text;
                 model_students.JoinDate = txtnewjoiningdate.Text;
                 model_students.Batch = cmbnewbatch.Text;
+                model_students.Gender = cmbnewgender.Text;
                 model_students.Scholarship = cmbnewscol.SelectedItem.ToString();
 
 
@@ -390,36 +395,37 @@ namespace ProAdmin
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            txtnewfullname.Text = null;
-            txtnewlastname.Text = null;
-            txtnewnic.Text = null;
-            dtpnewdob.Text = null;
-            txtnewhomwaddress.Text = null;
-            txtnewhometell.Text = null;
-            txtnewstayaddress.Text = null;
-            txtnewstaytell.Text = null;
-            txtnewfathername.Text = null;
-            txtnewparentsname.Text = null;
-            cmbnewolschool.Text = null;
-            cmbnewalschool.Text = null;
-            txtnewolresult.Text = null;
-            cmbnewbatch.Text = null;
-            cmbnewscol.SelectedItem = null;
+            txtnewfullname.Text         = null;
+            txtnewlastname.Text         = null;
+            txtnewnic.Text              = null;
+            dtpnewdob.Text              = null;
+            txtnewhomwaddress.Text      = null;
+            txtnewhometell.Text         = null;
+            txtnewstayaddress.Text      = null;
+            txtnewstaytell.Text         = null;
+            txtnewfathername.Text       = null;
+            txtnewparentsname.Text      = null;
+            cmbnewolschool.Text         = null;
+            cmbnewalschool.Text         = null;
+            txtnewolresult.Text         = null;
+            cmbnewbatch.Text            = null;
+            cmbnewscol.SelectedItem     = null;
+            cmbgender.Text              = null;
 
-            lblbatch.Text = null;
-            lbljoiningdate.Text = null;
-            lblname.Text = null;
-            lblregid.Text = null;
-            txtmessagbarcode.Text = null;
-            txtmessage.Text = null;
+            lblbatch.Text               = null;
+            lbljoiningdate.Text         = null;
+            lblname.Text                = null;
+            lblregid.Text               = null;
+            txtmessagbarcode.Text       = null;
+            txtmessage.Text             = null;
 
-            txtjoiningdate.Text = DateTime.Now.ToString();
-            txtnewjoiningdate.Text = DateTime.Now.ToString();
+            txtjoiningdate.Text         = DateTime.Now.ToString();
+            txtnewjoiningdate.Text      = DateTime.Now.ToString();
             populate_student_data_grid_view();
             populate_all_student_data_grid_view();
             get_combo_vale_list();
-            txtmessage.Text = null;
-            groupId.Visible = false;
+            txtmessage.Text             = null;
+            groupId.Visible             = false;
             //txtsavefilename.Text = null;
 
             picbatcode.InitialImage = null;

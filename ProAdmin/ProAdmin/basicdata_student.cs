@@ -32,5 +32,6 @@ namespace ProAdmin
         public string JoinDate { get; set; }
         public string Batch { get; set; }
         public string Scholarship { get; set; }
+        public string Gender { get; set; }
     }
 }

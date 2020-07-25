@@ -53,6 +53,7 @@
           <Property Name="JoinDate" Type="varchar" MaxLength="200" />
           <Property Name="Batch" Type="varchar" MaxLength="200" />
           <Property Name="Scholarship" Type="varchar" MaxLength="200" />
+          <Property Name="Gender" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="basicdata_subject">
           <Key>
@@ -340,6 +341,7 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_schoarshipstd_summary' does n
           <Property Name="JoinDate" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="Batch" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="Scholarship" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Gender" Type="String" />
         </EntityType>
         <EntityType Name="basicdata_subject">
           <Key>
@@ -566,6 +568,7 @@ warning 6002: The table/view 'proadmin_v1.dbo.view_schoarshipstd_summary' does n
           <EntitySetMapping Name="basicdata_student">
             <EntityTypeMapping TypeName="proadmin_v1_Model1.basicdata_student">
               <MappingFragment StoreEntitySet="basicdata_student">
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="regid" ColumnName="regid" />
                 <ScalarProperty Name="Firstname" ColumnName="Firstname" />
