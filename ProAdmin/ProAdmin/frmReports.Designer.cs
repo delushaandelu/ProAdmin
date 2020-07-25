@@ -35,10 +35,14 @@
             this.PrintStudentInfrobybatchandschool = new System.Windows.Forms.LinkLabel();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.lblattandance = new System.Windows.Forms.LinkLabel();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.lblreportbatch = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
+            this.groupControl3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -117,10 +121,31 @@
             this.lblattandance.Text = "Print Student Attandance Summary";
             this.lblattandance.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblattandance_LinkClicked);
             // 
+            // groupControl3
+            // 
+            this.groupControl3.Controls.Add(this.lblreportbatch);
+            this.groupControl3.Location = new System.Drawing.Point(42, 240);
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.Size = new System.Drawing.Size(414, 82);
+            this.groupControl3.TabIndex = 9;
+            this.groupControl3.Text = "Examiniation Information";
+            // 
+            // lblreportbatch
+            // 
+            this.lblreportbatch.AutoSize = true;
+            this.lblreportbatch.Location = new System.Drawing.Point(22, 34);
+            this.lblreportbatch.Name = "lblreportbatch";
+            this.lblreportbatch.Size = new System.Drawing.Size(166, 13);
+            this.lblreportbatch.TabIndex = 7;
+            this.lblreportbatch.TabStop = true;
+            this.lblreportbatch.Text = "Exam Results by Batch and Exam";
+            this.lblreportbatch.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblreportbatch_LinkClicked);
+            // 
             // frmReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
             this.Name = "frmReports";
@@ -131,6 +156,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
+            this.groupControl3.ResumeLayout(false);
+            this.groupControl3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -143,5 +171,7 @@
         private System.Windows.Forms.LinkLabel lblstudentadminon;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private System.Windows.Forms.LinkLabel lblattandance;
+        private DevExpress.XtraEditors.GroupControl groupControl3;
+        private System.Windows.Forms.LinkLabel lblreportbatch;
     }
 }

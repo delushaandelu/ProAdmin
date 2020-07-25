@@ -280,6 +280,12 @@
     <Compile Include="ReportAttdanceSummary.Designer.cs">
       <DependentUpon>ReportAttdanceSummary.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportExamResultSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportExamResultSummary.Designer.cs">
+      <DependentUpon>ReportExamResultSummary.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportStudentAdmissionForm.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -374,6 +380,9 @@
     </Compile>
     <EmbeddedResource Include="ReportAttdanceSummary.resx">
       <DependentUpon>ReportAttdanceSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportExamResultSummary.resx">
+      <DependentUpon>ReportExamResultSummary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportStudentAdmissionForm.resx">
       <DependentUpon>ReportStudentAdmissionForm.cs</DependentUpon>
