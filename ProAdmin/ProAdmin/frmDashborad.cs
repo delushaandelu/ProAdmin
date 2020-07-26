@@ -171,5 +171,12 @@ namespace ProAdmin
             }
             frmReports.Instance.BringToFront();
         }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            login.Show();
+            this.Hide();
+        }
     }
 }

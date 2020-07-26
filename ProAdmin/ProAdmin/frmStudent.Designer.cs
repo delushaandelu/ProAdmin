@@ -32,6 +32,8 @@
             this.txtsearch = new DevExpress.XtraBars.Navigation.TabPane();
             this.tabNavigationPage3 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cmbgender = new System.Windows.Forms.ComboBox();
+            this.label46 = new System.Windows.Forms.Label();
             this.dtpdob = new DevExpress.XtraEditors.DateEdit();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -42,6 +44,25 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.dgvStudent = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.regid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nic = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dob = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.home_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Home_tell = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Staying_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stay_home_tell = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Father_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Parents_contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ol_School = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Al_school = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ol_result = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JoinDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Batch = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Scholarship = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmbalschool = new System.Windows.Forms.ComboBox();
             this.cmbolschool = new System.Windows.Forms.ComboBox();
             this.cmbbatch = new System.Windows.Forms.ComboBox();
@@ -144,27 +165,7 @@
             this.label34 = new System.Windows.Forms.Label();
             this.txtnewfullname = new DevExpress.XtraEditors.TextEdit();
             this.dateTimeChartRangeControlClient1 = new DevExpress.XtraEditors.DateTimeChartRangeControlClient();
-            this.cmbgender = new System.Windows.Forms.ComboBox();
-            this.label46 = new System.Windows.Forms.Label();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.regid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nic = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dob = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.home_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Home_tell = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Staying_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stay_home_tell = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Father_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Parents_contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ol_School = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Al_school = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ol_result = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JoinDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Batch = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Scholarship = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblstudentadminon = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.txtsearch)).BeginInit();
             this.txtsearch.SuspendLayout();
             this.tabNavigationPage3.SuspendLayout();
@@ -278,6 +279,20 @@
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
             // 
+            // cmbgender
+            // 
+            this.cmbgender.FormattingEnabled = true;
+            this.cmbgender.Items.AddRange(new object[] {
+            resources.GetString("cmbgender.Items"),
+            resources.GetString("cmbgender.Items1")});
+            resources.ApplyResources(this.cmbgender, "cmbgender");
+            this.cmbgender.Name = "cmbgender";
+            // 
+            // label46
+            // 
+            resources.ApplyResources(this.label46, "label46");
+            this.label46.Name = "label46";
+            // 
             // dtpdob
             // 
             resources.ApplyResources(this.dtpdob, "dtpdob");
@@ -376,6 +391,138 @@
             this.dgvStudent.Name = "dgvStudent";
             this.dgvStudent.ReadOnly = true;
             this.dgvStudent.DoubleClick += new System.EventHandler(this.dgvStudent_DoubleClick);
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            resources.ApplyResources(this.Id, "Id");
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // Gender
+            // 
+            resources.ApplyResources(this.Gender, "Gender");
+            this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
+            // 
+            // regid
+            // 
+            this.regid.DataPropertyName = "regid";
+            resources.ApplyResources(this.regid, "regid");
+            this.regid.Name = "regid";
+            this.regid.ReadOnly = true;
+            // 
+            // Firstname
+            // 
+            this.Firstname.DataPropertyName = "Firstname";
+            resources.ApplyResources(this.Firstname, "Firstname");
+            this.Firstname.Name = "Firstname";
+            this.Firstname.ReadOnly = true;
+            // 
+            // Lastname
+            // 
+            this.Lastname.DataPropertyName = "Lastname";
+            resources.ApplyResources(this.Lastname, "Lastname");
+            this.Lastname.Name = "Lastname";
+            this.Lastname.ReadOnly = true;
+            // 
+            // Nic
+            // 
+            this.Nic.DataPropertyName = "Nic";
+            resources.ApplyResources(this.Nic, "Nic");
+            this.Nic.Name = "Nic";
+            this.Nic.ReadOnly = true;
+            // 
+            // Dob
+            // 
+            this.Dob.DataPropertyName = "Dob";
+            resources.ApplyResources(this.Dob, "Dob");
+            this.Dob.Name = "Dob";
+            this.Dob.ReadOnly = true;
+            // 
+            // home_address
+            // 
+            this.home_address.DataPropertyName = "home_address";
+            resources.ApplyResources(this.home_address, "home_address");
+            this.home_address.Name = "home_address";
+            this.home_address.ReadOnly = true;
+            // 
+            // Home_tell
+            // 
+            this.Home_tell.DataPropertyName = "Home_tell";
+            resources.ApplyResources(this.Home_tell, "Home_tell");
+            this.Home_tell.Name = "Home_tell";
+            this.Home_tell.ReadOnly = true;
+            // 
+            // Staying_address
+            // 
+            this.Staying_address.DataPropertyName = "Staying_address";
+            resources.ApplyResources(this.Staying_address, "Staying_address");
+            this.Staying_address.Name = "Staying_address";
+            this.Staying_address.ReadOnly = true;
+            // 
+            // Stay_home_tell
+            // 
+            this.Stay_home_tell.DataPropertyName = "Stay_home_tell";
+            resources.ApplyResources(this.Stay_home_tell, "Stay_home_tell");
+            this.Stay_home_tell.Name = "Stay_home_tell";
+            this.Stay_home_tell.ReadOnly = true;
+            // 
+            // Father_name
+            // 
+            this.Father_name.DataPropertyName = "Father_name";
+            resources.ApplyResources(this.Father_name, "Father_name");
+            this.Father_name.Name = "Father_name";
+            this.Father_name.ReadOnly = true;
+            // 
+            // Parents_contact
+            // 
+            this.Parents_contact.DataPropertyName = "Parents_contact";
+            resources.ApplyResources(this.Parents_contact, "Parents_contact");
+            this.Parents_contact.Name = "Parents_contact";
+            this.Parents_contact.ReadOnly = true;
+            // 
+            // Ol_School
+            // 
+            this.Ol_School.DataPropertyName = "Ol_School";
+            resources.ApplyResources(this.Ol_School, "Ol_School");
+            this.Ol_School.Name = "Ol_School";
+            this.Ol_School.ReadOnly = true;
+            // 
+            // Al_school
+            // 
+            this.Al_school.DataPropertyName = "Al_school";
+            resources.ApplyResources(this.Al_school, "Al_school");
+            this.Al_school.Name = "Al_school";
+            this.Al_school.ReadOnly = true;
+            // 
+            // Ol_result
+            // 
+            this.Ol_result.DataPropertyName = "Ol_result";
+            resources.ApplyResources(this.Ol_result, "Ol_result");
+            this.Ol_result.Name = "Ol_result";
+            this.Ol_result.ReadOnly = true;
+            // 
+            // JoinDate
+            // 
+            this.JoinDate.DataPropertyName = "JoinDate";
+            resources.ApplyResources(this.JoinDate, "JoinDate");
+            this.JoinDate.Name = "JoinDate";
+            this.JoinDate.ReadOnly = true;
+            // 
+            // Batch
+            // 
+            this.Batch.DataPropertyName = "Batch";
+            resources.ApplyResources(this.Batch, "Batch");
+            this.Batch.Name = "Batch";
+            this.Batch.ReadOnly = true;
+            // 
+            // Scholarship
+            // 
+            this.Scholarship.DataPropertyName = "Scholarship";
+            resources.ApplyResources(this.Scholarship, "Scholarship");
+            this.Scholarship.Name = "Scholarship";
+            this.Scholarship.ReadOnly = true;
             // 
             // cmbalschool
             // 
@@ -576,6 +723,7 @@
             // tabNavigationPage2
             // 
             resources.ApplyResources(this.tabNavigationPage2, "tabNavigationPage2");
+            this.tabNavigationPage2.Controls.Add(this.lblstudentadminon);
             this.tabNavigationPage2.Controls.Add(this.cmbnewgender);
             this.tabNavigationPage2.Controls.Add(this.label45);
             this.tabNavigationPage2.Controls.Add(this.dtpnewdob);
@@ -1023,151 +1171,12 @@
             resources.ApplyResources(this.txtnewfullname, "txtnewfullname");
             this.txtnewfullname.Name = "txtnewfullname";
             // 
-            // cmbgender
+            // lblstudentadminon
             // 
-            this.cmbgender.FormattingEnabled = true;
-            this.cmbgender.Items.AddRange(new object[] {
-            resources.GetString("cmbgender.Items"),
-            resources.GetString("cmbgender.Items1")});
-            resources.ApplyResources(this.cmbgender, "cmbgender");
-            this.cmbgender.Name = "cmbgender";
-            // 
-            // label46
-            // 
-            resources.ApplyResources(this.label46, "label46");
-            this.label46.Name = "label46";
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            resources.ApplyResources(this.Id, "Id");
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // Gender
-            // 
-            resources.ApplyResources(this.Gender, "Gender");
-            this.Gender.Name = "Gender";
-            this.Gender.ReadOnly = true;
-            // 
-            // regid
-            // 
-            this.regid.DataPropertyName = "regid";
-            resources.ApplyResources(this.regid, "regid");
-            this.regid.Name = "regid";
-            this.regid.ReadOnly = true;
-            // 
-            // Firstname
-            // 
-            this.Firstname.DataPropertyName = "Firstname";
-            resources.ApplyResources(this.Firstname, "Firstname");
-            this.Firstname.Name = "Firstname";
-            this.Firstname.ReadOnly = true;
-            // 
-            // Lastname
-            // 
-            this.Lastname.DataPropertyName = "Lastname";
-            resources.ApplyResources(this.Lastname, "Lastname");
-            this.Lastname.Name = "Lastname";
-            this.Lastname.ReadOnly = true;
-            // 
-            // Nic
-            // 
-            this.Nic.DataPropertyName = "Nic";
-            resources.ApplyResources(this.Nic, "Nic");
-            this.Nic.Name = "Nic";
-            this.Nic.ReadOnly = true;
-            // 
-            // Dob
-            // 
-            this.Dob.DataPropertyName = "Dob";
-            resources.ApplyResources(this.Dob, "Dob");
-            this.Dob.Name = "Dob";
-            this.Dob.ReadOnly = true;
-            // 
-            // home_address
-            // 
-            this.home_address.DataPropertyName = "home_address";
-            resources.ApplyResources(this.home_address, "home_address");
-            this.home_address.Name = "home_address";
-            this.home_address.ReadOnly = true;
-            // 
-            // Home_tell
-            // 
-            this.Home_tell.DataPropertyName = "Home_tell";
-            resources.ApplyResources(this.Home_tell, "Home_tell");
-            this.Home_tell.Name = "Home_tell";
-            this.Home_tell.ReadOnly = true;
-            // 
-            // Staying_address
-            // 
-            this.Staying_address.DataPropertyName = "Staying_address";
-            resources.ApplyResources(this.Staying_address, "Staying_address");
-            this.Staying_address.Name = "Staying_address";
-            this.Staying_address.ReadOnly = true;
-            // 
-            // Stay_home_tell
-            // 
-            this.Stay_home_tell.DataPropertyName = "Stay_home_tell";
-            resources.ApplyResources(this.Stay_home_tell, "Stay_home_tell");
-            this.Stay_home_tell.Name = "Stay_home_tell";
-            this.Stay_home_tell.ReadOnly = true;
-            // 
-            // Father_name
-            // 
-            this.Father_name.DataPropertyName = "Father_name";
-            resources.ApplyResources(this.Father_name, "Father_name");
-            this.Father_name.Name = "Father_name";
-            this.Father_name.ReadOnly = true;
-            // 
-            // Parents_contact
-            // 
-            this.Parents_contact.DataPropertyName = "Parents_contact";
-            resources.ApplyResources(this.Parents_contact, "Parents_contact");
-            this.Parents_contact.Name = "Parents_contact";
-            this.Parents_contact.ReadOnly = true;
-            // 
-            // Ol_School
-            // 
-            this.Ol_School.DataPropertyName = "Ol_School";
-            resources.ApplyResources(this.Ol_School, "Ol_School");
-            this.Ol_School.Name = "Ol_School";
-            this.Ol_School.ReadOnly = true;
-            // 
-            // Al_school
-            // 
-            this.Al_school.DataPropertyName = "Al_school";
-            resources.ApplyResources(this.Al_school, "Al_school");
-            this.Al_school.Name = "Al_school";
-            this.Al_school.ReadOnly = true;
-            // 
-            // Ol_result
-            // 
-            this.Ol_result.DataPropertyName = "Ol_result";
-            resources.ApplyResources(this.Ol_result, "Ol_result");
-            this.Ol_result.Name = "Ol_result";
-            this.Ol_result.ReadOnly = true;
-            // 
-            // JoinDate
-            // 
-            this.JoinDate.DataPropertyName = "JoinDate";
-            resources.ApplyResources(this.JoinDate, "JoinDate");
-            this.JoinDate.Name = "JoinDate";
-            this.JoinDate.ReadOnly = true;
-            // 
-            // Batch
-            // 
-            this.Batch.DataPropertyName = "Batch";
-            resources.ApplyResources(this.Batch, "Batch");
-            this.Batch.Name = "Batch";
-            this.Batch.ReadOnly = true;
-            // 
-            // Scholarship
-            // 
-            this.Scholarship.DataPropertyName = "Scholarship";
-            resources.ApplyResources(this.Scholarship, "Scholarship");
-            this.Scholarship.Name = "Scholarship";
-            this.Scholarship.ReadOnly = true;
+            resources.ApplyResources(this.lblstudentadminon, "lblstudentadminon");
+            this.lblstudentadminon.Name = "lblstudentadminon";
+            this.lblstudentadminon.TabStop = true;
+            this.lblstudentadminon.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblstudentadminon_LinkClicked);
             // 
             // frmStudent
             // 
@@ -1371,5 +1380,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn JoinDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Batch;
         private System.Windows.Forms.DataGridViewTextBoxColumn Scholarship;
+        private System.Windows.Forms.LinkLabel lblstudentadminon;
     }
 }

@@ -269,6 +269,7 @@
             this.barButtonItem1.Caption = "Logout";
             this.barButtonItem1.Id = 0;
             this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // barToolbarsListItem1
             // 

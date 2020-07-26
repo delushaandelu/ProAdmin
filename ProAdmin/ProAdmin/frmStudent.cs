@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.Entity;
+using DevExpress.XtraReports.UI;
 
 namespace ProAdmin
 {
@@ -436,6 +437,13 @@ namespace ProAdmin
             string invalidRegStr = string.Format(@"([{0}]*\.+$)|([{0}]+)", @"%windir%\system32\SnippingTool.exe");
 
             System.Diagnostics.Process.Start(invalidRegStr);
+        }
+
+        private void lblstudentadminon_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ReportStudentAdmissionForm studentReport = new ReportStudentAdmissionForm();
+            ReportPrintTool printtool = new ReportPrintTool(studentReport);
+            printtool.ShowRibbonPreview();
         }
     }
 }
