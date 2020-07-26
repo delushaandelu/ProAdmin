@@ -245,6 +245,12 @@
     <Compile Include="frmSheduleAnExam.Designer.cs">
       <DependentUpon>frmSheduleAnExam.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmStarter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStarter.Designer.cs">
+      <DependentUpon>frmStarter.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmStudent.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -385,6 +391,9 @@
     <EmbeddedResource Include="frmSheduleAnExam.resx">
       <DependentUpon>frmSheduleAnExam.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmStarter.resx">
+      <DependentUpon>frmStarter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmStudent.resx">
       <DependentUpon>frmStudent.cs</DependentUpon>
     </EmbeddedResource>
@@ -467,6 +476,8 @@
       <DependentUpon>ProAdminAws_v1.edmx</DependentUpon>
       <LastGenOutput>ProAdminAws_v1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\8ee212dac057d412972e0c8cc164deee.gif" />
+    <None Include="Resources\silhouette-solo-loader-dribbble_v2.gif" />
     <None Include="Resources\ogimage.png" />
     <None Include="Resources\unnamed.jpg" />
     <None Include="Resources\sap-basis-administrator.jpg" />

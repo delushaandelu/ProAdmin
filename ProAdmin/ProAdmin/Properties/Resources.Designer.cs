@@ -63,6 +63,16 @@ namespace ProAdmin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _8ee212dac057d412972e0c8cc164deee {
+            get {
+                object obj = ResourceManager.GetObject("8ee212dac057d412972e0c8cc164deee", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap graduation {
             get {
                 object obj = ResourceManager.GetObject("graduation", resourceCulture);
@@ -86,6 +96,16 @@ namespace ProAdmin.Properties {
         internal static System.Drawing.Bitmap sap_basis_administrator {
             get {
                 object obj = ResourceManager.GetObject("sap-basis-administrator", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap silhouette_solo_loader_dribbble_v2 {
+            get {
+                object obj = ResourceManager.GetObject("silhouette-solo-loader-dribbble_v2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
