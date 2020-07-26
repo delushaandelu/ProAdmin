@@ -197,6 +197,12 @@
     <Compile Include="frmExamResults.Designer.cs">
       <DependentUpon>frmExamResults.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmManageBasicData.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -355,6 +361,9 @@
     <EmbeddedResource Include="frmExamResults.resx">
       <DependentUpon>frmExamResults.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmManageBasicData.resx">
       <DependentUpon>frmManageBasicData.cs</DependentUpon>
     </EmbeddedResource>
@@ -458,6 +467,9 @@
       <DependentUpon>ProAdminAws_v1.edmx</DependentUpon>
       <LastGenOutput>ProAdminAws_v1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\ogimage.png" />
+    <None Include="Resources\unnamed.jpg" />
+    <None Include="Resources\sap-basis-administrator.jpg" />
     <None Include="Resources\teacher.png" />
     <None Include="Resources\user.png" />
     <None Include="Resources\graduation.png" />
