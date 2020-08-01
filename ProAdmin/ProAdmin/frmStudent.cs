@@ -36,6 +36,7 @@ namespace ProAdmin
             populate_student_data_grid_view();
             populate_all_student_data_grid_view();
             get_combo_vale_list();
+            clear_fields();
         }
 
         bool TestForNullOrEmpty(string s)
@@ -141,25 +142,45 @@ namespace ProAdmin
                 seq_val = nextSequenceValue.Value;
             }
 
-            if (txtfirstname.Text != null)
-            {              
-                model_students.Firstname        = txtfirstname.Text;
-                model_students.Lastname         = txtlastname.Text;
-                model_students.Nic              = txtnic.Text;
-                model_students.Dob              = dtpdob.Text;
-                model_students.home_address     = txthomeaddress.Text;
-                model_students.Home_tell        = txthometell.Text;
-                model_students.Staying_address  = txtstayingaddress.Text;
-                model_students.Stay_home_tell   = txtstayingtell.Text;
-                model_students.Father_name      = txtfathername.Text;
-                model_students.Parents_contact  = txtparenttell.Text;
-                model_students.Ol_School        = cmbalschool.Text;
-                model_students.Al_school        = cmbalschool.Text;
-                model_students.Ol_result        = txtolresult.Text;
-                model_students.JoinDate         = txtjoiningdate.Text;
-                model_students.Batch            = cmbbatch.Text;
-                model_students.Gender           = cmbgender.Text;
-                model_students.Scholarship      = cmbscholership.SelectedItem.ToString();
+            if (txtfirstname.Text == "" ||
+                txtlastname.Text == "" ||
+                cmbgender.Text == "" ||
+                txtnic.Text == "" ||
+                dtpdob.Text == "" ||
+                cmbbatch.Text == "" ||
+                txtfathername.Text == "" ||
+                txthomeaddress.Text == "" ||
+                txthometell.Text == "" ||
+                txtstayingaddress.Text == "" ||
+                txtstayingtell.Text == "" ||
+                txtparenttell.Text == "" ||
+                cmbolschool.Text == "" ||
+                txtolresult.Text == "" ||
+                cmbalschool.Text == "" ||
+                txtjoiningdate.Text == "" ||
+                cmbscholership.Text == "")
+            {
+                message_popup_ok("Empty fields found.");
+            }
+            else
+            {
+                model_students.Firstname = txtfirstname.Text;
+                model_students.Lastname = txtlastname.Text;
+                model_students.Nic = txtnic.Text;
+                model_students.Dob = dtpdob.Text;
+                model_students.home_address = txthomeaddress.Text;
+                model_students.Home_tell = txthometell.Text;
+                model_students.Staying_address = txtstayingaddress.Text;
+                model_students.Stay_home_tell = txtstayingtell.Text;
+                model_students.Father_name = txtfathername.Text;
+                model_students.Parents_contact = txtparenttell.Text;
+                model_students.Ol_School = cmbalschool.Text;
+                model_students.Al_school = cmbalschool.Text;
+                model_students.Ol_result = txtolresult.Text;
+                model_students.JoinDate = txtjoiningdate.Text;
+                model_students.Batch = cmbbatch.Text;
+                model_students.Gender = cmbgender.Text;
+                model_students.Scholarship = cmbscholership.SelectedItem.ToString();
 
 
                 using (proadmin_v1Entities db = new proadmin_v1Entities())
@@ -169,7 +190,7 @@ namespace ProAdmin
                     {
                         model_students.regid = cmbbatch.Text + "01" + seq_val;
                         db.basicdata_student.Add(model_students);
-                    }                  
+                    }
                     else //Update
                         db.Entry(model_students).State = EntityState.Modified;
 
@@ -182,10 +203,6 @@ namespace ProAdmin
                     model_students.Id = 0;
                     btnSave.Text = "Save";
                 }
-            }
-            else
-            {
-                message_popup_ok("Empty fields found.");
             }
         }
 
@@ -301,9 +318,13 @@ namespace ProAdmin
                 seq_val = nextSequenceValue.Value;
             }
 
-            if (txtfirstname.Text != null || txtnewlastname != null || txtnewnic != null || dtpnewdob != null || txtnewhomwaddress != null || 
-                txtnewhometell != null || txtnewfathername != null || txtnewparentsname != null || cmbnewolschool != null || cmbnewalschool != null ||
-                cmbnewbatch != null || TestForNullOrEmpty(cmbnewscol.Text) || cmbnewgender !=null)
+            if (txtnewfullname.Text == "" || txtnewlastname.Text == "" || txtnewnic.Text == "" || dtpnewdob.Text == "" || txtnewhomwaddress.Text == "" || 
+                txtnewhometell.Text == "" || txtnewfathername.Text == "" || txtnewparentsname.Text == "" || cmbnewolschool.Text == "" || cmbnewalschool.Text == "" ||
+                cmbnewbatch.Text == "" || cmbnewscol.Text == "" || cmbnewgender.Text == "" || txtnewstaytell.Text =="" || txtnewstayaddress.Text =="")
+            {
+                message_popup_ok("Empty fields found.");
+            }
+            else
             {
                 string regid = cmbnewbatch.Text + "01" + seq_val;
                 model_students.regid = regid;
@@ -345,12 +366,8 @@ namespace ProAdmin
                     txtmessage.Text = "New Student Reg ID : '" + regid + "'";
                     txtmessagbarcode.Text = regid;
 
-                   
+
                 }
-            }
-            else
-            {
-                message_popup_ok("Empty fields found.");
             }
         }
 

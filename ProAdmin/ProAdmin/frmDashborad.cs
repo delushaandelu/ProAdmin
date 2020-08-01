@@ -16,6 +16,14 @@ namespace ProAdmin
         public frmDashborad()
         {
             InitializeComponent();
+
+            if (!panelContainer.Controls.Contains(frmMainPage.Instance))
+            {
+                panelContainer.Controls.Add(frmMainPage.Instance);
+                frmMainPage.Instance.Dock = DockStyle.Fill;
+                frmMainPage.Instance.BringToFront();
+            }
+            frmManageBasicData.Instance.BringToFront();
         }
 
         private void accBasicData_Click(object sender, EventArgs e)

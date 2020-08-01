@@ -16,7 +16,7 @@ namespace ProAdmin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmStarter());
+            Application.Run(new frmDashborad());
         }
     }
 }

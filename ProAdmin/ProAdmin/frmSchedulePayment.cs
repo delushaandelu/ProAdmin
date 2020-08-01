@@ -70,12 +70,16 @@ namespace ProAdmin
 
         private void btnsave_Click(object sender, EventArgs e)
         {
-            if(txtmonth.Text != null && txtyear.Text != null && cmbbatch.Text != null)
+            if(txtmonth.Text == "" || txtyear.Text == "" || cmbbatch.Text == "")
             {
-                model_feeschedule.batch     = cmbbatch.Text;
-                model_feeschedule.feemonth  = txtmonth.Text;
-                model_feeschedule.year      = txtyear.Text;
-                model_feeschedule.state     = "Active";
+                MessageBox.Show("Please fill all the feilds..");
+            }
+            else
+            {
+                model_feeschedule.batch = cmbbatch.Text;
+                model_feeschedule.feemonth = txtmonth.Text;
+                model_feeschedule.year = txtyear.Text;
+                model_feeschedule.state = "Active";
 
                 using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
@@ -90,10 +94,6 @@ namespace ProAdmin
                     MessageBox.Show("Data Record Saved!");
                     dgvpaymentschedule.DataSource = db.basicdate_feeschedule.Where(data => data.batch == cmbbatch.Text).ToList<basicdate_feeschedule>();
                 }
-            }
-            else
-            {
-                MessageBox.Show("Please fill all the feilds..");
             }
             clear_feild();
         }

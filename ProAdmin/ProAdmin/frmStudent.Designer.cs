@@ -99,6 +99,7 @@
             this.dgvAllStudent = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.tabNavigationPage2 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.lblstudentadminon = new System.Windows.Forms.LinkLabel();
             this.cmbnewgender = new System.Windows.Forms.ComboBox();
             this.label45 = new System.Windows.Forms.Label();
             this.dtpnewdob = new DevExpress.XtraEditors.DateEdit();
@@ -165,7 +166,6 @@
             this.label34 = new System.Windows.Forms.Label();
             this.txtnewfullname = new DevExpress.XtraEditors.TextEdit();
             this.dateTimeChartRangeControlClient1 = new DevExpress.XtraEditors.DateTimeChartRangeControlClient();
-            this.lblstudentadminon = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.txtsearch)).BeginInit();
             this.txtsearch.SuspendLayout();
             this.tabNavigationPage3.SuspendLayout();
@@ -766,6 +766,13 @@
             this.tabNavigationPage2.Controls.Add(this.txtnewfullname);
             this.tabNavigationPage2.Name = "tabNavigationPage2";
             // 
+            // lblstudentadminon
+            // 
+            resources.ApplyResources(this.lblstudentadminon, "lblstudentadminon");
+            this.lblstudentadminon.Name = "lblstudentadminon";
+            this.lblstudentadminon.TabStop = true;
+            this.lblstudentadminon.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblstudentadminon_LinkClicked);
+            // 
             // cmbnewgender
             // 
             this.cmbnewgender.FormattingEnabled = true;
@@ -1170,13 +1177,6 @@
             // 
             resources.ApplyResources(this.txtnewfullname, "txtnewfullname");
             this.txtnewfullname.Name = "txtnewfullname";
-            // 
-            // lblstudentadminon
-            // 
-            resources.ApplyResources(this.lblstudentadminon, "lblstudentadminon");
-            this.lblstudentadminon.Name = "lblstudentadminon";
-            this.lblstudentadminon.TabStop = true;
-            this.lblstudentadminon.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblstudentadminon_LinkClicked);
             // 
             // frmStudent
             // 

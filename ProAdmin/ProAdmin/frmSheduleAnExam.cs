@@ -93,16 +93,20 @@ namespace ProAdmin
 
         private void btnsubsave_Click(object sender, EventArgs e)
         {
-            if (txtexam.Text != null || dtpenddate.Text != null || dtpenddate.Text != null || cmbstate.Text != null || cmbexamtype.Text != null)
+            if (txtexam.Text == "" || dtpstartdate.Text == "" || dtpenddate.Text == "" || cmbstate.Text == "" || cmbexamtype.Text == "" || cmbbatch.Text == "")
+            {
+                message_popup_ok("Empty fields found.");
+            }
+            else
             {
                 string exam = txtexam.Text + '_' + cmbexamtype.Text;
 
-                model_examschedule.exam         = exam;
-                model_examschedule.start_date   = dtpstartdate.Text;
-                model_examschedule.end_date     = dtpenddate.Text;
-                model_examschedule.state        = cmbstate.Text;
-                model_examschedule.exam_type    = cmbexamtype.Text;
-                model_examschedule.batch        = cmbbatch.Text;
+                model_examschedule.exam = exam;
+                model_examschedule.start_date = dtpstartdate.Text;
+                model_examschedule.end_date = dtpenddate.Text;
+                model_examschedule.state = cmbstate.Text;
+                model_examschedule.exam_type = cmbexamtype.Text;
+                model_examschedule.batch = cmbbatch.Text;
 
                 using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
@@ -118,7 +122,7 @@ namespace ProAdmin
                     else //Update
                     {
                         db.Entry(model_examschedule).State = EntityState.Modified;
-                    } 
+                    }
 
                     db.SaveChangesAsync();
                     clear_fields();
@@ -130,10 +134,6 @@ namespace ProAdmin
                     model_examschedule.id = 0;
                     btnsubsave.Text = "Save";
                 }
-            }
-            else
-            {
-                message_popup_ok("Empty fields found.");
             }
         }
 

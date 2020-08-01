@@ -18,6 +18,9 @@ namespace ProAdmin
         {
             InitializeComponent();
             get_basicdate_for_generate_marks();
+            btngenerate.Enabled = false;
+            btnupdate.Enabled = false;
+
         }
 
         basicdata_student   model_students      = new basicdata_student();
@@ -83,6 +86,8 @@ namespace ProAdmin
             txtaverage.Text         = "0";
             txtavgstate.Text        = "0";
             populate_all_student_exam_marks_data();
+            btngenerate.Enabled     = false;
+            btnupdate.Enabled       = false;
 
 
         }
@@ -128,6 +133,9 @@ namespace ProAdmin
 
         private void btnexamsearch_Click(object sender, EventArgs e)
         {
+            btngenerate.Enabled = true;
+            btnupdate.Enabled = true;
+
             if (txtstudentid.Text != null && cmbexam.Text != null)
             {
                 model_results.regid = txtstudentid.Text;
