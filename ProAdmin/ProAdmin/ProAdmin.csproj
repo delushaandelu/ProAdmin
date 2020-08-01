@@ -485,6 +485,13 @@
       <DependentUpon>ProAdminAws_v1.edmx</DependentUpon>
       <LastGenOutput>ProAdminAws_v1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\money %281%29.png" />
+    <None Include="Resources\shift.png" />
+    <None Include="Resources\exam %281%29.png" />
+    <None Include="Resources\credit-card.png" />
+    <None Include="Resources\video.png" />
+    <None Include="Resources\student %281%29.png" />
+    <None Include="Resources\student.png" />
     <None Include="Resources\8ee212dac057d412972e0c8cc164deee.gif" />
     <None Include="Resources\silhouette-solo-loader-dribbble_v2.gif" />
     <None Include="Resources\ogimage.png" />

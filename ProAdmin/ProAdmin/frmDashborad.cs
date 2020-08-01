@@ -186,5 +186,16 @@ namespace ProAdmin
             login.Show();
             this.Hide();
         }
+
+        private void accordionControlElement13_Click_1(object sender, EventArgs e)
+        {
+            if (!panelContainer.Controls.Contains(frmMainPage.Instance))
+            {
+                panelContainer.Controls.Add(frmMainPage.Instance);
+                frmMainPage.Instance.Dock = DockStyle.Fill;
+                frmMainPage.Instance.BringToFront();
+            }
+            frmMainPage.Instance.BringToFront();
+        }
     }
 }
