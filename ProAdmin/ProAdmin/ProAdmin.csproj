@@ -469,7 +469,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -485,6 +487,10 @@
       <DependentUpon>ProAdminAws_v1.edmx</DependentUpon>
       <LastGenOutput>ProAdminAws_v1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\exam %282%29.png" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\student %282%29.png" />
+    <None Include="Resources\podcast.png" />
     <None Include="Resources\money %281%29.png" />
     <None Include="Resources\shift.png" />
     <None Include="Resources\exam %281%29.png" />

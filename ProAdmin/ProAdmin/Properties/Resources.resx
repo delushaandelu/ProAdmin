@@ -130,11 +130,17 @@
   <data name="exam (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exam (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="folder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\folder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="unnamed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\unnamed.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="graduation" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\graduation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ogimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ogimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="credit-card" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\credit-card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,11 +148,14 @@
   <data name="student (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\student (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="podcast" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\podcast.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ogimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ogimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="money (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\money (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="shift" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shift.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,13 +163,16 @@
   <data name="video" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\video.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="silhouette-solo-loader-dribbble_v2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\silhouette-solo-loader-dribbble_v2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="student (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\student (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="teacher" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\teacher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="money (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\money (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="silhouette-solo-loader-dribbble_v2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silhouette-solo-loader-dribbble_v2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exam (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exam (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

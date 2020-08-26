@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.panelContainer = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
+            this.accordionControlElement13 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accManageStudent = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accBasicData = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -55,7 +56,6 @@
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barToolbarsListItem1 = new DevExpress.XtraBars.BarToolbarsListItem();
             this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
-            this.accordionControlElement13 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.SuspendLayout();
@@ -85,6 +85,13 @@
             this.accordionControl1.Size = new System.Drawing.Size(260, 678);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
+            // 
+            // accordionControlElement13
+            // 
+            this.accordionControlElement13.Name = "accordionControlElement13";
+            this.accordionControlElement13.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement13.Text = "Dashboard";
+            this.accordionControlElement13.Click += new System.EventHandler(this.accordionControlElement13_Click_1);
             // 
             // accordionControlElement1
             // 
@@ -154,6 +161,7 @@
             this.accordionControlElement7,
             this.accordionControlElement8});
             this.accordionControlElement5.Expanded = true;
+            this.accordionControlElement5.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.False;
             this.accordionControlElement5.Name = "accordionControlElement5";
             this.accordionControlElement5.Text = "Exams Condination";
             // 
@@ -288,13 +296,6 @@
             // 
             this.skinDropDownButtonItem1.Id = 1;
             this.skinDropDownButtonItem1.Name = "skinDropDownButtonItem1";
-            // 
-            // accordionControlElement13
-            // 
-            this.accordionControlElement13.Name = "accordionControlElement13";
-            this.accordionControlElement13.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement13.Text = "Dashboard";
-            this.accordionControlElement13.Click += new System.EventHandler(this.accordionControlElement13_Click_1);
             // 
             // frmDashborad
             // 
