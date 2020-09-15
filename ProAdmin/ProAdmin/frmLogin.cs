@@ -31,22 +31,29 @@ namespace ProAdmin
                 model_user.password = txtpassword.Text;
                 model_user.role = cmbuser.Text;
 
-                using (proadmin_v1Entities db = new proadmin_v1Entities())
+                try
                 {
-                    if (db.basicdata_users.Where(data => data.username == txtusername.Text && data.password == txtpassword.Text && data.role == cmbuser.Text).Any())
+                    using (proadmin_v1Entities db = new proadmin_v1Entities())
                     {
-                        
-                        frmDashborad dashborad = new frmDashborad();
-                        dashborad.Show();
-                        this.Hide();
+                        if (db.basicdata_users.Where(data => data.username == txtusername.Text && data.password == txtpassword.Text && data.role == cmbuser.Text).Any())
+                        {
+
+                            frmDashborad dashborad = new frmDashborad();
+                            dashborad.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid User login, Please try again.");
+                            txtusername.Text = null;
+                            txtpassword.Text = null;
+                            cmbuser.Text = null;
+                        }
                     }
-                    else
-                    {
-                        MessageBox.Show("Invalid User login, Please try again.");
-                        txtusername.Text = null;
-                        txtpassword.Text = null;
-                        cmbuser.Text = null;
-                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Please Contact IT Support", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
