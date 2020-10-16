@@ -63,47 +63,34 @@ namespace ProAdmin
             chartBusiness.DataSource = dgvStudentResultData.DataSource;
             chartBusiness.DataBind();
 
-            try
-            {
-                model_students.regid = txtstudentid.Text;
-                using (proadmin_v1Entities db = new proadmin_v1Entities())
-                {
-                    if (db.basicdata_student.Where(data => data.regid == txtstudentid.Text).Any())
-                    {
-                        model_students = db.basicdata_student.Where(x => x.regid == model_students.regid).FirstOrDefault();
-                        txtfirstname.Text = model_students.Firstname;
-                        txtlastname.Text = model_students.Lastname;
-                        txtbatch.Text = model_students.Batch;
-                        txtschool.Text = model_students.Al_school;
 
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalud Student Registration ID. Please Try Again!");
-                    }
-                }
-            }
-            catch (Exception ex)
+            model_students.regid = txtstudentid.Text;
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
-                MessageBox.Show(ex.Message, "Please Contact IT Support", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (db.basicdata_student.Where(data => data.regid == txtstudentid.Text).Any())
+                {
+                    model_students = db.basicdata_student.Where(x => x.regid == model_students.regid).FirstOrDefault();
+                    txtfirstname.Text = model_students.Firstname;
+                    txtlastname.Text = model_students.Lastname;
+                    txtbatch.Text = model_students.Batch;
+                    txtschool.Text = model_students.Al_school;
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Invalud Student Registration ID. Please Try Again!");
+                }
             }
 
         }
 
         public void populate_all_student_exam_marks_data()
         {
-            try
+            dgvStudentResultData.AutoGenerateColumns = false;
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
-                dgvStudentResultData.AutoGenerateColumns = false;
-                using (proadmin_v1Entities db = new proadmin_v1Entities())
-                {
-                    model_results.regid = txtstudentid.Text;
-                    dgvStudentResultData.DataSource = db.data_examresults.Where(x => x.regid == model_results.regid).ToList<data_examresults>();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Please Contact IT Support", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                model_results.regid = txtstudentid.Text;
+                dgvStudentResultData.DataSource = db.data_examresults.Where(x => x.regid == model_results.regid).ToList<data_examresults>();
             }
         }
     }

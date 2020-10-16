@@ -36,62 +36,41 @@ namespace ProAdmin
 
         private void txtdate_SelectionChanged(object sender, EventArgs e)
         {
-            try
+            using (proadmin_v1Entities db = new proadmin_v1Entities())
             {
-                using (proadmin_v1Entities db = new proadmin_v1Entities())
-                {
-                    var batch_data = from data in db.basicdata_class where data.classdate == txtdate.Text select new { Name = data.id, ID = data.batch };
-                    cmbbatch.DataSource = batch_data.ToList();
-                    cmbbatch.ValueMember = "id";
-                    cmbbatch.DisplayMember = "batch";
-                    cmbbatch.SelectedItem = null;
+                var batch_data = from data in db.basicdata_class where data.classdate == txtdate.Text select new { Name = data.id, ID = data.batch };
+                cmbbatch.DataSource = batch_data.ToList();
+                cmbbatch.ValueMember = "id";
+                cmbbatch.DisplayMember = "batch";
+                cmbbatch.SelectedItem = null;
 
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Please Contact IT Support", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnprocess_Click(object sender, EventArgs e)
         {
-            try
+            if (txtdate.Text != null && cmbbatch.Text != null)
             {
-                if (txtdate.Text != null && cmbbatch.Text != null)
+                using (proadmin_v1Entities db = new proadmin_v1Entities())
                 {
-                    using (proadmin_v1Entities db = new proadmin_v1Entities())
-                    {
-                        dgvattendees.DataSource = db.view_attandance_summary.Where(x => x.batch == cmbbatch.Text && x.classdate == txtdate.Text && x.attandance == "Attend").ToList<view_attandance_summary>();
-                        dgvabsentee.DataSource = db.view_attandance_summary.Where(x => x.batch == cmbbatch.Text && x.classdate == txtdate.Text && x.attandance == "Not Attend").ToList<view_attandance_summary>();
+                    dgvattendees.DataSource = db.view_attandance_summary.Where(x => x.batch == cmbbatch.Text && x.classdate == txtdate.Text && x.attandance == "Attend").ToList<view_attandance_summary>();
+                    dgvabsentee.DataSource = db.view_attandance_summary.Where(x => x.batch == cmbbatch.Text && x.classdate == txtdate.Text && x.attandance == "Not Attend").ToList<view_attandance_summary>();
 
-                        txtattend.Text = db.view_attandance_summary.Where(x => x.batch == cmbbatch.Text && x.classdate == txtdate.Text && x.attandance == "Attend").Count().ToString();
-                        txtnotattend.Text = db.view_attandance_summary.Where(x => x.batch == cmbbatch.Text && x.classdate == txtdate.Text && x.attandance == "Not Attend").Count().ToString();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Please fill all fields..");
+                    txtattend.Text = db.view_attandance_summary.Where(x => x.batch == cmbbatch.Text && x.classdate == txtdate.Text && x.attandance == "Attend").Count().ToString();
+                    txtnotattend.Text = db.view_attandance_summary.Where(x => x.batch == cmbbatch.Text && x.classdate == txtdate.Text && x.attandance == "Not Attend").Count().ToString();
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message, "Please Contact IT Support", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please fill all fields..");
             }
         }
 
         private void lblattandance_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            try
-            {
-                ReportAttdanceSummary studentReport = new ReportAttdanceSummary();
-                ReportPrintTool printtool = new ReportPrintTool(studentReport);
-                printtool.ShowRibbonPreview();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Please Contact IT Support", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            ReportAttdanceSummary studentReport = new ReportAttdanceSummary();
+            ReportPrintTool printtool = new ReportPrintTool(studentReport);
+            printtool.ShowRibbonPreview();
         }
     }
 }
